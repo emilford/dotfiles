@@ -1,0 +1,4 @@
+alias ea-f='cd ~/Development/EarthAid/frontend'
+
+alias gs='git status'
+alias migrate='rake db:migrate db:test:clone'
