@@ -1,9 +1,8 @@
 # print SQL to STDOUT
-if ENV.include?('RAILS_ENV') && !Object.const_defined?('RAILS_DEFAULT_LOGGER')
-  require 'logger'
-  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
-end
-
+#  require 'logger'
+#  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
+ActiveRecord::Base.logger = Logger.new(STDOUT)
+  
 # Autocomplete
 require 'irb/completion'
 
