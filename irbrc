@@ -1,8 +1,3 @@
-# print SQL to STDOUT
-#  require 'logger'
-#  RAILS_DEFAULT_LOGGER = Logger.new(STDOUT)
-ActiveRecord::Base.logger = Logger.new(STDOUT)
-  
 # Autocomplete
 require 'irb/completion'
 
@@ -14,15 +9,15 @@ require 'irb/ext/save-history'
 IRB.conf[:SAVE_HISTORY] = 100
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 
-# Easily print methods local to an object's class
-class Object
-  def local_methods
-    (methods - Object.instance_methods).sort
-  end
-end
+require 'factory_girl';
+Dir.glob('./spec/factories**/*').each{|f| require f}
 
-# copy a string to the clipboard
-def pbcopy(string)
-  `echo "#{string}" | pbcopy`
-  string
+
+railsrc_path = File.expand_path('~/.railsrc')
+if ( ENV['RAILS_ENV'] || defined? Rails ) && File.exist?( railsrc_path )
+  begin
+    load railsrc_path
+  rescue Exception
+    warn "Could not load: #{ railsrc_path }" # because of $!.message
+  end
 end
