@@ -3,3 +3,6 @@
 	email = ericmilford@gmail.com
 [core]
 	excludesfile = /Users/Eric/.gitignore
+[author]
+	name = Eric Milford
+	email = ericmilford@gmail.com
