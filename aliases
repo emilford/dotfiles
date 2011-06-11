@@ -1,5 +1,7 @@
-alias ea-f='cd ~/Development/EarthAid/frontend'
-alias db='cd ~/Development/IAC/Daily-Beast-2.0'
-
 alias gs='git status'
 alias migrate='rake db:migrate db:test:clone'
+
+
+for directory in $( ls ~/Development); do
+  alias "$directory"="cd ~/Development/$directory"
+done
