@@ -1,0 +1,124 @@
+" Leader ,
+let mapleader   = ","
+let g:mapleader = ","
+
+
+" Default color scheme
+color made_of_code
+
+
+" Status line
+set statusline=%t\ %y%r%m\ %{fugitive#statusline()}
+
+
+" Disable arrow keys
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+
+
+" Marks end match with $ for clarity
+set cpoptions=Bces$
+
+
+" Disable backups
+set nobackup
+set nowb
+set noswapfile
+
+
+" Auto reload ~/.gvimrc.local and ~/.vimrc.local on save
+autocmd! bufwritepost ~/.gvimrc.local source ~/.gvimrc.local
+autocmd! bufwritepost ~/.vimrc.local  source ~/.vimrc.local
+
+
+" Fast editing of the .vimrc.local
+map <leader>e :e ~/.vimrc.local<CR>
+
+
+" Cmd+J/K to move line down/up
+nmap <D-j> mz:m+<cr>`z
+nmap <D-k> mz:m-2<cr>`z
+vmap <D-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <D-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+
+" Window navigation shortcuts
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
+" Bash like keys for the command line
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+cnoremap <C-K> <C-U>
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
+
+
+" When pressing <leader>cd switch to the directory of the open buffer
+map <leader>cd :cd %:p:h<cr>
+
+
+" Rails shortcuts
+autocmd User Rails Rnavcommand step features/step_definitions -glob=**/* -suffix=_steps.rb
+autocmd User Rails Rnavcommand config config -glob=**/* -suffix=.rb -default=routes
+autocmd User Rails map <Leader>p :Rstep 
+autocmd User Rails map <Leader>sp :RSstep 
+autocmd User Rails map <Leader>tp :RTstep 
+
+autocmd User Rails map <Leader>m :Rmodel 
+autocmd User Rails map <Leader>c :Rcontroller 
+autocmd User Rails map <Leader>v :Rview 
+autocmd User Rails map <Leader>u :Runittest 
+autocmd User Rails map <Leader>f :Rfunctionaltest 
+autocmd User Rails map <Leader>i :Rintegrationtest 
+autocmd User Rails map <Leader>h :Rhelper 
+autocmd User Rails map <Leader>r :Rconfig<CR>
+
+autocmd User Rails map <Leader>mt :RTmodel 
+autocmd User Rails map <Leader>ct :RTcontroller 
+autocmd User Rails map <Leader>vt :RTview 
+autocmd User Rails map <Leader>ut :RTunittest 
+autocmd User Rails map <Leader>ft :RTfunctionaltest 
+autocmd User Rails map <Leader>it :RTintegrationtest 
+autocmd User Rails map <Leader>ht :RThelper 
+autocmd User Rails map <Leader>rt :RTconfig<CR>
+
+autocmd User Rails map <Leader>ms :RSmodel 
+autocmd User Rails map <Leader>cs :RScontroller 
+autocmd User Rails map <Leader>vs :RSview 
+autocmd User Rails map <Leader>us :RSunittest 
+autocmd User Rails map <Leader>fs :RSfunctionaltest 
+autocmd User Rails map <Leader>is :RSintegrationtest 
+autocmd User Rails map <Leader>hs :RShelper 
+autocmd User Rails map <Leader>rs :RSconfig<CR>
+
+autocmd User Rails map <Leader>mv :RVmodel 
+autocmd User Rails map <Leader>cv :RVcontroller 
+autocmd User Rails map <Leader>vv :RVview 
+autocmd User Rails map <Leader>uv :RVunittest 
+autocmd User Rails map <Leader>fv :RVfunctionaltest 
+autocmd User Rails map <Leader>iv :RVintegrationtest 
+autocmd User Rails map <Leader>hv :RVhelper 
+autocmd User Rails map <Leader>rv :RVconfig<CR>
+
+
+" Github credentials
+let g:github_user  = 'emilford'
+let g:github_token = 'd57ce4942bd71a99d8a3b8bcaa1065ca'
+
+
+" Gist configuration
+let g:gist_clip_command = 'pbcopy'
+let g:gist_detect_filetype = 1
+let g:gist_open_browser_after_post = 0
+
+
+" Fugitive shortcuts
+map <Leader>gs :Gstatus<CR>
+map <Leader>gc :Gcommit
+map <Leader>gl :Glog
+map <Leader>gd :Gdiff
