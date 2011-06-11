@@ -5,9 +5,6 @@ gem: --no-ri --no-rdoc
 :benchmark: false
 :sources: 
 - http://gemcutter.org
-- http://gems.rubyforge.org/
 - http://gems.github.com
-- http://gemcutter.org
-- http://gemcutter.org
 :update_sources: true
 :bulk_threshold: 1000
