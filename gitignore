@@ -1,0 +1,7 @@
+*.DS_Store
+/vendor/bundle
+/.rbenv-version
+/.rvmrc
+/chromedriver.log
+/.powenv
+/.powrc

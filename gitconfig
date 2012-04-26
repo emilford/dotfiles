@@ -1,0 +1,14 @@
+[user]
+	name = Eric Milford
+	email = ericmilford@gmail.com
+
+[author]
+	name = Eric Milford
+	email = ericmilford@gmail.com
+
+[github]
+	user = emilford
+
+[core]
+	excludesfile = /Users/Eric/.gitignore
+	editor = /usr/bin/vim
