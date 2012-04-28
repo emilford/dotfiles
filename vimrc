@@ -167,9 +167,6 @@ cnoremap <C-N> <Down>
 " Ctrl-P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Invoke with ,f
-let g:ctrlp_map = '<leader>f'
-
 " Show match window at top of the screen
 let g:ctrlp_match_window_bottom = 0
 
@@ -178,6 +175,24 @@ let g:ctrlp_match_window_reversed = 0
 
 " Do not manage the working directory
 let g:ctrlp_working_path_mode = 0
+
+" Ignore dotfiles/dirs
+let g:ctrlp_dotfiles = 0
+
+" Custom mappings sets ctrl-h for opening in a horizontal split
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>', '<c-h>']
+    \ }
+
+map <leader>f :CtrlP<cr>
+map <leader>fm :CtrlP app/models<cr>
+map <leader>fc :CtrlP app/controllers<cr>
+map <leader>fv :CtrlP app/views<cr>
+map <leader>fh :CtrlP app/helpers<cr>
+map <leader>ft :CtrlP spec<cr>
+map <leader>fj :CtrlP app/assets/javascripts<cr>
+map <leader>fs :CtrlP app/assets/stylesheets<cr>
+map <leader>fd :CtrlP db<cr>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
