@@ -17,6 +17,7 @@ alias gmf='git merge --ff-only'
 alias gcp='git cherry-pick'
 alias gwp='git whatchanged -p'
 alias gch='git cherry -v'
+alias grh='git reset --hard'
 
 ###########################################################
 # Rails-related
