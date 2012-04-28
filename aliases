@@ -3,7 +3,9 @@
 ###########################################################
 alias gs='git status'
 alias gb='git branch'
-alias gl='git log'
+alias gl='git r'
+alias gll='git l'
+alias glo='git log'
 alias gf='git fetch'
 alias gfs='gf && gs'
 alias glo='git log --oneline --decorate'
