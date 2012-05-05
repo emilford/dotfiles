@@ -116,6 +116,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 " Quick file rename
 map <leader>n :call RenameFile()<cr>
 
+" Change instance variable to RSpec let
+map <leader>p :PromoteToLet<cr>
+
 " Line number
 set number
 set numberwidth=5
@@ -366,3 +369,12 @@ function! RenameFile()
         redraw!
     endif
 endfunction
+
+function! PromoteToLet()
+  :normal! dd
+  " :exec '?^\s*it\>'
+  :normal! P
+  :.s/\(\w\+\) = \(.*\)$/let(:\1) { \2 }/
+  :normal ==
+endfunction
+:command! PromoteToLet :call PromoteToLet()
