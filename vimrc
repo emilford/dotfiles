@@ -251,6 +251,8 @@ else
 
 endif " has("autocmd")
 
+map <leader>bda :bufdo bd<cr>
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " File navigation shortcuts
