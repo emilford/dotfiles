@@ -9,6 +9,13 @@
 [github]
 	user = emilford
 
+[color]
+  diff = auto
+  log = true
+  status = auto
+  branch = auto
+  interactive = true
+
 [core]
 	excludesfile = /Users/Eric/.gitignore
 	editor = /usr/bin/vim
