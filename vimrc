@@ -187,7 +187,7 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>', '<c-h>']
     \ }
 
-map <leader>f :CtrlP<cr>
+map <leader>ff :CtrlP<cr>
 map <leader>fm :CtrlP app/models<cr>
 map <leader>fc :CtrlP app/controllers<cr>
 map <leader>fv :CtrlP app/views<cr>
