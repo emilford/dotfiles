@@ -44,3 +44,12 @@ done
 ###########################################################
 alias vi='vim'
 alias vim='/usr/local/Cellar/vim/7.3.333/bin/vim'
+
+
+###########################################################
+#  Tmux
+###########################################################
+alias t='tmux -u'
+alias tpr='t -S /tmp/pair'
+alias tap='tpr new -s pair'
+alias tls='tpr ls'
