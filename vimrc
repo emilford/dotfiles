@@ -101,6 +101,13 @@ set showtabline=2
 " Yanks work with clipboard
 set clipboard=unnamed
 
+" Mark unwanted spaces
+set list
+set listchars=tab:\ \
+set listchars+=trail:·
+set listchars+=extends:>
+set listchars+=precedes:<
+
 " Highlight current line
 set cursorline
 
