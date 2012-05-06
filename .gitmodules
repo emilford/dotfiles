@@ -34,3 +34,6 @@
 [submodule "vim/bundle/cucumber-tables"]
 	path = vim/bundle/cucumber-tables
 	url = git://gist.github.com/287147.git
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
