@@ -40,4 +40,4 @@ eval "$(rbenv init -)"
 #
 # [[ -s "/Users/Eric/.rvm/scripts/rvm" ]] && source "/Users/Eric/.rvm/scripts/rvm"
 
-PATH=$PATH:./bin
+PATH=/usr/local/bin:$PATH:./bin
