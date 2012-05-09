@@ -11,6 +11,7 @@ set nocompatible
 " Turn on syntax highlighting
 syntax on
 
+set clipboard=unnamed
 
 " Solarized colorscheme
 let g:solarized_termcolors=256
