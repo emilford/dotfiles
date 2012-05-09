@@ -11,8 +11,6 @@ set nocompatible
 " Turn on syntax highlighting
 syntax on
 
-" Exit insert mode
-" map ii <Esc>
 
 " Solarized colorscheme
 let g:solarized_termcolors=256
@@ -53,12 +51,6 @@ set ruler
 " Display incomplete commands
 set showcmd		
 
-" Disable arrow keys
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-
 " Marks end match with $ for clarity
 set cpoptions=Bces$
 
@@ -88,13 +80,6 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=0
 
-" Clear the search buffer when hitting return
-:nnoremap <CR> :nohlsearch<cr>
-
-" Launches tab autocomplete
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-inoremap <s-tab> <c-n>
-
 " Always show tab bar
 set showtabline=2
 
@@ -117,21 +102,9 @@ set cmdheight=2
 " Jump to first open window that contains buffer
 set switchbuf=useopen
 
-" Insert current directory
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-
-" Quick file rename
-map <leader>n :call RenameFile()<cr>
-
-" Change instance variable to RSpec let
-map <leader>p :PromoteToLet<cr>
-
 " Line number
 set number
 set numberwidth=5
-
-" Removes any trailing white space
-command! KWS :normal :%s/ *$//g<cr><c-o><cr>
 
 " Copies gist url to clipboard
 let g:gist_clip_command = 'pbcopy'
@@ -142,36 +115,11 @@ let g:gist_detect_filetype = 1
 " Do not open browser
 let g:gist_open_browser_after_post = 0
 
-" Vim-commentary shortcut
-map <leader>cc \\\
-
 " Default shell
 set shell=bash
 
 " Enters current timestamp
 command! InsertTime :normal a<c-r>=strftime('%F %H:%M:%S.0 %z')<cr>
-
-" Fast editing of the .vimrc.local
-map <leader>e :e ~/.vimrc<CR>
-
-" Cmd+J/K to move line down/up
-nmap <D-j> mz:m+<cr>`z
-nmap <D-k> mz:m-2<cr>`z
-vmap <D-j> :m'>+<cr>`<my`>mzgv`yo`z
-vmap <D-k> :m'<-2<cr>`>my`<mzgv`yo`z
-
-" Window navigation shortcuts
-nmap <C-J> <C-W><C-J>
-nmap <C-K> <C-W><C-K>
-nmap <C-H> <C-W><C-H>
-nmap <C-L> <C-W><C-L>
-
-" Bash like keys for the command line
-cnoremap <C-A> <Home>
-cnoremap <C-E> <End>
-cnoremap <C-K> <C-U>
-cnoremap <C-P> <Up>
-cnoremap <C-N> <Down>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Powerline
@@ -203,22 +151,6 @@ let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>', '<c-h>']
     \ }
 
-map <leader>ff :CtrlP<cr>
-map <leader>fm :CtrlP app/models<cr>
-map <leader>fc :CtrlP app/controllers<cr>
-map <leader>fv :CtrlP app/views<cr>
-map <leader>fh :CtrlP app/helpers<cr>
-map <leader>ft :CtrlP spec<cr>
-map <leader>fj :CtrlP app/assets/javascripts<cr>
-map <leader>fs :CtrlP app/assets/stylesheets<cr>
-map <leader>fd :CtrlP db<cr>
-
-map <leader>T :RunRubyFocusedTest<cr>
-map <leader>t :RunAllRubyTests<cr>
-map <leader>a :call RunVimTmuxCommand("clear; rspec")<cr>
-map <Leader>vq :CloseVimTmuxRunner<cr>
-map <Leader>vi :InterruptVimTmuxRunner<cr>
-map <Leader>vp :PromptVimTmuxCommand<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmd
@@ -273,30 +205,6 @@ else
 
 endif " has("autocmd")
 
-map <leader>bda :bufdo bd<cr>
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" File navigation shortcuts
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" map <leader>t  :call RunTestFile()<cr>
-" map <leader>T  :call RunNearestTest()<cr>
-" map <leader>a  :call RunTests('spec')<cr>
-
-map <leader>c :w\|:!cucumber<cr>
-map <leader>C :w\|:!cucumber --profile wip<cr>
-
-map <leader>r  :e      config/routes.rb<cr> 
-map <leader>rs :split  config/routes.rb<cr> 
-map <leader>rv :vsplit config/routes.rb<cr> 
-map <leader>R  :call   ShowRoutes()<cr>
-
-map <leader>g  :e      Gemfile<cr>
-map <leader>gs :split  Gemfile<cr>
-map <leader>gv :vsplit Gemfile<cr>
-
-nnoremap <leader><leader> <c-^>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Functions
@@ -402,3 +310,110 @@ function! PromoteToLet()
   :normal ==
 endfunction
 :command! PromoteToLet :call PromoteToLet()
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Custom Mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Insert current directory
+cnoremap %% <C-R>=expand('%:h').'/'<cr>
+
+" Quick file rename
+map <leader>n :call RenameFile()<cr>
+
+" Change instance variable to RSpec let
+map <leader>p :PromoteToLet<cr>
+
+" Vim-commentary shortcut
+map <leader>cc \\\
+
+" Removes any trailing white space
+command! KWS :normal :%s/ *$//g<cr><c-o><cr>
+
+" Fast editing of the .vimrc.local
+map <leader>e :e ~/.vimrc<CR>
+
+" Move line up/down
+nnoremap <A-j> :m+<CR>==
+nnoremap <A-k> :m-2<CR>==
+inoremap <A-j> <Esc>:m+<CR>==gi
+inoremap <A-k> <Esc>:m-2<CR>==gi
+vnoremap <A-j> :m'>+<CR>gv=gv
+vnoremap <A-k> :m-2<CR>gv=gv
+
+" Window navigation shortcuts
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-H> <C-W><C-H>
+nmap <C-L> <C-W><C-L>
+
+" Bash like keys for the command line
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+cnoremap <C-K> <C-U>
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
+
+" CtrlP finder shortcuts
+map <leader>ff :CtrlP<cr>
+map <leader>fm :CtrlP app/models<cr>
+map <leader>fc :CtrlP app/controllers<cr>
+map <leader>fv :CtrlP app/views<cr>
+map <leader>fh :CtrlP app/helpers<cr>
+map <leader>ft :CtrlP spec<cr>
+map <leader>fj :CtrlP app/assets/javascripts<cr>
+map <leader>fs :CtrlP app/assets/stylesheets<cr>
+map <leader>fd :CtrlP db<cr>
+
+" Cucumber shortcuts
+map <leader>c :w\|:!cucumber<cr>
+map <leader>C :w\|:!cucumber --profile wip<cr>
+
+" Spec shortcuts
+" map <leader>t  :call RunTestFile()<cr>
+" map <leader>T  :call RunNearestTest()<cr>
+" map <leader>a  :call RunTests('spec')<cr>
+
+" Spec shortcuts (via vimux)
+map <leader>T :RunRubyFocusedTest<cr>
+map <leader>t :RunAllRubyTests<cr>
+map <leader>a :call RunVimTmuxCommand("clear; rspec")<cr>
+
+" Vimux shortcuts
+map <Leader>vq :CloseVimTmuxRunner<cr>
+map <Leader>vi :InterruptVimTmuxRunner<cr>
+map <Leader>vp :PromptVimTmuxCommand<CR>
+
+map <leader>bda :bufdo bd<cr>
+
+
+" Routes shortcuts
+map <leader>r  :e      config/routes.rb<cr> 
+map <leader>rs :split  config/routes.rb<cr> 
+map <leader>rv :vsplit config/routes.rb<cr> 
+map <leader>R  :call   ShowRoutes()<cr>
+
+" Gemfile shortcuts
+map <leader>g  :e      Gemfile<cr>
+map <leader>gs :split  Gemfile<cr>
+map <leader>gv :vsplit Gemfile<cr>
+
+" Switch to previous file
+nnoremap <leader><leader> <c-^>
+
+" Exit insert mode
+map ii <Esc>
+
+" Disable arrow keys
+nnoremap <Left>  :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up>    :echoe "Use k"<CR>
+nnoremap <Down>  :echoe "Use j"<CR>
+
+" Clear the search buffer when hitting return
+:nnoremap <CR> :nohlsearch<cr>
+
+" Launches tab autocomplete
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <s-tab> <c-n>
