@@ -97,7 +97,7 @@ set listchars+=precedes:<
 set cursorline
 
 " Command line height
-set cmdheight=2
+set cmdheight=1
 
 " Jump to first open window that contains buffer
 set switchbuf=useopen
