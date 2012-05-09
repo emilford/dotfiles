@@ -40,3 +40,9 @@
 [submodule "vim/bundle/endwise"]
 	path = vim/bundle/endwise
 	url = https://github.com/tpope/vim-endwise.git
+[submodule "vim/bundle/vimux"]
+	path = vim/bundle/vimux
+	url = https://github.com/benmills/vimux.git
+[submodule "vim/bundle/vimux-ruby-test"]
+	path = vim/bundle/vimux-ruby-test
+	url = https://github.com/pgr0ss/vimux-ruby-test.git
