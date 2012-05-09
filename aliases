@@ -39,12 +39,6 @@ for directory in $(ls ~/Development/Examples); do
   alias $directory="cd ~/Development/Examples/$directory"
 done
 
-###########################################################
-#  Vim
-###########################################################
-alias vi='vim'
-alias vim='/usr/local/Cellar/vim/7.3.333/bin/vim'
-
 
 ###########################################################
 #  Tmux
