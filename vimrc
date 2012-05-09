@@ -213,6 +213,12 @@ map <leader>fj :CtrlP app/assets/javascripts<cr>
 map <leader>fs :CtrlP app/assets/stylesheets<cr>
 map <leader>fd :CtrlP db<cr>
 
+map <leader>T :RunRubyFocusedTest<cr>
+map <leader>t :RunAllRubyTests<cr>
+map <leader>a :call RunVimTmuxCommand("clear; rspec")<cr>
+map <Leader>vq :CloseVimTmuxRunner<cr>
+map <Leader>vi :InterruptVimTmuxRunner<cr>
+map <Leader>vp :PromptVimTmuxCommand<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmd
@@ -274,9 +280,9 @@ map <leader>bda :bufdo bd<cr>
 " File navigation shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-map <leader>t  :call RunTestFile()<cr>
-map <leader>T  :call RunNearestTest()<cr>
-map <leader>a  :call RunTests('spec')<cr>
+" map <leader>t  :call RunTestFile()<cr>
+" map <leader>T  :call RunNearestTest()<cr>
+" map <leader>a  :call RunTests('spec')<cr>
 
 map <leader>c :w\|:!cucumber<cr>
 map <leader>C :w\|:!cucumber --profile wip<cr>
