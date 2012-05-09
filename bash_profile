@@ -22,4 +22,4 @@ export GIT_PS1_SHOWDIRTYSTATE=Y
 # Custom prompt w/ git branch name
 PS1='\n\[\033[0m\]\T [lira:\w]\033[1;36m\]$(__rvm-prompt)\[\033[00;35m\]$(__git_ps1 "[%s]")\[\033[00m\]\n\$ '
 
-[[ -s "/Users/Eric/.rvm/scripts/rvm" ]] && source "/Users/Eric/.rvm/scripts/rvm"
+PATH=$PATH:./bin
