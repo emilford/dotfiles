@@ -154,6 +154,12 @@ let g:ctrlp_prompt_mappings = {
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vimux
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let VimuxOrientation = "h"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " autocmd
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -214,21 +220,17 @@ endif " has("autocmd")
 function! RunTests(filename)
     " Write the file and run tests for the given filename
     :w
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
-    :silent !echo;echo;echo;echo;echo;echo;echo;echo;echo;echo
 
     if match(a:filename, '\.feature$') != -1
-        exec ":!bundle exec cucumber " . a:filename
+        " exec ":!bundle exec cucumber " . a:filename
+        call RunVimTmuxCommand("clear; cucumber " . a:filename)
     else
-        if filereadable("script/test")
-            exec ":!script/test " . a:filename
-        else
-            exec ":!rspec " . a:filename
-        end
+        " if filereadable("script/test")
+        "     exec ":!script/test " . a:filename
+        " else
+        "     exec ":!rspec " . a:filename
+        " end
+        call RunVimTmuxCommand("clear; rspec " . a:filename)
     end
 endfunction
 
@@ -372,14 +374,9 @@ map <leader>c :w\|:!cucumber<cr>
 map <leader>C :w\|:!cucumber --profile wip<cr>
 
 " Spec shortcuts
-" map <leader>t  :call RunTestFile()<cr>
-" map <leader>T  :call RunNearestTest()<cr>
-" map <leader>a  :call RunTests('spec')<cr>
-
-" Spec shortcuts (via vimux)
-map <leader>T :RunRubyFocusedTest<cr>
-map <leader>t :RunAllRubyTests<cr>
-map <leader>a :call RunVimTmuxCommand("clear; rspec")<cr>
+map <leader>t  :call RunTestFile()<cr>
+map <leader>T  :call RunNearestTest()<cr>
+map <leader>a  :call RunTests('spec')<cr>
 
 " Vimux shortcuts
 map <Leader>vq :CloseVimTmuxRunner<cr>
