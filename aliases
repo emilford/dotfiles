@@ -47,3 +47,10 @@ alias t='tmux -u'
 alias tpr='t -S /tmp/pair'
 alias tap='tpr new -s pair'
 alias tls='tpr ls'
+
+
+###########################################################
+#  PostgreSQL
+###########################################################
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
