@@ -31,13 +31,17 @@ alias be='bundle exec'
 ###########################################################
 # Quick shortcuts to projects & examples
 ###########################################################
-for directory in $(ls ~/Development/Projects); do
-  alias $directory="cd ~/Development/Projects/$directory"
-done
+if [ -d "~/Development/Projects" ]; then
+  for directory in $(ls ~/Development/Projects); do
+    alias $directory="cd ~/Development/Projects/$directory"
+  done
+fi
 
-for directory in $(ls ~/Development/Examples); do
-  alias $directory="cd ~/Development/Examples/$directory"
-done
+if [ -d "~/Development/Examples" ]; then
+  for directory in $(ls ~/Development/Examples); do
+    alias $directory="cd ~/Development/Examples/$directory"
+  done
+fi
 
 
 ###########################################################
