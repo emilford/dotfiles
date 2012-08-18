@@ -147,6 +147,9 @@ let g:ctrlp_working_path_mode = 0
 " Ignore dotfiles/dirs
 let g:ctrlp_dotfiles = 0
 
+" Set max display height
+let g:ctrlp_max_height=35
+
 " Custom mappings sets ctrl-h for opening in a horizontal split
 let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("h")': ['<c-x>', '<c-cr>', '<c-s>', '<c-h>']
