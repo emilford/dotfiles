@@ -23,6 +23,10 @@ colorscheme solarized
 " Load my custom color settings
 color erm256
 
+" Only show cursor highlight on active buffer
+au BufEnter * setlocal cursorline
+au BufLeave * setlocal nocursorline
+
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
 set hidden
