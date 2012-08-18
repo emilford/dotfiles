@@ -51,3 +51,5 @@ alias t='tmux -u'
 alias tpr='t -S /tmp/pair'
 alias tap='tpr new -s pair'
 alias tls='tpr ls'
+
+alias unhitch='hitch -u'
