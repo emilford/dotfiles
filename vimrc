@@ -14,12 +14,14 @@ syntax on
 set clipboard=unnamed
 
 " Solarized colorscheme
-let g:solarized_termcolors=256
+let g:solarized_termcolors = 256
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
 set background=dark
 colorscheme solarized
 
 " Load my custom color settings
-:color erm256
+color erm256
 
 " Allow backgrounding buffers without writing them, and remember marks/undo
 " for backgrounded buffers
