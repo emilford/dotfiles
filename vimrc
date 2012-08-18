@@ -385,6 +385,7 @@ map <leader>a  :call RunTests('spec')<cr>
 map <Leader>vq :CloseVimTmuxRunner<cr>
 map <Leader>vi :InterruptVimTmuxRunner<cr>
 map <Leader>vp :PromptVimTmuxCommand<CR>
+map <Leader>vl :RunLastVimTmuxCommand<CR>
 
 map <leader>bda :bufdo bd<cr>
 
