@@ -68,3 +68,10 @@ map <Leader>vq :CloseVimTmuxRunner<cr>
 map <Leader>vi :InterruptVimTmuxRunner<cr>
 map <Leader>vp :PromptVimTmuxCommand<cr>
 map <Leader>vl :RunLastVimTmuxCommand<cr>
+map <leader>vv :call UseVimux()<cr>
+
+" Run specs shortcuts
+map <leader>t :call RunTestFile()<cr>
+map <leader>T :call RunNearestTest()<cr>
+map <leader>a :call RunTests()<cr>
+map <leader>f :call RunFeatures()<cr>
