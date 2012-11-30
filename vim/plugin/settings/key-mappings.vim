@@ -59,3 +59,6 @@ map <leader>rv :vsplit config/routes.rb<cr>
 map <leader>g  :e      Gemfile<cr>
 map <leader>gs :split  Gemfile<cr>
 map <leader>gv :vsplit Gemfile<cr>
+
+" Quick file rename
+nmap <leader>n :call RenameFile()<cr>
