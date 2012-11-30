@@ -75,3 +75,6 @@ map <leader>t :call RunTestFile()<cr>
 map <leader>T :call RunNearestTest()<cr>
 map <leader>a :call RunTests()<cr>
 map <leader>f :call RunFeatures()<cr>
+
+" Remove all trailing whitespace
+nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:nohl<cr>
