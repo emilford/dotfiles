@@ -83,3 +83,6 @@ set cursorline
 
 " Jump to first open window that contains buffer
 set switchbuf=useopen
+
+" Source .vimrc on save
+autocmd! bufwritepost ~/.vimrc  source ~/.vimrc

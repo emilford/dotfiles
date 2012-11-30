@@ -20,3 +20,6 @@ nnoremap <down>  :echoe "use j"<cr>
 
 " Clear the search buffer when hitting return
 nnoremap <cr> :nohlsearch<cr>
+
+" Quick edit of .vimrc
+map <leader>e :e ~/.vimrc<cr>
