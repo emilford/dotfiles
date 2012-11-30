@@ -49,3 +49,13 @@ nmap <leader>fi  :CtrlP app/interactors<cr>
 nmap <leader>fd  :CtrlP db<cr>
 nmap <leader>fs  :CtrlP spec<cr>
 nmap <leader>ft  :CtrlP test<cr>
+
+" Open routes.rb
+map <leader>r  :e      config/routes.rb<cr>
+map <leader>rs :split  config/routes.rb<cr>
+map <leader>rv :vsplit config/routes.rb<cr>
+
+" Open Gemfile
+map <leader>g  :e      Gemfile<cr>
+map <leader>gs :split  Gemfile<cr>
+map <leader>gv :vsplit Gemfile<cr>
