@@ -34,3 +34,18 @@ map <leader>" :Tabularize first_double_quote<cr>
 map <leader>{ :Tabularize first_left_stash<cr>
 map <leader>} :Tabularize first_right_stash<cr>
 map <leader>\| :Tabularize bar<cr>
+
+" Shortcuts for ctrl-p
+nmap <leader>ff  :CtrlP<cr>
+nmap <leader>fa  :CtrlP app<cr>
+nmap <leader>fm  :CtrlP app/models<cr>
+nmap <leader>fc  :CtrlP app/controllers<cr>
+nmap <leader>fv  :CtrlP app/views<cr>
+nmap <leader>fh  :CtrlP app/helpers<cr>
+nmap <leader>fp  :CtrlP app/presenters<cr>
+nmap <leader>faj :CtrlP app/assets/javascripts<cr>
+nmap <leader>fas :CtrlP app/assets/stylesheets<cr>
+nmap <leader>fi  :CtrlP app/interactors<cr>
+nmap <leader>fd  :CtrlP db<cr>
+nmap <leader>fs  :CtrlP spec<cr>
+nmap <leader>ft  :CtrlP test<cr>
