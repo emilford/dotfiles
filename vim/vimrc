@@ -78,8 +78,13 @@ set listchars+=trail:·
 set listchars+=extends:>
 set listchars+=precedes:<
 
-" Highlight current line
+" Highlight current line (in active buffer only)
 set cursorline
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
 
 " Jump to first open window that contains buffer
 set switchbuf=useopen
