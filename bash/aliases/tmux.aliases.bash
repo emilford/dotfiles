@@ -1,0 +1,11 @@
+alias tnp='ssh-agent tmux -S /tmp/pair new -s pair && chmod 777 /tmp/pair'
+alias tap='ssh-agent tmux -S /tmp/pair attach -t pair'
+alias tsp='ssh-agent tmux -S /tmp/pair switch -t pair'
+alias tlp='ssh-agent tmux -S /tmp/pair list-sessions'
+alias tdp='ssh-agent tmux -S /tmp/pair detach'
+
+alias tn='ssh-agent tmux new -s'
+alias ta='ssh-agent tmux attach -t'
+alias ts='ssh-agent tmux switch -t'
+alias tl='ssh-agent tmux list-sessions'
+alias td='ssh-agent tmux detach'
