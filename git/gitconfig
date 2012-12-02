@@ -18,3 +18,6 @@
 
 [init]
   templatedir = ~/.gittemplate
+
+[alias]
+  ctags = !.git/hooks/ctags
