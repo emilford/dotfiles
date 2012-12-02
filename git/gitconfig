@@ -1,0 +1,17 @@
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[user]
+  name = Eric Milford
+  email = ericmilford@gmail.com
+
+[author]
+  name = Eric Milford
+  email = ericmilford@gmail.com
+
+[help]
+  autocorrect = 1
+
+[color]
+  ui = true
