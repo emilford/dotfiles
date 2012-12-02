@@ -1,0 +1,2 @@
+# Source all .bash files
+for f in `find ~/.dotfiles/bash -name '*.bash'`; do [[ -f "$f" ]] && . "$f"; done
