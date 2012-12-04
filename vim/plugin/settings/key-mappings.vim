@@ -78,3 +78,6 @@ map <leader>f :call RunFeatures()<cr>
 
 " Remove all trailing whitespace
 nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:nohl<cr>
+
+" Close all buffers
+map <leader>bda :bufdo bd<cr>
