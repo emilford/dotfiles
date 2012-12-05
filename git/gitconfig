@@ -21,3 +21,6 @@
 
 [alias]
   ctags = !.git/hooks/ctags
+
+[github]
+  user = emilford
