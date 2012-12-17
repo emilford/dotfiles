@@ -81,3 +81,5 @@ nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:no
 
 " Close all buffers
 map <leader>bda :bufdo bd<cr>
+
+map <leader>n :NERDTreeToggle<cr>
