@@ -18,6 +18,9 @@ start() {
     memcached)
       /usr/local/bin/memcached -d
       ;;
+    elasticsearch)
+      elasticsearch -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+      ;;
   esac
 }
 
