@@ -61,7 +61,7 @@ map <leader>gs :split  Gemfile<cr>
 map <leader>gv :vsplit Gemfile<cr>
 
 " Quick file rename
-nmap <leader>n :call RenameFile()<cr>
+nmap <leader>rf :call RenameFile()<cr>
 
 " Vimux shortcuts
 map <Leader>vq :CloseVimTmuxRunner<cr>
