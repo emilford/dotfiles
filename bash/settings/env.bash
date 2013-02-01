@@ -1,4 +1,4 @@
-export PATH="./bin:$HOME/.rbenv/bin:$PATH"
+export PATH="./bin:/usr/local/bin:$PATH"
 
 # Prevent duplicates and common history across sessions
 export HISTCONTROL=ignoredups:erasedups
