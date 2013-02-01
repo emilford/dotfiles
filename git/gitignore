@@ -5,4 +5,5 @@
 /chromedriver.log
 /.powenv
 /.powrc
-/bin
+/bin/*
+!/bin/*.rb
