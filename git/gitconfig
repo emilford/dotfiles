@@ -24,3 +24,5 @@
 
 [github]
   user = emilford
+[push]
+	default = current
