@@ -7,3 +7,4 @@
 /.powrc
 /bin/*
 !/bin/*.rb
+/*.pem
