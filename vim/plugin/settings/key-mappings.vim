@@ -107,3 +107,6 @@ nmap <leader>gR  :Gremove!<cr>
 nmap <leader>gg  :Ggrep
 map  <leader>go  :Gbrowse
 map  <leader>gb  :Gblame
+
+" Toggle Gundo window
+nnoremap <leader>gu :GundoToggle<CR>
