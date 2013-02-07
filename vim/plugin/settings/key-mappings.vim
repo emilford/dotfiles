@@ -94,3 +94,16 @@ nmap <leader>l mQviwu`Q
 " uppercase/lowercase first character of word
 nmap <leader>U mQgewvU`Q
 nmap <leader>L mQgewvu`Q
+
+" Fugitive shortcuts
+nmap <leader>gs  :Gstatus<cr>
+nmap <leader>gd  :Gdiff
+nmap <leader>gl  :Glog
+nmap <leader>gll :Glog --
+nmap <leader>gc  :Gcommit
+nmap <leader>gm  :Gmove
+nmap <leader>gr  :Gremove<cr>
+nmap <leader>gR  :Gremove!<cr>
+nmap <leader>gg  :Ggrep
+map  <leader>go  :Gbrowse
+map  <leader>gb  :Gblame
