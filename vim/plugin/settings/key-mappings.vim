@@ -90,3 +90,7 @@ nmap <leader>fef ggVG=
 " uppercase/lowercase word
 nmap <leader>u mQviwU`Q
 nmap <leader>l mQviwu`Q
+
+" uppercase/lowercase first character of word
+nmap <leader>U mQgewvU`Q
+nmap <leader>L mQgewvu`Q
