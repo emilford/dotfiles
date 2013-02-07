@@ -86,3 +86,7 @@ map <leader>n :NERDTreeToggle<cr>
 
 " format the entire file
 nmap <leader>fef ggVG=
+
+" uppercase/lowercase word
+nmap <leader>u mQviwU`Q
+nmap <leader>l mQviwu`Q
