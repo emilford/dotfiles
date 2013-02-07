@@ -83,3 +83,6 @@ nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:no
 map <leader>bda :bufdo bd<cr>
 
 map <leader>n :NERDTreeToggle<cr>
+
+" format the entire file
+nmap <leader>fef ggVG=
