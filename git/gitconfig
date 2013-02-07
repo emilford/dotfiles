@@ -26,3 +26,5 @@
   user = emilford
 [push]
 	default = current
+[web]
+	browser = open
