@@ -28,7 +28,7 @@ function! RunTestFile()
 endfunction
 
 function! RunSpec(filename)
-  call Run("rspec " . a:filename)
+  call Run("rspec " . RSpecOrder()  . " " . a:filename)
 endfunction
 
 function! RunTest(filename)
@@ -56,9 +56,30 @@ function! RunTests()
   if isdirectory('test')
     call Run("rake test")
   else
-    call Run("rspec spec")
+    call Run("rspec " . RSpecOrder() . " spec")
   endif
 endfunction
+
+let g:rspec_random_order = 1
+
+function! RSpecOrder()
+  let order = ""
+
+  if g:rspec_random_order
+    let order = "--order random"
+  endif
+
+  return order
+endfunction
+
+function! RSpecToggleRandomOrder()
+  if g:rspec_random_order
+    let g:rspec_random_order = 0
+  else
+    let g:rspec_random_order = 1
+  endif
+endfunction
+command -nargs=0 RSpecToggleRandomOrder call RSpecToggleRandomOrder()
 
 function! RunFeatures()
   if isdirectory('features')
