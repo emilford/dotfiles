@@ -5,7 +5,7 @@ alias tkp='tmux -S /tmp/pair kill-session -t pair'
 alias tlp='tmux -S /tmp/pair list-sessions'
 alias tdp='tmux -S /tmp/pair detach'
 
-alias tn='ssh-agent tmux new -s'
+alias tn='ssh-agent tmux new -s `basename $PWD`'
 alias ta='tmux attach -t'
 alias ts='tmux switch -t'
 alias tl='tmux list-sessions'
