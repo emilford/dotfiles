@@ -29,6 +29,7 @@ endfunction
 
 function! RunSpec(filename)
   call Run("rspec " . RSpecOrder()  . " " . a:filename)
+  call RSpecSeed()
 endfunction
 
 function! RunTest(filename)
@@ -57,6 +58,7 @@ function! RunTests()
     call Run("rake test")
   else
     call Run("rspec " . RSpecOrder() . " spec")
+    call RSpecSeed()
   endif
 endfunction
 
@@ -65,12 +67,25 @@ let g:rspec_random_order = 1
 function! RSpecOrder()
   let order = ""
 
-  if g:rspec_random_order
+  if exists("g:rspec_seed")
+    let order = "--order rand:" . g:rspec_seed
+  elseif g:rspec_random_order
     let order = "--order random"
   endif
 
   return order
 endfunction
+
+function RSpecSeed(...)
+  if a:0 > 0
+    let g:rspec_seed = a:1
+  else
+    if exists("g:rspec_seed")
+      unlet g:rspec_seed
+    endif
+  end
+endfunction
+command -nargs=1 RSpecSeed call RSpecSeed(<args>)
 
 function! RSpecToggleRandomOrder()
   if g:rspec_random_order
