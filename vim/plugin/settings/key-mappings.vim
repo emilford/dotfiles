@@ -50,16 +50,6 @@ nmap <leader>fd  :CtrlP db<cr>
 nmap <leader>fs  :CtrlP spec<cr>
 nmap <leader>ft  :CtrlP test<cr>
 
-" Open routes.rb
-map <leader>r  :e      config/routes.rb<cr>
-map <leader>rs :split  config/routes.rb<cr>
-map <leader>rv :vsplit config/routes.rb<cr>
-
-" Open Gemfile
-map <leader>gf  :e      Gemfile<cr>
-map <leader>gfs :split  Gemfile<cr>
-map <leader>gfv :vsplit Gemfile<cr>
-
 " Quick file rename
 nmap <leader>rf :call RenameFile()<cr>
 
