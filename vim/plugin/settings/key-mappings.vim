@@ -78,9 +78,6 @@ map <leader>bda :bufdo bd<cr>
 
 map <leader>n :NERDTreeToggle<cr>
 
-" format the entire file
-nmap <leader>fef ggVG=
-
 " Fugitive shortcuts
 nmap <leader>gs  :Gstatus<cr>
 nmap <leader>gd  :Gdiff<cr>
