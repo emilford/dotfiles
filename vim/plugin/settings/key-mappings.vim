@@ -25,15 +25,15 @@ nnoremap <cr> :nohlsearch<cr>
 map <leader>e :e ~/.vimrc<cr>
 
 " Shortcuts for commonly tabulars
-map <leader>j :Tabularize json<cr>
-map <leader>: :Tabularize first_colon<cr>
-map <leader>h :Tabularize hash_rocket<cr>
-map <leader>= :Tabularize first_equals<cr>
-map <leader>' :Tabularize first_single_quote<cr>
-map <leader>" :Tabularize first_double_quote<cr>
-map <leader>{ :Tabularize first_left_stash<cr>
-map <leader>} :Tabularize first_right_stash<cr>
-map <leader>\| :Tabularize bar<cr>
+map <leader>tj :Tabularize json<cr>
+map <leader>t: :Tabularize first_colon<cr>
+map <leader>th :Tabularize hash_rocket<cr>
+map <leader>t= :Tabularize first_equals<cr>
+map <leader>t' :Tabularize first_single_quote<cr>
+map <leader>t" :Tabularize first_double_quote<cr>
+map <leader>t{ :Tabularize first_left_stash<cr>
+map <leader>t} :Tabularize first_right_stash<cr>
+map <leader>t\| :Tabularize bar<cr>
 
 " Shortcuts for ctrl-p
 nmap <leader>ff  :CtrlP<cr>
