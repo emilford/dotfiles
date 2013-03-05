@@ -13,3 +13,4 @@ ln -s /Users/Eric/.dotfiles/rbenv/plugins/rbenv-default-gesm $RBENV_ROOT/plugins
 ln -s /Users/Eric/.dotfiles/rbenv/default-gems $RBENV_ROOT/default-gems
 ln -s /Users/Eric/.dotfiles/rbenv/plugins/rbenv-aliases $RBENV_ROOT/plugins/rbenv-aliases
 ln -s /Users/Eric/.dotfiles/rbenv/plugins/rbenv-communal-gems $RBENV_ROOT/plugins/rbenv-communal-gems
+ln -s /Users/Eric/.dotfiles/rbenv/plugins/rbenv-ctags $RBENV_ROOT/plugins/rbenv-ctags

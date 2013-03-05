@@ -13,3 +13,6 @@
 [submodule "rbenv/plugins/rbenv-communal-gems"]
 	path = rbenv/plugins/rbenv-communal-gems
 	url = git://github.com/tpope/rbenv-communal-gems.git
+[submodule "rbenv/plugins/rbenv-ctags"]
+	path = rbenv/plugins/rbenv-ctags
+	url = git://github.com/tpope/rbenv-ctags.git
