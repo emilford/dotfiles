@@ -8,3 +8,4 @@ ln -s /Users/Eric/.dotfiles/vim ~/.vim
 ln -s /Users/Eric/.dotfiles/vim/vimrc ~/.vimrc
 ln -s /Users/Eric/.dotfiles/vim/gist-vim ~/.gist-vim
 ln -s /Users/Eric/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -s /Users/Eric/.dotfiles/rbenv/plugins/ruby-build $RBENV_ROOT/plugins/ruby-build
