@@ -4,3 +4,6 @@
 [submodule "rbenv/plugins/ruby-build"]
 	path = rbenv/plugins/ruby-build
 	url = git://github.com/sstephenson/ruby-build.git
+[submodule "rbenv/plugins/rbenv-default-gems"]
+	path = rbenv/plugins/rbenv-default-gems
+	url = git://github.com/sstephenson/rbenv-default-gems.git
