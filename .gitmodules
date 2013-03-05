@@ -10,3 +10,6 @@
 [submodule "rbenv/plugins/rbenv-aliases"]
 	path = rbenv/plugins/rbenv-aliases
 	url = git://github.com/tpope/rbenv-aliases.git
+[submodule "rbenv/plugins/rbenv-communal-gems"]
+	path = rbenv/plugins/rbenv-communal-gems
+	url = git://github.com/tpope/rbenv-communal-gems.git
