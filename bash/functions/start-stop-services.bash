@@ -33,7 +33,7 @@ stop() {
       pg_ctl -D /usr/local/var/postgres stop -s -m fast
       ;;
     mongo)
-      /usrr/local/bin/mongo --nodb --eval "connect('localhost:27017/admin').shutdownServer()"
+      /usr/local/bin/mongo --nodb --eval "connect('localhost:27017/admin').shutdownServer()"
       ;;
     redis)
       killall -SIGTERM redis-server
