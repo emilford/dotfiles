@@ -58,7 +58,6 @@ map <Leader>vq :CloseVimTmuxRunner<cr>
 map <Leader>vi :InterruptVimTmuxRunner<cr>
 map <Leader>vp :PromptVimTmuxCommand<cr>
 map <Leader>vl :RunLastVimTmuxCommand<cr>
-map <leader>vv :call UseVimux()<cr>
 
 " Remove all trailing whitespace
 nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:nohl<cr>
