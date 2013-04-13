@@ -83,3 +83,6 @@ map  <leader>gb  :Gblame<cr>
 
 " Toggle Gundo window
 nnoremap <leader>gu :GundoToggle<CR>
+
+" Edit project notes
+map <leader>pn :sp project-notes.txt<cr>
