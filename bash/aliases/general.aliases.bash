@@ -1,4 +1,4 @@
-alias ll='ls -al'
+alias ll='ls -Al'
 alias l='ls -a'
 alias c='clear'
 alias k='clear'
