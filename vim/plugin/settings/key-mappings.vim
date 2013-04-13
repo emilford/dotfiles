@@ -12,11 +12,11 @@ nmap <c-k> <c-w><c-k>
 nmap <c-h> <c-w><c-h>
 nmap <c-l> <c-w><c-l>
 
-" Disable arrow keys
-nnoremap <left>  :echoe "use h"<cr>
-nnoremap <right> :echoe "use l"<cr>
-nnoremap <up>    :echoe "use k"<cr>
-nnoremap <down>  :echoe "use j"<cr>
+" Map arrow keys to window resize
+nmap <left>  <c-w><
+nmap <right> <c-w>>
+nmap <up>    <c-w>+
+nmap <down>  <c-w>-
 
 " Clear the search buffer when hitting return
 nnoremap <cr> :nohlsearch<cr>
