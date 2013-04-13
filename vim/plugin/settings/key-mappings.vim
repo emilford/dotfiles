@@ -86,3 +86,6 @@ nnoremap <leader>gu :GundoToggle<CR>
 
 " Edit project notes
 map <leader>pn :sp project-notes.txt<cr>
+
+" Edit coding notes
+map <leader>cn :sp ~/Dropbox/coding-notes.txt<cr>
