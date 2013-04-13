@@ -9,3 +9,4 @@
 !/bin/*.rb
 /bin/pprof.rb
 /*.pem
+/project-notes.txt
