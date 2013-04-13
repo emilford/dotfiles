@@ -70,13 +70,13 @@ map <leader>n :NERDTreeToggle<cr>
 " Fugitive shortcuts
 nmap <leader>gs  :Gstatus<cr>
 nmap <leader>gd  :Gdiff<cr>
-nmap <leader>gl  :Glog<cr>
-nmap <leader>gll :Glog --<cr>
+nmap <leader>gl  :Glog!<cr>
+nmap <leader>gll :Glog! --<cr>
 nmap <leader>gc  :Gcommit<cr>
 nmap <leader>gm  :Gmove 
 nmap <leader>gr  :Gremove<cr>
 nmap <leader>gR  :Gremove!<cr>
-nmap <leader>gg  :Ggrep 
+nmap <leader>gg  :Ggrep! 
 map  <leader>go  :Gbrowse<cr>
 map  <leader>gO  :Gbrowse!<cr>
 map  <leader>gb  :Gblame<cr>
