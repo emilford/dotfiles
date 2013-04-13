@@ -73,7 +73,7 @@ nmap <leader>gd  :Gdiff<cr>
 nmap <leader>gl  :Glog<cr>
 nmap <leader>gll :Glog --<cr>
 nmap <leader>gc  :Gcommit<cr>
-nmap <leader>gm  :Gmove
+nmap <leader>gm  :Gmove 
 nmap <leader>gr  :Gremove<cr>
 nmap <leader>gR  :Gremove!<cr>
 nmap <leader>gg  :Ggrep 
