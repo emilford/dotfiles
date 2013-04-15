@@ -9,3 +9,4 @@ alias ....='cd ../../..'
 alias -- -='cd -'
 alias md='mkdir -p'
 alias rmd='rmdir'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
