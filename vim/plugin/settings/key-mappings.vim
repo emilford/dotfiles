@@ -94,3 +94,6 @@ map <leader>cn :sp ~/Dropbox/coding-notes.txt<cr>
 map <leader>s :Ag! 
 map <leader>sf :AgFile! 
 map <leader>sh :AgHelp! 
+
+" Run bundle
+map <leader>b :Bundle
