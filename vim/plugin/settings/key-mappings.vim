@@ -101,3 +101,7 @@ map <leader>b :Bundle
 " Dispatch! and Dispatch for asynchronously running commands
 nmap <leader>d :DispatchRunCommand<cr>
 nmap <leader>D :DispatchRunCommandBackground<cr>
+
+" Toggle Quickfix and Location lists
+nmap <script> <silent> <leader>q :call ToggleQuickfixList()<cr>
+nmap <script> <silent> <leader>l :call ToggleLocationList()<cr>
