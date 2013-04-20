@@ -4,7 +4,7 @@ vmap <leader>c \\
 xmap <leader>c \\
 
 " Show/hide line numbers
-nmap <c-n> :set invnumber<cr>
+nmap <c-n> :LineNumberToggle<cr>
 
 " Window navigation shortcuts
 nmap <c-j> <c-w><c-j>

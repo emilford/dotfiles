@@ -71,9 +71,6 @@ set showtabline=0
 " Make copy from OS available to vim
 set clipboard=unnamed
 
-" Show numbers relative to current line
-set relativenumber
-
 " Mark unwanted spaces
 set list
 set listchars=tab:\ \
