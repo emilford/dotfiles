@@ -90,6 +90,9 @@ map <leader>pn :sp project-notes.txt<cr>
 " Edit coding notes
 map <leader>cn :sp ~/Dropbox/coding-notes.txt<cr>
 
+" Edit Vim notes
+map <leader>vn :sp ~/Dropbox/vim-notes.txt<cr>
+
 " Search shortcuts via Ag
 map <leader>s :Ag! 
 map <leader>sf :AgFile! 
