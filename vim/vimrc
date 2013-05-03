@@ -91,3 +91,6 @@ set switchbuf=useopen
 
 " Source .vimrc on save
 autocmd! bufwritepost ~/.vimrc  source ~/.vimrc
+
+" Default to no line wrapping
+set nowrap

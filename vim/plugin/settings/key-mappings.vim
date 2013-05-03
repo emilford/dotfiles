@@ -112,3 +112,6 @@ nmap <script> <silent> <leader>l :call ToggleLocationList()<cr>
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
+
+" Toggle line wrap mode
+nmap <leader>w :ToggleWrap<cr>
