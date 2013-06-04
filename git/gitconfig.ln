@@ -21,6 +21,7 @@
 
 [alias]
   ctags = !.git/hooks/ctags
+   pr   = "!f() { git fetch origin pull/$1/head:pr-$1; } ; f"
 
 [github]
   user = emilford

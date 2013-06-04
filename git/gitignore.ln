@@ -10,3 +10,4 @@
 /bin/pprof.rb
 /*.pem
 /project-notes.txt
+/.ruby-version
