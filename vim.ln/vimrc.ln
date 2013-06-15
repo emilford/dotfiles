@@ -94,3 +94,6 @@ autocmd! bufwritepost ~/.vimrc  source ~/.vimrc
 
 " Default to no line wrapping
 set nowrap
+
+" show a highlight on column 80
+set colorcolumn=80
