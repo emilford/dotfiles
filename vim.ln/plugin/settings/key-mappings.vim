@@ -115,3 +115,6 @@ nnoremap k gk
 
 " Toggle line wrap mode
 nmap <leader>w :ToggleWrap<cr>
+
+" Toggle tagbar
+nmap <leader>tb :TagbarToggle<cr>
