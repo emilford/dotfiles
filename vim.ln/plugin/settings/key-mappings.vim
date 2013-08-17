@@ -1,7 +1,7 @@
 " Shortcuts to toggle comments
-nmap <leader>c \\\
-vmap <leader>c \\
-xmap <leader>c \\
+nmap <leader>cc \\\
+vmap <leader>cc \\
+xmap <leader>cc \\
 
 " Show/hide line numbers
 nmap <c-n> :LineNumberToggle<cr>
