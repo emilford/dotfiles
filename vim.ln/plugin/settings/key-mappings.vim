@@ -114,3 +114,11 @@ nmap <leader>w :ToggleWrap<cr>
 
 " Toggle tagbar
 nmap <leader>tb :TagbarToggle<cr>
+
+" Dash shortcuts
+nmap <silent> <leader>d  :Dash 
+nmap <silent> <leader>d! :Dash! 
+nmap <silent> <leader>D  <Plug>DashSearch
+nmap <silent> <leader>D! <Plug>DashGlobalSearch
+
+
