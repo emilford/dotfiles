@@ -1,0 +1,7 @@
+name: dotfiles
+root: ~/.dotfiles
+socket_path: ~/.tmux.socket
+
+windows:
+  - vim: vim
+  - shell:
