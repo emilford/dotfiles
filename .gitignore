@@ -1,1 +1,6 @@
 /vim.ln/bundle/*
+/ssh.ln/collective_idea_rsa
+/ssh.ln/collective_idea_rsa.pub
+/ssh.ln/id_rsa
+/ssh.ln/id_rsa.pub
+/ssh.ln/known_hosts

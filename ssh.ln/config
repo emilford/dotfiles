@@ -1,0 +1,14 @@
+Host heroku.collective_idea
+  HostName heroku.com
+  IdentityFile ~/.ssh/collective_idea_rsa
+  IdentitiesOnly yes
+
+Host foresight
+  HostName 184.72.250.130
+  User deploy
+  ForwardAgent yes
+
+Host ymca
+  HostName 63.90.115.65
+  User mighty
+  ForwardAgent yes
