@@ -1,0 +1,7 @@
+name: handbook
+root: ~/Development/handbook
+socket_path: ~/.tmux.socket
+
+windows:
+  - vim: vim
+  - shell:

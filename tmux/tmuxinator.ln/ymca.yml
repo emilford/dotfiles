@@ -1,9 +1,9 @@
-name: quirky
-root: ~/Development/quirky
+name: ymca
+root: ~/Development/ymca
 socket_path: ~/.tmux.socket
 
 windows:
   - vim: vim
   - specs:
-  - console: ./script/console
+  - console: rails c
   - shell:
