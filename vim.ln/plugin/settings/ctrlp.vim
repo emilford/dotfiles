@@ -21,7 +21,7 @@ let g:ctrlp_prompt_mappings = {
 
 " Files and directories to ignore
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v\/(\.git|\.bundle|vendor\/bundle|tmp|public\/system)$',
+    \ 'dir':  '\v\/(\.git|\.bundle|vendor\/bundle|tmp|public\/system|node_modules)$',
     \ 'file': '\v(.gitkeep|.gitignore|.jpg|.jpeg|.gif.|.png|.ico|bin/[^.]+)$'
     \ }
 
