@@ -24,3 +24,7 @@ let g:ctrlp_custom_ignore = {
     \ 'dir':  '\v\/(\.git|\.bundle|vendor\/bundle|tmp|public\/system)$',
     \ 'file': '\v(.gitkeep|.gitignore|.jpg|.jpeg|.gif.|.png|.ico|bin/[^.]+)$'
     \ }
+
+" Use ag for ctrlp
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_use_caching = 0
