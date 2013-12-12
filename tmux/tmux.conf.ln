@@ -26,19 +26,19 @@ set -g renumber-windows on
 set -g status-bg "#252525"
 
 # Set status line foreground color
-set -g status-fg '#aaaaaa'
+set -g status-fg "#aaaaaa"
 
 # Set status line left section to start
 set -g status-left "|"
 
 # Set status line right section to session name
-set -g status-right " #[fg=colour199][#S] "
+set -g status-right "#[fg=yellow]#S "
 
 # Set window title format
 set-window-option -g window-status-format '#I - #W |'
 
 # Set current window title format
-set-window-option -g window-status-current-format '#[fg=yellow]#I - #W #[default] |'
+set-window-option -g window-status-current-format '#[fg=yellow]#I - #W#[default] |'
 
 
 #------------------------ Key bindings
