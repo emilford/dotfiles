@@ -1,0 +1,9 @@
+name: foresight-fetch
+root: ~/Development/foresight-fetch
+socket_path: ~/.tmux.socket
+
+windows:
+  - vim: vim
+  - specs:
+  - console: rails c
+  - shell:
