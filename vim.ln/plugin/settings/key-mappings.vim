@@ -121,4 +121,8 @@ nmap <silent> <leader>d! :Dash!
 nmap <silent> <leader>D  <Plug>DashSearch
 nmap <silent> <leader>D! <Plug>DashGlobalSearch
 
+" Search AG for word under curosor
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
+" Start AG search
+nnoremap \ :Ag<SPACE>
