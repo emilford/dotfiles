@@ -19,7 +19,7 @@ nmap <up>    <c-w>+
 nmap <down>  <c-w>-
 
 " Clear the search buffer when hitting return
-nnoremap <cr> :nohlsearch<cr>
+nnoremap <leader><cr> :nohlsearch<cr>
 
 " Quick edit of .vimrc
 map <leader>e :e ~/.vimrc<cr>
