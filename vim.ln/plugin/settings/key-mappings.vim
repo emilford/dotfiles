@@ -85,13 +85,13 @@ map  <leader>gb  :Gblame<cr>
 nnoremap <leader>gu :GundoToggle<CR>
 
 " Edit project notes
-map <leader>pn :sp project-notes.txt<cr>
+map <leader>pn :vs project-notes.txt<cr>
 
 " Edit coding notes
-map <leader>cn :sp ~/Dropbox/coding-notes.txt<cr>
+map <leader>cn :vs ~/Dropbox/coding-notes.txt<cr>
 
 " Edit Vim notes
-map <leader>vn :sp ~/Dropbox/vim-notes.txt<cr>
+map <leader>vn :vs ~/Dropbox/vim-notes.txt<cr>
 
 " Search shortcuts via Ag
 map <leader>s :Ag! 
