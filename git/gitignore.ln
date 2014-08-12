@@ -5,8 +5,8 @@
 /chromedriver.log
 /.powenv
 /.powrc
-/bin/*
-!/bin/*.rb
+/* /bin/* */
+/* !/bin/*.rb */
 /bin/pprof.rb
 /*.pem
 /project-notes.txt
