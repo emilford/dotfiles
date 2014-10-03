@@ -29,3 +29,5 @@
 	default = current
 [web]
 	browser = open
+[fetch]
+	prune = true
