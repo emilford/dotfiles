@@ -1,4 +1,5 @@
 export PATH="./bin:/usr/local/bin:$PATH:/usr/local/share/npm/bin"
+export CDPATH="~/Code"
 
 # Prevent duplicates and common history across sessions
 export HISTCONTROL=ignoredups:erasedups
