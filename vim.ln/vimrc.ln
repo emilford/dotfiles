@@ -100,3 +100,6 @@ set nowrap
 
 " show a highlight on column 80
 set colorcolumn=80
+
+" Allow - to be considered part of a word
+set iskeyword+=-
