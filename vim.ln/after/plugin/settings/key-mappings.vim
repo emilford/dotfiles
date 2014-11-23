@@ -13,9 +13,6 @@ nmap <down>  <c-w>-
 " Clear the search buffer when hitting return
 nnoremap <leader><cr> :nohlsearch<cr>
 
-" Quick edit of .vimrc
-map <leader>e :e ~/.vimrc<cr>
-
 " Shortcuts for commonly tabulars
 map <leader>tj :Tabularize json<cr>
 map <leader>t: :Tabularize first_colon<cr>
