@@ -42,9 +42,6 @@ nmap <leader>fd  :CtrlP db<cr>
 nmap <leader>fs  :CtrlP spec<cr>
 nmap <leader>ft  :CtrlP test<cr>
 
-" Quick file rename
-nmap <leader>rn :call RenameFile()<cr>
-
 " Vimux shortcuts
 map <Leader>vq :CloseVimTmuxRunner<cr>
 map <Leader>vi :InterruptVimTmuxRunner<cr>
