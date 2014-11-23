@@ -1,8 +1,3 @@
-" Shortcuts to toggle comments
-nmap <leader>cc \\\
-vmap <leader>cc \\
-xmap <leader>cc \\
-
 " Window navigation shortcuts
 nmap <c-j> <c-w><c-j>
 nmap <c-k> <c-w><c-k>
