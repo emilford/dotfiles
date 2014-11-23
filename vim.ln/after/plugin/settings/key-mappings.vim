@@ -3,9 +3,6 @@ nmap <leader>cc \\\
 vmap <leader>cc \\
 xmap <leader>cc \\
 
-" Show/hide line numbers
-nmap <c-n> :LineNumberToggle<cr>
-
 " Window navigation shortcuts
 nmap <c-j> <c-w><c-j>
 nmap <c-k> <c-w><c-k>
@@ -108,9 +105,6 @@ nmap <script> <silent> <leader>l :call ToggleLocationList()<cr>
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
-
-" Toggle line wrap mode
-nmap <leader>w :ToggleWrap<cr>
 
 " Toggle tagbar
 nmap <leader>tb :TagbarToggle<cr>
