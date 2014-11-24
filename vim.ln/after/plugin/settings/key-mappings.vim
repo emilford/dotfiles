@@ -29,7 +29,7 @@ nmap <c-p>s  :CtrlP spec<cr>
 nmap <c-p>t  :CtrlP test<cr>
 
 " Close all buffers
-map <leader>bda :bufdo bd<cr>
+nmap bda :bufdo bd<cr>
 
 " Move to next/previous row instead of line
 nnoremap j gj
