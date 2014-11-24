@@ -51,9 +51,6 @@ nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:no
 " Close all buffers
 map <leader>bda :bufdo bd<cr>
 
-" Toggle Gundo window
-nnoremap <leader>gu :GundoToggle<CR>
-
 " Edit project notes
 map <leader>pn :vs project-notes.txt<cr>
 
