@@ -45,9 +45,6 @@ map <Leader>vi :InterruptVimTmuxRunner<cr>
 map <Leader>vp :PromptVimTmuxCommand<cr>
 map <Leader>vl :RunLastVimTmuxCommand<cr>
 
-" Remove all trailing whitespace
-nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:nohl<cr>
-
 " Close all buffers
 map <leader>bda :bufdo bd<cr>
 
