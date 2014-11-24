@@ -71,10 +71,6 @@ map <leader>sh :AgHelp!
 " Run bundle
 map <leader>b :Bundle
 
-" Toggle Quickfix and Location lists
-nmap <script> <silent> <leader>q :call ToggleQuickfixList()<cr>
-nmap <script> <silent> <leader>l :call ToggleLocationList()<cr>
-
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
