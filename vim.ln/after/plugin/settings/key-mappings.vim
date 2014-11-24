@@ -37,15 +37,6 @@ map <Leader>vl :RunLastVimTmuxCommand<cr>
 " Close all buffers
 map <leader>bda :bufdo bd<cr>
 
-" Edit project notes
-map <leader>pn :vs project-notes.txt<cr>
-
-" Edit coding notes
-map <leader>cn :vs ~/Dropbox/coding-notes.txt<cr>
-
-" Edit Vim notes
-map <leader>vn :vs ~/Dropbox/vim-notes.txt<cr>
-
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
