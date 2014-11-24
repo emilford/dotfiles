@@ -1,4 +1,4 @@
-start() {
+start-service() {
   case "$1" in
     mysql) 
       mysql.server start
@@ -24,7 +24,7 @@ start() {
   esac
 }
 
-stop() {
+stop-service() {
   case "$1" in
     mysql)
       mysql.server stop
