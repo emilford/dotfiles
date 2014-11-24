@@ -60,9 +60,6 @@ map <leader>cn :vs ~/Dropbox/coding-notes.txt<cr>
 " Edit Vim notes
 map <leader>vn :vs ~/Dropbox/vim-notes.txt<cr>
 
-" Run bundle
-map <leader>b :Bundle
-
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
