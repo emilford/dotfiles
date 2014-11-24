@@ -75,9 +75,6 @@ map <leader>b :Bundle
 nnoremap j gj
 nnoremap k gk
 
-" Toggle tagbar
-nmap <leader>tb :TagbarToggle<cr>
-
 " Search AG for word under curosor
 nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 
