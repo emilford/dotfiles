@@ -10,8 +10,9 @@ nmap <right> <c-w>>
 nmap <up>    <c-w>+
 nmap <down>  <c-w>-
 
-" Clear the search buffer when hitting return
-nnoremap <leader><cr> :nohlsearch<cr>
+" Clear the search buffer when hitting return except in quickfix window
+nnoremap <CR> :noh<CR>
+autocmd BufReadPost Quickfix nnoremap <buffer> <CR> <CR>
 
 " Shortcuts for ctrl-p
 nmap <leader>ff  :CtrlP<cr>
