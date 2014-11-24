@@ -13,17 +13,6 @@ nmap <down>  <c-w>-
 " Clear the search buffer when hitting return
 nnoremap <leader><cr> :nohlsearch<cr>
 
-" Shortcuts for commonly tabulars
-map <leader>tj :Tabularize json<cr>
-map <leader>t: :Tabularize first_colon<cr>
-map <leader>th :Tabularize hash_rocket<cr>
-map <leader>t= :Tabularize first_equals<cr>
-map <leader>t' :Tabularize first_single_quote<cr>
-map <leader>t" :Tabularize first_double_quote<cr>
-map <leader>t{ :Tabularize first_left_stash<cr>
-map <leader>t} :Tabularize first_right_stash<cr>
-map <leader>t\| :Tabularize bar<cr>
-
 " Shortcuts for ctrl-p
 nmap <leader>ff  :CtrlP<cr>
 nmap <leader>fa  :CtrlP app<cr>
