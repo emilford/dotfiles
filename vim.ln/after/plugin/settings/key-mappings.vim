@@ -28,12 +28,6 @@ nmap <leader>fd  :CtrlP db<cr>
 nmap <leader>fs  :CtrlP spec<cr>
 nmap <leader>ft  :CtrlP test<cr>
 
-" Vimux shortcuts
-map <Leader>vq :CloseVimTmuxRunner<cr>
-map <Leader>vi :InterruptVimTmuxRunner<cr>
-map <Leader>vp :PromptVimTmuxCommand<cr>
-map <Leader>vl :RunLastVimTmuxCommand<cr>
-
 " Close all buffers
 map <leader>bda :bufdo bd<cr>
 
