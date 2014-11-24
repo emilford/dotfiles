@@ -51,20 +51,6 @@ nnoremap <silent> <leader>kws :let _s=@/<bar>:%s/\s\+$//e<bar>:let @/=_s<bar>:no
 " Close all buffers
 map <leader>bda :bufdo bd<cr>
 
-" Fugitive shortcuts
-nmap <leader>gs  :Gstatus<cr>
-nmap <leader>gd  :Gdiff<cr>
-nmap <leader>gl  :silent Glog!<cr>
-nmap <leader>gll :silent Glog! --<cr>
-nmap <leader>gc  :Gcommit<cr>
-nmap <leader>gm  :Gmove 
-nmap <leader>gr  :Gremove<cr>
-nmap <leader>gR  :Gremove!<cr>
-nmap <leader>gg  :silent Ggrep! 
-map  <leader>go  :Gbrowse<cr>
-map  <leader>gO  :Gbrowse!<cr>
-map  <leader>gb  :Gblame<cr>
-
 " Toggle Gundo window
 nnoremap <leader>gu :GundoToggle<CR>
 
