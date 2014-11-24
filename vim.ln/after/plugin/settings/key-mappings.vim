@@ -63,20 +63,9 @@ map <leader>cn :vs ~/Dropbox/coding-notes.txt<cr>
 " Edit Vim notes
 map <leader>vn :vs ~/Dropbox/vim-notes.txt<cr>
 
-" Search shortcuts via Ag
-map <leader>s :Ag! 
-map <leader>sf :AgFile! 
-map <leader>sh :AgHelp! 
-
 " Run bundle
 map <leader>b :Bundle
 
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
-
-" Search AG for word under curosor
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
-
-" Start AG search
-nnoremap \ :Ag<SPACE>
