@@ -1,5 +1,5 @@
-export PATH="./bin:/usr/local/bin:$PATH:/usr/local/share/npm/bin"
-export CDPATH="~/Code"
+export PATH="./bin:/Users/Eric/Code/Marcom/cli-scripts/bin:/usr/local/bin:$PATH:/usr/local/share/npm/bin"
+export CDPATH="~/Code:~/Code/Marcom"
 
 # Prevent duplicates and common history across sessions
 export HISTCONTROL=ignoredups:erasedups
