@@ -34,3 +34,23 @@ nmap bda :bufdo bd<cr>
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
+
+" Add support for text inside |
+nnoremap di\| T\|d,
+nnoremap da\| F\|d,
+nnoremap ci\| T\|c,
+nnoremap ca\| F\|c,
+nnoremap yi\| T\|y,
+nnoremap ya\| F\|y,
+nnoremap vi\| T\|v,
+nnoremap va\| F\|v,
+
+" Add support for text inside :
+nnoremap di: T:d,
+nnoremap da: F:d,
+nnoremap ci: T:c,
+nnoremap ca: F:c,
+nnoremap yi: T:y,
+nnoremap ya: F:y,
+nnoremap vi: T:v,
+nnoremap va: F:v,
