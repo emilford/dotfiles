@@ -44,7 +44,7 @@ set-window-option -g window-status-current-format '#[fg=yellow]#I - #W#[default]
 #------------------------ Key bindings
 
 # Reload tmux.conf
-bind-key r source-file ~/.tmux.conf
+bind-key r source-file ~/.tmux.conf \; display-message "Configuration reloaded"
 
 # Toggle status line
 bind-key b set-option status
