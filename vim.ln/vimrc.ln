@@ -103,3 +103,6 @@ set colorcolumn=80
 
 " Allow - to be considered part of a word
 set iskeyword+=-
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
