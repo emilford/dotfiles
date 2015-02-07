@@ -69,3 +69,6 @@ bind -n S-Left resize-pane -L 10
 bind -n S-Right resize-pane -R 10
 bind -n S-Down resize-pane -D 5
 bind -n S-Up resize-pane -U 5
+
+# Send current pane to new window
+bind-key b break-pane -d
