@@ -60,8 +60,12 @@ bind-key - split-window -v  -c '#{pane_current_path}'
 bind-key \ split-window -h  -c '#{pane_current_path}'
 bind c new-window -c '#{pane_current_path}'
 
-# Resize panes with arrow keys
-bind-key Right resize-pane -R 8
-bind-key Left resize-pane -L 8
-bind-key Up resize-pane -U 4
-bind-key Down resize-pane -D 4
+# Easy resizing of panes with fine and coarse adjustment
+bind -n Left resize-pane -L 2
+bind -n Right resize-pane -R 2
+bind -n Down resize-pane -D 1
+bind -n Up resize-pane -U 1
+bind -n S-Left resize-pane -L 10
+bind -n S-Right resize-pane -R 10
+bind -n S-Down resize-pane -D 5
+bind -n S-Up resize-pane -U 5
