@@ -1,4 +1,4 @@
-for f in `find ~/.dotfiles -name '*.ln'`; do
+for f in `find ~/Code/dotfiles -name '*.ln'`; do
   filename=$(basename "$f")
 
   if [ ! -e "$HOME/.${filename%.ln}" ]; then
