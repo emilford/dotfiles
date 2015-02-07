@@ -55,9 +55,10 @@ bind-key j select-pane -D
 bind-key k select-pane -U
 bind-key l select-pane -R
 
-# Split panes
-bind-key | split-window -h
-bind-key _ split-window
+# More intuitive pane splitting key-bindings, open all in current path
+bind-key - split-window -v  -c '#{pane_current_path}'
+bind-key \ split-window -h  -c '#{pane_current_path}'
+bind c new-window -c '#{pane_current_path}'
 
 # Resize panes with arrow keys
 bind-key Right resize-pane -R 8
