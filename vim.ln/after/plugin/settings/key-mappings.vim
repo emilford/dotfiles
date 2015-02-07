@@ -54,3 +54,7 @@ nnoremap yi: T:y,
 nnoremap ya: F:y,
 nnoremap vi: T:v,
 nnoremap va: F:v,
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
