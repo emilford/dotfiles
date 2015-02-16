@@ -1,7 +1,0 @@
-name: foresight-app
-root: ~/Development/foresight-app
-socket_path: ~/.tmux.socket
-
-windows:
-  - vim: vim
-  - shell:

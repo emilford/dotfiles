@@ -1,9 +1,0 @@
-name: norecruit
-root: ~/Development/norecruit
-socket_path: ~/.tmux.socket
-
-windows:
-  - vim: vim
-  - specs:
-  - console: rails c
-  - shell:

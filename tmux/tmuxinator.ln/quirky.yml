@@ -1,9 +1,0 @@
-name: quirky
-root: ~/Development/quirky
-socket_path: ~/.tmux.socket
-
-windows:
-  - vim: vim
-  - specs:
-  - console: ./script/console
-  - shell:
