@@ -6,7 +6,18 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-source ~/.vim/bundles.vim
+function! s:SourceConfigFilesIn(directory)
+  let directory_splat = '~/.vim/' . a:directory . '/*'
+  for config_file in split(glob(directory_splat), '\n')
+    if filereadable(config_file)
+      execute 'source' config_file
+    endif
+  endfor
+endfunction
+
+" Load plugins
+call s:SourceConfigFilesIn("rcplugins")
+" source ~/.vim/bundles.vim
 
 call vundle#end()
 

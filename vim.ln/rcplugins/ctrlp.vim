@@ -1,3 +1,5 @@
+Plugin 'kien/ctrlp.vim'
+
 " Show match window at top of the screen
 let g:ctrlp_match_window_bottom = 0
 
