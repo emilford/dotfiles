@@ -10,6 +10,9 @@
   name = Eric Milford
   email = ericmilford@gmail.com
 
+[github]
+  user = emilford
+
 [help]
   autocorrect = 1
 
@@ -21,13 +24,12 @@
 
 [alias]
   ctags = !.git/hooks/ctags
-   pr   = "!f() { git fetch origin pull/$1/head:pr-$1; } ; f"
 
-[github]
-  user = emilford
 [push]
-	default = current
+  default = upstream
+
 [web]
-	browser = open
+  browser = open
+
 [fetch]
-	prune = true
+  prune = true
