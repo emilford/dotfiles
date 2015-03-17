@@ -41,3 +41,6 @@ set iskeyword+=-
 " Move to next/previous row instead of line
 nnoremap j gj
 nnoremap k gk
+
+" Enable backspacing over everything in insert mode
+set backspace=indent,eol,start
