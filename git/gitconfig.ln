@@ -26,7 +26,7 @@
   ctags = !.git/hooks/ctags
 
 [push]
-  default = upstream
+  default = current
 
 [web]
   browser = open
