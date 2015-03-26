@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require File.join(File.dirname(__FILE__), 'deploy')
+require File.join(File.dirname(__FILE__), 'heroku-deployer')
 
 class HerokuEnvironment
   def initialize(subcommands)
