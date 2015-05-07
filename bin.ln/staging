@@ -15,7 +15,7 @@
 
 require File.join(File.dirname(__FILE__), 'heroku-environment')
 
-class Staging < DeploymentEnvironment
+class Staging < HerokuEnvironment
   def initialize(subcommands)
     @environment = 'staging'
     super(subcommands)
