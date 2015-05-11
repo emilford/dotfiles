@@ -1,0 +1,7 @@
+brew cask install --appdir="/Applications" --force iterm2
+
+# Don’t display the annoying prompt when quitting iTerm
+defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+/usr/libexec/PlistBuddy -c "Set :\"New Bookmarks\":0:\"Non Ascii Font\" Monaco 14" ~/Library/Preferences/com.googlecode.iterm2.plist
+/usr/libexec/PlistBuddy -c "Set :\"New Bookmarks\":0:\"Normal Font\" Monaco 14" ~/Library/Preferences/com.googlecode.iterm2.plist
