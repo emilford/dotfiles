@@ -12,3 +12,9 @@ defaults write com.apple.dock autohide -bool true
 
 # Minimize with genie effect
 defaults write com.apple.dock mineffect -string "genie"
+
+# Remove default all application icons
+defaults write com.apple.dock persistent-apps -array
+
+# Remove default non-application icons
+defaults write com.apple.dock persistent-others -array
