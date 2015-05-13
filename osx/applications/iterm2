@@ -1,6 +1,6 @@
 brew cask install --appdir="/Applications" --force iterm2
 
-dockutil --add /Applications/iTerm2.app
+dockutil --add /Applications/iTerm.app --replacing iTerm --position 4
 
 # Don’t display the annoying prompt when quitting iTerm
 defaults write com.googlecode.iterm2 PromptOnQuit -bool false

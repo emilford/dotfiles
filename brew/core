@@ -8,14 +8,16 @@ brew tap homebrew/versions
 
 brew install bash
 brew install bash-completion2
+brew install caskroom/cask/brew-cask
 brew install chruby
-brew install chruby-default-gems
+brew install https://raw.github.com/bronson/chruby-default-gems/master/homebrew/chruby-default-gems.rb --HEAD
 brew install ctags
 brew install git
+brew install heroku-toolbelt
 brew install mysql
-brew install node
 brew install phantomjs
 brew install postgresql
+brew install pow
 brew install reattach-to-user-namespace
 brew install redis
 brew install rename
@@ -24,6 +26,5 @@ brew install the_silver_searcher
 brew install tmux
 brew install tree
 brew install vim
-brew install heroku-toolbelt
 
 brew cleanup

@@ -1,0 +1,5 @@
+# Add pair account alias
+sudo dscl . -append /Users/$USER RecordName pair
+
+# Enable remote login
+sudo launchctl load -w /System/Library/LaunchDaemons/ssh.plist
