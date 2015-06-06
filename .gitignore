@@ -1,4 +1,4 @@
-/vim.ln/bundle/*
+/vim/bundle/*
 /ssh.ln/collective_idea_rsa
 /ssh.ln/collective_idea_rsa.pub
 /ssh.ln/id_rsa
