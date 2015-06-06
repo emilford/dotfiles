@@ -1,3 +1,0 @@
-brew cask install --appdir="/Applications" --force slack
-
-dockutil --add /Applications/Slack.app --replacing Slack --position 5
