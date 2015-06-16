@@ -10,6 +10,7 @@
 /bin/pprof.rb
 /*.pem
 /project-notes.txt
+/project-notes
 /.ruby-version
 /.agignore
 /project-notes

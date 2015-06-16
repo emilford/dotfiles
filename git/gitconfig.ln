@@ -24,6 +24,7 @@
 
 [alias]
   ctags = !.git/hooks/ctags
+	co = checkout
 
 [push]
   default = current
