@@ -1,1 +1,0 @@
-Plugin 'gmarik/Vundle.vim'

@@ -1,1 +1,0 @@
-Plugin 'groenewege/vim-less'
