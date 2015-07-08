@@ -12,3 +12,66 @@ Host ymca
   HostName 63.90.115.65
   User mighty
   ForwardAgent yes
+
+Host *
+	ServerAliveInterval 59
+	ServerAliveCountMax 50
+	TCPKeepAlive yes
+
+Host marcom-netscaler-vip.apple.com
+	ForwardAgent yes
+	User devadmin
+	Port 24481
+
+Host 192.168.3.*
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+
+
+##
+# New Staging Servers
+##
+
+Host marcom-apps-staging-app-04
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.13
+
+Host marcom-apps-staging-app-05
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.12
+
+Host marcom-apps-staging-db
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.16
+
+Host marcom-apps-staging-util
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.10
+
+##
+# Original Staging Servers
+##
+
+Host marcom-apps-staging-app-01
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.11
+
+Host marcom-apps-staging-app-02
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.17
+
+Host marcom-apps-staging-db-01
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.14
+
+Host marcom-apps-staging-nosql-01
+	User emilford
+	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
+	HostName 192.168.3.15

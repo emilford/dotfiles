@@ -5,11 +5,10 @@ require File.join(File.dirname(__FILE__), 'heroku-deployer')
 class HerokuEnvironment
   def initialize(subcommands)
     @subcommands = subcommands
-    @subcommand = @subcommands.first
   end
 
   def run
-    case @subcommand
+    case @subcommands.first
     when nil
       system "heroku run console --remote #{@environment}"
     when 'backup'
@@ -29,6 +28,11 @@ class HerokuEnvironment
       system "heroku apps:info -r #{@environment} | grep -i web  | tr -s ' ' | cut -d ' ' -f 3"
     when 'deploy'
       HerokuDeployer.new(@environment, @subcommands).run
+    when "db-clone"
+      system "heroku pg:backups capture --remote #{@environment}"
+      system "curl -o latest.dump `heroku pg:backups public-url --remote #{@environment}`"
+      system "pg_restore --verbose --clean --no-acl --no-owner -h localhost -d #{@subcommands[1]} latest.dump"
+      system "rm latest.dump"
     else
       system "heroku #{@subcommands.join(' ')} --remote #{@environment}"
     end
