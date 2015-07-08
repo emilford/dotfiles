@@ -14,3 +14,4 @@
 /.ruby-version
 /.agignore
 /project-notes
+/bin/rspec
