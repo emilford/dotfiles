@@ -28,6 +28,11 @@ class HerokuEnvironment
       system "heroku apps:info -r #{@environment} | grep -i web  | tr -s ' ' | cut -d ' ' -f 3"
     when 'deploy'
       HerokuDeployer.new(@environment, @subcommands).run
+
+      system %{
+        heroku run rake db:migrate --remote #{@environment} &&
+        heroku restart --remote #{@environment}
+      }
     when "db-clone"
       system "heroku pg:backups capture --remote #{@environment}"
       system "curl -o latest.dump `heroku pg:backups public-url --remote #{@environment}`"
