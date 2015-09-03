@@ -2,3 +2,6 @@ app/assets/fonts
 app/assets/images
 vendor/bundle
 vendor/gems
+tmp/cache
+uploads
+node_modules
