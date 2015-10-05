@@ -1,8 +1,9 @@
 " Enable syntax highlighting
 syntax enable
 
-" Use vim-hybrid colorscheme
+" Use vim-hybrid dark colorscheme
 colorscheme hybrid
+set background=dark
 
 " Highlight the screen line of the cursor
 set cursorline
