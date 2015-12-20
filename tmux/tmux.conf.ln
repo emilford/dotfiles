@@ -8,11 +8,9 @@ set  -g default-terminal "screen-256color"
 setw -g mode-keys vi
 
 # Enable mouse copy mode and selection
-set  -g mode-mouse on
-
-# Enable mouse select pane/window
-set -g mouse-select-pane on
-set -g mouse-select-window on
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
 
 # Start tmux windows at 1 instead of 0
 set -g base-index 1
