@@ -2,6 +2,7 @@
 syntax enable
 
 " Use vim-hybrid dark colorscheme
+let g:hybrid_use_Xresources = 1
 colorscheme hybrid
 set background=dark
 
@@ -41,3 +42,10 @@ set cpoptions=Bces$
 
 " Briefly jump to matching bracket
 set showmatch
+
+if &term =~ '256color'
+  " disable Background Color Erase (BCE) so that color schemes
+  " render properly when inside 256-color tmux and GNU screen.
+  " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+  set t_ut=
+endif
