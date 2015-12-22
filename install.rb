@@ -51,6 +51,8 @@ def run(command, message = nil)
 end
 
 if __FILE__ == $PROGRAM_NAME
+  require_relative "./bash/install.rb"
+  run("source ~/.bash_profile")
   require_relative "./git/install.rb"
   require_relative "./homebrew/install.rb"
   require_relative "./vim/install.rb"
