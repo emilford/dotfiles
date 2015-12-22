@@ -54,4 +54,5 @@ if __FILE__ == $PROGRAM_NAME
   require_relative "./git/install.rb"
   require_relative "./homebrew/install.rb"
   require_relative "./vim/install.rb"
+  require_relative "./tmux/install.rb"
 end
