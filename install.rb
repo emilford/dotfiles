@@ -50,5 +50,8 @@ def run(command, message = nil)
   end
 end
 
-require_relative "./homebrew/install.rb"
-require_relative "./vim/install.rb"
+if __FILE__ == $PROGRAM_NAME
+  require_relative "./git/install.rb"
+  require_relative "./homebrew/install.rb"
+  require_relative "./vim/install.rb"
+end
