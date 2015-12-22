@@ -21,16 +21,19 @@ def failure(text)
   printf "\033[2K[ \033[0;31m✖\033[0m ] %s\n", text
 end
 
-#def symlink(old_name:, new_name:)
-#  link_from = "#{Dir.pwd}/#{old_name}"
-#  link_to = "#{Dir.home}/#{new_name}"
-#
-#  File.unlink(link_to) if File.symlink?(link_to)
-#  File.symlink(link_from, link_to)
-#
-#  success("Symlink #{link_from} to #{link_to}")
-#end
-#
+def symlink(old, new)
+  old = File.expand_path(old)
+  new = File.expand_path(new)
+
+  if File.symlink?(new)
+    File.unlink(new)
+  end
+
+  File.symlink(old, new)
+
+  success("Symlink #{old} to #{new}")
+end
+
 def run(command, message = nil)
   Open3.capture3(command).tap do |stdout, stderr, status|
     if status.success?
@@ -47,5 +50,5 @@ def run(command, message = nil)
   end
 end
 
-#require_relative "./homebrew/install.rb"
-#require_relative "./vim/install.rb"
+require_relative "./homebrew/install.rb"
+require_relative "./vim/install.rb"

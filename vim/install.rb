@@ -1,17 +1,17 @@
 #!/usr/bin/env ruby
 
+load File.expand_path("../../install.rb", __FILE__)
+
 def main
   header "Vim"
 
-  symlink(old_name: "vim", new_name: ".vim")
-  vim_install_plugins
-end
+  symlink("~/Code/dotfiles/vim", "~/.vim")
+  run("git submodule update --init --recursive")
+  run("vim +PluginInstall +qall", "Vim install plugins")
 
-def vim_install_plugins
-  run(
-    command: "vim +PluginInstall +qall",
-    message: "Vim install plugins"
-  )
+  run("mkdir ~/.config")
+  symlink("~/Code/dotfiles/vim", "~/.config/nvim")
+  symlink("~/Code/dotfiles/vim/vimrc", "~/.config/nvim/init.vim")
 end
 
 main
