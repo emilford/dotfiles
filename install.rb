@@ -56,4 +56,7 @@ if __FILE__ == $PROGRAM_NAME
   require_relative "./vim/install.rb"
   require_relative "./tmux/install.rb"
   require_relative "./ruby/install.rb"
+
+  symlink("~/Code/dotfiles/bin", "~/.bin")
+  symlink("~/Code/dotfiles/ssh", "~/.ssh")
 end
