@@ -50,7 +50,7 @@ def main
   homebrew_install_brew("rename")
   homebrew_install_brew("ruby-install")
   homebrew_install_brew("the_silver_searcher")
-  homebrew_install_brew("tmux")
+  homebrew_install_brew("https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb", "brew install tmux")
   homebrew_install_brew("tree")
   homebrew_install_brew("vim")
   homebrew_install_cask("1password")
@@ -131,7 +131,7 @@ def running(text)
   printf "%-100s", text
 end
 
-def run(command, message = nil)
+def run(command, message = nil, hide_failure = false)
 
   message = message.nil? ? command : message
 
@@ -140,7 +140,7 @@ def run(command, message = nil)
   end
 
   Open3.capture3(command).tap do |stdout, stderr, status|
-    if status.success?
+    if status.success? || hide_failure
       if message
         success
       end
@@ -210,7 +210,7 @@ def homebrew_brew_installed?(brew)
 end
 
 def homebrew_cask_installed?(cask)
-  _stdout, _stderr, status = run("brew cask list #{cask}", false)
+  _stdout, _stderr, status = run("brew cask list #{cask}", false, true)
   status.success?
 end
 
