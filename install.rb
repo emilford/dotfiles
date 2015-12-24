@@ -12,6 +12,7 @@ def main
   symlink("bash_profile")
   symlink("bin")
   symlink("bundle")
+  symlink("config")
   symlink("default-ruby-gems")
   symlink("gemrc")
   symlink("gitconfig")
