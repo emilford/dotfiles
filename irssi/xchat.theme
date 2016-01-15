@@ -462,7 +462,5 @@ formats = {
     notify_list = "           %w-%c-%C- %K| %n#$0: $1 $2 $3";
     notify_list_empty = "           %w-%c-%C- %K| %WNotify: %nThe notify list is empty";
   };
-  "Irssi::Script::adv_windowlist" = {
-    awl_display_header = "$C";
-  };
+  "Irssi::Script::adv_windowlist" = { awl_display_header = "$C"; };
 };

@@ -11,5 +11,5 @@ alias md='mkdir -p'
 alias rmd='rmdir'
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-alias vi='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
-alias vim='NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim'
+alias vi='nvim'
+alias vim='nvim'
