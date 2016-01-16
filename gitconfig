@@ -24,10 +24,106 @@
 
 [alias]
   ctags = !.git/hooks/ctags
-	co = checkout
+
+  # Branch (b)
+	branch-b = branch -v
+	branch-bx = branch -d
+	branch-bX = branch -D
+	branch-bm = branch -m
+	branch-bM = branch -M
+  branch-bu = branch --set-upstream
+
+  # Commit (c)
+  commit-c = commit --verbose
+  commit-cm = commit --message
+  commit-co = checkout
+  commit-cO- = checkout --patch
+  commit-ca = commit --verbose --amend
+  commit-cA- = commit --amend --reuse-message HEAD
+  commit-cp = cherry-pick --ff
+  commit-cP- = cherry-pick --no-commit
+  commit-cr = revert
+  commit-cR- = reset "HEAD^"
+  commit-cs = show
+
+  # Grep (g)
+  grep-g = grep
+  grep-gi = grep --ignore-case
+  grep-gf = grep --files-with-matches
+  grep-gF- = grep --files-without-matches
+  grep-gv = grep --invert-match
+  grep-gr = grep --word-regexp
+
+  # Index (i)
+  index-ia = add
+  index-iA- = add --all
+  index-iap = add --patch
+  index-iau = add --update
+  index-id = diff --no-ext-diff --cached --word-diff
+  index-ir = reset
+  index-iu = reset
+  index-iR- = reset --patch
+  index-ix = rm -r --cached
+  index-iX- = rm -rf --cached
+
+  # Log (l)
+	log-l = log --oneline --decorate --graph
+	log-la = log --oneline --decorate --graph --all
+	log-lc = shortlog --summary --numbered
+  log-lg = log --grep -E -i
+  log-ls = log -S
+
+  # Merge (m)
+  merge-m = merge
+  merge-mC- = merge --no-commit
+  merge-ma = merge --abort
+
+  # Push (p)
+  push-p = push
+  push-pF = push --force
+  push-pu = push --set-upstream
+
+  # Rebase (r)
+	rebase-r = rebase
+	rebase-ra = rebase --abort
+	rebase-rc = rebase --continue
+	rebase-ri = rebase --interactive
+	rebase-rs = rebase --skip
+	rebase-rm = !git rebase $(git merge-base master HEAD)
+	rebase-ru = !git pull --rebase $(git upstream)
+	rebase-rim = !git rebase --interactive $(git merge-base master HEAD)
+  rebase-riu = !git rebase --interactive $(git upstream)
+
+  # Remote (R)
+	remote-R = remote --verbose
+	remote-Ra = remote add
+	remote-Rm = remote mv
+	remote-Rd = remote rm
+
+  # Stash (s)
+  stash-s =  stash
+  stash-sa =  stash apply
+  stash-sc =  stash clear
+  stash-sx =  stash drop
+  stash-sl =  stash list
+  stash-sd =  stash show --patch --stat
+  stash-sp =  stash pop
+  stash-ss =  stash save --include-untracked
+  stash-si =  stash save --include-untracked --keep-index
+  stash-sI- =  stash save --patch --no-keep-index
+
+  # Working Copy (w)
+  working-copy-ws = status
+  working-copy-wd = diff --word-diff
+  working-copy-wr = reset --soft
+  working-copy-wR- = reset --hard
+  working-copy-wc = clean -n
+  working-copy-wC- = clean -f
+  working-copy-wx = rm -r
+  working-copy-wX- = rm -rf
 
 [push]
-  default = current
+  default = upstream
 
 [web]
   browser = open

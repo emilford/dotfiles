@@ -29,7 +29,7 @@ class PullFetcher
 
   def parse_pr_number(number)
     if number.nil?
-      puts "usage: git checkout-pull-request <pull-req-number>"
+      puts "usage: git pull-request-checkout <pull-req-number>"
       exit 1
     else
       number
