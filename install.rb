@@ -17,6 +17,7 @@ def main
   symlink("gemrc")
   symlink("gitconfig")
   symlink("gitignore")
+  symlink("gitmessage")
   symlink("gittemplate")
   symlink("hushlogin")
   symlink("irssi")
