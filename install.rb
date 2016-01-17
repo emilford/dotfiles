@@ -42,6 +42,7 @@ def main
   homebrew_install_brew("chruby")
   homebrew_install_brew("https://raw.github.com/bronson/chruby-default-gems/master/homebrew/chruby-default-gems.rb --HEAD", "brew install chruby-default-gems")
   homebrew_install_brew("ctags")
+  homebrew_install_brew("hub")
   homebrew_install_brew("git")
   homebrew_install_brew("heroku-toolbelt")
   homebrew_install_brew("irssi")

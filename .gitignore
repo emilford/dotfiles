@@ -7,3 +7,4 @@
 bin/phantomjs
 bin/phantomjs-2.0.0
 config/configstore/
+/config/hub
