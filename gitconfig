@@ -133,3 +133,6 @@
 
 [commit]
   template = ~/.gitmessage
+
+[gitsh]
+  noGreeting = true
