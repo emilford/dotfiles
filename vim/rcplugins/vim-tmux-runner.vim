@@ -1,10 +1,10 @@
 Plugin 'christoomey/vim-tmux-runner'
 
 " The orientation used when creating the tmux split pane to use as the runner pane.
-let g:VtrOrientation = "v"
+let g:VtrOrientation = "h"
 
 " The percent of the tmux window the runner pane will occupy.
-let g:VtrPercentage = 25
+let g:VtrPercentage = 30
 
 nnoremap <leader>ra :VtrAttachToPane<cr>
 nnoremap <leader>ro :VtrReorientRunner<cr>
