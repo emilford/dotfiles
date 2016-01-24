@@ -52,6 +52,7 @@
   p = push
   pf = push --force
   plr = pull --rebase
+  pr = pr-open
   pu = push --set-upstream
   r = rebase --verbose
   ra = rebase --abort
