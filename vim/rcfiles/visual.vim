@@ -1,12 +1,9 @@
 " Enable syntax highlighting
 syntax enable
 
-" Use vim-hybrid dark colorscheme if it exists
-if !empty(globpath(&rtp, 'colors/hybrid.vim'))
-  let g:hybrid_use_Xresources = 1
-  colorscheme hybrid
-  set background=dark
-endif
+" source ~/.vim/rcfiles/vim-hybrid.vim
+source ~/.vim/rcfiles/vim-solarized-light.vim
+" source ~/.vim/rcfiles/vim-solarized-dark.vim
 
 " Highlight the screen line of the cursor
 set cursorline
