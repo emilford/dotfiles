@@ -14,7 +14,7 @@ nmap <down>  <c-w>-
 autocmd VimResized * :wincmd =
 
 " Zoom current window
-nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <c-w>[ :wincmd _<cr>:wincmd \|<cr>
 
 " De-zoom current window
-nnoremap <leader>= :wincmd =<cr>
+nnoremap <c-w>] :wincmd =<cr>
