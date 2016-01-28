@@ -44,3 +44,6 @@ nnoremap k gk
 
 " Enable backspacing over everything in insert mode
 set backspace=indent,eol,start
+
+" Do not write netrwhist
+let g:netrw_dirhistmax=0
