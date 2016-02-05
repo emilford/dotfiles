@@ -25,9 +25,11 @@
   aa = add --all
   ap = add --patch
   b = branch
+  bc = branch-create
   bd = branch -d
   bdd = branch -D
   bm = branch -m
+  bp = branch-prune
   bu = branch --set-upstream
   c = commit --verbose
   ca = commit --verbose --amend
