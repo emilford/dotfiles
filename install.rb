@@ -23,6 +23,7 @@ def main
   symlink("irssi")
   symlink("rspec")
   symlink("ruby-version")
+  symlink("psqlrc")
   symlink("ssh")
   symlink("tmux.conf")
   symlink("vim")
