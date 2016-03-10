@@ -53,7 +53,7 @@
   ma = merge --abort
   mc = merge --no-commit
   p = push
-  pf = push --force
+  pf = push --force-with-lease
   plr = pull --rebase
   pr = pr-open
   pu = push --set-upstream
