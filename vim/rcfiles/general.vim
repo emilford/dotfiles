@@ -20,9 +20,6 @@ set shiftwidth=2
 " Remember the last 1000 commands
 set history=1000
 
-" Enable copy/paste between OS X clipboard
-set clipboard=unnamed
-
 " Copy indent from current line when starting a new line
 set autoindent
 
