@@ -1,5 +1,5 @@
 export PATH="./bin:$HOME/.bin:/usr/local/bin:$PATH"
-export CDPATH="~/Code"
+export CDPATH=".:~/Code"
 
 # Prevent duplicates and common history across sessions
 export HISTCONTROL=ignoredups:erasedups
