@@ -1,8 +1,8 @@
 " Enable syntax highlighting
 syntax enable
 
-" source ~/.vim/rcfiles/vim-hybrid.vim
-source ~/.vim/rcfiles/vim-solarized-light.vim
+source ~/.vim/rcfiles/vim-hybrid.vim
+" source ~/.vim/rcfiles/vim-solarized-light.vim
 " source ~/.vim/rcfiles/vim-solarized-dark.vim
 
 " Highlight the screen line of the cursor
