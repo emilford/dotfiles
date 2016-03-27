@@ -1,0 +1,1 @@
+Plugin 'idanarye/vim-merginal'
