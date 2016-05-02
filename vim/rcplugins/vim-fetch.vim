@@ -1,0 +1,1 @@
+Plugin 'kopischke/vim-fetch'
