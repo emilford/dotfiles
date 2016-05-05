@@ -7,14 +7,11 @@ let g:VtrOrientation = "h"
 let g:VtrPercentage = 30
 
 nnoremap <leader>ra :VtrAttachToPane<cr>
-nnoremap <leader>ro :VtrReorientRunner<cr>
+nnoremap <leader>rO :VtrReorientRunner<cr>
 nnoremap <leader>rc :VtrSendCommandToRunner<cr>
 nnoremap <leader>rl :VtrSendLinesToRunner<cr>
-vnoremap <leader>rl :VtrSendLinesToRunner<cr>
-nnoremap <leader>rO :VtrOpenRunner<cr>
+nnoremap <leader>ro :VtrOpenRunner<cr>
 nnoremap <leader>rk :VtrKillRunner<cr>
-nnoremap <leader>rz :VtrFocusRunner<cr>
+nnoremap <leader>rf :VtrFocusRunner<cr>
 nnoremap <leader>rd :VtrDetachRunner<cr>
 nnoremap <leader>rC :VtrClearRunner<cr>
-nnoremap <leader>rF :VtrFlushCommand<cr>
-nnoremap <leader>rf :VtrSendFile<cr>
