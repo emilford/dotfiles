@@ -1,1 +1,1 @@
-Plugin 'christoomey/vim-rfactory'
+Plug 'christoomey/vim-rfactory'

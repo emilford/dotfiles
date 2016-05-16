@@ -1,1 +1,1 @@
-Plugin 'gmarik/Vundle.vim'
+Plug 'gmarik/Vundle.vim'

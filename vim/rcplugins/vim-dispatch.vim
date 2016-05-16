@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-dispatch'
+Plug 'tpope/vim-dispatch'

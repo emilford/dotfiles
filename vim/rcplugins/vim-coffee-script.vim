@@ -1,1 +1,1 @@
-Plugin 'kchmck/vim-coffee-script'
+Plug 'kchmck/vim-coffee-script'

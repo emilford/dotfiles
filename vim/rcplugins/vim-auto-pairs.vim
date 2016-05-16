@@ -1,1 +1,1 @@
-Plugin 'jiangmiao/auto-pairs'
+Plug 'jiangmiao/auto-pairs'

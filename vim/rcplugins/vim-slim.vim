@@ -1,1 +1,1 @@
-Plugin 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim'

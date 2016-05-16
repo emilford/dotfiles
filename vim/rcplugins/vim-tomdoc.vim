@@ -1,1 +1,1 @@
-Plugin 'jc00ke/vim-tomdoc'
+Plug 'jc00ke/vim-tomdoc'

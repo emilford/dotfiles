@@ -1,1 +1,1 @@
-Plugin 'christoomey/vim-system-copy'
+Plug 'christoomey/vim-system-copy'

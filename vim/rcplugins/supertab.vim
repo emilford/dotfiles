@@ -1,1 +1,1 @@
-Plugin 'ervandew/supertab'
+Plug 'ervandew/supertab'

@@ -1,1 +1,1 @@
-Plugin 'tommcdo/vim-exchange'
+Plug 'tommcdo/vim-exchange'

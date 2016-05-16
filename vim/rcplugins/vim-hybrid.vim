@@ -1,1 +1,1 @@
-Plugin 'w0ng/vim-hybrid'
+Plug 'w0ng/vim-hybrid'

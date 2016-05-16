@@ -2,11 +2,6 @@ let mapleader=","
 
 set nocompatible
 
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=/usr/local/opt/fzf
-call vundle#begin()
-
 function! s:SourceConfigFilesIn(directory)
   let directory_splat = '~/.vim/' . a:directory . '/*'
   for config_file in split(glob(directory_splat), '\n')
@@ -16,10 +11,9 @@ function! s:SourceConfigFilesIn(directory)
   endfor
 endfunction
 
-" Load plugins
+call plug#begin('~/.vim/plugged')
 call s:SourceConfigFilesIn("rcplugins")
-
-call vundle#end()
+call plug#end()
 
 " Enable file type detection and language-specific indent files
 filetype plugin indent on

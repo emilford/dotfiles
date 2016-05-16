@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-cucumber'
+Plug 'tpope/vim-cucumber'

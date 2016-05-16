@@ -1,4 +1,4 @@
-Plugin 'janko-m/vim-test'
+Plug 'janko-m/vim-test'
 
 let test#strategy = "vtr"
 let test#ruby#bundle_exec = 0

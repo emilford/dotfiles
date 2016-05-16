@@ -1,4 +1,4 @@
-Plugin 'vim-scripts/ReplaceWithRegister'
+Plug 'vim-scripts/ReplaceWithRegister'
 
 " Copy from system clipboard
 nmap <leader>gr "*gr

@@ -1,3 +1,3 @@
-Plugin 'rking/ag.vim'
+Plug 'rking/ag.vim'
 
 set grepprg=ag\ --nogroup\ --nocolor

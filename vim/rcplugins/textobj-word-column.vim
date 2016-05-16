@@ -1,1 +1,1 @@
-Plugin 'coderifous/textobj-word-column.vim'
+Plug 'coderifous/textobj-word-column.vim'

@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-speeddating'
+Plug 'tpope/vim-speeddating'

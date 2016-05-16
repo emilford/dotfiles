@@ -1,4 +1,4 @@
-Plugin 'tpope/vim-rails'
+Plug 'tpope/vim-rails'
 
 let g:rails_projections = {
 \ "app/constraints/*_constraint.rb": {

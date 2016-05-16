@@ -1,4 +1,4 @@
-Plugin 'mtth/scratch.vim'
+Plug 'mtth/scratch.vim'
 
 " Open scratch window in a vertical split
 let g:scratch_horizontal = 1

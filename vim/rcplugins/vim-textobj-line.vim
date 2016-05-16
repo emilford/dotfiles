@@ -1,1 +1,1 @@
-Plugin 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-line'

@@ -1,1 +1,1 @@
-Plugin 'frankier/neovim-colors-solarized-truecolor-only'
+Plug 'frankier/neovim-colors-solarized-truecolor-only'

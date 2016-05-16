@@ -1,1 +1,1 @@
-Plugin 'christoomey/vim-sort-motion'
+Plug 'christoomey/vim-sort-motion'

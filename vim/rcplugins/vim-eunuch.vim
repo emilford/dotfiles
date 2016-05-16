@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-eunuch'
+Plug 'tpope/vim-eunuch'

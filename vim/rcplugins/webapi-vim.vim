@@ -1,1 +1,1 @@
-Plugin 'mattn/webapi-vim'
+Plug 'mattn/webapi-vim'

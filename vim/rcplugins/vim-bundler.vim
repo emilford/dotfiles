@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-bundler'
+Plug 'tpope/vim-bundler'

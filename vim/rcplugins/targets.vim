@@ -1,1 +1,1 @@
-Plugin 'wellle/targets.vim'
+Plug 'wellle/targets.vim'

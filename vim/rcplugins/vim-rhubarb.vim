@@ -1,1 +1,1 @@
-Plugin 'tpope/vim-rhubarb'
+Plug 'tpope/vim-rhubarb'

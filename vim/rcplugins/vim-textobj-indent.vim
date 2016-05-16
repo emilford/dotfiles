@@ -1,1 +1,1 @@
-Plugin 'kana/vim-textobj-indent'
+Plug 'kana/vim-textobj-indent'

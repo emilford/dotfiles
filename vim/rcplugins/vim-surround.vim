@@ -1,4 +1,4 @@
-Plugin 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 
 " Wrap as string interpolation
 let g:surround_35  = "#{\r}"

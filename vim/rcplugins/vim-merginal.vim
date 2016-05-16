@@ -1,1 +1,1 @@
-Plugin 'idanarye/vim-merginal'
+Plug 'idanarye/vim-merginal'

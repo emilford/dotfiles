@@ -1,1 +1,1 @@
-Plugin 'kana/vim-textobj-user.git'
+Plug 'kana/vim-textobj-user'

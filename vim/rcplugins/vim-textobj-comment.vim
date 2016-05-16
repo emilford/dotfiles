@@ -1,1 +1,1 @@
-Plugin 'glts/vim-textobj-comment'
+Plug 'glts/vim-textobj-comment'

@@ -1,4 +1,4 @@
-Plugin 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " Normalize whitespace
 let g:splitjoin_normalize_whitespace = 0

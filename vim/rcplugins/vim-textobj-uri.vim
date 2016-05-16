@@ -1,1 +1,1 @@
-Plugin 'jceb/vim-textobj-uri'
+Plug 'jceb/vim-textobj-uri'

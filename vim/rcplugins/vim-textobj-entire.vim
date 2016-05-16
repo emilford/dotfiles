@@ -1,1 +1,1 @@
-Plugin 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-entire'

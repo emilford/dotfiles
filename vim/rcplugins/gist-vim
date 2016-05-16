@@ -1,4 +1,4 @@
-Plugin 'mattn/gist-vim'
+Plug 'mattn/gist-vim'
 
 " Copy gist URL to clipboard
 let g:gist_clip_command = 'pbcopy'

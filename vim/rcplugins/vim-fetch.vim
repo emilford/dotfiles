@@ -1,1 +1,1 @@
-Plugin 'kopischke/vim-fetch'
+Plug 'kopischke/vim-fetch'
