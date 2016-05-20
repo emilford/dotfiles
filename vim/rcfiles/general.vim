@@ -44,3 +44,5 @@ set backspace=indent,eol,start
 
 " Do not write netrwhist
 let g:netrw_dirhistmax=0
+
+set shortmess+=I                " Do not show startup message on launch
