@@ -15,8 +15,107 @@ call plug#begin('~/.vim/plugged')
 call s:SourceConfigFilesIn("rcplugins")
 call plug#end()
 
-" Enable file type detection and language-specific indent files
-filetype plugin indent on
+filetype plugin indent on     " enable filetype detection
 
-" Load configuration
-call s:SourceConfigFilesIn("rcfiles")
+syntax enable                 " enable syntax highlighting
+
+set autoindent                " copy indent from current line when starting a new line
+set backspace+=eol            " allow backspacing over line breaks (join lines)
+set backspace+=indent         " allow backspacing over autoindent
+set backspace+=start          " allow backspacing over the start of insert; CTRL-W and CTRL-U
+set colorcolumn=81            " higlight the 81st column
+set cpoptions+=$              " when making a change to a line, put a $'$' at the of the changed text
+set cursorline                " highlight the screen line of the cursor
+set expandtab                 " expand tabs to spaces
+set hidden                    " allow buffers to be hidden
+set history=1000              " number of history items to remember
+set hlsearch                  " highlight search pattern matches
+set ignorecase                " ignore case"
+set incsearch                 " highlight search pattern matches as they're found
+set iskeyword+=-              " allow - to be considered part of a word
+set laststatus=1              " only show status if there are at least 2 windows
+set list                      " enable list mode
+set listchars+=extends:>      " mark last column when line continues beyond visible text
+set listchars+=precedes:<     " mark first column when line continues before visible text
+set listchars+=tab:\ \        " mark tabs
+set listchars+=trail:·        " mark trailing spaces
+set matchtime=2               " amount of time to show the matching parent when 'showmatch' is set
+set nobackup                  " do not make a backup before overwriting a file
+set nojoinspaces              " add single space after '.', '?', and '!' with a join command
+set noswapfile                " do not make a swapfile
+set nowrap                    " default to no line wrapping
+set nowritebackup             " do not make a backup before writing a file
+set ruler                     " show line and column number of the cursor position
+set scrolloff=3               " minimum number of screen lines to keep above/below the cursor"
+set shiftwidth=2              " set indent to 2 spaces
+set shortmess+=I              " do not show startup message on launch
+set showmatch                 " when a bracket is inserted, briefly jump to the matching one
+set smartcase                 " ignore case when the pattern contains lowercase only"
+set softtabstop=2             " set <tab> to 2 spaces while in insert mode
+set splitbelow                " open new horizontal split below current window
+set splitright                " open new vertical split right of the current window
+set switchbuf=useopen         " jump to existing buffer when available
+set tabstop=2                 " set <tab> to two spaces
+set textwidth=80              " maximum width of text that is being inserted
+set wildmenu                  " enable command-completion window
+set wildmode=list:longest     " list all matches and complete til longest common match
+
+
+autocmd! BufWritePost ~/.vimrc  source ~/.vimrc       " source .vimrc on save
+autocmd! VimResized * :wincmd =                       " automatically rebalance windows on vim resize
+" autocmd! BufReadPost Quickfix nnoremap <buffer> <CR> <CR>
+
+nnoremap j gj
+nnoremap k gk
+
+
+" Clear the search buffer when hitting return except in quickfix window
+" nnoremap <CR> :noh<CR>
+
+" Show command information in status line
+" set showcmd
+" Use vim-hybrid dark colorscheme if it exists
+" if !empty(globpath(&rtp, 'colors/hybrid.vim'))
+let g:hybrid_use_Xresources = 1
+colorscheme hybrid
+set background=dark
+" endif
+
+" source ~/.vim/rcfiles/vim-hybrid.vim
+" source ~/.vim/rcfiles/vim-solarized-light.vim
+" source ~/.vim/rcfiles/vim-solarized-dark.vim
+
+" Only highlight the screen line of the active buffer
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  au WinLeave * setlocal nocursorline
+augroup END
+
+" if &term =~ '256color'
+"   " disable Background Color Erase (BCE) so that color schemes
+"   " render properly when inside 256-color tmux and GNU screen.
+"   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+"   set t_ut=
+" endif
+
+" " Window navigation shortcuts
+" nmap <c-j> <c-w><c-j>
+" nmap <c-k> <c-w><c-k>
+" nmap <c-h> <c-w><c-h>
+" nmap <c-l> <c-w><c-l>
+
+" Map arrow keys to window resize
+nmap <left>  <c-w><
+nmap <right> <c-w>>
+nmap <up>    <c-w>+
+nmap <down>  <c-w>-
+
+nmap bda :bufdo bd<cr>        " close all buffers
+
+" zoom/unzoom window
+nnoremap <c-w>[ :wincmd _<cr><bar>:wincmd \|<cr> 
+nnoremap <c-w>] :wincmd =<cr>
+
+" Do not write netrwhist
+let g:netrw_dirhistmax=0
