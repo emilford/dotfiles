@@ -1,0 +1,19 @@
+priority -50
+
+snippet tag "<tag>" w
+<$1>
+	$0
+</$1>
+endsnippet
+
+snippet tag. "<tag> with class" w
+<$1`!p snip.rv=' class="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""`>
+	$0
+</$1>
+endsnippet
+
+snippet tag# "<tag> with ID & class" w
+<$1`!p snip.rv=' id="' if t[2] else ""`${2:name}`!p snip.rv = '"' if t[2] else ""``!p snip.rv=' class="' if t[3] else ""`${3:name}`!p snip.rv = '"' if t[3] else ""`>
+	$0
+</$1>
+endsnippet

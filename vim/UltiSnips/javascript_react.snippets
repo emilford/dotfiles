@@ -1,0 +1,72 @@
+priority -50
+
+extends javascript
+
+snippet gdp "get default props" b
+getDefaultProps: function() {
+	return {
+		${1}
+	};
+},$0
+endsnippet
+
+snippet gis "get initial state" b
+getInitialState: function() {
+	return {
+		${1}: ${2}
+	};
+},$0
+endsnippet
+
+snippet ism "is mounted"
+isMounted()
+endsnippet
+
+snippet jsx "define jsx dom" b
+var React = require("react");
+
+var ${1:ClassName} = React.createClass({
+
+render: function() {
+	return (
+		${VISUAL}$2
+	);
+}
+
+});
+$0
+${3:module.exports = $1;}
+endsnippet
+
+snippet pt "propTypes" b
+propTypes: {
+	${1}: React.PropTypes.${2:string}
+},
+endsnippet
+
+snippet rcc "create class/component" b
+var ${1:ClassName} = React.createClass({
+
+render: function() {
+	return (
+		${VISUAL}$2
+	);
+}
+
+});
+$0
+endsnippet
+
+snippet ren
+render: function() {
+	return (
+		${1:<div />}
+	);
+}$0
+endsnippet
+
+snippet sst "set state" b
+this.setState({
+	${1}: ${2}
+});$0
+endsnippet

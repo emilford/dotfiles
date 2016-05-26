@@ -1,0 +1,29 @@
+priority -50
+
+snippet class "class" do
+class $1
+	$0
+end
+endsnippet
+
+snippet module "module" do
+module $1
+	$0
+end
+endsnippet
+
+snippet interactor "interactor" do
+class $1
+	include Interactor
+
+	def call
+		$0
+	end
+end
+endsnippet
+
+snippet "\b(de)?f" "def <name>..." r
+def ${1:function_name}${2:(${3:*args})}
+	$0
+end
+endsnippet

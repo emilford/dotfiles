@@ -1,0 +1,32 @@
+snippet controller "create controller class"
+class ${1:Model}Controller < ApplicationController
+	$0
+end
+endsnippet
+
+snippet ba "before_action" do
+before_action ${1:method}${2:, only: ${3:actions}}
+endsnippet
+
+snippet model "create model class"
+class ${1:Model} < ActiveRecord::Base
+	$0
+end
+endsnippet
+
+# Associations
+snippet bt "belongs_to"
+belongs_to :${1:object}${2:, :class_name => "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", :foreign_key => "${4:${1}_id}"}
+endsnippet
+
+snippet habtm "has_and_belongs_to_many"
+has_and_belongs_to_many :${1:object}${2:, :join_table => "${3:table_name}", :foreign_key => "${4:${1}_id}"}
+endsnippet
+
+snippet hm "has_many"
+has_many :${1:objects}${2:, :class_name => "${1}", :foreign_key => "${4:reference}_id"}
+endsnippet
+
+snippet ho "has_one"
+has_one :${1:object}${2:, :class_name => "${3:${1/[[:alpha:]]+|(_)/(?1::\u$0)/g}}", :foreign_key => "${4:${1}_id}"}
+endsnippet
