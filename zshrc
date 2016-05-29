@@ -1,6 +1,7 @@
 source <(antibody init)
 
-autoload -U compinit && compinit                                   # initialize autocomplete
+autoload -U compinit
+compinit
 
 for file in $HOME/Code/dotfiles/zsh/rcplugins/*.zsh; do            # load plugins
   source $file
@@ -14,13 +15,14 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 source /usr/local/share/chruby-default-gems.sh
 
+unsetopt ignoreeof # do not require logout to close shell, ^D is fine
 setopt auto_cd
 cdpath=(. $HOME/Code)
 # export CDPATH=".:~/Code"
 export EDITOR="nvim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export NVIM_TUI_ENABLE_TRUE_COLOR="1"
-export PATH="./bin:$HOME/.bin:/usr/local/bin:$PATH"
+# export PATH="./bin:$HOME/.bin:/usr/local/bin:$PATH"
 eval "$(hub alias -s)"
 
 if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
