@@ -27,6 +27,7 @@ def main
   symlink("ssh")
   symlink("tmux.conf")
   symlink("vim")
+  symlink("zshrc")
 
 
   header("homebrew")
@@ -38,6 +39,8 @@ def main
   run("brew tap neovim/neovim")
   run("brew tap caskroom/versions")
   run("brew tap thoughtbot/formulae")
+  run("brew tap getantibody/homebrew-antibody")
+  homebrew_install_brew("antibody")
   homebrew_install_brew("bash")
   homebrew_install_brew("bash-completion2")
   homebrew_install_brew("caskroom/cask/brew-cask")
