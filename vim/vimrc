@@ -19,7 +19,10 @@ filetype plugin indent on     " enable filetype detection
 
 syntax enable                 " enable syntax highlighting
 
+colorscheme hybrid
+
 set autoindent                " copy indent from current line when starting a new line
+set background=dark           " use colors that look good on a dark background
 set backspace+=eol            " allow backspacing over line breaks (join lines)
 set backspace+=indent         " allow backspacing over autoindent
 set backspace+=start          " allow backspacing over the start of insert; CTRL-W and CTRL-U
@@ -75,16 +78,6 @@ nnoremap k gk
 
 " Show command information in status line
 " set showcmd
-" Use vim-hybrid dark colorscheme if it exists
-" if !empty(globpath(&rtp, 'colors/hybrid.vim'))
-let g:hybrid_use_Xresources = 1
-colorscheme hybrid
-set background=dark
-" endif
-
-" source ~/.vim/rcfiles/vim-hybrid.vim
-" source ~/.vim/rcfiles/vim-solarized-light.vim
-" source ~/.vim/rcfiles/vim-solarized-dark.vim
 
 " Only highlight the screen line of the active buffer
 augroup CursorLine
