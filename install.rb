@@ -60,7 +60,7 @@ def main
   homebrew_install_brew("rename")
   homebrew_install_brew("ruby-install")
   homebrew_install_brew("the_silver_searcher")
-  homebrew_install_brew("https://raw.githubusercontent.com/choppsv1/homebrew-term24/master/tmux.rb", "brew install tmux")
+  homebrew_install_brew("tmux")
   homebrew_install_brew("tree")
   homebrew_install_brew("vim")
   homebrew_install_cask("1password")
