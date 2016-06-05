@@ -67,17 +67,9 @@ set wildmode=list:longest     " list all matches and complete til longest common
 
 autocmd! BufWritePost ~/.vimrc  source ~/.vimrc       " source .vimrc on save
 autocmd! VimResized * :wincmd =                       " automatically rebalance windows on vim resize
-" autocmd! BufReadPost Quickfix nnoremap <buffer> <CR> <CR>
 
 nnoremap j gj
 nnoremap k gk
-
-
-" Clear the search buffer when hitting return except in quickfix window
-" nnoremap <CR> :noh<CR>
-
-" Show command information in status line
-" set showcmd
 
 " Only highlight the screen line of the active buffer
 augroup CursorLine
@@ -85,19 +77,6 @@ augroup CursorLine
   au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   au WinLeave * setlocal nocursorline
 augroup END
-
-" if &term =~ '256color'
-"   " disable Background Color Erase (BCE) so that color schemes
-"   " render properly when inside 256-color tmux and GNU screen.
-"   " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-"   set t_ut=
-" endif
-
-" " Window navigation shortcuts
-" nmap <c-j> <c-w><c-j>
-" nmap <c-k> <c-w><c-k>
-" nmap <c-h> <c-w><c-h>
-" nmap <c-l> <c-w><c-l>
 
 " Map arrow keys to window resize
 nmap <left>  <c-w><
