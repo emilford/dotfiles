@@ -9,5 +9,3 @@ export PROMPT_COMMAND="history -n; history -w; history -c; history -r; $PROMPT_C
 export GIT_PS1_SHOWDIRTYSTATE=Y
 
 export EDITOR="nvim"
-
-export NVIM_TUI_ENABLE_TRUE_COLOR="1"

@@ -23,7 +23,6 @@ cdpath=(. $HOME/Code)
 # export CDPATH=".:~/Code"
 export EDITOR="nvim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-export NVIM_TUI_ENABLE_TRUE_COLOR="1"
 # export PATH="./bin:$HOME/.bin:/usr/local/bin:$PATH"
 eval "$(hub alias -s)"
 

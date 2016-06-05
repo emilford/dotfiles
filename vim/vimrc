@@ -56,6 +56,7 @@ set splitbelow                " open new horizontal split below current window
 set splitright                " open new vertical split right of the current window
 set switchbuf=useopen         " jump to existing buffer when available
 set tabstop=2                 " set <tab> to two spaces
+set termguicolors             " enable nvim 24-bit TrueColor
 set textwidth=80              " maximum width of text that is being inserted
 set wildmenu                  " enable command-completion window
 set wildmode=list:longest     " list all matches and complete til longest common match
