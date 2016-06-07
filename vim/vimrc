@@ -55,8 +55,6 @@ set shortmess+=I              " do not show startup message on launch
 set showmatch                 " when a bracket is inserted, briefly jump to the matching one
 set smartcase                 " ignore case when the pattern contains lowercase only"
 set softtabstop=2             " set <tab> to 2 spaces while in insert mode
-set splitbelow                " open new horizontal split below current window
-set splitright                " open new vertical split right of the current window
 set switchbuf=useopen         " jump to existing buffer when available
 set tabstop=2                 " set <tab> to two spaces
 set termguicolors             " enable nvim 24-bit TrueColor
