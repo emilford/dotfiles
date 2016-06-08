@@ -84,6 +84,9 @@ nmap <down>  <c-w>-
 
 nmap bda :bufdo bd<cr>        " close all buffers
 
+" re-select the last pasted text
+nnoremap gV V`]
+
 " zoom/unzoom window
 nnoremap <c-w>[ :wincmd _<cr><bar>:wincmd \|<cr> 
 nnoremap <c-w>] :wincmd =<cr>
