@@ -8,3 +8,4 @@
 bin/phantomjs*
 config/configstore/
 /config/hub
+/vim/autoload/plug.vim*
