@@ -25,12 +25,6 @@ setopt complete_aliases
 precmd () {print -Pn "\e]2; %~/ \a"}
 preexec () {print -Pn "\e]2; %~/ \a"}
 
-# Auto ls when cding into a directory
-function chpwd() {
-    emulate -LR zsh
-    ls
-}
-
 # set the editor du jour.
 # export VISUAL='/usr/local/bin/vim'
 # export EDITOR="$VISUAL"
