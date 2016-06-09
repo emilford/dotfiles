@@ -1,7 +1,0 @@
-brew() {
-    if [[ $@ == "latest" ]]; then
-        command brew update && brew upgrade && brew cleanup
-    else
-        command brew "$@"
-    fi
-}
