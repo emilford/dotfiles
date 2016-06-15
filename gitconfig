@@ -87,3 +87,5 @@
 
 [gitsh]
   noGreeting = true
+[diff]
+	compactionHeuristic = true
