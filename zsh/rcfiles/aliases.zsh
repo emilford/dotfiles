@@ -1,13 +1,25 @@
-# alias dotedit='cd $DOTFILES && e'
+alias b='bundle'
+alias be='bundle exec'
+alias bc='bundle check'
+alias bi='bundle install'
+alias bl='bundle list'
+alias bu='bundle update'
+alias bp='bundle package'
 
-# alias notes='cd $NOTES && e'
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
-# alias curl='noglob curl'
+function tn () {
+  $(ssh-agent tmux -S ~/.tmux.socket new -s ${1-${PWD##*/}})
+}
 
-# alias reload!='. ~/.zshrc'
+function ta () {
+  $(tmux -S ~/.tmux.socket attach -t ${1-${PWD##*/}})
+}
 
-# alias -g poop=pop # All of a sudden, everything is hilarious
+function tk () {
+  $(tmux -S ~/.tmux.socket kill-session -t ${1-${PWD##*/}})
+}
 
-# alias -g 0a=-a # fucking seriously
-
-# alias :q='logout'
+function ts () {
+  $(tmux -S ~/.tmux.socket switch -t ${1-${PWD##*/}})
+}
