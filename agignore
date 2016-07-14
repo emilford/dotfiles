@@ -3,4 +3,5 @@
 tmp/
 node_modules/
 uploads/
+/bundle/cache
 .git/
