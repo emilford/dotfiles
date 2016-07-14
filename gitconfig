@@ -37,6 +37,7 @@
   ci-status = !hub ci-status
   cm = commit --message
   co = checkout
+  conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   cp = cherry-pick --ff
   ctags = !.git/hooks/ctags
   d = diff --word-diff
