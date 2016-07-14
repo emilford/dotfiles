@@ -8,6 +8,9 @@ alias bp='bundle package'
 
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
 
+alias tl='tmux -S ~/.tmux.socket list-sessions'
+alias td='tmux -S ~/.tmux.socket detach'
+
 function tn () {
   $(ssh-agent tmux -S ~/.tmux.socket new -s ${1-${PWD##*/}})
 }

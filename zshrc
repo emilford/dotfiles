@@ -17,6 +17,9 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 source /usr/local/share/chruby-default-gems.sh
 
+unsetopt correct
+setopt nocorrectall
+
 unsetopt ignoreeof # do not require logout to close shell, ^D is fine
 setopt auto_cd
 cdpath=(. $HOME/Code)
@@ -32,16 +35,20 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 
   if [[ "${#session_names[@]}" -eq 1 ]]
   then
-    exec tmux -S ~/.tmux.socket attach -t ${session_names[0]}
+    exec tmux -S ~/.tmux.socket attach -t ${session_names[1]}
   else
-    for i in "${!session_names[@]}"; do
-      printf "[%s] %s  " "$((i+1))" "${session_names[$i]}"
+    for (( i = 1; i <= $#session_names; i++ )) do
+      printf "[%s] %s  " "${i}" "${session_names[$i]}"
     done
+    # for i in $session_names; do
+    #   # printf "[%s] %s  " "$((i+1))" "${session_names[$i]}"
+    #   printf "[%s] %s" "f" "${i}"
+    # done
 
     printf "\nEnter the number of the tmux session to join: "
 
     read session
 
-    exec tmux -S ~/.tmux.socket attach -t ${session_names[$((session-1))]}
+    exec tmux -S ~/.tmux.socket attach -t ${session_names[$((session))]}
   fi
 fi
