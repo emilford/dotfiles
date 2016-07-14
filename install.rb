@@ -40,6 +40,7 @@ def main
   run("brew tap caskroom/versions")
   run("brew tap thoughtbot/formulae")
   run("brew tap getantibody/homebrew-antibody")
+  run("brew tap homebrew/services")
   homebrew_install_brew("antibody")
   homebrew_install_brew("bash")
   homebrew_install_brew("bash-completion2")
