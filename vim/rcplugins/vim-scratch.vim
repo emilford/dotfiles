@@ -4,7 +4,7 @@ Plug 'mtth/scratch.vim'
 let g:scratch_horizontal = 1
 
 " Width of split
-let g:scratch_height = 20
+let g:scratch_height = 40
 
 " Persist scratch window
 let g:scratch_persistence_file = 'project-notes.txt'
