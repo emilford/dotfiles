@@ -91,5 +91,9 @@ nnoremap gV V`]
 nnoremap <c-w>[ :wincmd _<cr><bar>:wincmd \|<cr> 
 nnoremap <c-w>] :wincmd =<cr>
 
+" Clear the search buffer when hitting return except in quickfix window
+nnoremap <CR> :noh<CR>
+autocmd BufReadPost Quickfix nnoremap <buffer> <CR> <CR>
+
 " Do not write netrwhist
 let g:netrw_dirhistmax=0
