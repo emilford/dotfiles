@@ -19,7 +19,7 @@ filetype plugin indent on     " enable filetype detection
 
 syntax enable                 " enable syntax highlighting
 
-colorscheme hybrid
+colorscheme solarized8_dark
 
 set autoindent                " copy indent from current line when starting a new line
 set background=dark           " use colors that look good on a dark background
