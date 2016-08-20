@@ -41,6 +41,7 @@ def main
   run("brew tap thoughtbot/formulae")
   run("brew tap getantibody/homebrew-antibody")
   run("brew tap homebrew/services")
+  run("brew tap caskroom/fonts")
   homebrew_install_brew("antibody")
   homebrew_install_brew("bash")
   homebrew_install_brew("bash-completion2")
