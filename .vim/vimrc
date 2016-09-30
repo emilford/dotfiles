@@ -10,6 +10,8 @@ filetype plugin indent on     " load plugin and indent files for specific file t
 
 syntax enable                 " enable syntax highlighting and do not overrule custom settings
 
+colorscheme hybrid_material
+
 set autoindent                " copy indent from current line when starting a new line
 set background=dark           " use colors that look good on a dark background
 set backspace+=eol            " allow backspacing over line breaks (join lines)
