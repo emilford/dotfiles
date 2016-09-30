@@ -27,6 +27,10 @@ Host 192.168.3.*
 	User emilford
 	ProxyCommand ssh devadmin@marcom-netscaler-vip.apple.com nc -w 120 %h %p
 
+Host criterion-one-staging
+  HostName stgp-onewcweb01.corp.criterionadvisory.com
+  User "corp\emilford"
+  ForwardAgent yes
 
 ##
 # New Staging Servers
