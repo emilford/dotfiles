@@ -1,5 +1,0 @@
-if ! sudo grep -q "/usr/local/bin/bash" "/etc/shells"; then
-    sudo bash -c "echo /usr/local/bin/bash >> /etc/shells"
-fi
-
-chsh -s /usr/local/bin/bash

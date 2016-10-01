@@ -1,9 +1,0 @@
-# Install the hybrid for iTerm
-open hybrid.itermcolors
-
-# Install solarized colors for iTerm
-open Solarized\ Dark.itermcolors
-open Solarized\ Light.itermcolors
-
-# Don’t display the annoying prompt when quitting iTerm
-defaults write com.googlecode.iterm2 PromptOnQuit -bool false

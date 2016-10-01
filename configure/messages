@@ -1,2 +1,0 @@
-# Disable sounds
-defaults write com.apple.messageshelper.AlertsController PlaySoundsKey -bool false
