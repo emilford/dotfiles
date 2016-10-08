@@ -63,3 +63,6 @@ augroup CursorLine                                              " only highlight
 augroup END
 
 autocmd! VimResized * :wincmd =                                 " automatically rebalance windows on vim resize
+
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
