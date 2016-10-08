@@ -21,6 +21,7 @@ set colorcolumn=81            " higlight the 81st screen column
 set cpoptions+=$              " when making a change to one line, put a $ at the end of the changed text
 set cursorline                " highlight the screen line of the cursor
 set expandtab                 " use the appropriate number of spaces to insert a <Tab>
+set hidden                    " hide buffer when it is abandoned
 set hlsearch                  " when there is a previous search pattern, highlight all its matches
 set incsearch                 " when typing a search command, highlight matches as it was typed so far
 set laststatus=1              " only show status if there are at least two windows
