@@ -1,7 +1,7 @@
 let mapleader=","
 
 call plug#begin()
-for file in split(glob('$HOME/.vim/plugs/*'), '\n')
+for file in split(glob('$HOME/.vim/plugins/*'), '\n')
   execute 'source' file
 endfor
 call plug#end()
