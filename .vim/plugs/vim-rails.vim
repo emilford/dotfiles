@@ -43,9 +43,12 @@ let g:rails_projections = {
 \     "spec/serializers/%s_serializer_spec.rb"
 \   ]
 \ },
+\ "app/views/pages/*.html.erb": {
+\     "command": "page"
+\  },
 \ "config/routes.rb": {"command": "routes"},
 \ "spec/features/*_spec.rb": {"command": "feature"},
-\ "spec/requests/*_spec.rb": {"command": "feature"},
+\ "spec/requests/*_spec.rb": {"command": "request"},
 \ "spec/support/*.rb": {"command": "support"},
 \ "spec/factories.rb": {"command": "factories"},
 \ "spec/factories/*.rb": {"command": "factories"}
