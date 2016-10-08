@@ -36,9 +36,11 @@ set nowrap                    " do not wrap lines longer than the width of the w
 set nowritebackup             " do not make a backup before overwriting a file
 set ruler                     " show then line and column number of the cursor position, separated by a comma
 set scrolloff=3               " minimal number of screen lines to keep above/below the cursor
+set shiftwidth=2              " number of spaces to use for each step of (auto)indent
 set shortmess+=I              " do not show the intro message when starting Vim
 set showmatch                 " when a bracket is inserted, briefly jump to the matching one
 set switchbuf=useopen         " jump to first open window that contains the specificed buffer
+set tabstop=2                 " number of spaces that a <Tab> in the file counts for
 set termguicolors             " use 24-bit color
 set wildmenu                  " enable enhanced command-line completion
 set wildmode=list:longest     " when more than one match, list all matches and complete till longest common string
