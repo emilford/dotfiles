@@ -1,0 +1,90 @@
+[core]
+  editor = "vim"
+  excludesfile = ~/.config/git/ignore
+  hooksPath = ~/.config/git/hooks
+
+[user]
+  name = Eric Milford
+  email = ericmilford@gmail.com
+
+[author]
+  name = Eric Milford
+  email = ericmilford@gmail.com
+
+[github]
+  user = emilford
+
+[color]
+  ui = true
+
+[alias]
+
+  a = add
+  aa = add --all
+  ap = add --patch
+  b = branch
+  bc = branch-create
+  bd = branch -d
+  bdd = branch -D
+  bm = branch -m
+  bp = branch-prune
+  bu = branch --set-upstream
+  c = commit --verbose
+  ca = commit --verbose --amend
+  car = commit --amend --reuse-message HEAD
+  ci-status = !hub ci-status
+  cm = commit --message
+  co = checkout
+  conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
+  cp = cherry-pick --ff
+  ctags = !.git/hooks/ctags
+  d = diff --word-diff
+  dc = diff --cached --word-diff
+  f = fetch
+  g = grep
+  gf = grep --files-with-matches
+  l = log --oneline --decorate --graph
+  la = log --oneline --decorate --graph --all
+  lc = shortlog --summary --numbered
+  lg = log --grep -E -i
+  ls = log -S
+  m = merge
+  ma = merge --abort
+  mc = merge --no-commit
+  p = push
+  pf = push --force-with-lease
+  plr = pull --rebase
+  pr = pr-open
+  pu = push --set-upstream
+  r = rebase --verbose
+  ra = rebase --abort
+  rc = rebase --continue
+  ri = rebase --interactive
+  ;rim = !co master && git pull --rebase origin master && co - && r --interactive $(git merge-base master HEAD)
+  ;rm = !co master && git pull --rebase origin master && co - && r $(git merge-base master HEAD)
+  rs = rebase --skip
+  sa =  stash apply
+  sc =  stash clear
+  sd =  stash drop
+  sh = show
+  sl =  stash list
+  sp =  stash pop
+  ss =  stash save --include-untracked
+  st = status
+
+[push]
+  default = upstream
+
+[web]
+  browser = open
+
+[fetch]
+  prune = true
+
+[commit]
+  template = ~/.config/git/message
+
+[gitsh]
+  noGreeting = true
+[diff]
+	compactionHeuristic = true
