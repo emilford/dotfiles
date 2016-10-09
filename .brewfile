@@ -51,3 +51,6 @@ cask 'slack'
 cask 'stay'
 cask 'transmission'
 cask 'ynab'
+
+# Fonts
+cask 'font-hasklig'
