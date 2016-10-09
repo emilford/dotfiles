@@ -12,6 +12,7 @@
 /.config/wireshark
 /.cpan
 /.cups
+/.dotfiles
 /.dropbox
 /.elm
 /.fzf.bash
