@@ -4,6 +4,7 @@
 /.anyconnect
 /.bash_history
 /.bin
+/.bundle/cache
 /.cache
 /.config/configstore
 /.config/heroku
