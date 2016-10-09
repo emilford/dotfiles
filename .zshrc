@@ -52,6 +52,6 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
     exec tmux -S ~/.tmux.socket attach -t ${session_names[$((session))]}
   fi
 fi
-alias dotfiles='/usr/bin/git --git-dir=$HOME/Code/dotfiles.v3/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
