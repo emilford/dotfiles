@@ -1,7 +1,7 @@
 source <(antibody init)
 
 autoload -U compinit
-compinit
+compinit -u
 
 for file in $HOME/.zsh/rcplugins/*.zsh; do            # load plugins
   source $file
