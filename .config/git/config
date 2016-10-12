@@ -37,7 +37,7 @@
   co = checkout
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   cp = cherry-pick --ff
-  ctags = !.git/hooks/ctags
+  ctags = !$HOME/.config/git/hooks/ctags
   d = diff --word-diff
   dc = diff --cached --word-diff
   f = fetch
