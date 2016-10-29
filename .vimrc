@@ -13,6 +13,7 @@ syntax enable                 " enable syntax highlighting and do not overrule c
 colorscheme hybrid_material
 
 set autoindent                " copy indent from current line when starting a new line
+set autoread                  " automatically read a file when a change to the file outside of Vim is detected
 set background=dark           " use colors that look good on a dark background
 set backspace+=eol            " allow backspacing over line breaks (join lines)
 set backspace+=indent         " allow backspacing over autoindent
