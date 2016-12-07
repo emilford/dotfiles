@@ -108,6 +108,15 @@ function ts () {
   $(tmux -S ~/.tmux.socket switch -t ${1-${PWD##*/}})
 }
 
+compdef g=git
+function g {
+  if [[ $# -gt 0 ]]; then
+    git "$@"
+  else
+    git status
+  fi
+}
+
 git_info() {
   if git_dir &>/dev/null; then
     echo "$(current_branch)$(rebase_info)$(repo_dirty)$(needs_push)$(current_sha)"
