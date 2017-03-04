@@ -174,3 +174,13 @@ current_branch_name() {
 git_dir() {
   git rev-parse --git-dir 2>/dev/null
 }
+
+function __tmux-sessions() {
+  local expl
+  local -a sessions
+  sessions=( ${${(f)"$(command tmux -S ~/.tmux.socket list-sessions)"}/:[ $'\t']##/:} )
+  _describe -t sessions 'sessions' sessions "$@"
+}
+compdef __tmux-sessions ta
+compdef __tmux-sessions tk
+compdef __tmux-sessions ts
