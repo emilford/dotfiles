@@ -46,8 +46,8 @@
 /.subversion
 /.terminfo/73/screen-256color
 /.tmux/plugins
-/.vim/autoload/plug.vim
 /.vim/.netrwhist
+/.vim/autoload/plug.vim
 /.vim/plugged
 /.viminfo
 /.w3m
@@ -68,3 +68,4 @@
 /Pictures
 /Public
 /Resources
+/VirtualBox VMs
