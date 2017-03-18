@@ -55,7 +55,7 @@
   p = push
   pf = push --force-with-lease
   plr = pull --rebase
-  pr = pr-open
+  pr = pull-request
   pu = push --set-upstream
   r = rebase --verbose
   ra = rebase --abort
