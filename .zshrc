@@ -172,3 +172,7 @@ git_status() {
   echo "$STATUS"
 }
 
+weather()
+{
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Washington,DC}"?u
+}
