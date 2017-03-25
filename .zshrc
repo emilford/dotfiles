@@ -26,6 +26,7 @@ cdpath=(. $HOME/Code)
 source <(antibody init)
 
 antibody bundle zsh-users/zsh-completions
+antibody bundle olivierverdier/zsh-git-prompt
 
 autoload -U compinit && compinit -u
 autoload -U colors && colors
@@ -65,7 +66,7 @@ export EDITOR="vim"
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export LSCOLORS="exfxcxdxbxegedabagacad"
 export PROMPT='%(?.%F{green}.%F{red})→%f '
-export RPROMPT=$'%c $(git_info)'
+export RPROMPT=$'%c $(git_status)'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -119,64 +120,6 @@ function g {
   fi
 }
 
-git_info() {
-  if git_dir &>/dev/null; then
-    echo "$(current_branch)$(rebase_info)$(repo_dirty)$(needs_push)$(current_sha)"
-  fi
-}
-
-current_branch() {
-  local branch_name="$(current_branch_name)"
-
-  if [ "$branch_name" = "HEAD" ]; then
-    echo "%{$fg[red]%}DETACHED%{$reset_color%}"
-  else
-    echo "%{$fg[blue]%}$branch_name%{$reset_color%}"
-  fi
-}
-
-current_sha() {
-  echo " %{$fg[yellow]%}$(git rev-parse --short HEAD)%{$reset_color%}"
-}
-
-rebase_info() {
-  local git_dir="$(git_dir)"
-
-  if [ -f "$git_dir/BISECT_LOG" ]; then
-    echo "+bisect"
-  elif [ -f "$git_dir/MERGE_HEAD" ]; then
-    echo "+merge"
-  else
-    for file in rebase rebase-apply rebase-merge; do
-      if [ -e "$git_dir/$file" ]; then
-        echo "+rebase ↕↓"
-        break
-      fi
-    done
-  fi
-}
-
-repo_dirty() {
-  if [[ ! $(git status 2>/dev/null) =~ "directory clean" ]]; then
-    echo " %{$fg[red]%}∗%{$reset_color%}"
-  fi
-}
-
-needs_push() {
-  if [[ -n "$(git cherry -v origin/em-$(current_branch_name) 2>/dev/null)" ]]; then
-    echo " %{$fg[red]%}↑%{$reset_color%} "
-
-  fi
-}
-
-current_branch_name() {
-  git rev-parse --abbrev-ref HEAD
-}
-
-git_dir() {
-  git rev-parse --git-dir 2>/dev/null
-}
-
 function __tmux-sessions() {
   local expl
   local -a sessions
@@ -186,3 +129,46 @@ function __tmux-sessions() {
 compdef __tmux-sessions ta
 compdef __tmux-sessions tk
 compdef __tmux-sessions ts
+
+git_status() {
+	precmd_update_git_vars
+
+  STATUS="%F{blue}$GIT_BRANCH%f"
+
+  if [ "$GIT_BEHIND" -ne "0" ]; then
+    STATUS="$STATUS %{↓%G%}$GIT_BEHIND%f"
+  fi
+
+  if [ "$GIT_AHEAD" -ne "0" ]; then
+    if [ "$GIT_BEHIND" -eq "0" ]; then
+      STATUS="$STATUS "
+    fi
+    STATUS="$STATUS%{↑%G%}$GIT_AHEAD%f"
+  fi
+
+  if [ "$GIT_CHANGED" -ne "0" ] ||
+     [ "$GIT_CONFLICTS" -ne "0" ] ||
+     [ "$GIT_STAGED" -ne "0" ] ||
+     [ "$GIT_UNTRACKED" -ne "0" ]; then
+    STATUS="$STATUS "
+  fi
+
+  if [ "$GIT_STAGED" -ne "0" ]; then
+    STATUS="$STATUS%F{green}%{•%G%}$GIT_STAGED%f"
+  fi
+
+  if [ "$GIT_CONFLICTS" -ne "0" ]; then
+    STATUS="$STATUS%F{red}%{!%G%}$GIT_CONFLICTS%f"
+  fi
+
+  if [ "$GIT_CHANGED" -ne "0" ]; then
+    STATUS="$STATUS%F{red}%{+%G%}$GIT_CHANGED%f"
+  fi
+
+  if [ "$GIT_UNTRACKED" -ne "0" ]; then
+    STATUS="$STATUS%F{magenta}%{◦%G%}$GIT_UNTRACKED%f"
+  fi
+
+  echo "$STATUS"
+}
+
