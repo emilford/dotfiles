@@ -1,3 +1,9 @@
+# .zshrc is for interactive shell configuration. You set options for the
+# interactive shell there with the setopt and unsetopt commands. You can also
+# load shell modules, set your history options, change your prompt, set up zle
+# and completion, et cetera. You also set any variables that are only used in
+# the interactive shell (e.g. $LS_COLORS).
+
 alias b='bundle'
 alias be='bundle exec'
 alias bc='bundle check'
@@ -62,9 +68,6 @@ export LSCOLORS="exfxcxdxbxegedabagacad"
 export PROMPT='%(?.%F{green}.%F{red})→%f '
 export RPROMPT=$'%c $(git_info)'
 
-source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
-source /usr/local/share/chruby-default-gems.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(hub alias -s)"
