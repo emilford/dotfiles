@@ -50,7 +50,6 @@ setopt NO_BG_NICE
 setopt NO_HUP
 setopt NO_LIST_BEEP
 setopt NO_NOMATCH
-setopt PROMPT_SUBST
 setopt SHARE_HISTORY
 
 unsetopt CORRECT
