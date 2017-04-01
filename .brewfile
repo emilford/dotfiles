@@ -13,7 +13,7 @@ tap 'universal-ctags/universal-ctags'
 # Packages
 brew 'antibody'
 brew 'chruby'
-brew 'chruby-default-gems'
+brew 'https://raw.github.com/bronson/chruby-default-gems/master/homebrew/chruby-default-gems.rb --HEAD'
 brew 'dasht'
 brew 'elixir'
 brew 'fzf'
