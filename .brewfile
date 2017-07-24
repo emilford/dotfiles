@@ -60,4 +60,5 @@ cask 'font-hasklig'
 
 # App Store
 mas 'Focus (3.3)', id: 777233759
+mas 'Things 3', id: 904280696
 mas 'Xcode', id: 497799835
