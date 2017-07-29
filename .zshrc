@@ -96,19 +96,19 @@ if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
 fi
 
 function tn () {
-  $(ssh-agent tmux -S ~/.tmux.socket new -s ${1-${PWD##*/}})
+  (ssh-agent tmux -S ~/.tmux.socket new -s ${1:-$(basename pwd)})
 }
 
 function ta () {
-  $(tmux -S ~/.tmux.socket attach -t ${1-${PWD##*/}})
+  (tmux -S ~/.tmux.socket attach -t ${1:-$(basename pwd)})
 }
 
 function tk () {
-  $(tmux -S ~/.tmux.socket kill-session -t ${1-${PWD##*/}})
+  (tmux -S ~/.tmux.socket kill-session -t ${1:-$(basename pwd)})
 }
 
 function ts () {
-  $(tmux -S ~/.tmux.socket switch -t ${1-${PWD##*/}})
+  (tmux -S ~/.tmux.socket switch -t ${1:-$(basename pwd)})
 }
 
 compdef g=git
