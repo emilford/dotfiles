@@ -5,6 +5,8 @@ set -gx PATH .git/safe/../../bin $PATH
 
 set -x CDPATH $CDPATH $HOME/Code
 
+set -x EDITOR vim
+
 abbr b  bundle
 abbr be bundle exec
 abbr bi bundle install
