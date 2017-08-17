@@ -25,6 +25,7 @@
 /.hex
 /.lesshst
 /.local/share/dasht
+/.local/share/fish
 /.local/share/heroku
 /.local/share/nvim
 /.mix
