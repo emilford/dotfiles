@@ -9,6 +9,7 @@
 /.config/configstore
 /.config/heroku
 /.config/hub
+/.config/fish/fishd*
 /.config/wireshark
 /.cpan
 /.cups
