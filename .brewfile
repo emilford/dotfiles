@@ -4,14 +4,12 @@
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
 tap 'caskroom/versions'
-tap 'getantibody/homebrew-antibody'
 tap 'homebrew/services'
 tap 'homebrew/versions'
 tap 'thoughtbot/formulae'
 tap 'universal-ctags/universal-ctags'
 
 # Packages
-brew 'antibody'
 brew 'chruby'
 brew 'chruby-fish'
 brew 'https://raw.github.com/bronson/chruby-default-gems/master/homebrew/chruby-default-gems.rb --HEAD'
@@ -39,7 +37,6 @@ brew 'tmux'
 brew 'tree'
 brew 'universal-ctags', args: ['HEAD']
 brew 'vim', args: ['--override-system-vi']
-brew 'zsh'
 
 # Casks
 cask_args appdir: '/Applications'
