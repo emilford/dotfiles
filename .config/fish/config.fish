@@ -19,8 +19,7 @@ abbr tk tmux kill-session -t
 abbr tl tmux list-sessions
 abbr tn tmux new -s
 
-source /usr/local/share/chruby/chruby.fish
-source /usr/local/share/chruby/auto.fish
+source /usr/local/opt/asdf/asdf.fish
 
 if test -n "$SSH_CLIENT" ; or test -n "$SSH_TTY"
   set sessions (tmux list-sessions -F "#{session_name}")
