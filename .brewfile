@@ -10,7 +10,6 @@ tap 'thoughtbot/formulae'
 tap 'universal-ctags/universal-ctags'
 
 # Packages
-brew 'antibody'
 brew 'asdf'
 brew 'dasht'
 brew 'elixir'
