@@ -1,5 +1,7 @@
 set fish_greeting
 
+source /usr/local/opt/asdf/asdf.fish
+
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH .git/safe/../../bin $PATH
 
@@ -18,8 +20,6 @@ abbr td tmux detach
 abbr tk tmux kill-session -t
 abbr tl tmux list-sessions
 abbr tn tmux new -s
-
-source /usr/local/opt/asdf/asdf.fish
 
 if test -n "$SSH_CLIENT" ; or test -n "$SSH_TTY"
   set sessions (tmux list-sessions -F "#{session_name}")
