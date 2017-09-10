@@ -35,7 +35,6 @@ set nojoinspaces              " insert only one space after '.', '?', and '!' wi
 set noswapfile                " do not user a swapfile for the buffer
 set nowrap                    " do not wrap lines longer than the width of the window
 set nowritebackup             " do not make a backup before overwriting a file
-set ruler                     " show then line and column number of the cursor position, separated by a comma
 set scrolloff=3               " minimal number of screen lines to keep above/below the cursor
 set shiftwidth=2              " number of spaces to use for each step of (auto)indent
 set shortmess+=I              " do not show the intro message when starting Vim
