@@ -1,3 +1,7 @@
 #!/bin/sh
 
-pmset -g batt | grep Internal | awk ' /InternalBattery/ {print $3, "("$4",", $5, $6")"}' | sed 's/;//g'
+pmset -g batt |
+  grep Internal |
+  awk ' /InternalBattery/ {print $3, "("$4",", $5, $6")"}' |
+  sed 's/, (no estimate)//' |
+  sed 's/;//g'
