@@ -13,7 +13,7 @@ set -x EDITOR vim
 abbr b  bundle
 abbr be bundle exec
 abbr bi bundle install
-abbr bu bundle udpate
+abbr bu bundle update
 
 abbr ta tmux attach -t
 abbr td tmux detach
