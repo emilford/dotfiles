@@ -4,3 +4,4 @@
 /.squirrel
 /.projections.json
 /spec/examples.txt
+/.tool-versions
