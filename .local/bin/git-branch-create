@@ -1,16 +1,15 @@
-#!/usr/bin/env ruby
-# Usage: git branch-bn <local-branch-name>
+#!/bin/bash
 #
-# Creates a local branch, then immediately pushes to origin with initials
-# prefix to the branch name and sets up tracking
+# Usage: git branch-create <branch-name>
+#
+# Creates a local branch, then immediately pushes and tracks a branch of the
+# same name to origin.
 
+set -e
 
-def main
-  local_branch_name = ARGV[0]
-  return if local_branch_name.nil?
-
-  system("git checkout -b #{local_branch_name}")
-  system("git push -u origin #{local_branch_name}:#{local_branch_name}")
-end
-
-main
+if [ $# -eq 0 ]; then
+  echo "Usage: git branch-create <branch-name>"
+else
+  git checkout -b "$1"
+  git push -u origin "$1":"$1"
+fi
