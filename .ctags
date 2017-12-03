@@ -1,0 +1,8 @@
+--exclude=.git
+--exclude=bower_components
+--exclude=coverage
+--exclude=node_modules
+--exclude=vendor
+--recurse
+--sort=yes
+--tag-relative=yes
