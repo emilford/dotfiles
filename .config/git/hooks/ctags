@@ -2,8 +2,5 @@
 
 set -e
 
-PATH="/usr/local/bin:$PATH"
-
-trap "rm -f .git/tags.$$" EXIT
-ctags --tag-relative -Rf.git/tags.$$ --exclude=.git --languages=-javascript,sql
-mv .git/tags.$$ .git/tags
+rm -f .git/tags
+git ls-files | ctags -f .git/tags -L -
