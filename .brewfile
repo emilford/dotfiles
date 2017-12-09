@@ -31,7 +31,7 @@ brew 'the_silver_searcher'
 brew 'tmux'
 brew 'tree'
 brew 'universal-ctags', args: ['HEAD']
-brew 'vim', args: ['--override-system-vi']
+brew 'vim'
 
 # Casks
 cask_args appdir: '/Applications'
