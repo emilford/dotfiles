@@ -2,7 +2,6 @@ elixir 1.5.2
 elm 0.18.0
 golang 1.9.2
 postgres 10.1
-redis 4.0.5
 ruby 2.4.2
 swift 4.0
 
