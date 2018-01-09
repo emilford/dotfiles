@@ -87,5 +87,7 @@
 
 [gitsh]
   noGreeting = true
+
 [diff]
 	compactionHeuristic = true
+  colorMoved = zebra
