@@ -72,6 +72,7 @@
   sp =  stash pop
   ss =  stash save --include-untracked
   st = status
+  wip = commit --all --message "wip"
 
 [push]
   default = upstream
