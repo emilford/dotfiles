@@ -3,4 +3,4 @@
 set -e
 
 rm -f .git/tags
-git ls-files | ctags -f .git/tags -L -
+git ls-files | ctags -f .git/tags --tag-relative=yes -L -
