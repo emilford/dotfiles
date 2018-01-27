@@ -10,7 +10,7 @@ filetype plugin indent on     " load plugin and indent files for specific file t
 
 syntax enable                 " enable syntax highlighting and do not overrule custom settings
 
-colorscheme hybrid_material
+colorscheme nord
 
 set autoindent                " copy indent from current line when starting a new line
 set autoread                  " automatically read a file when a change to the file outside of Vim is detected
