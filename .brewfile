@@ -33,6 +33,7 @@ brew 'tmux'
 brew 'tree'
 brew 'universal-ctags', args: ['HEAD']
 brew 'vim'
+brew 'yarn'
 
 # Casks
 cask_args appdir: '/Applications'
