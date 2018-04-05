@@ -56,6 +56,7 @@
 /.viminfo
 /.w3m
 /.wget-hsts
+/.yarnrc
 /.zcompdump
 /.zsh-histfile
 /.zsh_history
