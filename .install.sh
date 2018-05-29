@@ -23,7 +23,6 @@ function install_asdf {
   asdf_plugin_add "elixir"   "https://github.com/asdf-vm/asdf-elixir.git"
   asdf_plugin_add "elm"      "https://github.com/vic/asdf-elm"
   asdf_plugin_add "golang"   "https://github.com/kennyp/asdf-golang"
-  asdf_plugin_add "redis"    "https://github.com/smashedtoatoms/asdf-redis"
   asdf_plugin_add "ruby"     "https://github.com/asdf-vm/asdf-ruby.git"
   asdf_plugin_add "swift"    "https://github.com/fcrespo82/asdf-swift"
 
