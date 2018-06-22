@@ -34,6 +34,7 @@
 /.mix
 /.mysql_history
 /.netrc
+/.ngrok2
 /.node-gyp
 /.npm
 /.nvimlog
