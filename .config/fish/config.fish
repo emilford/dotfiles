@@ -1,6 +1,6 @@
 set fish_greeting
 
-source /usr/local/opt/asdf/asdf.fish
+source $HOME/.asdf/asdf.fish
 
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH .git/safe/../../bin $PATH
