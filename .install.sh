@@ -21,11 +21,11 @@ function install_asdf {
   cmd "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.1"
   cmd "source ~/.asdf/asdf.sh"
 
-  asdf_plugin_add "elixir"   "https://github.com/asdf-vm/asdf-elixir.git"
-  asdf_plugin_add "elm"      "https://github.com/vic/asdf-elm"
-  asdf_plugin_add "golang"   "https://github.com/kennyp/asdf-golang"
-  asdf_plugin_add "ruby"     "https://github.com/asdf-vm/asdf-ruby.git"
-  asdf_plugin_add "swift"    "https://github.com/fcrespo82/asdf-swift"
+  asdf_plugin_add "elixir"
+  asdf_plugin_add "elm"
+  asdf_plugin_add "golang"
+  asdf_plugin_add "ruby"
+  asdf_plugin_add "swift"
 
   run "asdf plugin-update: all" "asdf plugin-update --all"
   run "asdf install: all" "asdf install"
@@ -33,7 +33,7 @@ function install_asdf {
 
 function asdf_plugin_add {
   if !(asdf plugin-list | grep -q "$1" 2>/dev/null); then
-    run "asdf plugin-add: $1" "asdf plugin-add $1 $2"
+    run "asdf plugin-add: $1" "asdf plugin-add $1"
   else
     run "asdf plugin-add: $1"
   fi
