@@ -23,6 +23,7 @@ function install_asdf {
 
   asdf_plugin_add "elixir"
   asdf_plugin_add "elm"
+  asdf_plugin_add "erlang"
   asdf_plugin_add "golang"
   asdf_plugin_add "ruby"
   asdf_plugin_add "swift"
