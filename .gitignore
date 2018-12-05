@@ -7,6 +7,7 @@
 /.bin
 /.bundle/cache
 /.cache
+/.chromedriver-helper
 /.config/configstore
 /.config/heroku
 /.config/hub
@@ -32,13 +33,16 @@
 /.local/share/fish
 /.local/share/heroku
 /.local/share/nvim
+/.local/share/ruby-advisory-db
 /.mix
 /.mysql_history
 /.netrc
+/.ngrok
 /.ngrok2
 /.node-gyp
 /.npm
 /.nvimlog
+/.pry
 /.pry_history
 /.psql
 /.psql_history
@@ -75,5 +79,5 @@
 /Pictures
 /Public
 /Resources
-/Synced
+/Sync
 /VirtualBox VMs
