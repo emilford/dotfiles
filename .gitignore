@@ -33,6 +33,7 @@
 /.local/share/fish
 /.local/share/heroku
 /.local/share/nvim
+/.local/share/pry
 /.local/share/ruby-advisory-db
 /.mix
 /.mysql_history
