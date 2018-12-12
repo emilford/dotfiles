@@ -35,6 +35,7 @@ brew 'yarn'
 # Casks
 cask_args appdir: '/Applications'
 cask '1password'
+cask 'basecamp'
 cask 'encryptme'
 cask 'google-chrome'
 cask 'harvest'
