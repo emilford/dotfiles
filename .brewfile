@@ -56,3 +56,4 @@ cask 'font-hasklig'
 # App Store
 mas 'Gifox', id: 1082624744
 mas 'Ommwriter', id: 412347921
+mas 'Things 3', id: 904280696
