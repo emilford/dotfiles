@@ -4,6 +4,7 @@
 /.anyconnect
 /.asdf
 /.bash_history
+/.bashrc
 /.bin
 /.bundle/cache
 /.cache
@@ -67,6 +68,7 @@
 /.zcompdump
 /.zsh-histfile
 /.zsh_history
+/.zshrc
 /.zshrc.zni
 /Applications
 /Code
