@@ -38,6 +38,7 @@ brew 'yarn'
 # Casks
 cask_args appdir: '/Applications'
 cask '1password'
+cask 'alacritty'
 cask 'anki'
 cask 'basecamp'
 cask 'brainfm'
