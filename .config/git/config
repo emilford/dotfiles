@@ -24,59 +24,26 @@
 [alias]
 
   a = add
-  aa = add --all
-  ap = add --patch
   b = branch
-  bc = branch-create
-  bd = branch -d
-  bdd = branch -D
-  bm = branch -m
-  bp = branch-prune
-  bu = branch --set-upstream
-  c = commit --verbose
-  ca = commit --verbose --amend
-  car = commit --amend --reuse-message HEAD
-  ci-status = !hub ci-status
-  cm = commit --message
+  c = commit
   co = checkout
+  cp = cherry-pick
+  d = diff
+  f = fetch
+  g = grep
+  l = log --oneline --decorate --graph
+  m = merge
+  p = push
+  pl = pull
+  pr = pull-request
+  r = rebase
+  s = status
+  ; sh = show
+  ; st = stash
+
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   conflicted = "!vim +Conflicted"
   contrast = log --cherry-pick --oneline --left-only
-  cp = cherry-pick --ff
-  ctags = !$HOME/.config/git/hooks/ctags
-  d = diff --word-diff
-  dc = diff --cached --word-diff
-  f = fetch
-  g = grep
-  gf = grep --files-with-matches
-  l = log --oneline --decorate --graph
-  la = log --oneline --decorate --graph --all
-  lc = shortlog --summary --numbered
-  lg = log --grep -E -i
-  ls = log -S
-  m = merge
-  ma = merge --abort
-  mc = merge --no-commit
-  p = push
-  pf = push --force-with-lease
-  plr = pull --rebase
-  pr = pull-request
-  pu = push --set-upstream
-  r = rebase --verbose
-  ra = rebase --abort
-  rc = rebase --continue
-  ri = rebase --interactive
-  ;rim = !co master && git pull --rebase origin master && co - && r --interactive $(git merge-base master HEAD)
-  ;rm = !co master && git pull --rebase origin master && co - && r $(git merge-base master HEAD)
-  rs = rebase --skip
-  sa =  stash apply
-  sc =  stash clear
-  sd =  stash drop
-  sh = show
-  sl =  stash list
-  sp =  stash pop
-  ss =  stash save --include-untracked
-  st = status
   wip = commit --all --message "wip"
 
 [push]
