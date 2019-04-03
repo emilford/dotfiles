@@ -19,8 +19,9 @@ function main {
 function install_asdf {
   header "asdf"
 
-  cmd "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.5.1"
+  cmd "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.1"
   cmd "source ~/.asdf/asdf.sh"
+  cmd "asdf update"
 
   asdf_plugin_add "elixir"
   asdf_plugin_add "elm"
