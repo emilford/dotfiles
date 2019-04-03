@@ -49,6 +49,7 @@ cask 'sizeup'
 cask 'sketch'
 cask 'skype'
 cask 'slack'
+cask 'there'
 cask 'transmission'
 cask 'ynab'
 
