@@ -40,6 +40,7 @@
   cm = commit --message
   co = checkout
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
+  conflicted = "!vim +Conflicted"
   contrast = log --cherry-pick --oneline --left-only
   cp = cherry-pick --ff
   ctags = !$HOME/.config/git/hooks/ctags
