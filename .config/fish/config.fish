@@ -3,6 +3,8 @@ set fish_greeting
 source $HOME/.asdf/asdf.fish
 source $HOME/.config/fish/nord.fish
 
+direnv hook fish | source
+
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH .git/safe/../../bin $PATH
 
