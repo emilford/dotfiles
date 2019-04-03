@@ -12,6 +12,7 @@ function main {
   install_iterm
   install_macos
   install_fish
+  install_tmux
 
 }
 
@@ -65,6 +66,16 @@ function install_fish {
     run "fish default shell" "sudo chsh -s /usr/local/bin/fish eric"
   else
     noop "fish default shell"
+  fi
+}
+
+function install_tmux {
+  header "tmux"
+
+  if [ ! -d $HOME/.tmux/plugins/tpm ]; then
+    run "install tpm", "git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm"
+  else
+    noop "install tpm"
   fi
 }
 
