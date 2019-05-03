@@ -1,10 +1,5 @@
 set fish_greeting
 
-source $HOME/.asdf/asdf.fish
-source $HOME/.config/fish/nord.fish
-
-direnv hook fish | source
-
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH .git/safe/../../bin $PATH
 
@@ -23,6 +18,11 @@ abbr td tmux detach
 abbr tk tmux kill-session -t
 abbr tl tmux list-sessions
 abbr tn tmux new -s
+
+direnv hook fish | source
+
+source $HOME/.asdf/asdf.fish
+source $HOME/.config/fish/nord.fish
 
 if test -n "$SSH_CLIENT" ; or test -n "$SSH_TTY"
   set sessions (tmux list-sessions -F "#{session_name}")
