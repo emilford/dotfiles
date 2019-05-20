@@ -8,6 +8,11 @@ set -x CDPATH $CDPATH $HOME/Code
 
 set -x EDITOR vim
 
+source $HOME/.config/fish/nord.fish
+source $HOME/.asdf/asdf.fish
+
+direnv hook fish | source
+
 abbr b  bundle
 abbr be bundle exec
 abbr bi bundle install
