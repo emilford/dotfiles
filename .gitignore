@@ -21,6 +21,7 @@
 /.config/wireshark
 /.cpan
 /.cups
+/.docker
 /.dotfiles
 /.dropbox
 /.elm
