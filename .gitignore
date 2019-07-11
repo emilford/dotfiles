@@ -65,6 +65,7 @@
 /.tmux/plugins
 /.vim/.netrwhist
 /.vim/autoload/plug.vim
+/.vim/autoload/plug.vim.old
 /.vim/plugged
 /.viminfo
 /.w3m
