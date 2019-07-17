@@ -18,6 +18,8 @@ abbr be bundle exec
 abbr bi bundle install
 abbr bu bundle update
 
+abbr g git
+
 abbr ta tmux attach -t
 abbr td tmux detach
 abbr tk tmux kill-session -t
