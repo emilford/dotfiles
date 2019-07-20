@@ -37,6 +37,7 @@ brew 'tmux'
 brew 'tree'
 brew 'universal-ctags', args: ['HEAD']
 brew 'vim'
+brew 'watchman'
 brew 'weechat'
 brew 'yarn'
 
