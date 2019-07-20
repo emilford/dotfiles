@@ -12,6 +12,7 @@
 /.cache
 /.chromedriver-helper
 /.composer
+/.config/coc
 /.config/configstore
 /.config/direnv
 /.config/fish/fish_variables
@@ -63,6 +64,7 @@
 /.s3bucket
 /.sbt
 /.scala_history
+/.solargraph
 /.ssh/id_rsa*
 /.ssh/known_hosts
 /.subversion
