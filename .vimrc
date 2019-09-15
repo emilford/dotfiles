@@ -42,6 +42,7 @@ set shortmess+=I              " do not show the intro message when starting Vim
 set showmatch                 " when a bracket is inserted, briefly jump to the matching one
 set switchbuf=useopen         " jump to first open window that contains the specificed buffer
 set tabstop=2                 " number of spaces that a <Tab> in the file counts for
+set tags^=./.git/tags         " set tags location for fugitive.vim
 set termguicolors             " use 24-bit color
 set wildmenu                  " enable enhanced command-line completion
 set wildmode=list:longest     " when more than one match, list all matches and complete till longest common string
