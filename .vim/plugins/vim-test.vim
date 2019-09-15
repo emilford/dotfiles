@@ -2,6 +2,7 @@ Plug 'janko-m/vim-test'
 
 let test#strategy = "vtr"
 let test#ruby#bundle_exec = 0
+let test#python#runner = "djangotest"
 
 let g:test#ruby#minitest#executable = 'm'
 
