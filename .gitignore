@@ -33,6 +33,7 @@
 /.gitsh_history
 /.heroku
 /.hex
+/.ivy2
 /.lesshst
 /.local/share/dasht
 /.local/share/fish
@@ -40,6 +41,7 @@
 /.local/share/nvim
 /.local/share/pry
 /.local/share/ruby-advisory-db
+/.local/share/virtualenvs
 /.mix
 /.mysql_history
 /.netrc
@@ -53,10 +55,13 @@
 /.psql
 /.psql_history
 /.puma-dev
+/.python_history
 /.rnd
 /.rubies
 /.ruby-version
 /.s3bucket
+/.sbt
+/.scala_history
 /.ssh/id_rsa
 /.ssh/id_rsa.pub
 /.ssh/known_hosts
@@ -69,6 +74,7 @@
 /.vim/plugged
 /.viminfo
 /.w3m
+/.webdrivers
 /.wget-hsts
 /.yarnrc
 /.zcompdump
