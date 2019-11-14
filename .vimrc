@@ -21,6 +21,7 @@ set backspace+=start          " allow backspacing over the start of insert
 set colorcolumn=81            " higlight the 81st screen column
 set cpoptions+=$              " when making a change to one line, put a $ at the end of the changed text
 set cursorline                " highlight the screen line of the cursor
+set diffopt=vertical          " start diff mode with veritical splits
 set expandtab                 " use the appropriate number of spaces to insert a <Tab>
 set hidden                    " hide buffer when it is abandoned
 set hlsearch                  " when there is a previous search pattern, highlight all its matches
