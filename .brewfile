@@ -54,7 +54,6 @@ cask 'skype'
 cask 'slack'
 cask 'there'
 cask 'transmission'
-cask 'ynab'
 
 # Fonts
 cask 'font-hasklig'
