@@ -18,7 +18,12 @@ function main {
 function install_asdf {
   header "asdf"
 
-  cmd "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.1"
+  if [ ! -d $HOME/.asdf ]; then
+    cmd "git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.7.1"
+  else
+    noop "asdf install"
+  fi
+
   cmd "source ~/.asdf/asdf.sh"
   cmd "asdf update"
 
@@ -39,7 +44,7 @@ function asdf_plugin_add {
 function install_brew {
   header "brew"
 
-  if ! type brew > /dev/null 2>&1; then
+  if [[ $(command -v brew) == "" ]]; then
     run "brew install" 'echo | /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"'
   else
     noop "brew install"
