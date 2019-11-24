@@ -1,9 +1,9 @@
 # Use `brew bundle --file=$HOME/.brewfile` to install the packages listed below
 
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
-tap 'caskroom/versions'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
+tap 'homebrew/cask-versions'
 tap 'homebrew/services'
 tap 'heroku/brew'
 tap 'thoughtbot/formulae'
