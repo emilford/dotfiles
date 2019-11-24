@@ -23,13 +23,7 @@ function install_asdf {
   cmd "source ~/.asdf/asdf.sh"
   cmd "asdf update"
 
-  asdf_plugin_add "elixir"
-  asdf_plugin_add "elm"
-  asdf_plugin_add "erlang"
-  asdf_plugin_add "golang"
-  asdf_plugin_add "python"
   asdf_plugin_add "ruby"
-  asdf_plugin_add "swift"
 
   run "asdf plugin-update: all" "asdf plugin-update --all"
   run "asdf install: all" "asdf install"
