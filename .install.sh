@@ -50,7 +50,7 @@ function install_brew {
     noop "brew install"
   fi
 
-  run "brew bundle" "brew bundle --file=$HOME/.brewfile"
+  run "brew bundle" "brew bundle --file=$HOME/.brewfile --no-lock"
 }
 
 function install_fish {
