@@ -3,8 +3,7 @@ set fish_greeting
 set -gx PATH $HOME/.local/bin $PATH
 set -gx PATH .git/safe/../../bin $PATH
 
-set -x CDPATH $CDPATH $HOME
-set -x CDPATH $CDPATH $HOME/Code
+set -gx CDPATH . $HOME $HOME/Code
 
 set -x EDITOR vim
 
