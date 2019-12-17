@@ -1,8 +1,9 @@
-/vendor/bundle
-/project-notes.txt
+/.envrc
+/.projections.json
 /.psql_history*
 /.squirrel
-/.projections.json
-/spec/examples.txt
 /.tool-versions
 /dump.sql
+/project-notes.txt
+/spec/examples.txt
+/vendor/bundle
