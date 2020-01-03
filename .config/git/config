@@ -64,3 +64,5 @@
 [diff]
 	compactionHeuristic = true
   colorMoved = zebra
+[rebase]
+	autosquash = true
