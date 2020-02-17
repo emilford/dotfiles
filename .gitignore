@@ -37,13 +37,7 @@
 /.hex
 /.ivy2
 /.lesshst
-/.local/share/dasht
-/.local/share/fish
-/.local/share/heroku
-/.local/share/nvim
-/.local/share/pry
-/.local/share/ruby-advisory-db
-/.local/share/virtualenvs
+/.local/share
 /.mix
 /.mysql_history
 /.netrc
