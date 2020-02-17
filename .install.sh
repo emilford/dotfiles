@@ -9,6 +9,7 @@ function main {
   install_brew
   install_asdf
   install_plug
+  install_iterm
   install_macos
   install_fish
   install_tmux
@@ -77,6 +78,13 @@ function install_tmux {
   else
     noop "install tpm"
   fi
+}
+
+function install_iterm {
+  header "iTerm"
+
+  run "iterm configure preferences" "defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string ~/.config/iterm2"
+  run "iterm load preferences" "defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true"
 }
 
 function install_macos {
