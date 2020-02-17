@@ -1,6 +1,7 @@
 # Use `brew bundle --file=$HOME/.brewfile` to install the packages listed below
 
 # Taps
+tap 'github/gh'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
@@ -16,6 +17,7 @@ brew 'fish'
 brew 'fzf'
 brew 'git'
 brew 'git-extras'
+brew 'gh'
 brew 'heroku'
 brew 'hub'
 brew 'irssi'
