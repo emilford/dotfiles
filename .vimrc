@@ -19,6 +19,7 @@ set backspace+=eol            " allow backspacing over line breaks (join lines)
 set backspace+=indent         " allow backspacing over autoindent
 set backspace+=start          " allow backspacing over the start of insert
 set colorcolumn=81            " higlight the 81st screen column
+set complete+=kspell          " autocomplete with dictionary words when spell check is on
 set cpoptions+=$              " when making a change to one line, put a $ at the end of the changed text
 set cursorline                " highlight the screen line of the cursor
 set diffopt=vertical          " start diff mode with veritical splits
@@ -41,6 +42,7 @@ set shell=/bin/bash           " force bash shell; fish causes some odd behavior 
 set shiftwidth=2              " number of spaces to use for each step of (auto)indent
 set shortmess+=I              " do not show the intro message when starting Vim
 set showmatch                 " when a bracket is inserted, briefly jump to the matching one
+set spellfile=$HOME/.vim/vim-spell-en.utf-8.add   " set the word list file
 set switchbuf=useopen         " jump to first open window that contains the specificed buffer
 set tabstop=2                 " number of spaces that a <Tab> in the file counts for
 set tags^=./.git/tags         " set tags location for fugitive.vim
