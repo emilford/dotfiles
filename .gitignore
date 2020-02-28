@@ -75,6 +75,7 @@
 /.weechat/logs
 /.weechat/weechat.log
 /.weechat/sec.conf
+/.weechat/script/plugins.xml.gz
 /.wget-hsts
 /.yarnrc
 /.zcompdump
