@@ -71,6 +71,8 @@
 /.viminfo
 /.w3m
 /.webdrivers
+/.weechat/logs
+/.weechat/weechat.log
 /.weechat/sec.conf
 /.wget-hsts
 /.yarnrc
