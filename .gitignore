@@ -71,6 +71,7 @@
 /.viminfo
 /.w3m
 /.webdrivers
+/.weechat/sec.conf
 /.wget-hsts
 /.yarnrc
 /.zcompdump
