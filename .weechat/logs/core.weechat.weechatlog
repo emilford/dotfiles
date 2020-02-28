@@ -1,0 +1,15 @@
+2020-02-27 19:08:26		New key binding (context "default"): meta2-1;5P => /bar scroll buflist * -100%
+2020-02-27 19:08:26		New key binding (context "default"): meta2-1;5Q => /bar scroll buflist * +100%
+2020-02-27 19:08:26		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2020-02-27 19:08:26		New key binding (context "default"): meta2-1;3Q => /bar scroll buflist * e
+2020-02-27 19:08:26		New key binding (context "default"): meta2-1;3P => /bar scroll buflist * b
+2020-02-27 19:08:26		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2020-02-27 19:08:26		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2020-02-27 19:08:26		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2020-02-27 19:08:26		New key binding (context "default"): meta-meta2-12~ => /bar scroll buflist * e
+2020-02-27 19:08:26		New key binding (context "default"): meta-meta2-11~ => /bar scroll buflist * b
+2020-02-27 19:08:26		New key binding (context "default"): meta2-12^ => /bar scroll buflist * +100%
+2020-02-27 19:08:26		New key binding (context "default"): meta2-12~ => /bar scroll buflist * +100%
+2020-02-27 19:08:26		New key binding (context "default"): meta2-11^ => /bar scroll buflist * -100%
+2020-02-27 19:08:26		New key binding (context "default"): meta2-11~ => /bar scroll buflist * -100%
+2020-02-27 19:08:26		Plugins loaded: alias, buflist, charset, exec, fifo, fset, irc, logger, lua, perl, python, relay, ruby, script, spell, tcl, trigger, xfer
