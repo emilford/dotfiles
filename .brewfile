@@ -35,6 +35,7 @@ brew 'tmux'
 brew 'tree'
 brew 'universal-ctags', args: ['HEAD']
 brew 'vim'
+brew 'weechat'
 brew 'yarn'
 
 # Casks
