@@ -1,7 +1,11 @@
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
-nnoremap <c-p> :GFiles<CR>
+if isdirectory('.git')
+  nnoremap <c-p> :GFiles<CR>
+else
+  nnoremap <c-p> :Files<CR>
+endif
 
 let g:fzf_layout = { 'window': { 'width': 0.95, 'height': 0.95 } }
 
