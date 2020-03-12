@@ -7,6 +7,11 @@
   # https://git-scm.com/docs/git-update-index#_untracked_cache
   untrackedCache = true
 
+  # Convert CRLF (Windows) introduced to LF on commit, but not the other way
+  # around. This should leave CRLF endings in Windows checkouts, but LF endings
+  # on macOS and Linux systems and in the repository.
+  autocrlf = input
+
 [user]
   name = Eric Milford
   email = ericmilford@gmail.com
