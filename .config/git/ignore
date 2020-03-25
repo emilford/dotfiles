@@ -1,3 +1,4 @@
+/.config.fish
 /.envrc
 /.projections.json
 /.psql_history*
