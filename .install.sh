@@ -13,6 +13,7 @@ function main {
   install_macos
   install_fish
   install_tmux
+  install_heroku
 
 }
 
@@ -98,6 +99,22 @@ function install_plug {
 
   run "plug clone" "curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
   run "plug vim install" "echo | vim +PlugInstall +qall"
+}
+
+function install_heroku {
+  header "heroku"
+
+  if !(heroku plugins | grep -q "heroku-accounts" 2>/dev/null); then
+    run "heroku plugins:install heroku-accounts" "heroku plugins:install heroku-accounts"
+  else
+    noop "heroku plugins:install heroku-accounts"
+  fi
+
+  if !(heroku plugins | grep -q "heroku-pg-extras" 2>/dev/null); then
+    run "heroku plugins:install heroku-pg-extras" "heroku plugins:install heroku-pg-extras"
+  else
+    noop "heroku plugins:install heroku-pg-extras"
+  fi
 }
 
 function with_logging {
