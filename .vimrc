@@ -34,6 +34,7 @@ set listchars+=tab:\ \        " character to list a <Tab>
 set listchars+=trail:·        " character to list trailing spaces
 set matchtime=2               " tenths of a second to show the matching paren when showmatch is set
 set nojoinspaces              " insert only one space after '.', '?', and '!' with a join command
+set nomodeline                " disable modeline as a security precaution
 set noswapfile                " do not user a swapfile for the buffer
 set nowrap                    " do not wrap lines longer than the width of the window
 set nowritebackup             " do not make a backup before overwriting a file
