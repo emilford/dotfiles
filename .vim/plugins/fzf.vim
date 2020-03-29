@@ -23,6 +23,6 @@ command! -bang -nargs=? -complete=dir GFiles
 
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   'rg --column --line-number --no-heading --color=always --smart-case ' . <q-args>, 1,
   \   fzf#vim#with_preview('right:60%:hidden', '?'),
   \   <bang>0)
