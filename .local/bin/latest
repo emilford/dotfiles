@@ -3,6 +3,7 @@
 set -e
 
 brew update && brew upgrade && brew cask upgrade && brew cleanup
+brew cu --all --cleanup --yes
 asdf update
 asdf plugin-update --all
 vim +PlugUpgrade +PlugUpdate +qall

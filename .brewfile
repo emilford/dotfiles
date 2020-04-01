@@ -1,6 +1,7 @@
 # Use `brew bundle --file=$HOME/.brewfile` to install the packages listed below
 
 # Taps
+tap 'buo/cask-upgrade'
 tap 'github/gh'
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
