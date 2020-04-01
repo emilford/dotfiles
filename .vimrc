@@ -43,7 +43,6 @@ set shell=/bin/bash           " force bash shell; fish causes some odd behavior 
 set shiftwidth=2              " number of spaces to use for each step of (auto)indent
 set shortmess+=I              " do not show the intro message when starting Vim
 set showmatch                 " when a bracket is inserted, briefly jump to the matching one
-set spellfile=$HOME/.vim/vim-spell-en.utf-8.add   " set the word list file
 set switchbuf=useopen         " jump to first open window that contains the specificed buffer
 set tabstop=2                 " number of spaces that a <Tab> in the file counts for
 set tags^=./.git/tags         " set tags location for fugitive.vim
