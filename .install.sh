@@ -29,6 +29,10 @@ function install_asdf {
   cmd "source ~/.asdf/asdf.sh"
   cmd "asdf update"
 
+  asdf_plugin_add "elixir"
+  asdf_plugin_add "erlang"
+  asdf_plugin_add "nodejs"
+  asdf_plugin_add "python"
   asdf_plugin_add "ruby"
 
   run "asdf plugin-update: all" "asdf plugin-update --all"
