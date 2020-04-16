@@ -5,10 +5,13 @@ function! s:goyo_enter()
   silent !tmux list-panes -F '\#F' | grep -q Z; or tmux resize-pane -Z
   colorscheme pencil
   set background=light
+  set linebreak
   set nocursorline
-  set noshowmode
+  set nolist
   set noshowcmd
+  set noshowmode
   set scrolloff=999
+  set wrap
 endfunction
 
 function! s:goyo_leave()
@@ -17,9 +20,12 @@ function! s:goyo_leave()
   colorscheme hybrid_material
   set background=dark
   set cursorline
-  set showmode
-  set showcmd
+  set list
+  set nolinebreak
+  set nowrap
   set scrolloff=3
+  set showcmd
+  set showmode
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
