@@ -1,3 +1,0 @@
-[submodule ".config/bat/themes/Nord"]
-	path = .config/bat/themes/Nord
-	url = git@github.com:crabique/Nord-plist.git
