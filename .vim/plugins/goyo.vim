@@ -17,7 +17,7 @@ endfunction
 function! s:goyo_leave()
   silent !tmux set status on
   silent !tmux list-panes -F '\#F' | grep -q Z; and tmux resize-pane -Z
-  colorscheme hybrid_material
+  colorscheme nord
   set background=dark
   set cursorline
   set list
