@@ -66,7 +66,7 @@ cask 'transmission'
 cask 'font-hasklig'
 
 # App Store
-mas 'Gifox', id: 1082624744
+mas 'Gifox 2', id: 1461845568
 mas 'Ommwriter', id: 412347921
 mas 'Things 3', id: 904280696
 mas 'Trello', id: 1278508951
