@@ -68,6 +68,7 @@
 /.ssh/known_hosts
 /.subversion
 /.terminfo/73/screen-256color
+/.tldrc
 /.tmux/plugins
 /.vim/.netrwhist
 /.vim/autoload/plug.vim
