@@ -80,9 +80,9 @@
 /.webdrivers
 /.weechat/certs
 /.weechat/logs
-/.weechat/weechat.log
-/.weechat/sec.conf
 /.weechat/script/plugins.xml.gz
+/.weechat/sec.conf
+/.weechat/weechat.log
 /.wget-hsts
 /.yarnrc
 /.zcompdump
