@@ -67,6 +67,7 @@
 /.ssh/id_rsa.pub
 /.ssh/known_hosts
 /.subversion
+/.synvert
 /.terminfo/73/screen-256color
 /.tldrc
 /.tmux/plugins
