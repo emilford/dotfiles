@@ -29,6 +29,7 @@
 /.dotfiles
 /.dropbox
 /.elm
+/.expo
 /.fzf.bash
 /.fzf.zsh
 /.fzf/
