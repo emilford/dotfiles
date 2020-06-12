@@ -71,3 +71,5 @@
   colorMoved = zebra
 [rebase]
 	autosquash = true
+[pull]
+	ff = only
