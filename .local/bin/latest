@@ -8,3 +8,4 @@ asdf update
 asdf plugin-update --all
 vim +PlugUpgrade +PlugUpdate +qall
 gem update --system
+tldr --update
