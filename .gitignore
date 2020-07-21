@@ -63,8 +63,7 @@
 /.s3bucket
 /.sbt
 /.scala_history
-/.ssh/id_rsa
-/.ssh/id_rsa.pub
+/.ssh/id_rsa*
 /.ssh/known_hosts
 /.subversion
 /.synvert
