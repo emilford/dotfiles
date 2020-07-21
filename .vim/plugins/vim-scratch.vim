@@ -1,4 +1,4 @@
-Plug 'mtth/scratch.vim'
+Plug 'portable-powertools/scratch.vim'
 
 " Open scratch window in a horizontal split
 let g:scratch_horizontal = 1
@@ -8,6 +8,8 @@ let g:scratch_height = 20
 
 " Persist scratch window
 let g:scratch_persistence_file = 'project-notes.txt'
+
+let g:scratch_insert_autohide = 0
 
 " Customize key mappings to avoid conflict with vim-sort-motion
 " Pneumonic: go to notes
