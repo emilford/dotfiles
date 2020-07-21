@@ -1,7 +1,10 @@
 set fish_greeting
 
-set -gx PATH $HOME/.local/bin $PATH
-set -gx PATH .git/safe/../../bin $PATH
+contains $HOME/.local/bin $PATH
+or set PATH $HOME/.local/bin $PATH
+
+contains .git/safe/../../bin $PATH
+or set PATH .git/safe/../../bin $PATH
 
 set -gx CDPATH . $HOME $HOME/Code
 
