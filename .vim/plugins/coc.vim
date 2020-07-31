@@ -30,3 +30,5 @@ let g:coc_filetype_map = {
 " See .vim/plugins/vim-endwise.vim
 inoremap <expr> <Plug>CustomCocCR pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 imap <CR> <Plug>CustomCocCR<Plug>DiscretionaryEnd
+
+imap <C-l> <Plug>(coc-snippets-expand)

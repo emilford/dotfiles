@@ -1,14 +1,30 @@
 Plug 'vimwiki/vimwiki'
 Plug 'michal-h21/vim-zettel'
 
-let zettelkasten_wiki = {}
-let zettelkasten_wiki.path = '~/Documents/Notes/Zettelkasten'
-let zettelkasten_wiki.auto_tags = 1
-let zettelkasten_wiki.auto_toc = 1
-let zettelkasten_wiki.syntax = 'markdown'
-let zettelkasten_wiki.ext = 'md'
+" let wiki_defaults = { 'auto_tags': 1, 'auto_toc': 1 }
+let wiki_defaults = {
+  \ 'auto_diary_index': 1,
+  \ 'auto_tags': 1,
+  \ 'auto_toc': 1,
+  \ 'ext': '.md',
+  \ 'syntax': 'markdown'
+  \ }
+" let zettelkasten_wiki = {}
+" let zettelkasten_wiki.path = '~/Documents/Notes/Zettelkasten'
+" let zettelkasten_wiki.auto_tags = 1
+" let zettelkasten_wiki.auto_toc = 1
+" let zettelkasten_wiki.syntax = 'markdown'
+" let zettelkasten_wiki.ext = 'md'
 
-let g:vimwiki_list = [zettelkasten_wiki]
+" let g:vimwiki_list = [zettelkasten_wiki]
+
+
+let g:vimwiki_list = [
+  \ extend(copy(wiki_defaults), { 'path': '~/Documents/Notes/Zettelkasten' })
+  \ ]
+
+let g:vimwiki_table_mappings = 0
+            " \{'path': '~/VimWiki', 'syntax': 'markdown', 'ext': '.md'},
 
 " let g:vimwiki_list = [{"path":"~/Dropbox/Notes/", 'auto_tags': 1, 'auto_toc': 1}]
 " let g:vimwiki_use_mouse = 1

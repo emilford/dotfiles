@@ -19,7 +19,7 @@ set backspace+=eol            " allow backspacing over line breaks (join lines)
 set backspace+=indent         " allow backspacing over autoindent
 set backspace+=start          " allow backspacing over the start of insert
 set colorcolumn=81            " higlight the 81st screen column
-set complete+=kspell          " autocomplete with dictionary words when spell check is on
+" set complete+=kspell          " autocomplete with dictionary words when spell check is on
 set cpoptions+=$              " when making a change to one line, put a $ at the end of the changed text
 set cursorline                " highlight the screen line of the cursor
 set diffopt=vertical          " start diff mode with veritical splits
@@ -47,7 +47,7 @@ set showmatch                 " when a bracket is inserted, briefly jump to the 
 set switchbuf=useopen         " jump to first open window that contains the specificed buffer
 set tabstop=2                 " number of spaces that a <Tab> in the file counts for
 set tags^=./.git/tags         " set tags location for fugitive.vim
-set termguicolors             " use 24-bit color
+" set termguicolors             " use 24-bit color
 set wildmenu                  " enable enhanced command-line completion
 set wildmode=list:longest     " when more than one match, list all matches and complete till longest common string
 
