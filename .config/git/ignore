@@ -1,3 +1,4 @@
+/**/project-notes.txt
 /.config.fish
 /.envrc
 /.projections.json
@@ -5,6 +6,5 @@
 /.squirrel
 /.tool-versions
 /dump.sql
-/project-notes.txt
 /spec/examples.txt
 /vendor/bundle
