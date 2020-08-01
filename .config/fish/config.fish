@@ -6,7 +6,11 @@ or set PATH $HOME/.local/bin $PATH
 contains .git/safe/../../bin $PATH
 or set PATH .git/safe/../../bin $PATH
 
-set -gx CDPATH . $HOME $HOME/Code
+contains $HOME $CDPATH
+or set CDPATH $HOME
+
+contains $HOME/Code $CDPATH
+or set CDPATH $HOME/Code
 
 set -x EDITOR vim
 
