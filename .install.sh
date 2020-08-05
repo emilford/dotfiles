@@ -14,6 +14,7 @@ function main {
   install_fish
   install_tmux
   install_heroku
+  install_fzf
 
 }
 
@@ -119,6 +120,12 @@ function install_heroku {
   else
     noop "heroku plugins:install heroku-pg-extras"
   fi
+}
+
+function install_fzf {
+  header "fzf"
+
+  run "install --all", "/usr/local/opt/fzf/install --all --no-bash --no-zsh"
 }
 
 function with_logging {
