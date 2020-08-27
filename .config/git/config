@@ -16,9 +16,6 @@
   name = Eric Milford
   email = ericmilford@gmail.com
 
-[color]
-  ui = true
-
 [alias]
   l = log --oneline --decorate --graph
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
