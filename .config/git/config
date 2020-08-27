@@ -31,7 +31,6 @@
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   conflicted = "!vim +Conflicted"
   contrast = log --cherry-pick --oneline --left-only
-  wip = commit --all --message "wip"
 
 [push]
   default = upstream
