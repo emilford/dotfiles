@@ -39,6 +39,7 @@
   colorMoved = zebra
 [rebase]
 	autosquash = true
+	autoStash = true
 [pull]
 	ff = only
 [credential]
