@@ -38,7 +38,7 @@
 [diff]
   colorMoved = zebra
 [rebase]
-	autosquash = true
+	autoSquash = true
 	autoStash = true
 [pull]
 	ff = only
