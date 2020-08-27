@@ -66,6 +66,7 @@ cask 'transmission'
 
 # Fonts
 cask 'font-hasklig'
+cask 'font-source-code-pro'
 
 # App Store
 mas 'Gifox 2', id: 1461845568
