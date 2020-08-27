@@ -41,6 +41,7 @@
 
 [fetch]
   prune = true
+  pruneTags = true
 
 [commit]
   template = ~/.config/git/message
