@@ -39,7 +39,6 @@
   template = ~/.config/git/message
 
 [diff]
-	compactionHeuristic = true
   colorMoved = zebra
 [rebase]
 	autosquash = true
