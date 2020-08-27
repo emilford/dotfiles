@@ -45,9 +45,6 @@
 [commit]
   template = ~/.config/git/message
 
-[gitsh]
-  noGreeting = true
-
 [diff]
 	compactionHeuristic = true
   colorMoved = zebra
