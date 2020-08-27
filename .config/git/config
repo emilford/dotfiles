@@ -27,25 +27,7 @@
   ui = true
 
 [alias]
-
-  a = add
-  b = branch
-  c = commit
-  co = checkout
-  cp = cherry-pick
-  d = diff
-  f = fetch
-  g = grep
   l = log --oneline --decorate --graph
-  m = merge
-  p = push
-  pl = pull
-  pr = pull-request
-  r = rebase
-  s = status
-  ; sh = show
-  ; st = stash
-
   conflicts = "!$EDITOR $(git diff --name-only --diff-filter=U)"
   conflicted = "!vim +Conflicted"
   contrast = log --cherry-pick --oneline --left-only
