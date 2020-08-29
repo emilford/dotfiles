@@ -1,0 +1,59 @@
+snippet tcbi "Create binary column"
+t.binary :${1:title}${2:, :limit => ${3:2}.megabytes}
+$0
+endsnippet
+
+snippet tcbo "Create boolean column"
+t.boolean :${1:title}
+$0
+endsnippet
+
+snippet tcda "Create date column"
+t.date :${1:title}
+$0
+endsnippet
+
+snippet tcdt "Create datetime column"
+t.datetime :${1:title}
+$0
+endsnippet
+
+snippet tcde "Create decimal column"
+t.decimal :${1:title}${2:${3:, :precision => ${4:10}}${5:, :scale => ${6:2}}}
+$0
+endsnippet
+
+snippet tcfl "Create float column"
+t.float :${1:title}
+$0
+endsnippet
+
+snippet tcin "Create integer column"
+t.integer :${1:title}
+$0
+endsnippet
+
+snippet tcre "Create reference column"
+t.references :${1:taggable}${2:, :polymorphic => ${3:{ :default => '${4:Photo}' \}}}
+$0
+endsnippet
+
+snippet tcst "Create string column"
+t.string :${1:title}
+$0
+endsnippet
+
+snippet tcte "Create text column"
+t.text :${1:title}
+$0
+endsnippet
+
+snippet tcti "Create time column"
+t.time :${1:title}
+$0
+endsnippet
+
+snippet tcts "Create timestamps columns"
+t.timestamps
+$0
+endsnippet
