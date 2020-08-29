@@ -66,8 +66,9 @@
 /.sbt
 /.scala_history
 /.solargraph
-/.ssh/id_rsa*
-/.ssh/known_hosts
+/.ssh/**/*
+!/.ssh/config
+!/.ssh/authorized_keys
 /.subversion
 /.synvert
 /.terminfo/73/screen-256color
