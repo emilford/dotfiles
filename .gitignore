@@ -57,6 +57,7 @@
 /.psql_history-*
 /.puma-dev
 /.python_history
+/.rbenv
 /.rediscli_history
 /.rnd
 /.rubies
