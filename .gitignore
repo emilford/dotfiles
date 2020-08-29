@@ -54,7 +54,7 @@
 /.pry
 /.pry_history
 /.psql
-/.psql_history
+/.psql_history-*
 /.puma-dev
 /.python_history
 /.rediscli_history
