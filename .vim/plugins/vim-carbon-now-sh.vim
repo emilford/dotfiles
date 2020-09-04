@@ -1,5 +1,9 @@
 Plug 'kristijanhusak/vim-carbon-now-sh'
 
 let g:carbon_now_sh_options =
-  \ { 'ln': 'false',
-  \ 'fm': 'Source Code Pro' }
+  \ {
+  \   'ln': 'false',
+  \   'fm': 'Source Code Pro',
+  \   'fs': '14px',
+  \   't': 'nord'
+  \ }
