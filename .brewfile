@@ -63,6 +63,7 @@ cask 'sketch'
 cask 'skype'
 cask 'slack'
 cask 'transmission'
+cask 'tuple'
 
 # Fonts
 cask 'font-hasklig'
