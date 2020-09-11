@@ -1,4 +1,4 @@
-Plug 'tpope/vim-projectionist'
+" Plug 'tpope/vim-projectionist'
 
 let g:rails_gem_projections = {
       \   "pundit": {
