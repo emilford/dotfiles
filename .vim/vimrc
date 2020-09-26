@@ -10,3 +10,5 @@ filetype plugin indent on
 syntax enable
 
 colorscheme nord
+
+set autoindent
