@@ -19,3 +19,4 @@ set cpoptions+=$
 set cursorline
 set diffopt+=vertical
 set nojoinspaces
+set shortmess+=I
