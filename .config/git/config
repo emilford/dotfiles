@@ -1,3 +1,5 @@
 [user]
 	name = Eric Milford
 	email = ericmilford@gmail.com
+[commit]
+	template = ~/.config/git/message
