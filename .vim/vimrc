@@ -12,6 +12,7 @@ set cpoptions+=$
 set cursorline
 set diffopt+=vertical
 set nojoinspaces
+set rtp+=/usr/local/opt/fzf
 set shortmess+=I
 
 function! PackInit() abort
