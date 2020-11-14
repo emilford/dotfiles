@@ -12,3 +12,4 @@ syntax enable
 colorscheme nord
 
 set autoindent
+set autoread
