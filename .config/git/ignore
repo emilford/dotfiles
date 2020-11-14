@@ -1,0 +1,13 @@
+/**/.config.fish
+/**/.envrc
+/**/.projections.json
+/**/.psql_history*
+/**/.squirrel
+/**/.tool-versions
+/**/dump.sql
+/**/project-notes.txt
+/**/spec/examples.txt
+/**/tags
+/**/vendor/bundle
+/**/vendor/cache
+/**/vendor/gems
