@@ -7,3 +7,5 @@ abbr tl tmux list-sessions
 abbr tn tmux new -s
 
 source $HOME/.asdf/asdf.fish
+
+eval (direnv hook fish)
