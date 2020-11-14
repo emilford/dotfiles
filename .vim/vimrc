@@ -3,6 +3,10 @@ packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type': 'opt'})
 
+call minpac#add("arcticicestudio/nord-vim")
+
 filetype plugin indent on
 
 syntax enable
+
+colorscheme nord
