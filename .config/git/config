@@ -5,6 +5,7 @@
 	template = ~/.config/git/message
 [core]
 	excludesfile = ~/.config/git/ignore
+	autocrlf = input
 [pull]
 	ff = only
 [rebase]
