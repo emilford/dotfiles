@@ -7,3 +7,5 @@
 	excludesfile = ~/.config/git/ignore
 [pull]
 	ff = only
+[rebase]
+	autostash = true
