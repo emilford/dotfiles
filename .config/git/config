@@ -12,3 +12,5 @@
 	autosquash = true
 [merge]
 	autostash = true
+[init]
+	defaultbranch = main
