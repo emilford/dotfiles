@@ -9,5 +9,6 @@
 	ff = only
 [rebase]
 	autostash = true
+	autosquash = true
 [merge]
 	autostash = true
