@@ -5,3 +5,5 @@
 	template = ~/.config/git/message
 [core]
 	excludesfile = ~/.config/git/ignore
+[pull]
+	ff = only
