@@ -14,6 +14,7 @@ set diffopt+=vertical
 set hidden
 set nojoinspaces
 set rtp+=/usr/local/opt/fzf
+set shiftround
 set shortmess+=I
 
 function! PackInit() abort
