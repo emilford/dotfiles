@@ -13,6 +13,7 @@ set colorcolumn=+1
 set cpoptions+=$
 set cursorline
 set diffopt+=vertical
+set grepprg=rg\ --vimgrep
 set hidden
 set nojoinspaces
 set rtp+=/usr/local/opt/fzf
