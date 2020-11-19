@@ -1,3 +1,5 @@
 \set QUIET 1
 
+\set ON_ERROR_ROLLBACK interactive
+
 \unset QUIET
