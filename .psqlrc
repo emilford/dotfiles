@@ -1,5 +1,7 @@
 \set QUIET 1
 
+\set HISTFILE ~/.psql_history- :DBNAME
+
 \set ON_ERROR_ROLLBACK interactive
 
 \unset QUIET
