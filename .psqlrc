@@ -8,4 +8,6 @@
 
 \set VERBOSITY verbose
 
+\pset null '(null)'
+
 \unset QUIET
