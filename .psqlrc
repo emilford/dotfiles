@@ -10,4 +10,6 @@
 
 \pset null '(null)'
 
+\x auto
+
 \unset QUIET
