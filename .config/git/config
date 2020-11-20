@@ -16,3 +16,5 @@
 	autostash = true
 [init]
 	defaultbranch = main
+[status]
+	short = true
