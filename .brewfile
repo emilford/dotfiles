@@ -39,6 +39,7 @@ cask "kitty"
 cask "ngrok"
 cask "skype"
 cask "slack"
+cask "syncthing"
 cask "tuple"
 
 mas "Things 3", id: 904280696
