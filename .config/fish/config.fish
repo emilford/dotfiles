@@ -33,7 +33,9 @@ source $HOME/.asdf/asdf.fish
 source $HOME/.config/fish/nord.fish
 source $HOME/.config/fish/functions/local_config.fish
 
-if test -n "$SSH_CLIENT" ; or test -n "$SSH_TTY"
+# if set -q SSH_TTY
+# if test -n "$SSH_CLIENT" ; or test -n "$SSH_TTY"
+if set -q SSH_TTY
   set sessions (tmux list-sessions -F "#{session_name}")
 
   for i in (seq (count $sessions))

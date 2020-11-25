@@ -1,5 +1,5 @@
 /**/project-notes.txt
-/**/tags
+/**/tags*
 /.config.fish
 /.envrc
 /.projections.json
@@ -8,4 +8,5 @@
 /.tool-versions
 /dump.sql
 /spec/examples.txt
-/vendor/bundle
+/**/vendor/bundle
+/**/vendor/gems

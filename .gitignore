@@ -1,3 +1,5 @@
+!/.ssh/authorized_keys
+!/.ssh/config
 /.CFUserTextEncoding
 /.DS_Store
 /.Trash
@@ -44,11 +46,13 @@
 /.lesshst
 /.local/share
 /.mix
+/.my.cnf
 /.mysql_history
 /.netrc
 /.ngrok
 /.ngrok2
 /.node-gyp
+/.nodenv
 /.npm
 /.nvimlog
 /.pry
@@ -67,8 +71,6 @@
 /.scala_history
 /.solargraph
 /.ssh/**/*
-!/.ssh/config
-!/.ssh/authorized_keys
 /.subversion
 /.synvert
 /.terminfo/73/screen-256color

@@ -1,4 +1,5 @@
 function fish_right_prompt --description "Write out the right prompt"
+  set -g __fish_git_prompt_showupstream verbose
   set -g __fish_git_prompt_show_untracked_files 1
   set -g __fish_git_prompt_show_informative_status 1
 
