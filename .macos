@@ -3,3 +3,5 @@
 osascript -e 'tell application "System Preferences" to quit'
 
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
+
+defaults write com.apple.dock autohide -bool true
