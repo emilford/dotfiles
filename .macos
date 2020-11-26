@@ -5,3 +5,6 @@ osascript -e 'tell application "System Preferences" to quit'
 defaults write NSGlobalDomain _HIHideMenuBar -bool true
 
 defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock largesize -int 128
+defaults write com.apple.dock magnification -bool true
+defaults write com.apple.dock tilesize -int 23
