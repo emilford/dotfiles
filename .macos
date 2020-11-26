@@ -27,3 +27,4 @@ defaults write com.irradiatedsoftware.SizeUp MarginLeft -int 35
 defaults write com.irradiatedsoftware.SizeUp MarginRight -int 35
 defaults write com.irradiatedsoftware.SizeUp MarginUp -int 35
 defaults write com.irradiatedsoftware.SizeUp MarginVertical -int 20
+defaults write com.irradiatedsoftware.SizeUp MenuEnabled -bool false
