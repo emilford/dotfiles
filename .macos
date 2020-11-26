@@ -22,6 +22,8 @@ defaults write ~/library/containers/com.apple.safari/data/library/preferences/co
 defaults write ~/library/containers/com.apple.safari/data/library/preferences/com.apple.safari NewWindowBehavior -int 1
 
 defaults write com.irradiatedsoftware.SizeUp MarginDown -int 35
+defaults write com.irradiatedsoftware.SizeUp MarginHorizontal -int 20
 defaults write com.irradiatedsoftware.SizeUp MarginLeft -int 35
 defaults write com.irradiatedsoftware.SizeUp MarginRight -int 35
 defaults write com.irradiatedsoftware.SizeUp MarginUp -int 35
+defaults write com.irradiatedsoftware.SizeUp MarginVertical -int 20
