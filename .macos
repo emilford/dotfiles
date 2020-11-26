@@ -8,6 +8,7 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock largesize -int 128
 defaults write com.apple.dock magnification -bool true
 defaults write com.apple.dock minimize-to-application -bool true
+defaults write com.apple.dock mru-spaces -bool false
 defaults write com.apple.dock persistent-apps -array
 defaults write com.apple.dock persistent-others -array
 defaults write com.apple.dock show-recents -bool false
