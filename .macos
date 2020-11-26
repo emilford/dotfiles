@@ -16,3 +16,4 @@ defaults write com.apple.dock tilesize -int 23
 
 defaults write ~/library/containers/com.apple.safari/data/library/preferences/com.apple.safari AutoFillCreditCardData -bool false
 defaults write ~/library/containers/com.apple.safari/data/library/preferences/com.apple.safari AutoFillPasswords -bool false
+defaults write ~/library/containers/com.apple.safari/data/library/preferences/com.apple.safari AutoOpenSafeDownloads -bool false
