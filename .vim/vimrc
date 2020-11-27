@@ -11,7 +11,6 @@ set autoread
 set backspace=indent,eol,start
 set colorcolumn=+1
 set cpoptions+=$
-set cursorline
 set diffopt+=vertical
 set grepprg=rg\ --vimgrep
 set hidden
@@ -86,4 +85,10 @@ augroup quickfix
   autocmd!
   autocmd QuickFixCmdPost cgetexpr cwindow
   autocmd QuickFixCmdPost lgetexpr lwindow
+augroup END
+
+augroup CursorLine
+  autocmd!
+  autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+  autocmd WinLeave * setlocal nocursorline
 augroup END
