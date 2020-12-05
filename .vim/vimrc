@@ -18,6 +18,7 @@ set nojoinspaces
 set rtp+=/usr/local/opt/fzf
 set shiftround
 set shortmess+=I
+set termguicolors
 
 function! PackInit() abort
   packadd minpac
