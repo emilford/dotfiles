@@ -18,3 +18,5 @@
 	defaultbranch = main
 [status]
 	short = true
+[fetch]
+	prune = true
