@@ -20,3 +20,4 @@
 	short = true
 [fetch]
 	prune = true
+	pruneTags = true
