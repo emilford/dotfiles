@@ -44,6 +44,7 @@
 /.gnupg
 /.heroku
 /.hex
+/.irb_history
 /.ivy2
 /.lesshst
 /.local/share
