@@ -1,5 +1,6 @@
 {
 	"diagnostic.errorSign": "•",
 	"diagnostic.hintSign": "•",
-	"diagnostic.infoSign": "•"
+	"diagnostic.infoSign": "•",
+	"suggest.noselect": false
 }
