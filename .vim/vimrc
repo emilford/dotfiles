@@ -46,6 +46,7 @@ function! PackInit() abort
   call minpac#add("kana/vim-textobj-user")
   call minpac#add("lambdalisue/vim-gista")
   call minpac#add("nelstrom/vim-textobj-rubyblock")
+  call minpac#add("neoclide/coc.nvim", {'branch': 'release'})
   call minpac#add("pbrisbin/vim-mkdir")
   call minpac#add("portable-powertools/scratch.vim")
   call minpac#add("qalshidi/vim-bettergrep")
