@@ -76,6 +76,9 @@ endfunction
 command! PackUpdate call PackInit() | call minpac#update()
 command! PackClean  call PackInit() | call minpac#clean()
 
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 augroup CursorLine
   autocmd!
   autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
