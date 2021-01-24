@@ -30,6 +30,7 @@ brew "weechat"
 brew "yarn"
 
 cask "1password"
+cask "alacritty"
 cask "anki"
 cask "basecamp"
 cask "brainfm"
