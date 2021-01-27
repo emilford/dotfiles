@@ -80,3 +80,5 @@ augroup CursorLine
   autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
   autocmd WinLeave * setlocal nocursorline
 augroup END
+
+autocmd! VimResized * :wincmd =
