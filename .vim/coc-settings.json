@@ -3,5 +3,8 @@
 	"diagnostic.hintSign": "•",
 	"diagnostic.infoSign": "•",
 	"diagnostic.warningSign": "•",
-	"suggest.noselect": false
+	"suggest.noselect": false,
+	"snippets.extends": {
+		"ruby": ["rails", "rspec"]
+	}
 }
