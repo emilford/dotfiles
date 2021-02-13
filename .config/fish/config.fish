@@ -9,3 +9,5 @@ abbr tn tmux new -s
 source $HOME/.asdf/asdf.fish
 
 eval (direnv hook fish)
+
+set -x RIPGREP_CONFIG_PATH $HOME/.config/ripgrep/ripgreprc
