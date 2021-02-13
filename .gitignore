@@ -16,7 +16,8 @@
 /.cache
 /.chromedriver-helper
 /.composer
-/.config/coc
+/.config/coc/*
+!/.config/coc/ultisnips
 /.config/configstore
 /.config/direnv
 /.config/fish/fish_variables

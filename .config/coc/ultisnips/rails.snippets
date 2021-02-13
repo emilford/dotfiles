@@ -1,0 +1,71 @@
+# --- Migrations
+
+snippet t.binary
+t.binary :${1:column}${2:, limit: ${3:2}.megabytes}
+t.$0
+endsnippet
+
+snippet t.boolean
+t.boolean :${1:column}
+t.$0
+endsnippet
+
+snippet t.date
+t.date :${1:column}
+t.$0
+endsnippet
+
+snippet t.datetime
+t.datetime :${1:column}
+t.$0
+endsnippet
+
+snippet t.decimal
+t.decimal :${1:column}${2:${3:, precision: ${4:10}}${5:, scale: ${6:2}}}
+t.$0
+endsnippet
+
+snippet t.float
+t.float :${1:column}
+t.$0
+endsnippet
+
+snippet t.integer
+t.integer :${1:column}
+t.$0
+endsnippet
+
+snippet t.references
+t.references :${1:taggable}${2:, polymorphic: ${3:{ default: '${4:Photo}' }}}
+t.$0
+endsnippet
+
+snippet t.rename
+t.rename :${1:old_column_name}, :${2:new_column_name}
+t.$0
+endsnippet
+
+snippet t.string
+t.string :${1:column}
+t.$0
+endsnippet
+
+snippet t.text
+t.text :${1:column}
+t.$0
+endsnippet
+
+snippet t.time
+t.time :${1:column}
+t.$0
+endsnippet
+
+snippet t.timestamp
+t.timestamp :${1:column}
+t.$0
+endsnippet
+
+snippet t.timestamps
+t.timestamps
+t.$0
+endsnippet
