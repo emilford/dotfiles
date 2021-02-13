@@ -2,5 +2,6 @@
 	"diagnostic.errorSign": "•",
 	"diagnostic.hintSign": "•",
 	"diagnostic.infoSign": "•",
-	"diagnostic.warningSign": "•"
+	"diagnostic.warningSign": "•",
+	"suggest.noselect": false
 }
