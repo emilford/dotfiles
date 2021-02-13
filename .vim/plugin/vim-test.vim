@@ -1,5 +1,4 @@
-let test#strategy = "vimterminal"
-let test#vim#term_position = "botright 20"
+let test#strategy = "vtr"
 
 nmap <silent> <leader>tn :TestNearest<CR>
 nmap <silent> <leader>tf :TestFile<CR>
