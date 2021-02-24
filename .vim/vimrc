@@ -4,8 +4,6 @@ filetype plugin indent on
 
 syntax enable
 
-colorscheme nord
-
 set autoindent
 set autoread
 set backspace=indent,eol,start
