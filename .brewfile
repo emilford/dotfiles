@@ -8,6 +8,7 @@ tap "universal-ctags/universal-ctags"
 
 brew "bat"
 brew "direnv"
+brew "fd"
 brew "fish"
 brew "fzf"
 brew "gh"
