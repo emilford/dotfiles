@@ -1,3 +1,4 @@
+let g:scratch_height = 20
 let g:scratch_no_mappings = 1
 
 " Pneumonic: go to notes
