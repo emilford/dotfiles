@@ -6,5 +6,5 @@
   "suggest.noselect": false,
   "snippets.extends": {
     "ruby": ["rails", "rspec"]
-  }
+  },
 }
