@@ -1,1 +1,12 @@
 --smart-case
+--hidden
+--follow
+
+--glob
+!.git/*
+
+--glob
+!node_modules/*
+
+--glob
+!vendor/cache/*

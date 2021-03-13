@@ -22,5 +22,8 @@ function fish_right_prompt --description "Write out the right prompt"
   set -g __fish_git_prompt_color_suffix normal
 
   echo -n (basename (prompt_pwd))
-  printf '%s ' (__fish_vcs_prompt)
+
+  if test $PWD != "$HOME/Code/github/github"
+    printf '%s ' (__fish_vcs_prompt)
+  end
 end

@@ -1,10 +1,27 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "coc.preferences.formatOnType": true,
   "diagnostic.errorSign": "•",
   "diagnostic.hintSign": "•",
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
-  "suggest.noselect": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "prettier.disableSuccessMessage": true,
   "snippets.extends": {
-    "ruby": ["rails", "rspec"]
+    "javascriptreact": ["javascript"],
+    /* "ruby": ["rails", "rspec"], */
+    "typescript": ["javascript"]
   },
+  "tsserver.formatOnType": true
 }

@@ -1,0 +1,24 @@
+snippet rnfc "React Native functional component" b
+import React from 'react';
+import { View, Text } from 'react-native';
+
+const ${1:name} = (${2:props}) => {
+	return(
+		<View>
+			<Text>${3:text}</Text>
+			$0
+		</View>
+	)
+};
+
+export default $1;
+endsnippet
+
+snippet rnss "React Native stylesheet" b
+import { StyleSheet } from 'react-native';
+
+const styles = StyleSheet.create({
+});
+
+export default styles;
+endsnippet
