@@ -15,6 +15,7 @@
 /.bundle/cache
 /.cache
 /.chromedriver-helper
+/.cocoapods
 /.composer
 /.config/coc/*
 !/.config/coc/ultisnips
@@ -64,6 +65,7 @@
 /.puma-dev
 /.python_history
 /.rbenv
+/.react-native-cli
 /.rediscli_history
 /.rnd
 /.rubies
