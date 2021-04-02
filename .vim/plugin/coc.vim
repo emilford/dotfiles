@@ -6,7 +6,6 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-marketplace',
   \ 'coc-prettier',
-  \ 'coc-snippets',
   \ 'coc-tailwindcss',
   \ 'coc-tsserver',
   \ ]

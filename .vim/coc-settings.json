@@ -18,6 +18,8 @@
     "typescriptreact"
   ],
   "prettier.disableSuccessMessage": true,
+  "suggest.noselect": false,
+  "suggest.enablePreview": true,
   "snippets.extends": {
     "javascriptreact": ["javascript"],
     /* "ruby": ["rails", "rspec"], */

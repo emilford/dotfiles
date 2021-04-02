@@ -35,6 +35,7 @@ function! PackInit() abort
   call minpac#add("coderifous/textobj-word-column.vim")
   call minpac#add("dhruvasagar/vim-zoom")
   call minpac#add("ervandew/supertab")
+  call minpac#add("SirVer/ultisnips")
   call minpac#add("janko-m/vim-test")
   call minpac#add("jceb/vim-textobj-uri")
   call minpac#add("junegunn/fzf.vim")
@@ -72,6 +73,7 @@ function! PackInit() abort
   call minpac#add("tpope/vim-unimpaired")
   call minpac#add("wellle/targets.vim")
   call minpac#add("wincent/loupe")
+  call minpac#add("tpope/vim-projectionist")
 endfunction
 
 command! PackUpdate call PackInit() | call minpac#update()
