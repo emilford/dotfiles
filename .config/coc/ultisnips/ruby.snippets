@@ -1,11 +1,11 @@
 snippet def "def <name>..."
-def ${1:function_name}${2: ${3:*args}}
+def ${1:function_name}${2:(${3:*args})}
 	$0
 end
 endsnippet
 
 snippet defi "def initialize ..."
-def initialize(${1:*args})
+def initialize${1:(${2:*args})}
 	$0
 end
 endsnippet
