@@ -10,3 +10,5 @@ let g:coc_global_extensions = [
   \ 'coc-tailwindcss',
   \ 'coc-tsserver',
   \ ]
+
+imap <c-y> <Plug>(coc-snippets-expand)
