@@ -69,3 +69,21 @@ snippet t.timestamps
 t.timestamps
 t.$0
 endsnippet
+
+snippet "class [Controller]"
+class ${1:`!p snip.rv = snip.basename.title().replace('_', '')`} < ApplicationController
+	$0
+end
+endsnippet
+
+snippet "class [Mailer]"
+class ${1:`!p snip.rv = snip.basename.title().replace('_', '')`} < ApplicationMailer
+	$0
+end
+endsnippet
+
+snippet "class [Model]"
+class ${1:`!p snip.rv = snip.basename.title().replace('_', '')`} < ApplicationRecord
+	$0
+end
+endsnippet

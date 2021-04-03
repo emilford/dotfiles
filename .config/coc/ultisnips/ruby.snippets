@@ -16,10 +16,149 @@ if ${1:condition}
 end
 endsnippet
 
-snippet ife
+snippet "if else"
 if ${1:condition}
 	$2
 else
 	$3
+end
+endsnippet
+
+snippet "if elsif"
+if ${1:condition}
+	$2
+elsif ${3:condition}
+	$4
+end
+endsnippet
+
+snippet "if elsif else"
+if ${1:condition}
+	$2
+elsif ${3:condition}
+	$4
+else
+	$5
+end
+endsnippet
+
+snippet each
+$1.each do |${2:key}${3:, ${4:value}}|
+	$0
+end
+endsnippet
+
+snippet Each ".each { |<key>, <value>| <block> }"
+$1.each { |${2:key}${3:, ${4:value}}| $0 }
+endsnippet
+
+snippet reject
+$1.reject$2 do |${3:key}${4:, ${5:value}}|
+	$0
+end
+endsnippet
+
+snippet Reject
+$1.reject$2 { |${3:key}${4:, ${5:value}}| $0 }
+endsnippet
+
+snippet select
+$1.select$2 do |${3:key}${4:, ${5:value}}|
+	$0
+end
+endsnippet
+
+snippet Select
+$1.select$2 { |${3:key}${4:, ${5:value}}| $0 }
+endsnippet
+
+snippet sort
+$1.sort$2 do |${3:a}, ${4:b}|
+	$0
+end
+endsnippet
+
+snippet Sort
+$1.sort$2 { |${3:a}, ${4:b}| $0 }
+endsnippet
+
+snippet map
+$1.map$2 do |${3:element}|
+	$0
+end
+endsnippet
+
+snippet Map
+$1.map$2 { |${3:element}| $0 }
+endsnippet
+
+snippet case
+case ${1:variable}
+when ${2:expression}
+	$0
+end
+endsnippet
+
+snippet class
+class ${1:`!p snip.rv = snip.basename.title().replace('_', '')`}
+	def initialize(${2:*args})
+		$0
+	end
+end
+endsnippet
+
+snippet module
+module ${1:`!p snip.rv = snip.basename.title().replace('_', '')`}
+	$0
+end
+endsnippet
+
+snippet "(\S+)\.Each" "" r
+`!p snip.rv=match.group(1)`.each$1 { |${2:key}${3:, ${4:value}}| ${5:block} }
+endsnippet
+
+snippet "(\S+)\.each" "" r
+`!p snip.rv=match.group(1)`.each$1 do |${2:key}${3:, ${4:value}}|
+	${0:block}
+end
+endsnippet
+
+snippet "(\S+)\.Reject" "" r
+`!p snip.rv=match.group(1)`.reject$1 { |${2:key}${3:, ${4:value}}| ${5:block} }
+endsnippet
+
+snippet "(\S+)\.reject" "" r
+`!p snip.rv=match.group(1)`.reject$1 do |${2:key}${3:, ${4:value}}|
+	${0:block}
+end
+endsnippet
+
+snippet "(\S+)\.Select" "" r
+`!p snip.rv=match.group(1)`.select$1 { |${2:key}${3:, ${4:value}}| ${5:block} }
+endsnippet
+
+snippet "(\S+)\.select" "" r
+`!p snip.rv=match.group(1)`.select$1 do |${2:key}${3:, ${4:value}}|
+	${0:block}
+end
+endsnippet
+
+snippet "(\S+)\.Sort" "" r
+`!p snip.rv=match.group(1)`.sort$1 { |${2:a}, ${3:b}| ${4:block} }
+endsnippet
+
+snippet "(\S+)\.sort" "" r
+`!p snip.rv=match.group(1)`.sort$1 do |${2:a}, ${3:b}}|
+	${0:block}
+end
+endsnippet
+
+snippet "(\S+)\.Map" "" r
+`!p snip.rv=match.group(1)`.map$1 { |${2:key}${3:, ${4:value}}| ${5:block} }
+endsnippet
+
+snippet "(\S+)\.map" "" r
+`!p snip.rv=match.group(1)`.map$1 do |${2:key}${3:, ${4:value}}|
+	${0:block}
 end
 endsnippet
