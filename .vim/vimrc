@@ -16,6 +16,7 @@ set number
 set rtp+=/usr/local/opt/fzf
 set shiftround
 set shortmess+=I
+set showmatch
 set termguicolors
 set wildmenu
 set wildmode=list:longest,list:full
