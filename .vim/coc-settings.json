@@ -4,6 +4,7 @@
   "diagnostic.hintSign": "•",
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
+  "prettier.requireConfig": true,
   "suggest.noselect": false,
   "snippets.extends": {
     "ruby": ["rails", "rspec"]
