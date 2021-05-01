@@ -48,6 +48,7 @@
 /.hex
 /.irb_history
 /.ivy2
+/.kube
 /.lesshst
 /.local/share
 /.mix
