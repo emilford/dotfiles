@@ -4,6 +4,12 @@
   "diagnostic.hintSign": "•",
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
+  "diagnostic-languageserver.filetypes": {
+    "ruby": "standardrb"
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "ruby": "standardrb"
+  },
   "diagnostic-languageserver.formatters": {
     "standardrb": {
       "command": "bundle",
