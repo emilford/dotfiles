@@ -13,3 +13,6 @@ let g:coc_global_extensions = [
   \ ]
 
 imap <c-y> <Plug>(coc-snippets-expand)
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
