@@ -1,5 +1,6 @@
 let g:coc_global_extensions = [
   \ 'coc-css',
+  \ 'coc-diagnostic',
   \ 'coc-html',
   \ 'coc-highlight',
   \ 'coc-eslint',
