@@ -4,6 +4,25 @@
   "diagnostic.hintSign": "•",
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
+  "diagnostic-languageserver.formatters": {
+    "standardrb": {
+      "command": "bundle",
+      "args": [
+        "exec",
+        "standardrb",
+        "--fix",
+        "--force-exclusion",
+        "%filepath"
+      ],
+      "rootPatterns": [
+        ".git"
+      ],
+      "requiredFiles": [
+        ".standard.yml",
+        "bin/standardrb"
+      ]
+    }
+  },
   "prettier.requireConfig": true,
   "suggest.noselect": false,
   "snippets.extends": {
