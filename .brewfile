@@ -45,4 +45,5 @@ cask "slack"
 cask "syncthing"
 cask "tuple"
 
+mas "iA Writer", id: 775737590
 mas "Things 3", id: 904280696
