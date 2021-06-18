@@ -38,6 +38,7 @@ function! PackInit() abort
   call minpac#add("ervandew/supertab")
   call minpac#add("janko-m/vim-test")
   call minpac#add("jceb/vim-textobj-uri")
+  call minpac#add("jiangmiao/auto-pairs")
   call minpac#add("junegunn/fzf.vim")
   call minpac#add("junegunn/vim-easy-align")
   call minpac#add("kana/vim-textobj-entire")
