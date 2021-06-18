@@ -4,6 +4,7 @@
 /**/.psql_history*
 /**/.squirrel
 /**/.tool-versions
+/**/.vim/coc-settings.json
 /**/dump.sql
 /**/project-notes.txt
 /**/spec/examples.txt
