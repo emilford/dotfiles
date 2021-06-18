@@ -70,6 +70,7 @@
       ]
     }
   },
+  "prettier.disableSuccessMessage": true,
   "prettier.requireConfig": true,
   "suggest.noselect": false,
   "snippets.extends": {
