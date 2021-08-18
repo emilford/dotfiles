@@ -8,3 +8,4 @@ vim.o.shiftround = true
 vim.o.shortmess = vim.o.shortmess .. "I"
 vim.o.showmatch = true
 vim.o.termguicolors = true
+vim.o.wildmode = "list:longest,list:full"
