@@ -5,3 +5,7 @@ vim.cmd([[
     autocmd WinLeave * setlocal nocursorline
   augroup END
 ]])
+
+vim.cmd([[
+  autocmd! VimResized * :wincmd =
+]])
