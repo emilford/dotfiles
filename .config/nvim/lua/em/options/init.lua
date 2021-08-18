@@ -7,6 +7,7 @@ vim.o.hidden = true
 vim.o.joinspaces = false
 vim.o.laststatus = 1
 vim.o.number = true
+vim.o.ruler = false
 vim.o.shiftround = true
 vim.o.shortmess = vim.o.shortmess .. "I"
 vim.o.showmatch = true
