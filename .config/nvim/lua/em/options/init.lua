@@ -4,3 +4,4 @@ vim.o.diffopt = vim.o.diffopt .. ",vertical"
 vim.o.hidden = true
 vim.o.joinspaces = false
 vim.o.number = true
+vim.o.shiftround = true
