@@ -5,3 +5,4 @@ vim.o.hidden = true
 vim.o.joinspaces = false
 vim.o.number = true
 vim.o.shiftround = true
+vim.o.shortmess = vim.o.shortmess .. "I"
