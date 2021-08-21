@@ -1,5 +1,11 @@
 {
   "coc.preferences.extensionUpdateCheck": "weekly",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
   "coc.preferences.formatOnType": true,
   "diagnostic.errorSign": "•",
   "diagnostic.hintSign": "•",
