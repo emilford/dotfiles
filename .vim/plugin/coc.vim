@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
   \ 'coc-marketplace',
   \ 'coc-prettier',
   \ 'coc-snippets',
+  \ 'coc-sql',
   \ 'coc-tailwindcss',
   \ 'coc-tsserver',
   \ ]
