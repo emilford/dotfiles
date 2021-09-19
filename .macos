@@ -14,6 +14,11 @@ defaults write com.apple.dock persistent-others -array
 defaults write com.apple.dock show-recents -bool false
 defaults write com.apple.dock tilesize -int 23
 
+defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowHardDrivesOnDesktop -bool false
+defaults write com.apple.finder ShowMountedServersOnDesktop -bool false
+defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool false
+
 defaults write ~/library/containers/com.apple.safari/data/library/preferences/com.apple.safari AutoFillCreditCardData -bool false
 defaults write ~/library/containers/com.apple.safari/data/library/preferences/com.apple.safari AutoFillPasswords -bool false
 defaults write ~/library/containers/com.apple.safari/data/library/preferences/com.apple.safari AutoOpenSafeDownloads -bool false
