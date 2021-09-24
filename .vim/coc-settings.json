@@ -12,12 +12,30 @@
   "diagnostic.infoSign": "•",
   "diagnostic.warningSign": "•",
   "diagnostic-languageserver.filetypes": {
+    "eruby": "erblint",
     "ruby": "standardrb"
   },
   "diagnostic-languageserver.formatFiletypes": {
+    "eruby": "erblint",
     "ruby": "standardrb"
   },
   "diagnostic-languageserver.formatters": {
+    "erblint": {
+      "command": "bundle",
+      "args": [
+        "exec",
+        "erblint",
+        "--autocorrect",
+        "%filepath"
+      ],
+      "isStdout": false,
+      "rootPatterns": [
+        ".git"
+      ],
+      "requiredFiles": [
+        ".erb-lint.yml"
+      ]
+    },
     "standardrb": {
       "command": "bundle",
       "args": [
@@ -37,6 +55,33 @@
     }
   },
   "diagnostic-languageserver.linters": {
+    "erblint": {
+      "command": "bundle",
+      "sourceName": "erblint",
+      "debounce": 100,
+      "args": [
+        "exec",
+        "erblint",
+        "--format",
+        "json",
+        "--stdin",
+        "%filepath"
+      ],
+      "parseJson": {
+        "errorsRoot": "files[0].offenses",
+        "line": "location.start_line",
+        "endLine": "location.last_line",
+        "column": "location.start_column",
+        "endColumn": "location.last_column",
+        "message": "[${linter}] ${message}"
+      },
+      "rootPatterns": [
+        ".git"
+      ],
+      "requiredFiles": [
+        ".erb-lint.yml"
+      ]
+    },
     "standardrb": {
       "command": "bundle",
       "sourceName": "standardrb",
