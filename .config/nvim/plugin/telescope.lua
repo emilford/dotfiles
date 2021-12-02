@@ -1,3 +1,16 @@
+require("telescope").setup({
+	defaults = {
+		mappings = {
+			i = {
+				["<c-\\>"] = require("telescope.actions.layout").toggle_preview,
+			},
+		},
+		preview = {
+			hide_on_startup = true,
+		},
+	},
+})
+
 vim.api.nvim_set_keymap(
 	"n",
 	"<c-p>",
