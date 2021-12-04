@@ -30,6 +30,7 @@
 /.config/glab-cli
 /.config/heroku
 /.config/hub
+/.config/nvim/plugin/packer_compiled.lua
 /.config/wireshark
 /.config/yarn
 /.cpan
