@@ -2,6 +2,7 @@ return require("packer").startup(function()
 	use({ "wbthomason/packer.nvim" })
 
 	use({ "AndrewRadev/splitjoin.vim" })
+	use({ "DarwinSenior/nvim-colorizer.lua" })
 	use({ "SirVer/ultisnips" })
 	use({ "arcticicestudio/nord-vim" })
 	use({ "christoomey/vim-sort-motion" })
