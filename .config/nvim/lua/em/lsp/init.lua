@@ -89,9 +89,21 @@ lsp_installer.on_server_ready(function(server)
 	end
 
 	if server.name == "tsserver" then
+		-- Needed for inlayHints. Merge this table with your settings or copy
+		-- it from the source if you want to add your own init_options.
+		opts.init_options = require("nvim-lsp-ts-utils").init_options
 		opts.on_attach = function(client, bufnr)
 			client.resolved_capabilities.document_formatting = false
 			client.resolved_capabilities.document_range_formatting = false
+
+			local ts_utils = require("nvim-lsp-ts-utils")
+			ts_utils.setup({})
+			-- required to fix code action ranges and filter diagnostics
+			ts_utils.setup_client(client)
+
+			vim.cmd("command! LspTSOrganize TSLspOrganize")
+			vim.cmd("command! LspTSRenameFile TSLspRenameFile")
+			vim.cmd("command! LspTSImportAll TSLspImportAll")
 
 			on_attach(client, bufnr)
 		end
