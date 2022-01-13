@@ -40,6 +40,7 @@
 /.dropbox
 /.elm
 /.emulator_console_auth_token
+/.eslint_d
 /.expo
 /.fzf.bash
 /.fzf.zsh

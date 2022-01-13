@@ -51,7 +51,6 @@ local lsp_installer = require("nvim-lsp-installer")
 local servers = {
 	"cssls",
 	"emmet_ls",
-	"eslint",
 	"html",
 	"jsonls",
 	"solargraph",
