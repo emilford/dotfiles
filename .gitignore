@@ -66,6 +66,7 @@
 /.node-gyp
 /.npm
 /.nvimlog
+/.prettierd
 /.pry
 /.pry_history
 /.psql
