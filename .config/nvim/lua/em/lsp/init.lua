@@ -85,6 +85,7 @@ lsp_installer.on_server_ready(function(server)
 		opts.init_options = {
 			formatting = false,
 		}
+		opts.root_dir = nvim_lsp.util.root_pattern(".solargraph.yml")
 	end
 
 	if server.name == "tsserver" then
