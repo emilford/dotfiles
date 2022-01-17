@@ -30,6 +30,7 @@ brew "universal-ctags", args: ["HEAD"]
 brew "vim"
 brew "weechat"
 brew "yarn"
+brew "zk"
 
 cask "1password"
 cask "anki"
