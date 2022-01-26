@@ -81,6 +81,14 @@ lsp_installer.on_server_ready(function(server)
 		capabilities = capabilities,
 	}
 
+	if server.name == "jsonls" then
+		opts.settings = {
+			json = {
+				schemas = require("schemastore").json.schemas(),
+			},
+		}
+	end
+
 	if server.name == "solargraph" then
 		opts.init_options = {
 			formatting = false,
