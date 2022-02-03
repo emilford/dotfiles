@@ -160,8 +160,18 @@ null_ls.setup({
 
 	sources = {
 		null_ls.builtins.code_actions.eslint_d.with(eslint_d_opts),
+		null_ls.builtins.code_actions.proselint.with({
+			extra_filetypes = { "gitcommit" },
+		}),
 		null_ls.builtins.diagnostics.eslint_d.with(eslint_d_opts),
+		null_ls.builtins.diagnostics.gitlint,
+		null_ls.builtins.diagnostics.proselint.with({
+			extra_filetypes = { "gitcommit" },
+		}),
 		null_ls.builtins.diagnostics.standardrb,
+		null_ls.builtins.diagnostics.write_good.with({
+			extra_filetypes = { "gitcommit" },
+		}),
 		null_ls.builtins.formatting.eslint_d.with(eslint_d_opts),
 		null_ls.builtins.formatting.prettierd.with(prettierd_opts),
 		null_ls.builtins.formatting.standardrb,
