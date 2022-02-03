@@ -31,6 +31,7 @@
 /.config/heroku
 /.config/hub
 /.config/nvim/plugin/packer_compiled.lua
+/.config/nvim/spell/*.spl
 /.config/wireshark
 /.config/yarn
 /.cpan
