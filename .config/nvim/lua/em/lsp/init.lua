@@ -207,7 +207,7 @@ cmp.setup({
 	}),
 	formatting = {
 		format = require("lspkind").cmp_format({
-			with_text = true,
+			mode = "symbol_text",
 			preset = "codicons",
 			menu = {
 				buffer = "[buffer]",
