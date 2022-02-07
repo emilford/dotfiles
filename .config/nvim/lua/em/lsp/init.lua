@@ -18,6 +18,9 @@ local on_attach = function(client, bufnr)
 	vim.cmd("command! LspDiagnosticLine lua vim.diagnostic.open_float({float = { border = 'rounded' }})")
 	vim.cmd("command! LspDiagnosticNext lua vim.diagnostic.goto_next({float = { border = 'rounded' }})")
 	vim.cmd("command! LspDiagnosticPrev lua vim.diagnostic.goto_prev({float = { border = 'rounded' }})")
+	vim.cmd(
+		"command! LspDiagnosticCurrent lua vim.diagnostic.open_float({scope = 'cursor', float = { border = 'rounded' }})"
+	)
 	vim.cmd("command! LspDiagnosticSetLoclist lua vim.diagnostic.set_loclist()")
 	vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
 	vim.cmd("command! LspHover lua vim.lsp.buf.hover()")
@@ -32,6 +35,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "K", ":LspHover<cr>", opts)
 	buf_set_keymap("n", "[d", ":LspDiagnosticPrev<cr>", opts)
 	buf_set_keymap("n", "]d", ":LspDiagnosticNext<cr>", opts)
+	buf_set_keymap("n", "<leader>d", ":LspDiagnosticCurrent<cr>", opts)
 	buf_set_keymap("n", "gd", ":LspDefintion<cr>", opts)
 	buf_set_keymap("n", "gy", ":LspTypeDefinition<cr>", opts)
 
