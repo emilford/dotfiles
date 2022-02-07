@@ -15,9 +15,9 @@ local on_attach = function(client, bufnr)
 
 	vim.cmd("command! LspCodeAction lua vim.lsp.buf.code_action()")
 	vim.cmd("command! LspDefintion lua vim.lsp.buf.definition()")
-	vim.cmd("command! LspDiagnosticLine lua vim.diagnostic.open_float()")
-	vim.cmd("command! LspDiagnosticNext lua vim.diagnostic.goto_next()")
-	vim.cmd("command! LspDiagnosticPrev lua vim.diagnostic.goto_prev()")
+	vim.cmd("command! LspDiagnosticLine lua vim.diagnostic.open_float({float = { border = 'rounded' }})")
+	vim.cmd("command! LspDiagnosticNext lua vim.diagnostic.goto_next({float = { border = 'rounded' }})")
+	vim.cmd("command! LspDiagnosticPrev lua vim.diagnostic.goto_prev({float = { border = 'rounded' }})")
 	vim.cmd("command! LspDiagnosticSetLoclist lua vim.diagnostic.set_loclist()")
 	vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
 	vim.cmd("command! LspHover lua vim.lsp.buf.hover()")
@@ -51,6 +51,9 @@ vim.lsp.handlers["textDocument/references"] = lspactions.references
 vim.lsp.handlers["textDocument/definition"] = lspactions.definition
 vim.lsp.handlers["textDocument/declaration"] = lspactions.declaration
 vim.lsp.handlers["textDocument/implementation"] = lspactions.implementation
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	border = "rounded",
+})
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
