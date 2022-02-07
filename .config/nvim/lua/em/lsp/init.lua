@@ -42,6 +42,16 @@ local on_attach = function(client, bufnr)
 	require("lsp_signature").on_attach()
 end
 
+require("astronauta.keymap")
+local lspactions = require("lspactions")
+vim.ui.select = lspactions.select
+vim.ui.input = lspactions.input
+vim.lsp.handlers["textDocument/codeAction"] = lspactions.codeaction
+vim.lsp.handlers["textDocument/references"] = lspactions.references
+vim.lsp.handlers["textDocument/definition"] = lspactions.definition
+vim.lsp.handlers["textDocument/declaration"] = lspactions.declaration
+vim.lsp.handlers["textDocument/implementation"] = lspactions.implementation
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 

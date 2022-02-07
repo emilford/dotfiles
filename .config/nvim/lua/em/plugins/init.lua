@@ -3,6 +3,15 @@ return require("packer").startup(function()
 
 	use({ "AndrewRadev/splitjoin.vim" })
 	use({ "DarwinSenior/nvim-colorizer.lua" })
+	use({
+		"RishabhRD/lspactions",
+		requires = {
+			{ "nvim-lua/plenary.nvim" },
+			{ "nvim-lua/popup.nvim" },
+			{ "tjdevries/astronauta.nvim" },
+		},
+		branch = "nvim-0.6-compatible",
+	})
 	use({ "SirVer/ultisnips" })
 	use({ "ThePrimeagen/harpoon" })
 	use({ "arcticicestudio/nord-vim" })
