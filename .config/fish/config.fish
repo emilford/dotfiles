@@ -8,7 +8,7 @@ abbr tn tmux new -s
 
 source $HOME/.asdf/asdf.fish
 
-eval (direnv hook fish)
+direnv hook fish | source
 
 set -x FZF_CTRL_T_COMMAND "fd --type file --follow --hidden --exclude .git"
 set -x FZF_DEFAULT_COMMAND $FZF_CTRL_T_COMMAND
