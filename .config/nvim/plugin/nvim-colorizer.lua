@@ -1,3 +1,3 @@
 require("colorizer").setup(nil, {
-	mode = "virtualtext",
+  mode = "virtualtext",
 })
