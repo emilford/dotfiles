@@ -43,6 +43,10 @@ return require("packer").startup(function()
   use({ "lambdalisue/vim-gista" })
   use({ "mtth/scratch.vim" })
   use({ "mickael-menu/zk-nvim" })
+  use({
+    "mrjones2014/dash.nvim",
+    run = "make install",
+  })
   use({ "nelstrom/vim-textobj-rubyblock" })
   use({ "neovim/nvim-lspconfig" })
   use({ "nvim-lua/plenary.nvim" })
