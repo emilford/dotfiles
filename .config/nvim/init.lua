@@ -1,5 +1,5 @@
-require("em.plugins")
 require("em.options")
+require("em.plugins")
 require("em.autocmds")
 require("em.lsp")
 
