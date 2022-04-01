@@ -86,6 +86,10 @@ return require("packer").startup(function()
     run = "make install",
   })
   use({ "neovim/nvim-lspconfig" })
+  use({
+    "numToStr/Comment.nvim",
+    config = utils.config("comment"),
+  })
   use({ "nvim-lua/plenary.nvim" })
   use({
     "nvim-telescope/telescope.nvim",
@@ -105,7 +109,6 @@ return require("packer").startup(function()
   use({ "tommcdo/vim-exchange" })
   use({ "tpope/vim-abolish" })
   use({ "tpope/vim-bundler" })
-  use({ "tpope/vim-commentary" })
   use({
     "tpope/vim-dadbod",
     config = utils.config("vim-dadbod"),
