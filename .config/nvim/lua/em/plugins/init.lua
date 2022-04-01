@@ -105,8 +105,15 @@ return require("packer").startup(function()
       },
     },
   })
-  use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
-  use({ "nvim-treesitter/nvim-treesitter-textobjects" })
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    event = { "BufRead", "BufNewFile" },
+    run = ":TSUpdate",
+  })
+  use({
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    after = "nvim-treesitter",
+  })
   use({ "onsails/lspkind-nvim" })
   use({ "pbrisbin/vim-mkdir" })
   use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" })
