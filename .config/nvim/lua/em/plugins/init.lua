@@ -93,9 +93,18 @@ return require("packer").startup(function()
   use({ "nvim-lua/plenary.nvim" })
   use({
     "nvim-telescope/telescope.nvim",
+    cmd = "Telescope",
     config = utils.config("telescope"),
+    module_pattern = "telescope.*",
+    keys = { "<leader>ff" },
+    requires = {
+      {
+        "nvim-telescope/telescope-fzf-native.nvim",
+        run = "make",
+        after = "telescope.nvim",
+      },
+    },
   })
-  use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" })
   use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
   use({ "nvim-treesitter/nvim-treesitter-textobjects" })
   use({ "onsails/lspkind-nvim" })

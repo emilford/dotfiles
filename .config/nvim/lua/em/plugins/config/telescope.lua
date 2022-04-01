@@ -14,8 +14,6 @@ function M.config()
     },
   })
 
-  require("telescope").load_extension("fzf")
-
   vim.api.nvim_set_keymap(
     "n",
     "<leader>ff",
