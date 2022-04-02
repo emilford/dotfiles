@@ -27,6 +27,7 @@ return require("packer").startup(function()
   use({
     "ThePrimeagen/harpoon",
     config = utils.config("harpoon"),
+    keys = { "<leader>h", "<leader>a", "<leader>1", "<leader>2", "<leader>3", "<leader>4" },
   })
   use({
     "arcticicestudio/nord-vim",
