@@ -6,6 +6,7 @@ return require("packer").startup(function()
   use({
     "AndrewRadev/splitjoin.vim",
     config = utils.config("splitjoin"),
+    keys = { "gS", "gJ" },
   })
   use({
     "DarwinSenior/nvim-colorizer.lua",
