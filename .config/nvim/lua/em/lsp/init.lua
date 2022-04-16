@@ -46,7 +46,6 @@ local on_attach = function(client, bufnr)
   require("lsp_signature").on_attach()
 end
 
-require("astronauta.keymap")
 local lspactions = require("lspactions")
 vim.ui.select = lspactions.select
 vim.ui.input = lspactions.input

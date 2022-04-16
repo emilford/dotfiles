@@ -17,9 +17,7 @@ return require("packer").startup(function()
     requires = {
       { "nvim-lua/plenary.nvim" },
       { "nvim-lua/popup.nvim" },
-      { "tjdevries/astronauta.nvim" },
     },
-    branch = "nvim-0.6-compatible",
   })
   use({
     "SirVer/ultisnips",
