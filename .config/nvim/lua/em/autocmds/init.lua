@@ -1,26 +1,32 @@
-vim.cmd([[
-  augroup CursorLine
-    autocmd!
-    autocmd VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    autocmd WinLeave * setlocal nocursorline
-  augroup END
-]])
+vim.api.nvim_create_augroup("CursorLine", { clear = true })
+vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
+  group = "CursorLine",
+  command = "setlocal cursorline",
+})
 
-vim.cmd([[
-  autocmd! VimResized * :wincmd =
-]])
+vim.api.nvim_create_autocmd("WinLeave", {
+  group = "CursorLine",
+  command = "setlocal nocursorline",
+})
 
-vim.cmd([[
-  autocmd FileType sql,mysql,plsql lua require'cmp'.setup.buffer {
-  \   sources = {
-  \     { name = "vim-dadbod-completion" }
-  \   },
-  \   formatting = {
-  \     format = function(entry, vim_item)
-  \       vim_item.kind = nil
-  \       vim_item.menu = "[DB]"
-  \       return vim_item
-  \     end
-  \   },
-  \ }
-]])
+vim.api.nvim_create_autocmd("VimResized", {
+  command = "wincmd =",
+})
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = { "sql", "mysql", "plsql" },
+  callback = function()
+    require("cmp").setup.buffer({
+      sources = {
+        { name = "vim-dadbod-completion" },
+      },
+      formatting = {
+        format = function(_, vim_item)
+          vim_item.kind = nil
+          vim_item.menu = "[DB]"
+          return vim_item
+        end,
+      },
+    })
+  end,
+})
