@@ -112,6 +112,15 @@ lsp_installer.on_server_ready(function(server)
     opts.root_dir = nvim_lsp.util.root_pattern(".solargraph.yml")
   end
 
+  if server.name == "sumneko_lua" then
+    opts.on_attach = function(client, bufnr)
+      client.resolved_capabilities.document_formatting = false
+      client.resolved_capabilities.document_range_formatting = false
+
+      on_attach(client, bufnr)
+    end
+  end
+
   if server.name == "tsserver" then
     -- Needed for inlayHints. Merge this table with your settings or copy
     -- it from the source if you want to add your own init_options.
