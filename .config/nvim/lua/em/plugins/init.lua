@@ -1,4 +1,4 @@
-local utils = require("em.utils.plugins")
+local utils = require("em.utils")
 
 return require("packer").startup(function()
   use({ "wbthomason/packer.nvim" })
