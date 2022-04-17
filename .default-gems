@@ -2,5 +2,6 @@ gem-ctags
 
 bundler
 github-auth
+parity
 pry
 solargraph
