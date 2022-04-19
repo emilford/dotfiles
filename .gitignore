@@ -21,7 +21,6 @@
 /.config/coc/*
 !/.config/coc/ultisnips
 /.config/configstore
-/.config/direnv
 /.config/fish/fish_variables
 /.config/fish/fishd*
 /.config/fish/functions/fish_user_key_bindings.fish
