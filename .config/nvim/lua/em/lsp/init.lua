@@ -242,12 +242,21 @@ cmp.setup({
       menu = {
         buffer = "[buffer]",
         cmp_git = "[repo]",
+        ["vim-dadbod-completion"] = "[DB]",
         nvim_lsp = "[lsp]",
         nvim_lua = "[lua]",
         ultisnips = "[ultisnips]",
       },
     }),
   },
+})
+
+cmp.setup.filetype({ "sql", "mysql", "psql" }, {
+  sources = cmp.config.sources({
+    { name = "vim-dadbod-completion" },
+  }, {
+    { name = "buffer" },
+  }),
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won"t work anymore).
