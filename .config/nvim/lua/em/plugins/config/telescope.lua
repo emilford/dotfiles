@@ -14,11 +14,11 @@ function M.config()
     },
   })
 
-  vim.api.nvim_set_keymap(
+  vim.keymap.set(
     "n",
     "<leader>ff",
     [[<cmd> lua require("telescope.builtin").git_files()<cr>]],
-    { noremap = true, silent = true }
+    { silent = true }
   )
 end
 

@@ -3,9 +3,6 @@ local nvim_lsp = require("lspconfig")
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  local function buf_set_keymap(...)
-    vim.api.nvim_buf_set_keymap(bufnr, ...)
-  end
   local function buf_set_option(...)
     vim.api.nvim_buf_set_option(bufnr, ...)
   end
@@ -31,13 +28,13 @@ local on_attach = function(client, bufnr)
   vim.cmd("command! LspTypeDefinition lua vim.lsp.buf.type_definition()")
 
   -- See `:help vim.lsp.*` for documentation on any of the below functions
-  local opts = { noremap = true, silent = true }
-  buf_set_keymap("n", "K", ":LspHover<cr>", opts)
-  buf_set_keymap("n", "[d", ":LspDiagnosticPrev<cr>", opts)
-  buf_set_keymap("n", "]d", ":LspDiagnosticNext<cr>", opts)
-  buf_set_keymap("n", "<leader>d", ":LspDiagnosticCurrent<cr>", opts)
-  buf_set_keymap("n", "gd", ":LspDefintion<cr>", opts)
-  buf_set_keymap("n", "gy", ":LspTypeDefinition<cr>", opts)
+  local opts = { silent = true }
+  vim.keymap.set("n", "K", ":LspHover<cr>", opts)
+  vim.keymap.set("n", "[d", ":LspDiagnosticPrev<cr>", opts)
+  vim.keymap.set("n", "]d", ":LspDiagnosticNext<cr>", opts)
+  vim.keymap.set("n", "<leader>d", ":LspDiagnosticCurrent<cr>", opts)
+  vim.keymap.set("n", "gd", ":LspDefintion<cr>", opts)
+  vim.keymap.set("n", "gy", ":LspTypeDefinition<cr>", opts)
 
   if client.resolved_capabilities.document_formatting then
     if vim.bo.filetype ~= "ruby" then

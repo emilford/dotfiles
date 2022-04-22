@@ -7,10 +7,10 @@ function M.config()
   vim.g.scratch_persistence_file = "project-notes.txt"
 
   -- Pneumonic: go to notes
-  vim.api.nvim_set_keymap("n", "gN", "<plug>(scratch-insert-clear)", {})
-  vim.api.nvim_set_keymap("n", "gn", "<plug>(scratch-insert-reuse)", {})
-  vim.api.nvim_set_keymap("x", "gN", "<plug>(scratch-selection-clear)", {})
-  vim.api.nvim_set_keymap("x", "gn", "<plug>(scratch-selection-reuse)", {})
+  vim.keymap.set("n", "gN", "<plug>(scratch-insert-clear)")
+  vim.keymap.set("n", "gn", "<plug>(scratch-insert-reuse)")
+  vim.keymap.set("x", "gN", "<plug>(scratch-selection-clear)")
+  vim.keymap.set("x", "gn", "<plug>(scratch-selection-reuse)")
 end
 
 return M
