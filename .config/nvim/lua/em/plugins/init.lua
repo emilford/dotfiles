@@ -14,13 +14,6 @@ return require("packer").startup({
       config = utils.config("nvim-colorizer"),
     })
     use({
-      "RishabhRD/lspactions",
-      requires = {
-        { "nvim-lua/plenary.nvim" },
-        { "nvim-lua/popup.nvim" },
-      },
-    })
-    use({
       "SirVer/ultisnips",
       config = utils.config("ultisnips"),
     })
@@ -51,14 +44,20 @@ return require("packer").startup({
     use({ "hrsh7th/cmp-buffer" })
     use({ "hrsh7th/cmp-path" })
     use({ "hrsh7th/cmp-cmdline" })
-    use({ "hrsh7th/nvim-cmp" })
+    use({
+      "hrsh7th/nvim-cmp",
+      config = utils.config("cmp"),
+    })
     use({
       "janko-m/vim-test",
       config = utils.config("vim-test"),
     })
     use({ "jceb/vim-textobj-uri" })
     use({ "jiangmiao/auto-pairs" })
-    use({ "jose-elias-alvarez/null-ls.nvim" })
+    use({
+      "jose-elias-alvarez/null-ls.nvim",
+      config = utils.config("null-ls"),
+    })
     use({ "jose-elias-alvarez/nvim-lsp-ts-utils" })
     use({
       "junegunn/vim-easy-align",
@@ -86,7 +85,10 @@ return require("packer").startup({
       "mrjones2014/dash.nvim",
       run = "make install",
     })
-    use({ "neovim/nvim-lspconfig" })
+    use({
+      "neovim/nvim-lspconfig",
+      config = utils.config("lspconfig"),
+    })
     use({
       "numToStr/Comment.nvim",
       config = utils.config("comment"),
@@ -145,7 +147,6 @@ return require("packer").startup({
     use({ "tpope/vim-surround" })
     use({ "tpope/vim-unimpaired" })
     use({ "wellle/targets.vim" })
-    use({ "williamboman/nvim-lsp-installer" })
     use({
       "wincent/loupe",
       config = utils.config("loupe"),
