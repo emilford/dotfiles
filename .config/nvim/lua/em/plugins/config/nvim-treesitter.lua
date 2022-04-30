@@ -2,6 +2,9 @@ local M = {}
 
 function M.config()
   require("nvim-treesitter.configs").setup({
+    endwise = {
+      enable = true,
+    },
     ensure_installed = {
       "bash",
       "comment",
@@ -36,7 +39,6 @@ function M.config()
     },
     highlight = {
       enable = true,
-      additional_vim_regex_highlighting = true,
     },
     textobjects = {
       select = {

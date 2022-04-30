@@ -13,6 +13,7 @@ return require("packer").startup({
       "DarwinSenior/nvim-colorizer.lua",
       config = utils.config("nvim-colorizer"),
     })
+    use({ "RRethy/nvim-treesitter-endwise" })
     use({
       "SirVer/ultisnips",
       config = utils.config("ultisnips"),
@@ -133,7 +134,6 @@ return require("packer").startup({
       "tpope/vim-dadbod",
       config = utils.config("vim-dadbod"),
     })
-    use({ "tpope/vim-endwise" })
     use({ "tpope/vim-eunuch" })
     use({
       "tpope/vim-fugitive",
