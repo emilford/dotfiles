@@ -10,7 +10,7 @@ function M.config()
         preset = "codicons",
         menu = {
           buffer = "[buffer]",
-          cmp_git = "[repo]",
+          git = "[git]",
           ["vim-dadbod-completion"] = "[DB]",
           nvim_lsp = "[lsp]",
           nvim_lua = "[lua]",
@@ -61,7 +61,7 @@ function M.config()
 
   cmp.setup.filetype("gitcommit", {
     sources = cmp.config.sources({
-      { name = "cmp_git" },
+      { name = "git" },
     }, {
       { name = "buffer" },
     }),
