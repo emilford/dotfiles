@@ -122,6 +122,12 @@ return require("packer").startup({
     use({ "onsails/lspkind-nvim" })
     use({ "pbrisbin/vim-mkdir" })
     use({ "petertriho/cmp-git", requires = "nvim-lua/plenary.nvim" })
+    use({
+      "psliwka/vim-dirtytalk",
+      config = utils.config("vim-dirtytalk"),
+      ft = { "gitcommit", "markdown" },
+      run = ":DirtytalkUpdate",
+    })
     use({ "qalshidi/vim-bettergrep" })
     use({ "quangnguyen30192/cmp-nvim-ultisnips" })
     use({ "ray-x/lsp_signature.nvim" })
