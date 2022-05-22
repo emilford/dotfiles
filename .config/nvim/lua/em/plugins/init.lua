@@ -104,8 +104,9 @@ return require("packer").startup({
       requires = {
         {
           "nvim-telescope/telescope-fzf-native.nvim",
-          run = "make",
           after = "telescope.nvim",
+          config = utils.config("telescope-fzf-native"),
+          run = "make",
         },
       },
     })
