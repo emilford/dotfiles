@@ -38,6 +38,10 @@ return require("packer").startup({
     use({ "dhruvasagar/vim-zoom" })
     use({ "ervandew/supertab" })
     use({
+      "folke/which-key.nvim",
+      config = utils.config("which-key"),
+    })
+    use({
       "folke/zen-mode.nvim",
       config = utils.config("zen-mode"),
     })
