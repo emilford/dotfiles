@@ -1,7 +1,6 @@
 @fsouza/prettierd
 @tailwindcss/language-server
 emmet-ls
-eslint_d
 typescript
 typescript-language-server
 vscode-langservers-extracted

@@ -3,19 +3,6 @@ local M = {}
 function M.config()
   local null_ls = require("null-ls")
 
-  local eslint_d_opts = {
-    condition = function(utils)
-      return utils.root_has_file({
-        ".eslintrc.js",
-        ".eslintrc.cjs",
-        ".eslintrc.yaml",
-        ".eslintrc.yml",
-        ".eslintrc.json",
-      })
-    end,
-    prefer_local = "node_modules/.bin",
-  }
-
   local prettierd_opts = {
     condition = function(utils)
       return utils.root_has_file({
@@ -57,11 +44,9 @@ function M.config()
     on_attach = on_attach,
 
     sources = {
-      null_ls.builtins.code_actions.eslint_d.with(eslint_d_opts),
       null_ls.builtins.code_actions.proselint.with({
         extra_filetypes = { "gitcommit" },
       }),
-      null_ls.builtins.diagnostics.eslint_d.with(eslint_d_opts),
       null_ls.builtins.diagnostics.gitlint,
       null_ls.builtins.diagnostics.proselint.with({
         extra_filetypes = { "gitcommit" },
@@ -70,7 +55,6 @@ function M.config()
       null_ls.builtins.diagnostics.write_good.with({
         extra_filetypes = { "gitcommit" },
       }),
-      null_ls.builtins.formatting.eslint_d.with(eslint_d_opts),
       null_ls.builtins.formatting.prettierd.with(prettierd_opts),
       null_ls.builtins.formatting.standardrb,
       null_ls.builtins.formatting.stylua,
