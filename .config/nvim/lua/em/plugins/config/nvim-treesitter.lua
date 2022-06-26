@@ -24,6 +24,7 @@ function M.config()
       "lua",
       "make",
       "markdown",
+      "markdown_inline",
       "python",
       "query",
       "regex",
