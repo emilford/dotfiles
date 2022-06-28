@@ -1,5 +1,3 @@
-ENV
-heroku
 wip
 thoughtbot
 ripgrep
@@ -14,8 +12,6 @@ CoC
 config
 agiti
 Capybara
-eslint
-homebridge
 SBIS
 frontmatter
 zk
