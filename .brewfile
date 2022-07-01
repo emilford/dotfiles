@@ -51,6 +51,7 @@ cask "slack"
 cask "syncthing"
 cask "tuple"
 
+mas "1Password for Safari", id: 1569813296
 mas "Agenda", id: 1287445660
 mas "iA Writer", id: 775737590
 mas "Things 3", id: 904280696
