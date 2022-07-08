@@ -18,6 +18,14 @@ function M.config()
         },
       }),
     },
+    window = {
+      completion = cmp.config.window.bordered({
+        winhighlight = "CursorLine:Visual,Search:None",
+      }),
+      documentation = cmp.config.window.bordered({
+        winhighlight = "CursorLine:Visual,Search:None",
+      }),
+    },
     mapping = cmp.mapping.preset.insert({
       ["<c-b>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
       ["<c-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
