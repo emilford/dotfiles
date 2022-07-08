@@ -2,6 +2,8 @@ local M = {}
 
 function M.config()
   local cmp = require("cmp")
+  local cmp_defaults = require("cmp.config.default")()
+
 
   cmp.setup({
     formatting = {
@@ -56,6 +58,15 @@ function M.config()
     sources = {
       { name = "buffer" },
     },
+    window = cmp_defaults.window,
+  })
+
+  cmp.setup.cmdline("?", {
+    mapping = cmp.mapping.preset.cmdline(),
+    sources = {
+      { name = "buffer" },
+    },
+    window = cmp_defaults.window,
   })
 
   cmp.setup.cmdline(":", {
@@ -65,6 +76,7 @@ function M.config()
     }, {
       { name = "cmdline" },
     }),
+    window = cmp_defaults.window,
   })
 
   cmp.setup.filetype("gitcommit", {
