@@ -37,6 +37,8 @@ function M.config()
   highlight("CmpItemKind", { fg = nord.gui.nord15 })
   highlight("CmpItemMenu", { fg = nord.gui.nord14 })
 
+  highlight("WhichKeyFloat", { bg = nord.gui.nord1 })
+
   vim.cmd([[colorscheme nord]])
 end
 
