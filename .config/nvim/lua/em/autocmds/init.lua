@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
   command = "setlocal cursorline",
 })
 
-vim.api.nvim_create_autocmd("WinLeave", {
+vim.api.nvim_create_autocmd({ "WinLeave", "Filetype TelescopePrompt" }, {
   group = "CursorLine",
   command = "setlocal nocursorline",
 })
