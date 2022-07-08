@@ -117,21 +117,18 @@ function M.config()
     capabilities = capabilities,
   })
 
-  lspconfig.tsserver.setup({
-    on_attach = function(client, bufnr)
-      -- client.resolved_capabilities.document_formatting = false
-      -- client.resolved_capabilities.document_range_formatting = false
+  require("typescript").setup({
+    server = {
+      on_attach = function(client, bufnr)
+        vim.api.nvim_buf_create_user_command(bufnr, "LspAddMissingImports", "TypescriptAddMissingImports", {})
+        vim.api.nvim_buf_create_user_command(bufnr, "LspFixAll", "TypescriptFixAll", {})
+        vim.api.nvim_buf_create_user_command(bufnr, "LspOrganizeImports", "TypescriptOrganizeImports", {})
+        vim.api.nvim_buf_create_user_command(bufnr, "LspRemoveUnused", "TypescriptRemoveUnused", {})
+        vim.api.nvim_buf_create_user_command(bufnr, "LspRenameFile", "TypescriptRenameFile", {})
 
-      local ts_utils = require("nvim-lsp-ts-utils")
-      ts_utils.setup({})
-      ts_utils.setup_client(client)
-
-      vim.api.nvim_buf_create_user_command(bufnr, "LspTSOrganize", "TSLspOrganize", {})
-      vim.api.nvim_buf_create_user_command(bufnr, "LspTSRenameFile", "TSLspRenameFile", {})
-      vim.api.nvim_buf_create_user_command(bufnr, "LspTSImportAll", "TSLspImportAll", {})
-
-      on_attach(client, bufnr)
-    end,
+        on_attach(client, bufnr)
+      end,
+    },
   })
 
   lspconfig.yamlls.setup({

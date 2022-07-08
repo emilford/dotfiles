@@ -63,7 +63,7 @@ return require("packer").startup({
       "jose-elias-alvarez/null-ls.nvim",
       config = utils.config("null-ls"),
     })
-    use({ "jose-elias-alvarez/nvim-lsp-ts-utils" })
+    use({ "jose-elias-alvarez/typescript.nvim" })
     use({
       "junegunn/vim-easy-align",
       config = utils.config("vim-easy-align"),
