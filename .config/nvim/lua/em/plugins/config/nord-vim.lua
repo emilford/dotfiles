@@ -12,23 +12,27 @@ function M.config()
   local nord = require("em.themes.nord.palette")
 
   local highlight = function(group, arguments)
-    arguments.style = arguments.style and "gui=" .. arguments.style or "gui=NONE"
-    arguments.fg = arguments.fg and "guifg=" .. arguments.fg or "guifg=NONE"
-    arguments.bg = arguments.bg and "guibg=" .. arguments.bg or "guibg=NONE"
-    arguments.sp = arguments.sp and "guisp=" .. arguments.sp or ""
+    if arguments.link then
+      vim.cmd("autocmd ColorScheme nord :highlight! link " .. group .. " " .. arguments.link)
+    else
+      arguments.style = arguments.style and "gui=" .. arguments.style or "gui=NONE"
+      arguments.fg = arguments.fg and "guifg=" .. arguments.fg or "guifg=NONE"
+      arguments.bg = arguments.bg and "guibg=" .. arguments.bg or "guibg=NONE"
+      arguments.sp = arguments.sp and "guisp=" .. arguments.sp or ""
 
-    vim.cmd(
-      "autocmd ColorScheme nord :highlight "
-        .. group
-        .. " "
-        .. arguments.style
-        .. " "
-        .. arguments.fg
-        .. " "
-        .. arguments.bg
-        .. " "
-        .. arguments.sp
-    )
+      vim.cmd(
+        "autocmd ColorScheme nord :highlight "
+          .. group
+          .. " "
+          .. arguments.style
+          .. " "
+          .. arguments.fg
+          .. " "
+          .. arguments.bg
+          .. " "
+          .. arguments.sp
+      )
+    end
   end
 
   highlight("CmpItemAbbr", { fg = nord.gui.nord4 })
@@ -36,6 +40,13 @@ function M.config()
   highlight("CmpItemAbbrMatchFuzzy", { fg = nord.gui.nord7, style = "bold" })
   highlight("CmpItemKind", { fg = nord.gui.nord15 })
   highlight("CmpItemMenu", { fg = nord.gui.nord14 })
+
+  highlight("TelescopeBorder", { link = "FloatBorder" })
+  highlight("TelescopeMatching", { fg = nord.gui.nord7, style = "bold" })
+  highlight("TelescopePromptCounter", { fg = nord.gui.nord3 })
+  highlight("TelescopePromptPrefix", { link = "TelescopeNormal" })
+  highlight("TelescopeSelection", { link = "PmenuSel" })
+  highlight("TelescopeTitle", { fg = nord.gui.nord3 })
 
   highlight("WhichKeyFloat", { bg = nord.gui.nord1 })
 
