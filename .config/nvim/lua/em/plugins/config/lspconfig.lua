@@ -3,6 +3,22 @@ local M = {}
 function M.config()
   local lspconfig = require("lspconfig")
 
+  local win = require("lspconfig.ui.windows")
+  local default_opts = win.default_opts
+
+  win.default_opts = function(options)
+    local opts = default_opts(options)
+    opts.border = "rounded"
+    return opts
+  end
+
+  vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded",
+  })
+  vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+    border = "rounded",
+  })
+
   vim.api.nvim_create_user_command("LspDiagnosticNext", vim.diagnostic.goto_next, {})
   vim.api.nvim_create_user_command("LspDiagnosticPrev", vim.diagnostic.goto_prev, {})
   vim.api.nvim_create_user_command("LspDiagnosticLine", vim.diagnostic.open_float, {})
