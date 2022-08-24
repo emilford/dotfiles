@@ -97,6 +97,7 @@ return require("packer").startup({
     use({
       "numToStr/Comment.nvim",
       config = utils.config("comment"),
+      keys = { "gc", "gb" },
     })
     use({ "nvim-lua/plenary.nvim" })
     use({
