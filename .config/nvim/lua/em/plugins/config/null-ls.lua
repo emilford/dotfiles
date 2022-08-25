@@ -33,6 +33,7 @@ function M.config()
     vim.api.nvim_buf_create_user_command(bufnr, "LspTypeDefinition", vim.lsp.buf.type_definition, {})
 
     local opts = { buffer = bufnr, silent = true }
+    vim.keymap.set("n", "<leader>f", ":LspFormat<cr>", opts)
     vim.keymap.set("n", "K", ":LspHover<cr>", opts)
     vim.keymap.set("n", "gd", ":LspDefinition<cr>", opts)
     vim.keymap.set("n", "gy", ":LspTypeDefinition<cr>", opts)
