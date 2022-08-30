@@ -41,6 +41,8 @@ function M.config()
   highlight("CmpItemKind", { fg = nord.gui.nord15 })
   highlight("CmpItemMenu", { fg = nord.gui.nord14 })
 
+  highlight("LspInfoBorder", { link = "FloatBorder" })
+
   highlight("TelescopeBorder", { link = "FloatBorder" })
   highlight("TelescopeMatching", { fg = nord.gui.nord7, style = "bold" })
   highlight("TelescopePromptCounter", { fg = nord.gui.nord3 })
