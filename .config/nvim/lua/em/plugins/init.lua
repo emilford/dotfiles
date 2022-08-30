@@ -13,7 +13,10 @@ return require("packer").startup({
       "DarwinSenior/nvim-colorizer.lua",
       config = utils.config("nvim-colorizer"),
     })
-    use({ "RRethy/nvim-treesitter-endwise" })
+    use({
+      "RRethy/nvim-treesitter-endwise",
+      after = "nvim-treesitter",
+    })
     use({
       "SirVer/ultisnips",
       config = utils.config("ultisnips"),
