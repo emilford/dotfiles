@@ -3,14 +3,7 @@ local M = {}
 function M.config()
   local lspconfig = require("lspconfig")
 
-  local win = require("lspconfig.ui.windows")
-  local default_opts = win.default_opts
-
-  win.default_opts = function(options)
-    local opts = default_opts(options)
-    opts.border = "rounded"
-    return opts
-  end
+  require("lspconfig.ui.windows").default_options.border = "rounded"
 
   vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
     border = "rounded",
