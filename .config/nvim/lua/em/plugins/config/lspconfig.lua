@@ -95,13 +95,6 @@ function M.config()
       "erb",
       "eruby",
       "html",
-      "javascript",
-      "javascriptreact",
-      "javascript.jsx",
-      "typescript",
-      "typescriptreact",
-      "typescript.tsx",
-      "vue",
     },
   })
 
