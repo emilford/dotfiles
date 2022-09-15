@@ -60,6 +60,10 @@ return require("packer").startup({
       "janko-m/vim-test",
       config = utils.config("vim-test"),
     })
+    use({
+      "j-hui/fidget.nvim",
+      config = utils.config("fidget"),
+    })
     use({ "jceb/vim-textobj-uri" })
     use({ "jiangmiao/auto-pairs" })
     use({
