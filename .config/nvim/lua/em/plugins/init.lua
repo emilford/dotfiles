@@ -82,6 +82,10 @@ return require("packer").startup({
       config = utils.config("vim-gista"),
     })
     use({
+      "lukas-reineke/indent-blankline.nvim",
+      config = utils.config("indent-blankline"),
+    })
+    use({
       "mtth/scratch.vim",
       config = utils.config("scratch"),
     })
