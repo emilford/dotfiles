@@ -170,6 +170,7 @@ return require("packer").startup({
     use({ "tpope/vim-rhubarb" })
     use({ "tpope/vim-surround" })
     use({ "tpope/vim-unimpaired" })
+    use({ "tpope/vim-vinegar" })
     use({ "wellle/targets.vim" })
     use({
       "wincent/loupe",
