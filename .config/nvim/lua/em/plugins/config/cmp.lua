@@ -95,7 +95,13 @@ function M.config()
     }),
   })
 
-  require("cmp_git").setup()
+  require("cmp_git").setup({
+    github = {
+      pull_requests = {
+        state = "all",
+      },
+    },
+  })
 end
 
 return M
