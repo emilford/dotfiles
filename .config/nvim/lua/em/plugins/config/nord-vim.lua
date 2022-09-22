@@ -3,60 +3,41 @@ local M = {}
 function M.config()
   vim.g.nord_italic = 1
 
-  -- https://github.com/arcticicestudio/nord-vim/issues/279
-  vim.cmd([[autocmd ColorScheme nord :highlight erubyDelimiter ctermbg=5 guifg=#B48EAD]])
+  vim.api.nvim_create_autocmd("ColorScheme", {
+    pattern = "nord",
+    callback = function()
+      local nord = require("em.themes.nord.palette")
 
-  -- https://www.reddit.com/r/neovim/comments/uhv6xs/is_it_possible_to_make_lsp_hover_windows/
-  vim.cmd([[autocmd ColorScheme nord :highlight! link NormalFloat Normal]])
+      -- https://github.com/arcticicestudio/nord-vim/issues/279
+      vim.api.nvim_set_hl(0, "erubyDelimiter", { ctermfg = 5, fg = "#B48EAD" })
 
-  local nord = require("em.themes.nord.palette")
+      -- https://www.reddit.com/r/neovim/comments/uhv6xs/is_it_possible_to_make_lsp_hover_windows/
+      vim.api.nvim_set_hl(0, "NormalFloat", { link = "Normal" })
 
-  local highlight = function(group, arguments)
-    if arguments.link then
-      vim.cmd("autocmd ColorScheme nord :highlight! link " .. group .. " " .. arguments.link)
-    else
-      arguments.style = arguments.style and "gui=" .. arguments.style or "gui=NONE"
-      arguments.fg = arguments.fg and "guifg=" .. arguments.fg or "guifg=NONE"
-      arguments.bg = arguments.bg and "guibg=" .. arguments.bg or "guibg=NONE"
-      arguments.sp = arguments.sp and "guisp=" .. arguments.sp or ""
+      vim.api.nvim_set_hl(0, "CmpItemAbbr", { fg = nord.gui.nord4 })
+      vim.api.nvim_set_hl(0, "CmpItemAbbrMatch", { fg = nord.gui.nord7, bold = true })
+      vim.api.nvim_set_hl(0, "CmpItemAbbrMatchFuzzy", { fg = nord.gui.nord7, bold = true })
+      vim.api.nvim_set_hl(0, "CmpItemKind", { fg = nord.gui.nord15 })
+      vim.api.nvim_set_hl(0, "CmpItemMenu", { fg = nord.gui.nord14 })
 
-      vim.cmd(
-        "autocmd ColorScheme nord :highlight "
-          .. group
-          .. " "
-          .. arguments.style
-          .. " "
-          .. arguments.fg
-          .. " "
-          .. arguments.bg
-          .. " "
-          .. arguments.sp
-      )
-    end
-  end
+      vim.api.nvim_set_hl(0, "LspInfoBorder", { link = "FloatBorder" })
 
-  highlight("CmpItemAbbr", { fg = nord.gui.nord4 })
-  highlight("CmpItemAbbrMatch", { fg = nord.gui.nord7, style = "bold" })
-  highlight("CmpItemAbbrMatchFuzzy", { fg = nord.gui.nord7, style = "bold" })
-  highlight("CmpItemKind", { fg = nord.gui.nord15 })
-  highlight("CmpItemMenu", { fg = nord.gui.nord14 })
+      vim.api.nvim_set_hl(0, "LspSagaBorderTitle", { fg = nord.gui.nord4 })
+      vim.api.nvim_set_hl(0, "LspSagaCodeActionBorder", { link = "FloatBorder" })
+      vim.api.nvim_set_hl(0, "LspSagaCodeActionContent", { fg = nord.gui.nord4 })
+      vim.api.nvim_set_hl(0, "LspSagaCodeActionTitle", { fg = nord.gui.nord5 })
+      vim.api.nvim_set_hl(0, "LspSagaRenameBorder", { link = "FloatBorder" })
 
-  highlight("LspInfoBorder", { link = "FloatBorder" })
+      vim.api.nvim_set_hl(0, "TelescopeMatching", { fg = nord.gui.nord7, bold = true })
+      vim.api.nvim_set_hl(0, "TelescopeBorder", { link = "FloatBorder" })
+      vim.api.nvim_set_hl(0, "TelescopePromptCounter", { fg = nord.gui.nord3 })
+      vim.api.nvim_set_hl(0, "TelescopePromptPrefix", { link = "TelescopeNormal" })
+      vim.api.nvim_set_hl(0, "TelescopeSelection", { link = "PmenuSel" })
+      vim.api.nvim_set_hl(0, "TelescopeTitle", { fg = nord.gui.nord3 })
 
-  highlight("LspSagaBorderTitle", { fg = nord.gui.nord4 })
-  highlight("LspSagaCodeActionBorder", { link = "FloatBorder" })
-  highlight("LspSagaCodeActionContent", { fg = nord.gui.nord7 })
-  highlight("LspSagaCodeActionTitle", { fg = nord.gui.nord5 })
-  highlight("LspSagaRenameBorder", { link = "FloatBorder" })
-
-  highlight("TelescopeBorder", { link = "FloatBorder" })
-  highlight("TelescopeMatching", { fg = nord.gui.nord7, style = "bold" })
-  highlight("TelescopePromptCounter", { fg = nord.gui.nord3 })
-  highlight("TelescopePromptPrefix", { link = "TelescopeNormal" })
-  highlight("TelescopeSelection", { link = "PmenuSel" })
-  highlight("TelescopeTitle", { fg = nord.gui.nord3 })
-
-  highlight("WhichKeyFloat", { bg = nord.gui.nord1 })
+      vim.api.nvim_set_hl(0, "WhichKeyFloat", { bg = nord.gui.nord1 })
+    end,
+  })
 
   vim.cmd([[colorscheme nord]])
 end
