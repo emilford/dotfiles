@@ -43,6 +43,12 @@ function M.config()
 
   highlight("LspInfoBorder", { link = "FloatBorder" })
 
+  highlight("LspSagaBorderTitle", { fg = nord.gui.nord4 })
+  highlight("LspSagaCodeActionBorder", { link = "FloatBorder" })
+  highlight("LspSagaCodeActionContent", { fg = nord.gui.nord7 })
+  highlight("LspSagaCodeActionTitle", { fg = nord.gui.nord5 })
+  highlight("LspSagaRenameBorder", { link = "FloatBorder" })
+
   highlight("TelescopeBorder", { link = "FloatBorder" })
   highlight("TelescopeMatching", { fg = nord.gui.nord7, style = "bold" })
   highlight("TelescopePromptCounter", { fg = nord.gui.nord3 })

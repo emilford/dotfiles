@@ -48,6 +48,11 @@ return require("packer").startup({
       "folke/zen-mode.nvim",
       config = utils.config("zen-mode"),
     })
+    use({
+      "glepnir/lspsaga.nvim",
+      branch = "main",
+      config = utils.config("lspsaga"),
+    })
     use({ "hrsh7th/cmp-nvim-lsp" })
     use({ "hrsh7th/cmp-buffer" })
     use({ "hrsh7th/cmp-path" })

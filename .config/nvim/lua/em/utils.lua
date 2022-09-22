@@ -32,7 +32,7 @@ function M.on_attach(client, bufnr)
   buf_set_keymap("n", "<leader>q", ":LspDiagnosticSetloclist<cr>")
 
   if client.supports_method("textDocument/codeAction") then
-    buf_create_user_command("LspCodeAction", vim.lsp.buf.code_action)
+    buf_create_user_command("LspCodeAction", "Lspsaga code_action")
   end
 
   if client.supports_method("textDocument/definition") then
@@ -85,7 +85,7 @@ function M.on_attach(client, bufnr)
   end
 
   if client.supports_method("textDocument/rename") then
-    buf_create_user_command("LspRename", vim.lsp.buf.rename)
+    buf_create_user_command("LspRename", "Lspsaga rename")
   end
 
   if client.supports_method("textDocument/signatureHelp") then
