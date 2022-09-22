@@ -2,6 +2,7 @@ local M = {}
 
 function M.config()
   local lspconfig = require("lspconfig")
+  local U = require("em.utils")
 
   require("lspconfig.ui.windows").default_options.border = "rounded"
 
@@ -12,42 +13,11 @@ function M.config()
     border = "rounded",
   })
 
-  vim.api.nvim_create_user_command("LspDiagnosticNext", vim.diagnostic.goto_next, {})
-  vim.api.nvim_create_user_command("LspDiagnosticPrev", vim.diagnostic.goto_prev, {})
-  vim.api.nvim_create_user_command("LspDiagnosticLine", vim.diagnostic.open_float, {})
-  vim.api.nvim_create_user_command("LspDiagnosticSetloclist", vim.diagnostic.setloclist, {})
-
-  local opts = { silent = true }
-  vim.keymap.set("n", "<leader>d", ":LspDiagnosticLine<cr>", opts)
-  vim.keymap.set("n", "[d", ":LspDiagnosticPrev<cr>", opts)
-  vim.keymap.set("n", "]d", ":LspDiagnosticNext<cr>", opts)
-  vim.keymap.set("n", "<leader>q", ":LspDiagnosticSetloclist<cr>", opts)
-
-  local on_attach = function(_, bufnr)
-    vim.api.nvim_buf_create_user_command(bufnr, "LspCodeAction", vim.lsp.buf.code_action, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspDefinition", vim.lsp.buf.definition, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspFormat", vim.lsp.buf.formatting, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspHover", vim.lsp.buf.hover, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspImplementation", vim.lsp.buf.implementation, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspReferences", vim.lsp.buf.references, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspRename", vim.lsp.buf.rename, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspSignatureHelp", vim.lsp.buf.signature_help, {})
-    vim.api.nvim_buf_create_user_command(bufnr, "LspTypeDefinition", vim.lsp.buf.type_definition, {})
-
-    local opts = { buffer = bufnr, silent = true }
-    vim.keymap.set("n", "<leader>f", ":LspFormat<cr>", opts)
-    vim.keymap.set("n", "K", ":LspHover<cr>", opts)
-    vim.keymap.set("n", "gd", ":LspDefinition<cr>", opts)
-    vim.keymap.set("n", "gy", ":LspTypeDefinition<cr>", opts)
-
-    require("lsp_signature").on_attach()
-  end
-
   local capabilities = vim.lsp.protocol.make_client_capabilities()
   capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
   lspconfig.cssls.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
     filetypes = {
       "css",
@@ -67,7 +37,7 @@ function M.config()
   })
 
   lspconfig.emmet_ls.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
     filetypes = {
       "erb",
@@ -84,12 +54,12 @@ function M.config()
   })
 
   lspconfig.eslint.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
   })
 
   lspconfig.html.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
     filetypes = {
       "erb",
@@ -99,7 +69,7 @@ function M.config()
   })
 
   lspconfig.jsonls.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
     settings = {
       schemas = require("schemastore").json.schemas(),
@@ -107,7 +77,7 @@ function M.config()
   })
 
   lspconfig.solargraph.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
     init_options = {
       formatting = false,
@@ -116,26 +86,18 @@ function M.config()
   })
 
   lspconfig.tailwindcss.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
   })
 
   require("typescript").setup({
     server = {
-      on_attach = function(client, bufnr)
-        vim.api.nvim_buf_create_user_command(bufnr, "LspAddMissingImports", "TypescriptAddMissingImports", {})
-        vim.api.nvim_buf_create_user_command(bufnr, "LspFixAll", "TypescriptFixAll", {})
-        vim.api.nvim_buf_create_user_command(bufnr, "LspOrganizeImports", "TypescriptOrganizeImports", {})
-        vim.api.nvim_buf_create_user_command(bufnr, "LspRemoveUnused", "TypescriptRemoveUnused", {})
-        vim.api.nvim_buf_create_user_command(bufnr, "LspRenameFile", "TypescriptRenameFile", {})
-
-        on_attach(client, bufnr)
-      end,
+      on_attach = U.on_attach,
     },
   })
 
   lspconfig.yamlls.setup({
-    on_attach = on_attach,
+    on_attach = U.on_attach,
     capabilities = capabilities,
   })
 
