@@ -76,6 +76,27 @@ function M.config()
     },
   })
 
+  lspconfig.sumneko_lua.setup({
+    on_attach = U.on_attach,
+    capatabilities = capabilities,
+    settings = {
+      Lua = {
+        runtime = {
+          version = "LuaJIT",
+        },
+        diagnostics = {
+          globals = { "vim", "use" },
+        },
+        workspace = {
+          library = vim.api.nvim_get_runtime_file("", true),
+        },
+        telemetry = {
+          enable = false,
+        },
+      },
+    },
+  })
+
   lspconfig.solargraph.setup({
     on_attach = U.on_attach,
     capabilities = capabilities,
