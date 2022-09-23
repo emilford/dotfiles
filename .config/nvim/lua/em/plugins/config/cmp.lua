@@ -7,16 +7,29 @@ function M.config()
 
   cmp.setup({
     formatting = {
+      fields = { "kind", "abbr", "menu" },
       format = require("lspkind").cmp_format({
-        mode = "symbol_text",
-        preset = "codicons",
+        mode = "symbol",
         menu = {
-          buffer = "[buffer]",
-          git = "[git]",
-          ["vim-dadbod-completion"] = "[DB]",
-          nvim_lsp = "[lsp]",
-          nvim_lua = "[lua]",
-          ultisnips = "[ultisnips]",
+          buffer = "(Buffer)",
+          git = "(Git)",
+          ["vim-dadbod-completion"] = "(DB)",
+          nvim_lsp = "(LSP)",
+          nvim_lua = "(Lua)",
+          ultisnips = "(Ultisnips)",
+        },
+        symbol_map = {
+          Constant = "",
+          Constructor = "",
+          Field = "",
+          Function = "",
+          Keyword = "",
+          Module = "",
+          Reference = "",
+          Snippet = "",
+          Struct = "",
+          TypeParameter = "",
+          Variable = "",
         },
       }),
     },
