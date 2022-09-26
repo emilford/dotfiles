@@ -4,7 +4,6 @@ function M.config()
   local cmp = require("cmp")
   local cmp_defaults = require("cmp.config.default")()
 
-
   cmp.setup({
     formatting = {
       fields = { "kind", "abbr", "menu" },
@@ -67,15 +66,7 @@ function M.config()
     }),
   })
 
-  cmp.setup.cmdline("/", {
-    mapping = cmp.mapping.preset.cmdline(),
-    sources = {
-      { name = "buffer" },
-    },
-    window = cmp_defaults.window,
-  })
-
-  cmp.setup.cmdline("?", {
+  cmp.setup.cmdline({ "/", "?" }, {
     mapping = cmp.mapping.preset.cmdline(),
     sources = {
       { name = "buffer" },
