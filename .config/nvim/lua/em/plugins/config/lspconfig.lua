@@ -36,23 +36,6 @@ function M.config()
     },
   })
 
-  lspconfig.emmet_ls.setup({
-    on_attach = U.on_attach,
-    capabilities = capabilities,
-    filetypes = {
-      "erb",
-      "eruby",
-      "html",
-      "javascript",
-      "javascriptreact",
-      "javascript.jsx",
-      "typescript",
-      "typescriptreact",
-      "typescript.tsx",
-      "vue",
-    },
-  })
-
   lspconfig.eslint.setup({
     on_attach = U.on_attach,
     capabilities = capabilities,
