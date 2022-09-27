@@ -182,6 +182,11 @@ return require("packer").startup({
       "wincent/loupe",
       config = utils.config("loupe"),
     })
+    use({
+      "windwp/nvim-ts-autotag",
+      after = "nvim-treesitter",
+      config = utils.config("nvim-ts-autotag"),
+    })
   end,
   config = {
     max_jobs = 50,
