@@ -55,7 +55,10 @@ function M.config()
     on_attach = U.on_attach,
     capabilities = capabilities,
     settings = {
-      schemas = require("schemastore").json.schemas(),
+      json = {
+        schemas = require("schemastore").json.schemas(),
+        validate = { enable = true },
+      },
     },
   })
 
