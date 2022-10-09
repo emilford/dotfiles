@@ -7,6 +7,7 @@ vim.opt.hidden = true
 vim.opt.joinspaces = false
 vim.opt.laststatus = 1
 vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.ruler = false
 vim.opt.shiftround = true
 vim.opt.shortmess:append("I")
