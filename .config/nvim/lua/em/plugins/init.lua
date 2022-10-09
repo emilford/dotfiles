@@ -71,7 +71,6 @@ return require("packer").startup({
       config = utils.config("fidget"),
     })
     use({ "jceb/vim-textobj-uri" })
-    use({ "jiangmiao/auto-pairs" })
     use({
       "jose-elias-alvarez/null-ls.nvim",
       config = utils.config("null-ls"),
@@ -181,6 +180,10 @@ return require("packer").startup({
     use({
       "wincent/loupe",
       config = utils.config("loupe"),
+    })
+    use({
+      "windwp/nvim-autopairs",
+      config = utils.config("nvim-autopairs"),
     })
     use({
       "windwp/nvim-ts-autotag",
