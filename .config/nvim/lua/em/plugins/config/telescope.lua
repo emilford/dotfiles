@@ -19,6 +19,15 @@ function M.config()
     })
   end, { silent = true })
 
+  vim.keymap.set("n", "<leader>fh", function()
+    require("telescope.builtin").help_tags({
+      layout_config = {
+        preview_width = 0.55,
+        prompt_position = "top",
+      },
+      sorting_strategy = "ascending",
+    })
+  end, { silent = true })
 end
 
 return M
