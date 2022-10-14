@@ -91,6 +91,11 @@ return require("packer").startup({
       config = utils.config("vim-gista"),
     })
     use({
+      "ldelossa/gh.nvim",
+      config = utils.config("gh"),
+      requires = { { "ldelossa/litee.nvim" } },
+    })
+    use({
       "lukas-reineke/indent-blankline.nvim",
       config = utils.config("indent-blankline"),
     })
@@ -128,6 +133,11 @@ return require("packer").startup({
           after = "telescope.nvim",
           config = utils.config("telescope-fzf-native"),
           run = "make",
+        },
+        {
+          "nvim-telescope/telescope-ui-select.nvim",
+          after = "telescope.nvim",
+          config = utils.config("telescope-ui-select"),
         },
       },
     })
