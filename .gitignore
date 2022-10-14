@@ -57,8 +57,7 @@
 /.ivy2
 /.kube
 /.lesshst
-/.local/share
-/.local/state/gh
+/.local
 /.mix
 /.mysql_history
 /.netrc
