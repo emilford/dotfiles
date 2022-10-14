@@ -105,7 +105,9 @@ function M.on_attach(client, bufnr)
     buf_create_user_command("LspRenameFile", "TypescriptRenameFile")
   end
 
-  require("lsp_signature").on_attach()
+  require("lsp_signature").on_attach({
+    toggle_key = "<M-x>",
+  }, bufnr)
 end
 
 return M
