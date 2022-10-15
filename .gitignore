@@ -90,6 +90,7 @@
 /.terminfo
 /.tldrc
 /.tmux/plugins
+/.vale
 /.vim/.netrwhist
 /.vim/autoload/plug.vim
 /.vim/autoload/plug.vim.old

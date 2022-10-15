@@ -7,22 +7,14 @@ function M.config()
   null_ls.setup({
     on_attach = U.on_attach,
     sources = {
-      null_ls.builtins.code_actions.proselint.with({
-        extra_filetypes = { "gitcommit" },
-      }),
       null_ls.builtins.diagnostics.erb_lint.with({
         condition = function(utils)
           return utils.root_has_file({ ".erb-lint.yml" })
         end,
       }),
       null_ls.builtins.diagnostics.gitlint,
-      null_ls.builtins.diagnostics.proselint.with({
-        extra_filetypes = { "gitcommit" },
-      }),
       null_ls.builtins.diagnostics.standardrb,
-      null_ls.builtins.diagnostics.write_good.with({
-        extra_filetypes = { "gitcommit" },
-      }),
+      null_ls.builtins.diagnostics.vale.with({ extra_filetypes = { "gitcommit" } }),
       null_ls.builtins.formatting.erb_lint.with({
         condition = function(utils)
           return utils.root_has_file({ ".erb-lint.yml" })
