@@ -73,6 +73,7 @@ function M.config()
           globals = { "vim", "use" },
         },
         workspace = {
+          checkThirdParty = false,
           library = vim.api.nvim_get_runtime_file("", true),
         },
         telemetry = {
