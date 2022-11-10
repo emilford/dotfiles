@@ -163,7 +163,10 @@ return require("packer").startup({
     use({ "qalshidi/vim-bettergrep" })
     use({ "quangnguyen30192/cmp-nvim-ultisnips" })
     use({ "ray-x/lsp_signature.nvim" })
-    use({ "ryvnf/readline.vim" })
+    use({
+      "ryvnf/readline.vim",
+      config = utils.config("readline"),
+    })
     use({ "shumphrey/fugitive-gitlab.vim" })
     use({ "tommcdo/vim-exchange" })
     use({ "tpope/vim-abolish" })
