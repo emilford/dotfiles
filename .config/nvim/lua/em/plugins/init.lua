@@ -27,8 +27,9 @@ return require("packer").startup({
       keys = { "<leader>h", "<leader>a", "<leader>1", "<leader>2", "<leader>3", "<leader>4" },
     })
     use({
-      "arcticicestudio/nord-vim",
-      config = utils.config("nord-vim"),
+      "rose-pine/neovim",
+      as = "rose-pine",
+      config = utils.config("rose-pine"),
     })
     use({ "b0o/schemastore.nvim" })
     use({ "christoomey/vim-sort-motion" })
