@@ -13,6 +13,9 @@ function M.config()
 
   vim.keymap.set("n", "<leader>ff", function()
     require("telescope.builtin").git_files({
+      layout_config = {
+        preview_width = 0.55,
+      },
       preview = {
         hide_on_startup = true,
       },
@@ -22,7 +25,6 @@ function M.config()
   vim.keymap.set("n", "<leader>fh", function()
     require("telescope.builtin").help_tags({
       layout_config = {
-        preview_width = 0.55,
         prompt_position = "top",
       },
       sorting_strategy = "ascending",
