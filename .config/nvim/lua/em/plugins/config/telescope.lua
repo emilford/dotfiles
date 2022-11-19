@@ -28,6 +28,21 @@ function M.config()
       sorting_strategy = "ascending",
     })
   end, { silent = true })
+
+  vim.keymap.set("n", "<leader>fn", function()
+    require("telescope.builtin").find_files({
+      prompt_title = "Project Notes",
+      cwd = "./notes",
+      hidden = true,
+      layout_config = {
+        height = 0.40,
+        width = 0.40,
+      },
+      preview = {
+        hide_on_startup = true,
+      },
+    })
+  end, { silent = true })
 end
 
 return M

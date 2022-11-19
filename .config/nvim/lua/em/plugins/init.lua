@@ -101,10 +101,6 @@ return require("packer").startup({
       config = utils.config("indent-blankline"),
     })
     use({
-      "mtth/scratch.vim",
-      config = utils.config("scratch"),
-    })
-    use({
       "mickael-menu/zk-nvim",
       config = utils.config("zk-nvim"),
     })
