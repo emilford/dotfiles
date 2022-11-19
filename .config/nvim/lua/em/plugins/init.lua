@@ -86,6 +86,7 @@ return require("packer").startup({
     use({ "kana/vim-textobj-line" })
     use({ "kana/vim-textobj-user" })
     use({ "keith/rspec.vim" })
+    use({ "khaveesh/vim-fish-syntax" })
     use({ "kristijanhusak/vim-dadbod-completion" })
     use({
       "lambdalisue/vim-gista",
