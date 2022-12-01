@@ -41,6 +41,7 @@ return require("packer").startup({
     })
     use({ "dhruvasagar/vim-zoom" })
     use({ "ervandew/supertab" })
+    use({ "fladson/vim-kitty" })
     use({
       "folke/which-key.nvim",
       config = utils.config("which-key"),
