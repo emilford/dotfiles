@@ -12,3 +12,8 @@ vim.api.nvim_create_autocmd({ "WinLeave", "Filetype TelescopePrompt" }, {
 vim.api.nvim_create_autocmd("VimResized", {
   command = "wincmd =",
 })
+
+vim.api.nvim_create_autocmd("CursorMoved", {
+  pattern = "*",
+  command = "norm zz",
+})
