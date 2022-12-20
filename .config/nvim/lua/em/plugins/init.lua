@@ -185,6 +185,7 @@ return require("packer").startup({
     use({ "tpope/vim-rake" })
     use({ "tpope/vim-repeat" })
     use({ "tpope/vim-rhubarb" })
+    use({ "tpope/vim-sleuth" })
     use({ "tpope/vim-surround" })
     use({ "tpope/vim-unimpaired" })
     use({ "tpope/vim-vinegar" })
