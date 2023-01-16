@@ -7,13 +7,13 @@ function M.config()
     disable_float_background = true,
     highlight_groups = {
       LspInfoBorder = {
-        fg = "highlight_med"
+        fg = "highlight_med",
       },
-      LspSagaCodeActionBorder = {
-        fg = "highlight_med"
+      CodeActionBorder = {
+        fg = "highlight_med",
       },
-      LspSagaRenameBorder = {
-        fg = "highlight_med"
+      RenameBorder = {
+        fg = "highlight_med",
       },
       StatusLine = {
         bg = "surface",
