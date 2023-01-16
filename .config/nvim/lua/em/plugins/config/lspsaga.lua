@@ -1,11 +1,16 @@
 local M = {}
 
 function M.config()
-  require("lspsaga").init_lsp_saga({
-    border_style = "rounded",
-    code_action_icon = "◎ ",
-    code_action_lightbulb = {
+  require("lspsaga").setup({
+    lightbulb = {
       virtual_text = false,
+    },
+    symbol_in_winbar = {
+      enable = false,
+    },
+    ui = {
+      border = "rounded",
+      code_action = "◎",
     },
   })
 end
