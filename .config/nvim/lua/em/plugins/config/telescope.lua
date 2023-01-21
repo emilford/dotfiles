@@ -19,6 +19,7 @@ function M.config()
       preview = {
         hide_on_startup = true,
       },
+      show_untracked = true,
     })
   end, { silent = true })
 
