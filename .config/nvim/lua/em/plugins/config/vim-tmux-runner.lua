@@ -1,11 +1,14 @@
-local M = {}
-
-function M.config()
-  vim.keymap.set("n", "<leader>ra", ":VtrAttachToPane<cr>")
-  vim.keymap.set("n", "<leader>rc", ":VtrClearRunner<cr>")
-  vim.keymap.set("n", "<leader>rf", ":VtrFocusRunner<cr>")
-  vim.keymap.set("n", "<leader>ro", ":VtrOpenRunner<cr>")
-  vim.keymap.set("n", "<leader>rk", ":VtrKillRunner<cr>")
-end
-
-return M
+return {
+  "christoomey/vim-tmux-runner",
+  keys = {
+    { "<leader>ra", ":VtrAttachToPane<cr>" },
+    { "<leader>rc", ":VtrClearRunner<cr>" },
+    { "<leader>rf", ":VtrFocusRunner<cr>" },
+    { "<leader>ro", ":VtrOpenRunner<cr>" },
+    { "<leader>rk", ":VtrKillRunner<cr>" },
+  },
+  init = function()
+    vim.g.VtrOrientation = "h"
+    vim.g.VtrPercentage = 35
+  end
+}

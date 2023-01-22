@@ -1,7 +1,7 @@
-local M = {}
-
-function M.config()
-  require("lspsaga").setup({
+return {
+  "glepnir/lspsaga.nvim",
+  event = "BufRead",
+  opts = {
     lightbulb = {
       virtual_text = false,
     },
@@ -12,7 +12,5 @@ function M.config()
       border = "rounded",
       code_action = "◎",
     },
-  })
-end
-
-return M
+  },
+}

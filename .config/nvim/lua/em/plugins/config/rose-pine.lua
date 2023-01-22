@@ -1,7 +1,9 @@
-local M = {}
-
-function M.config()
-  require("rose-pine").setup({
+return {
+  "rose-pine/neovim",
+  lazy = false,
+  name = "rose-pine",
+  priority = 1000,
+  opts = {
     dark_variant = "moon",
     disable_background = true,
     disable_float_background = true,
@@ -24,10 +26,11 @@ function M.config()
         fg = "muted",
       },
     },
-  })
+  },
+  config = function(_, opts)
+    require("rose-pine").setup(opts)
 
-  vim.cmd("highlight FidgetTitle ctermfg=110 guifg=#6cb6eb")
-  vim.cmd("colorscheme rose-pine")
-end
-
-return M
+    vim.cmd("highlight FidgetTitle ctermfg=110 guifg=#6cb6eb")
+    vim.cmd("colorscheme rose-pine")
+  end,
+}

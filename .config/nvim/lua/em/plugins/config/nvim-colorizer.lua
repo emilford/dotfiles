@@ -1,9 +1,9 @@
-local M = {}
-
-function M.config()
-  require("colorizer").setup(nil, {
-    mode = "virtualtext",
-  })
-end
-
-return M
+return {
+  "DarwinSenior/nvim-colorizer.lua",
+  event = "BufReadPre",
+  config = function()
+    require("colorizer").setup(nil, {
+      mode = "virtualtext",
+    })
+  end,
+}

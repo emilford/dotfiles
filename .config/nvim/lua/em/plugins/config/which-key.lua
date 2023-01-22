@@ -1,10 +1,7 @@
-local M = {}
-
-function M.config()
-  require("which-key").setup({
+return {
+  "folke/which-key.nvim",
+  opts = {
     ignore_missing = true,
     triggers = { "<leader>" },
-  })
-end
-
-return M
+  },
+}

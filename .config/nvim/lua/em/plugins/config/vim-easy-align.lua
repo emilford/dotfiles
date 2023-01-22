@@ -1,8 +1,9 @@
-local M = {}
-
-function M.config()
-  vim.keymap.set("v", "<enter>", "<plug>(EasyAlign)")
-  vim.keymap.set("n", "ga", "<plug>(EasyAlign)")
-end
-
-return M
+return {
+  "junegunn/vim-easy-align",
+  -- TODO: Other events?
+  event = { "BufNewFile", "BufReadPost" },
+  keys = {
+    { "<enter>", "<plug>(EasyAlign)", { mode = "v" } },
+    { "ga", "<plug>(EasyAlign)" },
+  },
+}

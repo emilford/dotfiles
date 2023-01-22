@@ -1,9 +1,8 @@
-local M = {}
+return {
+  "lukas-reineke/indent-blankline.nvim",
+  config = function()
+    vim.g.indent_blankline_use_treesitter = true
 
-function M.config()
-  vim.g.indent_blankline_use_treesitter = true
-
-  require("indent_blankline").setup()
-end
-
-return M
+    require("indent_blankline").setup()
+  end,
+}

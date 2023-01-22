@@ -1,11 +1,8 @@
-local M = {}
-
-function M.config()
-  require("fidget").setup({
+return {
+  "j-hui/fidget.nvim",
+  opts = {
     window = {
       blend = 0,
     },
-  })
-end
-
-return M
+  },
+}

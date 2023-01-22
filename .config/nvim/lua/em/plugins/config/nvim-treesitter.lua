@@ -1,7 +1,13 @@
-local M = {}
-
-function M.config()
-  require("nvim-treesitter.configs").setup({
+return {
+  "nvim-treesitter/nvim-treesitter",
+  event = "BufReadPost",
+  build = ":TSUpdate",
+  dependencies = {
+    "RRethy/nvim-treesitter-endwise",
+    "nvim-treesitter/nvim-treesitter-textobjects",
+    "windwp/nvim-ts-autotag",
+  },
+  opts = {
     endwise = {
       enable = true,
     },
@@ -55,7 +61,9 @@ function M.config()
         },
       },
     },
-  })
-end
-
-return M
+  },
+  config = function(_, opts)
+    require("nvim-treesitter.configs").setup(opts)
+    require("nvim-ts-autotag").setup()
+  end,
+}

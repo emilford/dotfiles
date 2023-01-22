@@ -1,7 +1,6 @@
-local M = {}
-
-function M.config()
-  require("zen-mode").setup({
+return {
+  "folke/zen-mode.nvim",
+  opts = {
     window = {
       backdrop = 1,
       width = 80,
@@ -26,7 +25,5 @@ function M.config()
         font = "+2",
       },
     },
-  })
-end
-
-return M
+  },
+}

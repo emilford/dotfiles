@@ -1,7 +1,7 @@
-local M = {}
-
-function M.config()
-  require("Comment").setup()
-end
-
-return M
+return {
+  "numToStr/Comment.nvim",
+  keys = { "gc", "gb" },
+  config = function()
+    require("Comment").setup()
+  end,
+}
