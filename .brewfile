@@ -31,7 +31,6 @@ brew "tmux"
 brew "tree"
 brew "universal-ctags", args: ["HEAD"]
 brew "vale"
-brew "vim"
 brew "weechat"
 brew "zk"
 

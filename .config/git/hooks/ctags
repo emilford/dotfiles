@@ -3,7 +3,7 @@
 set -e
 
 if [ -d doc -a \( -d autoload -o -d ftdetect -o -d plugin \) ]; then
-  nohup vim -u NONE -c 'helptags doc' -cq >/dev/null 2>&1 </dev/null &
+  nohup nvim -u NONE -c 'helptags doc' -cq >/dev/null 2>&1 </dev/null &
 fi
 
 optfiles=`git ls-files -oc --directory -- .ctags '*/.ctags'`

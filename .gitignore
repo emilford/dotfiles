@@ -93,14 +93,6 @@
 /.tldrc
 /.tmux/plugins
 /.vale
-/.vim/.netrwhist
-/.vim/autoload/plug.vim
-/.vim/autoload/plug.vim.old
-/.vim/pack
-/.vim/plugged
-/.vim/sessions
-/.vim/spell/*.spl
-/.viminfo
 /.w3m
 /.webdrivers
 /.weechat/certs
