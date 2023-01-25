@@ -7,6 +7,7 @@ function M.config()
   null_ls.setup({
     on_attach = U.on_attach,
     sources = {
+      null_ls.builtins.diagnostics.actionlint,
       null_ls.builtins.diagnostics.erb_lint.with({
         condition = function(utils)
           return utils.root_has_file({ ".erb-lint.yml" })

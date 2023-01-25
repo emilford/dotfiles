@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "heroku/brew"
 
+brew "actionlint"
 brew "bat"
 brew "direnv"
 brew "fd"
