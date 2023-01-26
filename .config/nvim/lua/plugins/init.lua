@@ -1,4 +1,4 @@
-local utils = require("em.utils")
+local utils = require("config.utils")
 
 return {
   { "christoomey/vim-sort-motion" },

@@ -8,7 +8,7 @@ return {
   },
   config = function()
     local lspconfig = require("lspconfig")
-    local U = require("em.utils")
+    local U = require("config.utils")
 
     require("lspconfig.ui.windows").default_options.border = "rounded"
 

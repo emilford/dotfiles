@@ -2,7 +2,7 @@ return {
   "jose-elias-alvarez/null-ls.nvim",
   event = "BufReadPre",
   opts = function()
-    local U = require("em.utils")
+    local U = require("config.utils")
     local null_ls = require("null-ls")
 
     return {
