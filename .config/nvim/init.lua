@@ -1,6 +1,6 @@
 require("em.options")
 require("config.lazy")
-require("em.autocmds")
+require("config.autocmds")
 
 vim.keymap.set("n", "<m-j>", [[:m .+1<cr>==]], { silent = true })
 vim.keymap.set("n", "<m-k>", [[:m .-2<cr>==]], { silent = true })
