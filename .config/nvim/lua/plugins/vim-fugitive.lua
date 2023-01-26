@@ -31,7 +31,7 @@ return {
     "Gwq",
     "Gwrite",
   },
-  config = function()
+  init = function()
     vim.g.fugitive_legacy_commands = 0
   end,
 }
