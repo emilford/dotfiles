@@ -17,3 +17,9 @@ vim.api.nvim_create_autocmd("CursorMoved", {
   pattern = "*",
   command = "norm zz",
 })
+
+-- https://github.com/keith/rspec.vim/issues/39
+vim.api.nvim_create_autocmd({ "Bufnewfile", "Bufread" }, {
+  pattern = { "*_spec.rb", "*_shared_examples.rb, *_shared_context.rb" },
+  command = "set syntax=rspec filetype=rspec.ruby",
+})
