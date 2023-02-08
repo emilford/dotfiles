@@ -1,6 +1,6 @@
 return {
   "neovim/nvim-lspconfig",
-  event = "BufReadPre",
+  event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "b0o/schemastore.nvim",
     "hrsh7th/cmp-nvim-lsp",

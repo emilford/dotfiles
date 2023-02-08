@@ -1,6 +1,6 @@
 return {
   "glepnir/lspsaga.nvim",
-  event = "BufRead",
+  event = { "BufReadPost", "BufNewFile" },
   opts = {
     lightbulb = {
       virtual_text = false,
