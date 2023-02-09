@@ -36,5 +36,4 @@ return {
   { "tpope/vim-sleuth" },
   { "tpope/vim-unimpaired" },
   { "tpope/vim-vinegar" },
-  { "wellle/targets.vim" },
 }
