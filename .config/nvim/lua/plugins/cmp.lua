@@ -89,9 +89,11 @@ return {
       }),
     }
   end,
-  config = function()
+  config = function(_, opts)
     local cmp = require("cmp")
     local cmp_defaults = require("cmp.config.default")()
+
+    cmp.setup(opts)
 
     cmp.setup.cmdline({ "/", "?" }, {
       mapping = cmp.mapping.preset.cmdline(),
