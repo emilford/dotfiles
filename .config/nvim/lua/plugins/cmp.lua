@@ -9,7 +9,19 @@ return {
     "hrsh7th/cmp-path",
     "kristijanhusak/vim-dadbod-completion",
     "onsails/lspkind-nvim",
-    "petertriho/cmp-git",
+    {
+      "petertriho/cmp-git",
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+      },
+      opt = {
+        github = {
+          pull_requests = {
+            state = "all",
+          },
+        },
+      },
+    },
     "quangnguyen30192/cmp-nvim-ultisnips",
   },
   opts = function()
@@ -113,14 +125,6 @@ return {
       }, {
         { name = "buffer" },
       }),
-    })
-
-    require("cmp_git").setup({
-      github = {
-        pull_requests = {
-          state = "all",
-        },
-      },
     })
   end,
 }
