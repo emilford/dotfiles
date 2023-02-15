@@ -4,7 +4,6 @@ return {
   dependencies = {
     "b0o/schemastore.nvim",
     "hrsh7th/cmp-nvim-lsp",
-    "jose-elias-alvarez/typescript.nvim",
   },
   config = function()
     local lspconfig = require("lspconfig")
@@ -101,12 +100,6 @@ return {
     lspconfig.tailwindcss.setup({
       on_attach = U.on_attach,
       capabilities = capabilities,
-    })
-
-    require("typescript").setup({
-      server = {
-        on_attach = U.on_attach,
-      },
     })
 
     lspconfig.yamlls.setup({

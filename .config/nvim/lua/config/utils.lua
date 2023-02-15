@@ -97,14 +97,6 @@ function M.on_attach(client, bufnr)
     buf_set_keymap("n", "gy", ":LspTypeDefinition<cr>")
   end
 
-  if client.name == "tsserver" then
-    buf_create_user_command("LspAddMissingImports", "TypescriptAddMissingImports")
-    buf_create_user_command("LspFixAll", "TypescriptFixAll")
-    buf_create_user_command("LspOrganizeImports", "TypescriptOrganizeImports")
-    buf_create_user_command("LspRemoveUnused", "TypescriptRemoveUnused")
-    buf_create_user_command("LspRenameFile", "TypescriptRenameFile")
-  end
-
   require("lsp_signature").on_attach({
     toggle_key = "<M-x>",
   }, bufnr)
