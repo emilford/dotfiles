@@ -100,6 +100,16 @@ return {
     lspconfig.tailwindcss.setup({
       on_attach = U.on_attach,
       capabilities = capabilities,
+      root_dir = lspconfig.util.root_pattern(
+        "config/tailwind.config.js",
+        "tailwind.config.js",
+        "tailwind.config.ts",
+        "postcss.config.js",
+        "postcss.config.ts",
+        "package.json",
+        "node_modules",
+        ".git"
+      ),
     })
 
     lspconfig.yamlls.setup({
