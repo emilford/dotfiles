@@ -22,7 +22,7 @@ return {
         },
       },
     },
-    "quangnguyen30192/cmp-nvim-ultisnips",
+    "saadparwaiz1/cmp_luasnip",
   },
   opts = function()
     local cmp = require("cmp")
@@ -38,7 +38,7 @@ return {
             ["vim-dadbod-completion"] = "(DB)",
             nvim_lsp = "(LSP)",
             nvim_lua = "(Lua)",
-            ultisnips = "(Ultisnips)",
+            luasnip = "(Snippet)",
           },
           symbol_map = {
             Constant = "",
@@ -77,13 +77,13 @@ return {
       }),
       snippet = {
         expand = function(args)
-          vim.fn["UltiSnips#Anon"](args.body)
+          require("luasnip").lsp_expand(args.body)
         end,
       },
       sources = cmp.config.sources({
         { name = "nvim_lsp" },
         { name = "nvim_lua" },
-        { name = "ultisnips" },
+        { name = "luasnip" },
       }, {
         { name = "buffer" },
       }),
