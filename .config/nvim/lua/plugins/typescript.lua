@@ -1,11 +1,6 @@
 return {
   "jose-elias-alvarez/typescript.nvim",
   ft = { "typescript", "typescriptreact" },
-  opts = {
-    server = {
-      on_attach = require("config.utils").on_attach,
-    },
-  },
   config = function(_, opts)
     require("typescript").setup(opts)
 

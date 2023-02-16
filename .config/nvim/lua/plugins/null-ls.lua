@@ -1,12 +1,11 @@
 return {
   "jose-elias-alvarez/null-ls.nvim",
   event = { "BufReadPre", "BufNewFile" },
+  dependencies = { "nvim-lua/plenary.nvim", "mason.nvim" },
   opts = function()
-    local U = require("config.utils")
     local null_ls = require("null-ls")
 
     return {
-      on_attach = U.on_attach,
       sources = {
         null_ls.builtins.diagnostics.actionlint,
         null_ls.builtins.diagnostics.erb_lint.with({
