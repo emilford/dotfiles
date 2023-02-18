@@ -85,6 +85,7 @@ return {
           },
           root_dir = require("lspconfig").util.root_pattern(".solargraph.yml"),
         },
+        standardrb = {},
         tailwindcss = {
           root_dir = require("lspconfig").util.root_pattern(
             "config/tailwind.config.js",
@@ -100,11 +101,14 @@ return {
         yamlls = {},
       },
       setup = {
-        -- example to setup with typescript.nvim
-        -- tsserver = function(_, opts)
-        --   require("typescript").setup({ server = opts })
-        --   return true
-        -- end,
+        standardrb = function()
+          vim.lsp.start({
+            name = "standard",
+            cmd = { "standardrb", "--lsp" },
+          })
+
+          return true
+        end,
         -- Specify * to use this function as a fallback for any server
         -- ["*"] = function(server, opts) end,
       },

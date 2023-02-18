@@ -10,7 +10,6 @@ return {
       "erb-lint",
       "gitlint",
       "prettierd",
-      "standardrb",
       "stylua",
       "vale",
     },

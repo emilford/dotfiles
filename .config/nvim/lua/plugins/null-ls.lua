@@ -14,7 +14,6 @@ return {
           end,
         }),
         null_ls.builtins.diagnostics.gitlint,
-        null_ls.builtins.diagnostics.standardrb,
         null_ls.builtins.diagnostics.vale.with({ extra_filetypes = { "gitcommit" } }),
         null_ls.builtins.formatting.erb_lint.with({
           condition = function(utils)
@@ -38,7 +37,6 @@ return {
           end,
           prefer_local = "node_modules/.bin",
         }),
-        null_ls.builtins.formatting.standardrb,
         null_ls.builtins.formatting.stylua,
       },
     }
