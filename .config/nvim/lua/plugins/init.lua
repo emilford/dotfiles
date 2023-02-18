@@ -14,6 +14,19 @@ return {
   { "qalshidi/vim-bettergrep" },
   { "ray-x/lsp_signature.nvim" },
   {
+    "Wansmer/treesj",
+    dependencies = {
+      "nvim-treesitter",
+    },
+    keys = {
+      { "gS", "<cmd>TSJSplit<cr>" },
+      { "gJ", "<cmd>TSJJoin<cr>" },
+    },
+    opts = {
+      use_default_keymaps = false,
+    },
+  },
+  {
     "romainl/vim-qf",
     event = "VeryLazy",
     init = function()
