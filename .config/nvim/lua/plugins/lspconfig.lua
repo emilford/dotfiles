@@ -5,6 +5,7 @@ return {
     "b0o/schemastore.nvim",
     "hrsh7th/cmp-nvim-lsp",
     "mason.nvim",
+    "ray-x/lsp_signature.nvim",
     "williamboman/mason-lspconfig.nvim",
   },
   opts = function()
