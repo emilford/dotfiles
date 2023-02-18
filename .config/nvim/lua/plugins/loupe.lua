@@ -1,7 +1,7 @@
 return {
   "wincent/loupe",
   event = "VeryLazy",
-  config = function()
+  init = function()
     vim.g.LoupeCenterResults = 0
     vim.g.LoupeClearHighlightMap = 0
     vim.g.LoupeVeryMagic = 0
