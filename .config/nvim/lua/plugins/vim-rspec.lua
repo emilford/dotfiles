@@ -1,1 +1,4 @@
-return { "keith/rspec.vim" }
+return {
+  "keith/rspec.vim",
+  ft = "rspec",
+}

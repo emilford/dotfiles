@@ -1,6 +1,7 @@
 return {
   "gbprod/nord.nvim",
   priority = 1000,
+  lazy = false,
   opts = {
     errors = { mode = "fg" },
     on_highlights = function(highlights, colors)

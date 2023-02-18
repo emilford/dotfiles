@@ -1,1 +1,4 @@
-return { "pbrisbin/vim-mkdir" }
+return {
+  "pbrisbin/vim-mkdir",
+  event = "CmdlineEnter",
+}
