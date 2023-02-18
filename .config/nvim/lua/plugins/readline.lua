@@ -1,7 +1,7 @@
 return {
   "ryvnf/readline.vim",
   event = "CmdlineEnter",
-  config = function()
+  init = function()
     vim.g.readline_ctrl_t = 0
   end,
 }
