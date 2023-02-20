@@ -1,12 +1,15 @@
 vim.api.nvim_create_augroup("CursorLine", { clear = true })
-vim.api.nvim_create_autocmd({ "VimEnter", "WinEnter", "BufWinEnter" }, {
+vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
   group = "CursorLine",
-  command = "setlocal cursorline",
+  callback = function()
+    vim.wo.cursorline = true
+  end,
 })
-
-vim.api.nvim_create_autocmd({ "WinLeave", "Filetype TelescopePrompt" }, {
+vim.api.nvim_create_autocmd({ "InsertEnter", "WinLeave" }, {
   group = "CursorLine",
-  command = "setlocal nocursorline",
+  callback = function()
+    vim.wo.cursorline = false
+  end,
 })
 
 vim.api.nvim_create_autocmd("VimResized", {
