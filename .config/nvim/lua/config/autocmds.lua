@@ -35,3 +35,11 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*_spec.rb", "*_shared_examples.rb, *_shared_context.rb" },
   command = "set syntax=rspec filetype=rspec.ruby",
 })
+
+vim.api.nvim_create_augroup("HighlightYank", { clear = true })
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = "HighlightYank",
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+})
