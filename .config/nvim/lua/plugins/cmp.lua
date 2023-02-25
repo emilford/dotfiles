@@ -14,7 +14,7 @@ return {
       dependencies = {
         "nvim-lua/plenary.nvim",
       },
-      opt = {
+      opts = {
         github = {
           pull_requests = {
             state = "all",
