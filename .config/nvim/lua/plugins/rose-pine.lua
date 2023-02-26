@@ -8,6 +8,9 @@ return {
     disable_background = true,
     disable_float_background = true,
     highlight_groups = {
+      ["@symbol.ruby"] = {
+        fg = "foam",
+      },
       FidgetTitle = {
         fg = "subtle",
       },
