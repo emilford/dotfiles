@@ -8,6 +8,9 @@ return {
     disable_background = true,
     disable_float_background = true,
     highlight_groups = {
+      FidgetTitle = {
+        fg = "subtle",
+      },
       LspInfoBorder = {
         fg = "highlight_med",
       },
@@ -30,7 +33,6 @@ return {
   config = function(_, opts)
     require("rose-pine").setup(opts)
 
-    vim.cmd("highlight FidgetTitle ctermfg=110 guifg=#6cb6eb")
     vim.cmd("colorscheme rose-pine")
   end,
 }
