@@ -34,6 +34,7 @@
 /.config/hub
 /.config/nvim/plugin/packer_compiled.lua
 /.config/nvim/spell/*.spl
+/.config/tmux/plugins
 /.config/wireshark
 /.config/yarn
 /.cpan
@@ -92,7 +93,6 @@
 /.synvert
 /.terminfo
 /.tldrc
-/.tmux/plugins
 /.vale
 /.w3m
 /.webdrivers
