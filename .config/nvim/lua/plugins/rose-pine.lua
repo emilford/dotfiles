@@ -24,7 +24,7 @@ return {
         fg = "highlight_med",
       },
       StatusLine = {
-        bg = "surface",
+        bg = "highlight_low",
         fg = "muted",
       },
       StatusLineNC = {
