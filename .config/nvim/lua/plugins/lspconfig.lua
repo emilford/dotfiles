@@ -45,13 +45,7 @@ return {
           },
         },
         eslint = {},
-        html = {
-          filetypes = {
-            "erb",
-            "eruby",
-            "html",
-          },
-        },
+        html = {},
         jsonls = {
           settings = {
             json = {
