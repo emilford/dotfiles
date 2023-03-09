@@ -11,6 +11,10 @@ return {
       "<cmd>Telescope git_files<cr>",
     },
     {
+      "<leader>fF",
+      "<cmd>Telescope find_files<cr>",
+    },
+    {
       "<leader>fh",
       "<cmd>Telescope help_tags<cr>",
     },
@@ -43,6 +47,14 @@ return {
         },
       },
       pickers = {
+        find_files = {
+          layout_config = {
+            preview_width = 0.55,
+          },
+          preview = {
+            hide_on_startup = true,
+          },
+        },
         git_files = {
           layout_config = {
             preview_width = 0.55,
