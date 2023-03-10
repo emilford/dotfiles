@@ -13,6 +13,7 @@ return {
             return utils.root_has_file({ ".erb-lint.yml" })
           end,
         }),
+        null_ls.builtins.diagnostics.fish,
         null_ls.builtins.diagnostics.gitlint,
         null_ls.builtins.diagnostics.vale.with({ extra_filetypes = { "gitcommit" } }),
         null_ls.builtins.formatting.erb_lint.with({
@@ -20,6 +21,7 @@ return {
             return utils.root_has_file({ ".erb-lint.yml" })
           end,
         }),
+        null_ls.builtins.formatting.fish_indent,
         null_ls.builtins.formatting.prettierd.with({
           condition = function(utils)
             return utils.root_has_file({
