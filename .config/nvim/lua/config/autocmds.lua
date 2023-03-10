@@ -1,3 +1,10 @@
+vim.api.nvim_create_augroup("AutoInsert", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "AutoInsert",
+  pattern = "gitcommit",
+  command = "startinsert",
+})
+
 vim.api.nvim_create_augroup("CursorLine", { clear = true })
 vim.api.nvim_create_autocmd({ "InsertLeave", "WinEnter" }, {
   group = "CursorLine",
