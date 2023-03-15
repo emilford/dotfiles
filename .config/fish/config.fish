@@ -16,3 +16,5 @@ set -x RIPGREP_CONFIG_PATH $HOME/.config/ripgrep/ripgreprc
 set -x VISUAL "nvim"
 
 fish_config theme choose "Rosé Pine Moon"
+
+fish_add_path -pP ".git/safe/../../bin"
