@@ -92,7 +92,21 @@ return {
             ".git"
           ),
         },
-        yamlls = {},
+        yamlls = {
+          settings = {
+            redhat = {
+              telemetry = {
+                enabled = false,
+              },
+            },
+            yaml = {
+              format = {
+                enable = true,
+              },
+              schemas = require("schemastore").json.schemas(),
+            },
+          },
+        },
       },
       setup = {
         -- Specify * to use this function as a fallback for any server
