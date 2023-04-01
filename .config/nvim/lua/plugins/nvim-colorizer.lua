@@ -4,6 +4,7 @@ return {
   opts = {
     user_default_options = {
       mode = "virtualtext",
+      names = false,
     },
   },
 }
