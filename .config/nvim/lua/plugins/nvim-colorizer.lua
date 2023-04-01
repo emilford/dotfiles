@@ -1,9 +1,9 @@
 return {
-  "DarwinSenior/nvim-colorizer.lua",
+  "NvChad/nvim-colorizer.lua",
   event = { "BufReadPre", "BufNewFile" },
-  config = function()
-    require("colorizer").setup(nil, {
+  opts = {
+    user_default_options = {
       mode = "virtualtext",
-    })
-  end,
+    },
+  },
 }
