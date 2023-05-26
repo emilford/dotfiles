@@ -15,6 +15,7 @@ return {
         }),
         null_ls.builtins.diagnostics.fish,
         null_ls.builtins.diagnostics.gitlint,
+        null_ls.builtins.diagnostics.tfsec,
         null_ls.builtins.diagnostics.vale.with({ extra_filetypes = { "gitcommit" } }),
         null_ls.builtins.formatting.erb_lint.with({
           condition = function(utils)

@@ -35,6 +35,7 @@ return {
       "regex",
       "ruby",
       "scss",
+      "terraform",
       "todotxt",
       "toml",
       "tsx",

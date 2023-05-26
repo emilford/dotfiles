@@ -11,6 +11,7 @@ return {
       "gitlint",
       "prettierd",
       "stylua",
+      "tfsec",
       "vale",
     },
   },

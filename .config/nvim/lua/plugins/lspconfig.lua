@@ -92,6 +92,7 @@ return {
             ".git"
           ),
         },
+        terraformls = {},
         yamlls = {
           settings = {
             redhat = {

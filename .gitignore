@@ -93,6 +93,7 @@
 /.swiftpm
 /.synvert
 /.terminfo
+/.terraform.d/
 /.tldrc
 /.vale
 /.w3m
