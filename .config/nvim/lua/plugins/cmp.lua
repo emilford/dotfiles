@@ -73,7 +73,7 @@ return {
         ["<c-f>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
         ["<c-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
         ["<c-y>"] = cmp.mapping.confirm({ select = true }),
-        ["<cr>"] = cmp.mapping.confirm({ select = true }),
+        ["<cr>"] = cmp.mapping.confirm({ select = false }),
       }),
       snippet = {
         expand = function(args)
