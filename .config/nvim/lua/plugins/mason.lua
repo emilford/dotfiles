@@ -10,6 +10,7 @@ return {
       "erb-lint",
       "gitlint",
       "prettierd",
+      "rustywind",
       "stylua",
       "tfsec",
       "vale",

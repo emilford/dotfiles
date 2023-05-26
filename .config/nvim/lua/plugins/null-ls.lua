@@ -40,6 +40,7 @@ return {
           end,
           prefer_local = "node_modules/.bin",
         }),
+        null_ls.builtins.formatting.rustywind.with({ extra_filetypes = { "eruby" } }),
         null_ls.builtins.formatting.stylua,
       },
     }
