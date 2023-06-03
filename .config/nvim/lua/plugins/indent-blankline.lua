@@ -15,7 +15,4 @@ return {
     },
     use_treesitter = true,
   },
-  config = function(_plugin, opts)
-    require("indent_blankline").setup(opts)
-  end,
 }
