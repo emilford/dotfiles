@@ -8,7 +8,6 @@ return {
     "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-path",
     "kristijanhusak/vim-dadbod-completion",
-    "onsails/lspkind-nvim",
     {
       "petertriho/cmp-git",
       dependencies = {
@@ -30,30 +29,18 @@ return {
     return {
       formatting = {
         fields = { "kind", "abbr", "menu" },
-        format = require("lspkind").cmp_format({
-          mode = "symbol",
-          menu = {
+        format = function(entry, item)
+          item.kind = require("config").icons.kinds[item.kind] .. " "
+          item.menu = ({
             buffer = "(Buffer)",
             git = "(Git)",
             ["vim-dadbod-completion"] = "(DB)",
             nvim_lsp = "(LSP)",
             nvim_lua = "(Lua)",
             luasnip = "(Snippet)",
-          },
-          symbol_map = {
-            Constant = "",
-            Constructor = "",
-            Field = "",
-            Function = "",
-            Keyword = "",
-            Module = "",
-            Reference = "",
-            Snippet = "",
-            Struct = "",
-            TypeParameter = "",
-            Variable = "",
-          },
-        }),
+          })[entry.source.name]
+          return item
+        end,
       },
       window = {
         completion = cmp.config.window.bordered({
