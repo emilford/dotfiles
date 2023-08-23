@@ -17,6 +17,7 @@ return {
       "dockerfile",
       "eex",
       "elixir",
+      "embedded_template",
       "fish",
       "graphql",
       "help",
