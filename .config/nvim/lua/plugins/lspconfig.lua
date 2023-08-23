@@ -91,6 +91,16 @@ return {
             "node_modules",
             ".git"
           ),
+          settings = {
+            tailwindCSS = {
+              experimental = {
+                classRegex = {
+                  "\\bclass:\\s*'([^']*)'",
+                  '\\bclass:\\s*"([^"]*)"',
+                },
+              },
+            },
+          },
         },
         terraformls = {},
         yamlls = {
