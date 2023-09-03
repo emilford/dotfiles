@@ -6,7 +6,5 @@ return {
     { "<m-j>", mode = { "n", "v" } },
     { "<m-k>", mode = { "n", "v" } },
   },
-  config = function()
-    require("mini.move").setup()
-  end,
+  config = true,
 }
