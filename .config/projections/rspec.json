@@ -1,0 +1,65 @@
+{
+  "lib/*.rb": {
+    "type": "lib",
+    "alternate": "spec/{}_spec.rb"
+  },
+  "spec/*_spec.rb": {
+    "command": "spec",
+    "alternate": "lib/{}.rb",
+    "template": [
+      "require \"rails_helper\"",
+      "",
+      "RSpec.describe {camelcase|capitalize|colons} do",
+      "end"
+    ]
+  },
+  "spec/controllers/*_spec.rb": {
+    "template": [
+      "require \"rails_helper\"",
+      "",
+      "RSpec.describe {camelcase|capitalize|colons}, type: :controller do",
+      "end"
+    ]
+  },
+  "spec/helpers/*_spec.rb": {
+    "template": [
+      "require \"rails_helper\"",
+      "",
+      "RSpec.describe {camelcase|capitalize|colons}, type: :helper do",
+      "end"
+    ]
+  },
+  "spec/models/*_spec.rb": {
+    "template": [
+      "require \"rails_helper\"",
+      "",
+      "RSpec.describe {camelcase|capitalize|colons}, type: :model do",
+      "end"
+    ]
+  },
+  "spec/mailers/*_spec.rb": {
+    "template": [
+      "require \"rails_helper\"",
+      "",
+      "RSpec.describe {camelcase|capitalize|colons}, type: :mailer do",
+      "end"
+    ]
+  },
+  "spec/requests/*_spec.rb": {
+    "template": [
+      "require \"rails_helper\"",
+      "",
+      "RSpec.describe \"\", type: :request do",
+      "end"
+    ]
+  },
+  "spec/system/*_spec.rb": {
+    "command": "system",
+    "template": [
+      "require \"rails_helper\"",
+      "",
+      "RSpec.describe \"\", type: :system do",
+      "end"
+    ]
+  }
+}

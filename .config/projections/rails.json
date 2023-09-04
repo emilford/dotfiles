@@ -1,0 +1,78 @@
+{
+  "app/components/*_component.rb": {
+    "command": "component",
+    "template": [
+      "class {camelcase|capitalize|colons}Component < ApplicationComponent",
+      "end"
+    ],
+    "alternate": [
+      "app/components/{}_component.html.erb"
+    ],
+    "test": [
+      "spec/components/{}_component_spec.rb"
+    ]
+  },
+  "app/decorators/*_decorator.rb": {
+    "command": "decorator",
+    "template": [
+      "class {camelcase|capitalize|colons}Decorator < ApplicationDecorator",
+      "end"
+    ],
+    "test": [
+      "spec/decorators/{}_decorator_spec.rb"
+    ]
+  },
+  "app/jobs/*_job.rb": {
+    "command": "job",
+    "template": [
+      "class {camelcase|capitalize|colons}Job < ApplicationJob",
+      "end"
+    ]
+  },
+  "app/policies/*_policy.rb": {
+    "command": "policy",
+    "template": [
+      "class {camelcase|capitalize|colons}Policy < ApplicationPolicy",
+      "  class Scope",
+      "  end",
+      "end"
+    ],
+    "test": [
+      "spec/policies/{}_policy_spec.rb"
+    ]
+  },
+  "app/presenters/*.rb": {
+    "command": "presenter",
+    "template": [
+      "class {camelcase|capitalize|colons}",
+      "end"
+    ],
+    "test": [
+      "spec/presenters/{}_spec.rb"
+    ]
+  },
+  "app/queries/*_query.rb": {
+    "command": "query",
+    "template": [
+      "class {camelcase|capitalize|colons}Query < ApplicationQuery",
+      "  def initialize(scope:)",
+      "    @scope = scope",
+      "  end",
+      "",
+      "  private",
+      "",
+      "  def records",
+      "  end",
+      "end"
+    ],
+    "test": [
+      "spec/queries/{}_spec.rb"
+    ]
+  },
+  "app/views/pages/*.html.erb": {
+    "command": "page"
+  },
+  "config/routes.rb": {
+    "command": "routes"
+  }
+}
