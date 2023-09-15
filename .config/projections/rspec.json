@@ -17,7 +17,7 @@
     "template": [
       "require \"rails_helper\"",
       "",
-      "RSpec.describe {camelcase|capitalize|colons}, type: :controller do",
+      "RSpec.describe {camelcase|capitalize|colons}Controller, type: :controller do",
       "end"
     ]
   },
@@ -25,7 +25,7 @@
     "template": [
       "require \"rails_helper\"",
       "",
-      "RSpec.describe {camelcase|capitalize|colons}, type: :helper do",
+      "RSpec.describe {camelcase|capitalize|colons}Helpers, type: :helper do",
       "end"
     ]
   },
@@ -41,7 +41,7 @@
     "template": [
       "require \"rails_helper\"",
       "",
-      "RSpec.describe {camelcase|capitalize|colons}, type: :mailer do",
+      "RSpec.describe {camelcase|capitalize|colons}Mailer, type: :mailer do",
       "end"
     ]
   },
