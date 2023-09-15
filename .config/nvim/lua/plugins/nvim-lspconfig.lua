@@ -2,185 +2,128 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    "b0o/schemastore.nvim",
-    "hrsh7th/cmp-nvim-lsp",
-    "mason.nvim",
     "ray-x/lsp_signature.nvim",
+    "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   },
-  opts = function()
-    return {
-      diagnostics = {
-        float = {
-          border = "rounded",
-          source = "always",
-        },
-        virtual_text = false,
-        severity_sort = true,
+  config = function()
+    local lspconfig = require("lspconfig")
+
+    lspconfig.util.default_config = vim.tbl_extend("force", lspconfig.util.default_config, {
+      capabilities = vim.tbl_deep_extend(
+        "force",
+        lspconfig.util.default_config.capabilities,
+        require("cmp_nvim_lsp").default_capabilities()
+      ),
+      handlers = {
+        ["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { border = "rounded" }),
+        ["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = "rounded" }),
       },
-      icons = {
-        diagnostics = {
-          Error = "●",
-          Hint = "○",
-          Info = "●",
-          Warn = "●",
-        },
-      },
-      servers = {
-        cssls = {
-          filetypes = {
-            "css",
-            "erb",
-            "eruby",
-            "html",
-            "javascript",
-            "javascriptreact",
-            "javascript.jsx",
-            "less",
-            "scss",
-            "typescript",
-            "typescriptreact",
-            "typescript.tsx",
-            "vue",
-          },
-        },
-        eslint = {},
-        html = {},
-        jsonls = {
-          settings = {
-            json = {
-              schemas = require("schemastore").json.schemas(),
-              validate = { enable = true },
-            },
-          },
-        },
-        lua_ls = {
-          settings = {
-            Lua = {
-              runtime = {
-                version = "LuaJIT",
-              },
-              diagnostics = {
-                globals = { "vim", "use" },
-              },
-              workspace = {
-                checkThirdParty = false,
-                library = vim.api.nvim_get_runtime_file("", true),
-              },
-              telemetry = {
-                enable = false,
-              },
-            },
-          },
-        },
-        solargraph = {
-          init_options = {
-            formatting = false,
-          },
-          root_dir = require("lspconfig").util.root_pattern(".solargraph.yml"),
-        },
-        standardrb = {},
-        tailwindcss = {
-          root_dir = require("lspconfig").util.root_pattern(
-            "config/tailwind.config.js",
-            "tailwind.config.js",
-            "tailwind.config.ts",
-            "postcss.config.js",
-            "postcss.config.ts",
-            "package.json",
-            "node_modules",
-            ".git"
-          ),
-          settings = {
-            tailwindCSS = {
-              experimental = {
-                classRegex = {
-                  "\\bclass:\\s*'([^']*)'",
-                  '\\bclass:\\s*"([^"]*)"',
-                },
-              },
-            },
-          },
-        },
-        terraformls = {},
-        yamlls = {
-          settings = {
-            redhat = {
-              telemetry = {
-                enabled = false,
-              },
-            },
-            yaml = {
-              format = {
-                enable = true,
-              },
-              schemas = require("schemastore").json.schemas(),
-            },
-          },
-        },
-      },
-      setup = {
-        -- Specify * to use this function as a fallback for any server
-        -- ["*"] = function(server, opts) end,
-      },
-    }
-  end,
-  config = function(_, opts)
-    vim.api.nvim_create_autocmd("LspAttach", {
-      callback = function(args)
-        local client = vim.lsp.get_client_by_id(args.data.client_id)
-        require("config.utils").on_attach(client, args.buf)
-      end,
     })
 
     require("lspconfig.ui.windows").default_options.border = "rounded"
 
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-      border = "rounded",
-    })
-    vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-      border = "rounded",
+    vim.diagnostic.config({
+      float = {
+        border = "rounded",
+        source = "always",
+      },
+      virtual_text = false,
+      severity_sort = true,
     })
 
-    vim.diagnostic.config(opts.diagnostics)
-    for type, icon in pairs(opts.icons.diagnostics) do
+    for _, type in ipairs({ "Error", "Hint", "Info", "Warn" }) do
       local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
+      vim.fn.sign_define(hl, { text = "●", texthl = hl, numhl = hl })
     end
 
-    local capabilities = require("cmp_nvim_lsp").default_capabilities()
-    local available_servers = require("mason-lspconfig").get_available_servers()
+    vim.api.nvim_create_autocmd("LspAttach", {
+      desc = "LSP actions",
+      callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
 
-    local function setup(server)
-      local server_opts = vim.tbl_deep_extend("force", {
-        capabilities = vim.deepcopy(capabilities),
-      }, opts.servers[server] or {})
+        require("lsp_signature").on_attach({ toggle_key = "<M-x>" }, args.buf)
 
-      if opts.setup[server] then
-        if opts.setup[server](server, server_opts) then
-          return
+        -- NOTE: These were initially wrapped in a check to only add them if
+        -- the language server supports the `textDocument/publishDiagnostics`
+        -- specification. Even though null-ls provides diagnostics, wrapping
+        -- these caused issue. Until this can be looked into further, always
+        -- add these commands and keymaps.
+        -- create_user_command_and_keymap(
+        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticNext", vim.diagnostic.goto_next, {})
+        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticPrev", vim.diagnostic.goto_prev, {})
+        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticLine", vim.diagnostic.open_float, {})
+        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticSetloclist", vim.diagnostic.setloclist, {})
+        vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
+        vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
+        vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+        vim.keymap.set("n", "<leader>l", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+
+        if client.supports_method("textDocument/codeAction") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspCodeAction", function()
+            vim.lsp.buf.code_action()
+          end, {})
         end
-      elseif opts.setup["*"] then
-        if opts.setup["*"](server, server_opts) then
-          return
+
+        if client.supports_method("textDocument/definition") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspDefinition", vim.lsp.buf.definition, {})
+          vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto definition" })
         end
-      end
 
-      require("lspconfig")[server].setup(server_opts)
-    end
+        if client.supports_method("textDocument/formatting") then
+          local lsp_formatting = function()
+            vim.lsp.buf.format({
+              filter = function()
+                return client.name ~= "tsserver"
+              end,
+              bufnr = args.buf,
+            })
+          end
 
-    local ensure_installed = {}
-    for server, server_opts in pairs(opts.servers) do
-      server_opts = server_opts == true and {} or server_opts
+          local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
-      if server_opts.mason == false or not vim.tbl_contains(available_servers, server) then
-        setup(server)
-      else
-        ensure_installed[#ensure_installed + 1] = server
-      end
-    end
+          vim.api.nvim_clear_autocmds({ group = augroup, buffer = args.buf })
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            group = augroup,
+            buffer = args.buf,
+            callback = lsp_formatting,
+          })
 
-    require("mason-lspconfig").setup({ ensure_installed = ensure_installed })
-    require("mason-lspconfig").setup_handlers({ setup })
+          vim.api.nvim_buf_create_user_command(args.buf, "LspFormat", lsp_formatting, {})
+          vim.keymap.set("n", "<leader>F", lsp_formatting, { desc = "Format buffer" })
+
+          if client.supports_method("textDocument/rangeFormatting") then
+            vim.keymap.set("v", "<leader>F", lsp_formatting, { desc = "Format range" })
+          end
+        end
+
+        if client.supports_method("textDocument/hover") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspHover", vim.lsp.buf.hover, {})
+          vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover documentation" })
+        end
+
+        if client.supports_method("textDocument/implementation") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspImplementation", vim.lsp.buf.implementation, {})
+        end
+
+        if client.supports_method("textDocument/references") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspReferences", vim.lsp.buf.references, {})
+        end
+
+        if client.supports_method("textDocument/rename") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspRename", function()
+            vim.lsp.buf.rename()
+          end, {})
+        end
+
+        if client.supports_method("textDocument/signatureHelp") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspSignatureHelp", vim.lsp.buf.signature_help, {})
+        end
+
+        if client.supports_method("textDocument/typeDefinition") then
+          vim.api.nvim_buf_create_user_command(args.buf, "LspTypeDefinition", vim.lsp.buf.type_definition, {})
+        end
+      end,
+    })
   end,
 }
