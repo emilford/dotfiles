@@ -6,6 +6,8 @@ abbr tk tmux kill-session -t
 abbr tl tmux list-sessions
 abbr tn tmux new -s
 
+eval (/opt/homebrew/bin/brew shellenv)
+
 source $HOME/.asdf/asdf.fish
 
 direnv hook fish | source
