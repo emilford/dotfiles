@@ -70,33 +70,6 @@ return {
           vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "Goto definition" })
         end
 
-        if client.supports_method("textDocument/formatting") then
-          local lsp_formatting = function()
-            vim.lsp.buf.format({
-              filter = function()
-                return client.name ~= "tsserver"
-              end,
-              bufnr = args.buf,
-            })
-          end
-
-          local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
-
-          vim.api.nvim_clear_autocmds({ group = augroup, buffer = args.buf })
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            group = augroup,
-            buffer = args.buf,
-            callback = lsp_formatting,
-          })
-
-          vim.api.nvim_buf_create_user_command(args.buf, "LspFormat", lsp_formatting, {})
-          vim.keymap.set("n", "<leader>F", lsp_formatting, { desc = "Format buffer" })
-
-          if client.supports_method("textDocument/rangeFormatting") then
-            vim.keymap.set("v", "<leader>F", lsp_formatting, { desc = "Format range" })
-          end
-        end
-
         if client.supports_method("textDocument/hover") then
           vim.api.nvim_buf_create_user_command(args.buf, "LspHover", vim.lsp.buf.hover, {})
           vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show hover documentation" })
