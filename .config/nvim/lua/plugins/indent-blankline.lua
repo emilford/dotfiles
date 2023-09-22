@@ -1,18 +1,18 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
+  main = "ibl",
+  branch = "v3",
   event = { "BufReadPre", "BufNewFile" },
+  dependencies = { "tpope/vim-sleuth" },
   opts = {
-    filetype_exclude = {
-      "",
-      "checkhealth",
-      "fugitive",
-      "gitcommit",
-      "help",
-      "lspinfo",
-      "man",
-      "markdown",
-      "packer",
+    exclude = {
+      filetypes = {
+        "fugitive",
+        "markdown",
+      },
     },
-    use_treesitter = true,
+    indent = {
+      char = "│",
+    },
   },
 }
