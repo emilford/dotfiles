@@ -1,6 +1,7 @@
 vim.g.mapleader = ","
 
 vim.opt.colorcolumn = "+1"
+vim.opt.confirm = true
 vim.opt.cpoptions:append("$")
 vim.opt.diffopt:append("vertical")
 vim.opt.hidden = true
