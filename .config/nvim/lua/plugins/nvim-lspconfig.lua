@@ -3,8 +3,6 @@ return {
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
     "ray-x/lsp_signature.nvim",
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
   },
   config = function()
     local lspconfig = require("lspconfig")
