@@ -32,6 +32,7 @@
 /.config/glab-cli
 /.config/heroku
 /.config/hub
+/.config/kitty/current-theme.conf
 /.config/nvim/lazy-lock.json
 /.config/nvim/plugin/packer_compiled.lua
 /.config/nvim/spell/*.spl
@@ -94,6 +95,7 @@
 /.synvert
 /.terminfo
 /.terraform.d/
+/.theme
 /.tldrc
 /.vale
 /.w3m

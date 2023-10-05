@@ -15,3 +15,14 @@ else
   require("config.autocmds")
   require("config.keymaps")
 end
+
+local theme = os.getenv("HOME") .. "/.theme"
+
+local function adjust_theme()
+  local mode = io.open(theme, "r") and io.input(theme):read() or "dark"
+  vim.opt.background = mode
+end
+
+adjust_theme()
+
+vim.loop.fs_event_start(vim.loop.new_fs_event(), theme, {}, vim.schedule_wrap(adjust_theme))
