@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2009-2014 Sébastien Helleu <flashcode@flashtux.org>
+# Copyright (C) 2009-2023 Sébastien Helleu <flashcode@flashtux.org>
 # Copyright (C) 2010 m4v <lambdae2@gmail.com>
 # Copyright (C) 2011 stfn <stfnmd@googlemail.com>
 #
@@ -21,6 +21,12 @@
 #
 # History:
 #
+# 2023-06-21, Sébastien Helleu <flashcode@flashtux.org>:
+#     version 2.9: add option "min_chars"
+# 2023-01-08, Sébastien Helleu <flashcode@flashtux.org>:
+#     version 2.8: send buffer pointer with signal "input_text_changed"
+# 2021-05-25, Tomáš Janoušek <tomi@nomi.cz>:
+#     version 2.7: add new option to prefix short names with server names
 # 2019-07-11, Simmo Saan <simmo.saan@gmail.com>
 #     version 2.6: fix detection of "/input search_text_here"
 # 2017-04-01, Sébastien Helleu <flashcode@flashtux.org>:
@@ -94,7 +100,7 @@ from __future__ import print_function
 
 SCRIPT_NAME = 'go'
 SCRIPT_AUTHOR = 'Sébastien Helleu <flashcode@flashtux.org>'
-SCRIPT_VERSION = '2.6'
+SCRIPT_VERSION = '2.9'
 SCRIPT_LICENSE = 'GPL3'
 SCRIPT_DESC = 'Quick jump to buffers'
 
@@ -106,13 +112,19 @@ try:
     import weechat
 except ImportError:
     print('This script must be run under WeeChat.')
-    print('Get WeeChat now at: http://www.weechat.org/')
+    print('Get WeeChat now at: https://weechat.org/')
     IMPORT_OK = False
 
 import re
 
 # script options
 SETTINGS = {
+    'auto_jump': (
+        'off',
+        'automatically jump to buffer when it is uniquely selected'),
+    'buffer_number': (
+        'on',
+        'display buffer number'),
     'color_number': (
         'yellow,magenta',
         'color for buffer number (not selected)'),
@@ -131,12 +143,21 @@ SETTINGS = {
     'color_name_highlight_selected': (
         'red,brown',
         'color for highlight in a selected buffer name'),
+    'fuzzy_search': (
+        'off',
+        'search buffer matches using approximation'),
     'message': (
         'Go to: ',
         'message to display before list of buffers'),
+    'min_chars': (
+        '0',
+        'Minimum chars to search and display list of matching buffers'),
     'short_name': (
         'off',
         'display and search in short names instead of buffer name'),
+    'short_name_server': (
+        'off',
+        'prefix short names with server names for search and display'),
     'sort': (
         'number,beginning',
         'comma-separated list of keys to sort buffers '
@@ -149,15 +170,6 @@ SETTINGS = {
     'use_core_instead_weechat': (
         'off',
         'use name "core" instead of "weechat" for core buffer'),
-    'auto_jump': (
-        'off',
-        'automatically jump to buffer when it is uniquely selected'),
-    'fuzzy_search': (
-        'off',
-        'search buffer matches using approximation'),
-    'buffer_number': (
-        'on',
-        'display buffer number'),
 }
 
 # hooks management
@@ -317,9 +329,14 @@ def go_matching_buffers(strinput):
     strinput = strinput.lower()
     infolist = weechat.infolist_get('buffer', '', '')
     while weechat.infolist_next(infolist):
+        pointer = weechat.infolist_pointer(infolist, 'pointer')
         short_name = weechat.infolist_string(infolist, 'short_name')
+        server = weechat.buffer_get_string(pointer, 'localvar_server')
         if go_option_enabled('short_name'):
-            name = weechat.infolist_string(infolist, 'short_name')
+            if go_option_enabled('short_name_server') and server:
+                name = server + '.' + short_name
+            else:
+                name = short_name
         else:
             name = weechat.infolist_string(infolist, 'name')
         if name == 'weechat' \
@@ -332,7 +349,6 @@ def go_matching_buffers(strinput):
             full_name = '%s.%s' % (
                 weechat.infolist_string(infolist, 'plugin_name'),
                 weechat.infolist_string(infolist, 'name'))
-        pointer = weechat.infolist_pointer(infolist, 'pointer')
         matching = name.lower().find(strinput) >= 0
         if not matching and strinput[-1] == ' ':
             matching = name.lower().endswith(strinput.strip())
@@ -401,6 +417,11 @@ def go_matching_buffers(strinput):
 
 def go_buffers_to_string(listbuf, pos, strinput):
     """Return string built with list of buffers found (matching user input)."""
+    try:
+        if len(strinput) < int(weechat.config_get_plugin('min_chars')):
+            return ''
+    except:
+        pass
     string = ''
     strinput = strinput.lower()
     for i in range(len(listbuf)):
@@ -491,7 +512,7 @@ def go_command_run_input(data, buf, command):
         if buffers_pos >= len(buffers):
             buffers_pos = 0
         weechat.hook_signal_send('input_text_changed',
-                                 weechat.WEECHAT_HOOK_SIGNAL_STRING, '')
+                                 weechat.WEECHAT_HOOK_SIGNAL_POINTER, buf)
         return weechat.WEECHAT_RC_OK_EAT
     elif command == '/input complete_previous':
         # choose previous buffer in list
@@ -499,7 +520,7 @@ def go_command_run_input(data, buf, command):
         if buffers_pos < 0:
             buffers_pos = len(buffers) - 1
         weechat.hook_signal_send('input_text_changed',
-                                 weechat.WEECHAT_HOOK_SIGNAL_STRING, '')
+                                 weechat.WEECHAT_HOOK_SIGNAL_POINTER, buf)
         return weechat.WEECHAT_RC_OK_EAT
     elif command == '/input return':
         # switch to selected buffer (if any)
