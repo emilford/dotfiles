@@ -80,6 +80,7 @@
 /.puma-dev
 /.python_history
 /.rbenv
+/.rdbg_history
 /.react-native-cli
 /.rediscli_history
 /.rnd
