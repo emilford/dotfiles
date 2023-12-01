@@ -50,3 +50,8 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     vim.highlight.on_yank()
   end,
 })
+
+vim.api.nvim_create_user_command("DiagnosticNext", vim.diagnostic.goto_next, {})
+vim.api.nvim_create_user_command("DiagnosticPrev", vim.diagnostic.goto_prev, {})
+vim.api.nvim_create_user_command("DiagnosticLine", vim.diagnostic.open_float, {})
+vim.api.nvim_create_user_command("DiagnosticSetloclist", vim.diagnostic.setloclist, {})

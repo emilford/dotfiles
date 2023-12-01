@@ -42,21 +42,6 @@ return {
 
         require("lsp_signature").on_attach({ toggle_key = "<M-x>" }, args.buf)
 
-        -- NOTE: These were initially wrapped in a check to only add them if
-        -- the language server supports the `textDocument/publishDiagnostics`
-        -- specification. Even though null-ls provides diagnostics, wrapping
-        -- these caused issue. Until this can be looked into further, always
-        -- add these commands and keymaps.
-        -- create_user_command_and_keymap(
-        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticNext", vim.diagnostic.goto_next, {})
-        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticPrev", vim.diagnostic.goto_prev, {})
-        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticLine", vim.diagnostic.open_float, {})
-        vim.api.nvim_buf_create_user_command(args.buf, "LspDiagnosticSetloclist", vim.diagnostic.setloclist, {})
-        vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Goto next diagnostic" })
-        vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Goto previous diagnostic" })
-        vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line diagnostics" })
-        vim.keymap.set("n", "<leader>l", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
-
         if client.supports_method("textDocument/codeAction") then
           vim.api.nvim_buf_create_user_command(args.buf, "LspCodeAction", function()
             vim.lsp.buf.code_action()
