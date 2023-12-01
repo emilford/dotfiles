@@ -36,6 +36,7 @@
 /.config/nvim/lazy-lock.json
 /.config/nvim/plugin/packer_compiled.lua
 /.config/nvim/spell/*.spl
+/.config/op/
 /.config/tmux/plugins
 /.config/wireshark
 /.config/yarn

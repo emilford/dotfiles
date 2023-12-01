@@ -1,0 +1,80 @@
+{
+  "review": {
+    "type": "chat",
+    "opts": {
+      "title": "Code Review",
+      "template": "Review the following {{language}} code for logic issues, inefficiencies, or non-adherence to SOLID principles or other best practices:\n\n```{{input}}\n\n``` Suggest improvements using {{language}}'s standard library for better readability, maintainability, and performance. Provide practical, actionable advice, and code examples when appropriate.",
+      "strategy": "edit",
+      "max_tokens": 4096,
+      "params": {
+        "model": "gpt-4",
+        "temperature": 0
+      }
+    },
+    "args": {
+      "language": {
+        "type": "string",
+        "optional": "true",
+        "default": "Ruby"
+      }
+    }
+  },
+
+  "review-as": {
+    "type": "chat",
+    "opts": {
+      "title": "Personal Code Review",
+      "template": "Imagine you are {{person}} explaining this code. Provide a brief analysis while also {{activity}}, and relate this to your review. Limit your response to 3 sentences. Address your note to `Nate`. Also, include a closing salution and sign the response `{{person}}`.\n\n{{input}}",
+      "strategy": "display",
+      "params": {
+        "model": "gpt-4",
+        "temperature": 2,
+        "max_tokens": 512
+      }
+    },
+    "args": {
+      "person": {
+        "type": "string",
+        "optional": "false",
+        "default": "DHH"
+      },
+      "activity": {
+        "type": "string",
+        "optional": "true",
+        "default": "coaching me to write Rails code like a Rails core member"
+      }
+    }
+  },
+
+  "refactor": {
+    "type": "chat",
+    "opts": {
+      "title": "Code Refactor",
+      "template": "Refactor the following {{language}} code to optimize readability, reliability, maintainability, performance, and robustness.\n\n{{input}}",
+      "strategy": "edit",
+      "max_tokens": 4096,
+      "params": {
+        "model": "gpt-4"
+      }
+    },
+    "args": {
+      "language": {
+        "type": "string",
+        "optional": "true",
+        "default": "Ruby"
+      }
+    }
+  },
+
+  "yardoc": {
+    "type": "chat",
+    "opts": {
+      "template": "Document the following Ruby method using YARD syntax. Include parameters, return values, an example if appropriate, and relevant information that will help a user understand how to use the method. Keep the documentation brief and to the point. Match the indentation depth used in the Ruby method. Do not wrap the answer in markdown.\n\n{{input}}",
+      "strategy": "prepend",
+      "params": {
+        "model": "gpt-4",
+        "stop": ["def "]
+      }
+    }
+  }
+}
