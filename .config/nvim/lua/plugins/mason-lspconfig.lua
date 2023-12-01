@@ -12,6 +12,7 @@ return {
       "html",
       "jsonls",
       "lua_ls",
+      "ruby_ls",
       "solargraph",
       "standardrb",
       "tailwindcss",

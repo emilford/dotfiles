@@ -7,8 +7,10 @@ return {
   },
   opts = {
     ensure_installed = {
+      "actionlint",
       "erb-lint",
       "gitlint",
+      "luacheck",
       "prettierd",
       "rustywind",
       "standardrb",
