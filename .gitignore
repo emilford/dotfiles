@@ -60,6 +60,7 @@
 /.gradle
 /.heroku
 /.hex
+/.homebridge/
 /.irb_history
 /.ivy2
 /.kube
