@@ -7,12 +7,10 @@ return {
       eruby = { "erb_lint" },
       fish = { "fish" },
       gitcommit = { "gitlint", "vale" },
-      javascript = { "eslint" },
       lua = { "luacheck" },
       markdown = { "vale" },
       terraform = { "tflint", "tfsec" },
       tf = { "tfsec" },
-      typescript = { "eslint" },
       yaml = { "actionlint" },
     }
 
@@ -22,10 +20,8 @@ return {
       pattern = {
         "*.erb",
         "*.fish",
-        "*.js",
         "*.lua",
         "*.md",
-        "*.ts",
         "*.tf",
         "*.tfvars",
         "*.tfvars.json",
