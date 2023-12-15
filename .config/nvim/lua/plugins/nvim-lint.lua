@@ -2,7 +2,9 @@ return {
   "mfussenegger/nvim-lint",
   event = { "BufReadPre", "BufNewFile" },
   config = function()
-    require("lint").linters_by_ft = {
+    local lint = require("lint")
+
+    lint.linters_by_ft = {
       ["terraform-vars"] = { "tflint", "tfsec" },
       eruby = { "erb_lint" },
       fish = { "fish" },
@@ -17,21 +19,12 @@ return {
     vim.api.nvim_create_augroup("nvim-lint", { clear = true })
     vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
       group = "nvim-lint",
-      pattern = {
-        "*.erb",
-        "*.fish",
-        "*.lua",
-        "*.md",
-        "*.tf",
-        "*.tfvars",
-        "*.tfvars.json",
-        "*.tf.json",
-        "*.yaml",
-        "*.yml",
-        "*COMMIT_EDITMSG", -- really filetype=gitcommit
-      },
       callback = function()
-        require("lint").try_lint()
+        local linters = lint._resolve_linter_by_ft(vim.bo.filetype)
+
+        if #linters > 0 then
+          lint.try_lint(linters)
+        end
       end,
     })
   end,
