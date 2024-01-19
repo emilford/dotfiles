@@ -27,6 +27,14 @@ return {
       vue = { { "prettierd", "prettier" }, "rustywind" },
       yaml = { { "prettierd", "prettier" } },
     },
+    formatters = {
+      rustywind = {
+        prepend_args = {
+          "--custom-regex",
+          "\\bclass:\\s*['\"]([^'\"]*)['\"]",
+        },
+      },
+    },
     format_on_save = function(bufnr)
       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
         return
