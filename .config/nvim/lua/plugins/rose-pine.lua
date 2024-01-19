@@ -5,8 +5,9 @@ return {
   priority = 1000,
   opts = {
     dark_variant = "moon",
-    disable_background = true,
-    disable_float_background = true,
+    styles = {
+      transparency = true,
+    },
     highlight_groups = {
       ["@symbol.ruby"] = {
         fg = "foam",
