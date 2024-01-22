@@ -18,6 +18,9 @@ return {
       LspInfoBorder = {
         fg = "highlight_med",
       },
+      HarpoonBorder = {
+        fg = "muted",
+      },
       CodeActionBorder = {
         fg = "highlight_med",
       },
