@@ -19,17 +19,8 @@ return {
       "<cmd>Telescope help_tags<cr>",
     },
     {
-      -- TODO: Move this to a custom extension
       "<leader>fn",
-      function()
-        require("telescope.builtin").find_files({
-          previewer = false,
-          prompt_title = false,
-          theme = "dropdown",
-          cwd = "./notes",
-          hidden = true,
-        })
-      end,
+      "<cmd>Telescope find_files cwd=./notes hidden=true<cr>",
     },
   },
   opts = {
