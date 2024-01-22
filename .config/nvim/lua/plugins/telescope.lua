@@ -23,56 +23,38 @@ return {
       "<leader>fn",
       function()
         require("telescope.builtin").find_files({
-          prompt_title = "Project Notes",
+          previewer = false,
+          prompt_title = false,
+          theme = "dropdown",
           cwd = "./notes",
           hidden = true,
-          layout_config = {
-            height = 0.40,
-            width = 0.40,
-          },
-          preview = {
-            hide_on_startup = true,
-          },
         })
       end,
     },
   },
-  opts = function()
-    return {
-      defaults = {
-        mappings = {
-          i = {
-            ["<c-\\>"] = require("telescope.actions.layout").toggle_preview,
-          },
+  opts = {
+    pickers = {
+      find_files = {
+        previewer = false,
+        prompt_title = false,
+        theme = "dropdown",
+      },
+      git_files = {
+        previewer = false,
+        prompt_title = false,
+        show_untracked = true,
+        theme = "dropdown",
+      },
+      help_tags = {
+        results_title = false,
+        prompt_title = false,
+        preview_title = false,
+        layout_config = {
+          preview_width = 0.55,
         },
       },
-      pickers = {
-        find_files = {
-          layout_config = {
-            preview_width = 0.55,
-          },
-          preview = {
-            hide_on_startup = true,
-          },
-        },
-        git_files = {
-          layout_config = {
-            preview_width = 0.55,
-          },
-          preview = {
-            hide_on_startup = true,
-          },
-          show_untracked = true,
-        },
-        help_tags = {
-          layout_config = {
-            prompt_position = "top",
-          },
-          sorting_strategy = "ascending",
-        },
-      },
-    }
-  end,
+    },
+  },
   config = function(_, opts)
     local telescope = require("telescope")
 
