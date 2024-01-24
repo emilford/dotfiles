@@ -31,7 +31,7 @@ return {
       rustywind = {
         prepend_args = {
           "--custom-regex",
-          "\\bclass:\\s*['\"]([^'\"]*)['\"]",
+          "\\bclass[:=]\\s*['\"]([^'\"]*)['\"]",
         },
       },
     },
