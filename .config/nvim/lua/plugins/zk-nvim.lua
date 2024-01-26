@@ -4,39 +4,38 @@ return {
     picker = "telescope",
   },
   lazy = false,
+  main = "zk",
   cond = function()
     return vim.fn.isdirectory(".zk") ~= 0
   end,
-  config = function(_, opts)
-    require("zk").setup(opts)
+  keys = {
+    { "<leader>zb", "<cmd>ZkBacklinks<cr>", desc = "Show backlinks" },
+    { "<leader>zl", "<cmd>ZkLinks<cr>", desc = "Show links" },
+    {
+      "<leader>zn",
+      "<cmd>ZkNew { dir = vim.fn.expand('%:p:h'), title = vim.fn.input('Title: ') }<cr>",
+      desc = "Create new note",
+    },
+    { "<leader>zo", "<cmd>ZkNotes<cr>", desc = "Open note" },
+    {
+      "<leader>zs",
+      "<cmd>ZkNotes { dir = vim.fn.expand('%:p:h'), match = vim.fn.input('Search: ') }<cr>",
+      desc = "Search notes",
+    },
+    { "<leader>zt", "<cmd>ZkTags<cr>", desc = "Filter notes by tag" },
 
-    vim.keymap.set("n", "<cr>", "<cmd>lua vim.lsp.buf.definition()<cr>", { buffer = 0 })
-    vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<cr>", { buffer = 0 })
-
-    local wk = require("which-key")
-    wk.register({
-      z = {
-        name = "+ZettelKasten",
-        b = { "<cmd>ZkBacklinks<cr>", "Backlinks" },
-        o = { "<cmd>ZkNotes<cr>", "Open" },
-        f = { "<cmd>ZkNotes { dir = vim.fn.expand('%:p:h'), match = vim.fn.input('Find: ') }<cr>", "Find" },
-        i = { "<cmd>ZkIndex<cr>", "Index" },
-        l = { "<cmd>ZkLinks<cr>", "Links" },
-        n = { "<cmd>ZkNew { dir = vim.fn.expand('%:p:h'), title = vim.fn.input('Title: ') }<cr>", "New" },
-        t = { "<cmd>ZkTags<cr>", "Tags" },
-      },
-    }, { prefix = "<leader>", mode = "n" })
-
-    wk.register({
-      z = {
-        name = "+ZettelKasten",
-        f = { ":'<'>ZkMatch<cr>", "Find" },
-        n = { ":'<'>ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<cr>", "New" },
-        N = {
-          ":'<'>ZkNewFromContentSelection { dir = vim.fn.expand('%:p:h'), title = vim.fn.input('Title: ') } <cr>",
-          "New",
-        },
-      },
-    }, { prefix = "<leader>", mode = "v" })
-  end,
+    { "<leader>zf", ":'<'>ZkMatch<cr>", mode = "v", desc = "Find notes matching selection" },
+    {
+      "<leader>znc",
+      ":'<'>ZkNewFromContentSelection { dir = vim.fn.expand('%:p:h'), title = vim.fn.input('Title: ') }<cr>",
+      mode = "v",
+      desc = "Create note with content from selection",
+    },
+    {
+      "<leader>znt",
+      ":'<'>ZkNewFromTitleSelection { dir = vim.fn.expand('%:p:h') }<cr>",
+      mode = "v",
+      desc = "Create note with title from selection",
+    },
+  },
 }
