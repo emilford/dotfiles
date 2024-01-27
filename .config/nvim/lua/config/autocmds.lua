@@ -40,7 +40,7 @@ vim.api.nvim_create_autocmd("CursorMoved", {
 -- https://github.com/keith/rspec.vim/issues/39
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
   pattern = { "*_spec.rb", "*_shared_examples.rb, *_shared_context.rb" },
-  command = "set syntax=rspec filetype=rspec.ruby",
+  command = "set syntax=rspec filetype=ruby.rspec",
 })
 
 vim.api.nvim_create_augroup("HighlightYank", { clear = true })
