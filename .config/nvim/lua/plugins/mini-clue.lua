@@ -8,6 +8,9 @@ return {
       { mode = "n", keys = "<leader>d" },
       { mode = "x", keys = "<leader>d" },
 
+      -- mini.basics
+      { mode = "n", keys = "\\" },
+
       -- mini.bracketed
       { mode = "n", keys = "[" },
       { mode = "n", keys = "]" },
