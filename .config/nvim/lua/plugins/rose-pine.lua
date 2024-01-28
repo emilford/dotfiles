@@ -27,14 +27,6 @@ return {
       RenameBorder = {
         fg = "highlight_med",
       },
-      StatusLine = {
-        bg = "highlight_low",
-        fg = "muted",
-      },
-      StatusLineNC = {
-        bg = "surface",
-        fg = "muted",
-      },
     },
   },
   config = function(_, opts)
