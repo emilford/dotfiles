@@ -1,5 +1,6 @@
 return {
   "janko-m/vim-test",
+  enabled = false,
   keys = {
     { "<leader>tn", ":TestNearest<cr>" },
     { "<leader>tf", ":TestFile<cr>" },
