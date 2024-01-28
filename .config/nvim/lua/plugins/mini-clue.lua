@@ -8,6 +8,10 @@ return {
       { mode = "n", keys = "<leader>d" },
       { mode = "x", keys = "<leader>d" },
 
+      -- mini.bracketed
+      { mode = "n", keys = "[" },
+      { mode = "n", keys = "]" },
+
       -- neotest
       { mode = "n", keys = "<leader>t" },
 
