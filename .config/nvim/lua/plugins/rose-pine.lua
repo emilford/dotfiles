@@ -12,9 +12,6 @@ return {
       ["@symbol.ruby"] = {
         fg = "foam",
       },
-      FidgetTitle = {
-        fg = "subtle",
-      },
       LspInfoBorder = {
         fg = "highlight_med",
       },
