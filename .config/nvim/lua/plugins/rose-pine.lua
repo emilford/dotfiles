@@ -9,7 +9,7 @@ return {
       transparency = true,
     },
     highlight_groups = {
-      ["@symbol.ruby"] = {
+      ["@string.special.symbol.ruby"] = {
         fg = "foam",
       },
       LspInfoBorder = {
