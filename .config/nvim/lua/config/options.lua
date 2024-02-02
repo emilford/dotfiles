@@ -15,5 +15,6 @@ vim.opt.showmode = false
 vim.opt.shiftround = true
 vim.opt.shortmess:append("I")
 vim.opt.showmatch = true
+vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.wildmode = { "list:longest", "list:full" }
