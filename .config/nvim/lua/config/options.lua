@@ -4,6 +4,7 @@ vim.opt.colorcolumn = "+1"
 vim.opt.confirm = true
 vim.opt.cpoptions:append("$")
 vim.opt.diffopt:append("vertical")
+vim.opt.fillchars = "eob: "
 vim.opt.hidden = true
 vim.opt.joinspaces = false
 vim.opt.laststatus = 1
