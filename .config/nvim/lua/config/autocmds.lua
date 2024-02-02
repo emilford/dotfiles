@@ -47,3 +47,19 @@ vim.api.nvim_create_user_command("DiagnosticNext", vim.diagnostic.goto_next, {})
 vim.api.nvim_create_user_command("DiagnosticPrev", vim.diagnostic.goto_prev, {})
 vim.api.nvim_create_user_command("DiagnosticLine", vim.diagnostic.open_float, {})
 vim.api.nvim_create_user_command("DiagnosticSetloclist", vim.diagnostic.setloclist, {})
+
+vim.api.nvim_create_augroup("close_with_q", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+  group = "close_with_q",
+  pattern = {
+    "help",
+    "lspinfo",
+    "neotest-summary",
+    "neotest-output",
+    "neotest-output-panel",
+  },
+  callback = function(event)
+    vim.bo[event.buf].buflisted = false
+    vim.keymap.set("n", "q", "<cmd>close<cr>", { buffer = event.buf, silent = true })
+  end,
+})
