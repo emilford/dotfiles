@@ -18,3 +18,4 @@ vim.opt.showmatch = true
 vim.opt.signcolumn = "yes"
 vim.opt.termguicolors = true
 vim.opt.wildmode = { "list:longest", "list:full" }
+vim.opt.wrap = false
