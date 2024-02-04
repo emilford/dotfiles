@@ -2,12 +2,14 @@ return {
   "williamboman/mason-lspconfig.nvim",
   dependencies = {
     "b0o/schemastore.nvim",
+    "olrtg/emmet-language-server",
     "neovim/nvim-lspconfig",
     "williamboman/mason.nvim",
   },
   opts = {
     ensure_installed = {
       "cssls",
+      "emmet_language_server",
       "eslint",
       "html",
       "jsonls",
