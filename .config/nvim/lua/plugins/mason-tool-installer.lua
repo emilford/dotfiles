@@ -1,7 +1,7 @@
 return {
   "WhoIsSethDaniel/mason-tool-installer.nvim",
   event = "VeryLazy",
-  dependecies = {
+  dependencies = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   },
