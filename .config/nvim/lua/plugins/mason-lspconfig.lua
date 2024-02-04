@@ -17,6 +17,7 @@ return {
       "ruby_ls",
       "solargraph",
       "standardrb",
+      "stimulus_ls",
       "tailwindcss",
       "terraformls",
       "tflint",
