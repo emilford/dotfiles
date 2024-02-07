@@ -33,6 +33,8 @@
 /.config/heroku
 /.config/hub
 /.config/kitty/current-theme.conf
+/.config/kitty/get_layout.py
+/.config/kitty/pass_keys.py
 /.config/nvim/lazy-lock.json
 /.config/nvim/plugin/packer_compiled.lua
 /.config/nvim/spell/*.spl
@@ -63,6 +65,7 @@
 /.homebridge/
 /.irb_history
 /.ivy2
+/.kitty-sessions.json
 /.kube
 /.lesshst
 /.local
