@@ -8,6 +8,8 @@ vim.opt.fillchars = "eob: "
 vim.opt.hidden = true
 vim.opt.joinspaces = false
 vim.opt.laststatus = 1
+vim.opt.list = true
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.ruler = false
