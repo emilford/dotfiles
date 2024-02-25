@@ -32,7 +32,7 @@ return {
 
     for _, type in ipairs({ "Error", "Hint", "Info", "Warn" }) do
       local hl = "DiagnosticSign" .. type
-      vim.fn.sign_define(hl, { text = "●", texthl = hl, numhl = hl })
+      vim.fn.sign_define(hl, { text = "", texthl = hl, numhl = hl })
     end
 
     vim.api.nvim_create_autocmd("LspAttach", {
