@@ -18,6 +18,9 @@ return {
       -- neotest
       { mode = "n", keys = "<leader>t" },
 
+      -- telescope
+      { mode = "n", keys = "<leader>f" },
+
       -- zk
       { mode = "n", keys = "<leader>z" },
       { mode = "x", keys = "<leader>z" },
