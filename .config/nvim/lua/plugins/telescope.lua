@@ -9,23 +9,27 @@ return {
     {
       "<leader>ff",
       "<cmd>Telescope git_files<cr>",
+      desc = "Find files (Git)",
     },
     {
       "<leader>fF",
       "<cmd>Telescope find_files<cr>",
+      desc = "Find files",
     },
     {
       "<leader>fh",
       "<cmd>Telescope help_tags<cr>",
+      desc = "Find help",
     },
     {
       "<leader>fn",
       "<cmd>Telescope find_files cwd=./notes hidden=true<cr>",
+      desc = "Find notes",
     },
     {
       "<leader>f/",
       "<cmd>Telescope current_buffer_fuzzy_find<cr>",
-      desc = "Fuzzily find in current buffer",
+      desc = "Find buffer",
     },
   },
   opts = {
