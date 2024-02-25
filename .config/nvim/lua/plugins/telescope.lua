@@ -22,9 +22,19 @@ return {
       "<leader>fn",
       "<cmd>Telescope find_files cwd=./notes hidden=true<cr>",
     },
+    {
+      "<leader>f/",
+      "<cmd>Telescope current_buffer_fuzzy_find<cr>",
+      desc = "Fuzzily find in current buffer",
+    },
   },
   opts = {
     pickers = {
+      current_buffer_fuzzy_find = {
+        previewer = false,
+        prompt_title = false,
+        theme = "dropdown",
+      },
       find_files = {
         previewer = false,
         prompt_title = false,
