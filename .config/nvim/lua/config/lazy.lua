@@ -18,6 +18,9 @@ require("lazy").setup("plugins", {
   defaults = {
     lazy = true,
   },
+  install = {
+    colorscheme = { "rose-pine" },
+  },
   performance = {
     rtp = {
       disabled_plugins = {
