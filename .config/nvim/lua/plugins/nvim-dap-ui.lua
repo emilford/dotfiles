@@ -37,6 +37,16 @@ return {
         size = 0.30,
         position = "left",
       },
+      {
+        elements = {
+          {
+            id = "repl",
+            size = 1,
+          },
+        },
+        size = 0.30,
+        position = "bottom",
+      },
     },
   },
   config = function(_plugin, opts)
