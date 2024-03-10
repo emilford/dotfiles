@@ -1,4 +1,4 @@
 return {
   "tpope/vim-rails",
-  event = "VeryLazy",
+  ft = { "ruby", "ruby.rspec", "ruby.rake", "eruby" },
 }
