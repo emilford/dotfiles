@@ -74,7 +74,7 @@ return {
     end, { desc = "Disable format on save", nargs = 0, bang = true })
 
     vim.api.nvim_create_user_command("FormatEnable", function()
-      vim.b.disable_autoformat = true
+      vim.b.disable_autoformat = false
       vim.g.disable_autoformat = false
     end, { desc = "Enable format on save", nargs = 0 })
   end,
