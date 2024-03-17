@@ -59,18 +59,8 @@ return {
         require("lspconfig").lua_ls.setup({
           settings = {
             Lua = {
-              runtime = {
-                version = "LuaJIT",
-              },
-              diagnostics = {
-                globals = { "vim", "use" },
-              },
-              workspace = {
-                checkThirdParty = false,
-                library = vim.api.nvim_get_runtime_file("", true),
-              },
-              telemetry = {
-                enable = false,
+              completion = {
+                callSnippet = "Replace",
               },
             },
           },
