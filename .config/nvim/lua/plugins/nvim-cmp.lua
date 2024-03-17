@@ -5,7 +5,6 @@ return {
     "hrsh7th/cmp-buffer",
     "hrsh7th/cmp-cmdline",
     "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-nvim-lua",
     "hrsh7th/cmp-path",
     "kristijanhusak/vim-dadbod-completion",
     {
@@ -36,7 +35,6 @@ return {
             git = "(Git)",
             ["vim-dadbod-completion"] = "(DB)",
             nvim_lsp = "(LSP)",
-            nvim_lua = "(Lua)",
             luasnip = "(Snippet)",
           })[entry.source.name]
           return item
