@@ -7,6 +7,11 @@ return {
   },
   keys = {
     {
+      "<leader>fb",
+      "<cmd>Telescope git_branches<cr>",
+      desc = "Find branch (Git)",
+    },
+    {
       "<leader>ff",
       "<cmd>Telescope git_files<cr>",
       desc = "Find files (Git)",
@@ -40,6 +45,11 @@ return {
         theme = "dropdown",
       },
       find_files = {
+        previewer = false,
+        prompt_title = false,
+        theme = "dropdown",
+      },
+      git_branches = {
         previewer = false,
         prompt_title = false,
         theme = "dropdown",
