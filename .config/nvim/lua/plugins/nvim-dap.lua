@@ -96,10 +96,11 @@ return {
       desc = "End debug session",
     },
     {
-      "<leader>dX",
+      "<leader>dx",
       function()
         require("dap").clear_breakpoints()
       end,
+      desc = "Clear breakpoints",
     },
   },
   init = function()
