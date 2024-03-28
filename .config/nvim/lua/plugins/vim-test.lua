@@ -1,17 +1,18 @@
 return {
   "janko-m/vim-test",
-  enabled = false,
+  cmd = {
+    "TestNearest",
+    "TestFile",
+    "TestSuite",
+    "TestLast",
+  },
   keys = {
-    { "<leader>tn", ":TestNearest<cr>" },
-    { "<leader>tf", ":TestFile<cr>" },
-    { "<leader>ta", ":TestSuite<cr>" },
-    { "<leader>tl", ":TestLast<cr>" },
-    { "<leader>tv", ":TestVisit<cr>" },
+    { "<leader>Tn", ":TestNearest<cr>" },
+    { "<leader>Tf", ":TestFile<cr>" },
+    { "<leader>Ta", ":TestSuite<cr>" },
+    { "<leader>Tl", ":TestLast<cr>" },
   },
-  dependencies = {
-    "christoomey/vim-tmux-runner",
-  },
-  config = function()
-    vim.g["test#strategy"] = "vtr"
+  init = function()
+    vim.g["test#strategy"] = "kitty"
   end,
 }
