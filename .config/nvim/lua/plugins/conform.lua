@@ -20,6 +20,7 @@ return {
       markdown = { { "prettierd", "prettier" } },
       ["markdown.mdx"] = { { "prettierd", "prettier" } },
       scss = { { "prettierd", "prettier" } },
+      sql = { "sqlfmt" },
       terraform = { "terraform_fmt" },
       ["terraform-vars"] = { "terraform_fmt" },
       tf = { "terraform_fmt" },
@@ -35,6 +36,11 @@ return {
           "\\bclass[:=]\\s*['\"]([^'\"]*)['\"]",
         },
       },
+      sql_formatter = {
+        prepend_args = {
+          "--config /Users/eric/.config/sql-formatter.json",
+        },
+      },
     },
     format_on_save = function(bufnr)
       if vim.g.disable_autoformat or vim.b[bufnr].disable_autoformat then
@@ -42,7 +48,7 @@ return {
       end
 
       return {
-        timeout_ms = 500,
+        timeout_ms = 20000,
         lsp_fallback = true,
         filter = function(client)
           return client.name ~= "tsserver"
