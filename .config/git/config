@@ -22,3 +22,5 @@
 [fetch]
 	prune = true
 	pruneTags = true
+[diff]
+	algorithm = histogram
