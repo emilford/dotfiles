@@ -29,6 +29,7 @@ return {
       formatting = {
         fields = { "kind", "abbr", "menu" },
         format = function(entry, item)
+          item = require("tailwind-tools.cmp").lspkind_format(entry, item)
           item.kind = require("config").icons.kinds[item.kind] .. " "
           item.menu = ({
             buffer = "(Buffer)",
