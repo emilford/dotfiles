@@ -20,6 +20,7 @@ return {
       markdown = { { "prettierd", "prettier" } },
       ["markdown.mdx"] = { { "prettierd", "prettier" } },
       scss = { { "prettierd", "prettier" } },
+      sql = { "sqlfmt" },
       terraform = { "terraform_fmt" },
       ["terraform-vars"] = { "terraform_fmt" },
       tf = { "terraform_fmt" },
