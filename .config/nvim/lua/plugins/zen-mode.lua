@@ -44,9 +44,6 @@ return {
               ruler = false,
               showcmd = false,
             },
-            tmux = {
-              enabled = true,
-            },
             kitty = {
               enabled = true,
               font = "+2",
