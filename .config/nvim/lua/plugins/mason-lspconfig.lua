@@ -26,25 +26,6 @@ return {
       function(server)
         require("lspconfig")[server].setup({})
       end,
-      cssls = function()
-        require("lspconfig").cssls.setup({
-          filetypes = {
-            "css",
-            "erb",
-            "eruby",
-            "html",
-            "javascript",
-            "javascriptreact",
-            "javascript.jsx",
-            "less",
-            "scss",
-            "typescript",
-            "typescriptreact",
-            "typescript.tsx",
-            "vue",
-          },
-        })
-      end,
       jsonls = function()
         require("lspconfig").jsonls.setup({
           settings = {
