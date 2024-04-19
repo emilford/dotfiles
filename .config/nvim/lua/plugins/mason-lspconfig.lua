@@ -101,15 +101,7 @@ return {
       yamlls = function()
         require("lspconfig").yamlls.setup({
           settings = {
-            redhat = {
-              telemetry = {
-                enabled = false,
-              },
-            },
             yaml = {
-              format = {
-                enable = true,
-              },
               schemas = require("schemastore").json.schemas(),
             },
           },
