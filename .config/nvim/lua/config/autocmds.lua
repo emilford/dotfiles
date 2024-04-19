@@ -54,9 +54,6 @@ vim.api.nvim_create_autocmd("FileType", {
   pattern = {
     "help",
     "lspinfo",
-    "neotest-summary",
-    "neotest-output",
-    "neotest-output-panel",
   },
   callback = function(event)
     vim.bo[event.buf].buflisted = false
