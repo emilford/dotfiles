@@ -2,6 +2,21 @@ return {
   "stevearc/conform.nvim",
   event = { "BufWritePre" },
   cmd = { "ConformInfo" },
+  keys = {
+    {
+      "<leader>F",
+      function()
+        require("conform").format({
+          timeout_ms = 500,
+          lsp_fallback = true,
+          filter = function(client)
+            return client.name ~= "tsserver"
+          end,
+        })
+      end,
+      desc = "Format Document",
+    },
+  },
   opts = {
     formatters_by_ft = {
       css = { { "prettierd", "prettier" } },
@@ -37,29 +52,12 @@ return {
         },
       },
     },
-    format_on_save = function(bufnr)
-      return {
-        timeout_ms = 500,
-        lsp_fallback = true,
-        filter = function(client)
-          return client.name ~= "tsserver"
-        end,
-      }
-    end,
-  },
-  keys = {
-    {
-      "<leader>F",
-      function()
-        require("conform").format({
-          timeout_ms = 500,
-          lsp_fallback = true,
-          filter = function(client)
-            return client.name ~= "tsserver"
-          end,
-        })
+    format_on_save = {
+      timeout_ms = 500,
+      lsp_fallback = true,
+      filter = function(client)
+        return client.name ~= "tsserver"
       end,
-      desc = "Format Document",
     },
   },
 }
