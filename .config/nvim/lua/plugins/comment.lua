@@ -1,8 +1,10 @@
 return {
   "numToStr/Comment.nvim",
   keys = {
-    { "gc", mode = { "n", "v" } },
-    { "gb", mode = { "n", "v" } },
+    { "gcc", mode = "n", desc = "Comment toggle current line" },
+    { "gc", mode = { "n", "o", "x" }, desc = "Comment toggle linewise" },
+    { "gbc", mode = "n", desc = "Comment toggle current block" },
+    { "gb", mode = { "n", "o", "x" }, desc = "Comment toggle blockwise" },
   },
-  config = true,
+  opts = {},
 }
