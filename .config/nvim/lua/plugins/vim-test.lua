@@ -18,15 +18,12 @@ return {
   init = function()
     vim.g["test#custom_strategies"] = {
       toggleterm = function(cmd)
-        local terminal = require("toggleterm.terminal").Terminal:new({ direction = "vertical" })
-        local go_back = true
         local width = vim.o.columns * 0.30
 
-        terminal:toggle(width)
-        terminal:send("clear;" .. cmd, go_back)
+        require("toggleterm").exec_command("cmd='clear;" .. cmd .. "' size=" .. width .. " direction='vertical'", 999)
 
         vim.keymap.set("n", "<leader>tk", function()
-          terminal:close()
+          vim.cmd("999ToggleTerm")
         end, { desc = "Close test runner" })
       end,
     }
