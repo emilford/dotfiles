@@ -1,8 +1,5 @@
 return {
-  "janko-m/vim-test",
-  dependencies = {
-    "akinsho/toggleterm.nvim",
-  },
+  "emilford/vim-test",
   cmd = {
     "TestNearest",
     "TestFile",
@@ -17,16 +14,20 @@ return {
   },
   init = function()
     vim.g["test#custom_strategies"] = {
-      toggleterm = function(cmd)
-        local width = vim.o.columns * 0.30
+      wezterm_wrapped = function(cmd)
+        vim.fn["test#strategy#wezterm"]("clear; " .. cmd .. "\n")
 
-        require("toggleterm").exec_command("cmd='clear;" .. cmd .. "' size=" .. width .. " direction='vertical'", 999)
+        local pane_id = vim.g["test#wezterm#pane_id"]
+        vim.g["test#wezterm#pane_id"] = nil
 
         vim.keymap.set("n", "<leader>tk", function()
-          vim.cmd("999ToggleTerm")
+          vim.cmd("!wezterm cli kill-pane --pane-id " .. pane_id, { silent = true })
         end, { desc = "Close test runner" })
       end,
     }
-    vim.g["test#strategy"] = "toggleterm"
+
+    -- https://github.com/vim-test/vim-test/pull/796
+    vim.g["test#wezterm#split_percent"] = 30
+    vim.g["test#strategy"] = "wezterm_wrapped"
   end,
 }
