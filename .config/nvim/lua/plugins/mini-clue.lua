@@ -15,7 +15,7 @@ return {
       { mode = "n", keys = "[" },
       { mode = "n", keys = "]" },
 
-      -- neotest
+      -- vim-test
       { mode = "n", keys = "<leader>t" },
 
       -- telescope

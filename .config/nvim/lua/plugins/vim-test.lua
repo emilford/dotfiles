@@ -7,10 +7,10 @@ return {
     "TestLast",
   },
   keys = {
-    { "<leader>tn", ":TestNearest<cr>" },
-    { "<leader>tf", ":TestFile<cr>" },
-    { "<leader>ta", ":TestSuite<cr>" },
-    { "<leader>tl", ":TestLast<cr>" },
+    { "<leader>tn", ":TestNearest<cr>", desc = "Run nearest test" },
+    { "<leader>tf", ":TestFile<cr>", desc = "Run tests in file" },
+    { "<leader>ta", ":TestSuite<cr>", desc = "Run all tests" },
+    { "<leader>tl", ":TestLast<cr>", desc = "Run last test" },
   },
   init = function()
     vim.g["test#custom_strategies"] = {
