@@ -18,7 +18,7 @@ return {
       -- vim-test
       { mode = "n", keys = "<leader>t" },
 
-      -- telescope
+      -- mini.pick
       { mode = "n", keys = "<leader>f" },
 
       -- zk
