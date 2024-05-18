@@ -7,19 +7,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
     "kristijanhusak/vim-dadbod-completion",
-    {
-      "petertriho/cmp-git",
-      dependencies = {
-        "nvim-lua/plenary.nvim",
-      },
-      opts = {
-        github = {
-          pull_requests = {
-            state = "all",
-          },
-        },
-      },
-    },
+    "petertriho/cmp-git",
     "saadparwaiz1/cmp_luasnip",
   },
   opts = function()
