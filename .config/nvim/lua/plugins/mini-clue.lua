@@ -4,29 +4,24 @@ return {
   event = "VeryLazy",
   opts = {
     clues = {
+      { mode = "n", keys = "<leader>d", desc = "+Debug" },
+      { mode = "n", keys = "<leader>f", desc = "+Find" },
       { mode = "n", keys = "<leader>n", desc = "+Notes" },
+      { mode = "n", keys = "<leader>s", desc = "+Snippet" },
+      { mode = "n", keys = "<leader>t", desc = "+Test" },
+
+      { mode = "x", keys = "<leader>d", desc = "+Debug" },
+      { mode = "x", keys = "<leader>s", desc = "+Snippet" },
     },
     triggers = {
-      -- dap
-      { mode = "n", keys = "<leader>d" },
-      { mode = "x", keys = "<leader>d" },
-
+      { mode = "n", keys = "<leader>" },
+      { mode = "x", keys = "<leader>" },
       -- mini.basics
       { mode = "n", keys = "\\" },
 
       -- mini.bracketed
       { mode = "n", keys = "[" },
       { mode = "n", keys = "]" },
-
-      -- vim-test
-      { mode = "n", keys = "<leader>t" },
-
-      -- obsidian.nvim
-      { mode = "n", keys = "<leader>n" },
-      { mode = "x", keys = "<leader>n" },
-
-      -- mini.pick
-      { mode = "n", keys = "<leader>f" },
     },
     window = {
       config = {
