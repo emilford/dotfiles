@@ -51,6 +51,7 @@ return {
           },
         })
       end,
+      desc = "Toggle buffer zoom",
     },
   },
 }
