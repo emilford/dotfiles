@@ -15,7 +15,7 @@ return {
       "eruby",
     },
     document_color = {
-      inline_symbol = "󱓻 ",
+      inline_symbol = "■ ",
     },
   },
 }
