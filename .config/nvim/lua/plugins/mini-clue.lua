@@ -3,6 +3,9 @@ return {
   version = false,
   event = "VeryLazy",
   opts = {
+    clues = {
+      { mode = "n", keys = "<leader>n", desc = "+Notes" },
+    },
     triggers = {
       -- dap
       { mode = "n", keys = "<leader>d" },
@@ -18,12 +21,12 @@ return {
       -- vim-test
       { mode = "n", keys = "<leader>t" },
 
+      -- obsidian.nvim
+      { mode = "n", keys = "<leader>n" },
+      { mode = "x", keys = "<leader>n" },
+
       -- mini.pick
       { mode = "n", keys = "<leader>f" },
-
-      -- zk
-      { mode = "n", keys = "<leader>z" },
-      { mode = "x", keys = "<leader>z" },
     },
     window = {
       config = {

@@ -1,3 +1,0 @@
-[note]
-filename = "{{format-date now 'timestamp'}}-{{slug title}}"
-template = "note.md"

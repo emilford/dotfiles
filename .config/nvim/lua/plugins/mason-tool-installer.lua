@@ -17,7 +17,6 @@ return {
       "stylua",
       "tfsec",
       "vale",
-      "zk",
     },
   },
 }
