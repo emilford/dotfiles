@@ -22,9 +22,7 @@ return {
       {
         "<c-k>",
         function()
-          if luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
-          end
+          return luasnip.expand_or_jumpable() and luasnip.expand_or_jump() or "<c-k>"
         end,
         expr = true,
         silent = true,
@@ -33,9 +31,7 @@ return {
       {
         "<c-j>",
         function()
-          if luasnip.jumpable(-1) then
-            luasnip.jump(-1)
-          end
+          return luasnip.jumpable(-1) and luasnip.jump(-1) or "<c-j>"
         end,
         expr = true,
         silent = true,
