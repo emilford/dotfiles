@@ -2,8 +2,6 @@ set fish_greeting
 
 eval (/opt/homebrew/bin/brew shellenv)
 
-source $HOME/.asdf/asdf.fish
-
 direnv hook fish | source
 
 set -x FZF_CTRL_T_COMMAND "fd --type file --follow --hidden --exclude .git"

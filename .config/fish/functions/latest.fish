@@ -1,8 +1,8 @@
 function latest --description "Update all the things"
-    asdf update && asdf plugin update --all
     brew update && brew upgrade
     gem update --system
     gh extension upgrade --all
+    mise plugin update
     npm update --location=global
     tldr --update
     vale sync
