@@ -3,5 +3,7 @@ return {
   keys = {
     { "cp", mode = { "n", "v" } },
     { "cv", mode = { "n", "v" } },
+    "cP",
+    "cV",
   },
 }
