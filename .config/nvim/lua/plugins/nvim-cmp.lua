@@ -39,16 +39,16 @@ return {
         }),
       },
       mapping = {
-        ["<c-d>"] = cmp.mapping(cmp.mapping.scroll_docs(4), { "i", "c" }),
+        ["<c-d>"] = cmp.mapping.scroll_docs(4),
         ["<c-e>"] = cmp.mapping({
           i = cmp.mapping.abort(),
           c = cmp.mapping.close(),
         }),
-        ["<c-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }, { "i", "c" }),
+        ["<c-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert }),
         ["<c-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert }),
-        ["<c-u>"] = cmp.mapping(cmp.mapping.scroll_docs(-4), { "i", "c" }),
-        ["<c-y>"] = cmp.mapping(cmp.mapping.confirm({ select = true }), { "i", "c" }),
-        ["<cr>"] = cmp.mapping.confirm({ select = false }, { "c" }),
+        ["<c-u>"] = cmp.mapping.scroll_docs(-4),
+        ["<c-y>"] = cmp.mapping.confirm({ select = false }),
+        ["<cr>"] = cmp.mapping.confirm({ select = false }),
       },
       snippet = {
         expand = function(args)
