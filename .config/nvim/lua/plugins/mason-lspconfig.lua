@@ -20,6 +20,7 @@ return {
       "tailwindcss",
       "terraformls",
       "tflint",
+      "vtsls",
       "yamlls",
     },
     handlers = {
