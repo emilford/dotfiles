@@ -37,12 +37,6 @@ vim.api.nvim_create_autocmd("CursorMoved", {
   command = "norm zz",
 })
 
--- https://github.com/keith/rspec.vim/issues/39
-vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
-  pattern = { "*_spec.rb", "*_shared_examples.rb, *_shared_context.rb" },
-  command = "set syntax=rspec filetype=ruby.rspec",
-})
-
 vim.api.nvim_create_augroup("close_with_q", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
   group = "close_with_q",
