@@ -8,7 +8,7 @@ return {
       function()
         require("conform").format({
           timeout_ms = 500,
-          lsp_fallback = true,
+          lsp_format = "fallback",
           filter = function(client)
             return client.name ~= "tsserver"
           end,
@@ -54,7 +54,7 @@ return {
     },
     format_on_save = {
       timeout_ms = 500,
-      lsp_fallback = true,
+      lsp_format = "fallback",
       filter = function(client)
         return client.name ~= "tsserver"
       end,
