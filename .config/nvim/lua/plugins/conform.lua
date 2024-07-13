@@ -6,13 +6,7 @@ return {
     {
       "<leader>F",
       function()
-        require("conform").format({
-          timeout_ms = 500,
-          lsp_format = "fallback",
-          filter = function(client)
-            return client.name ~= "tsserver"
-          end,
-        })
+        require("conform").format({ lsp_format = "fallback" })
       end,
       desc = "Format Document",
     },
@@ -53,11 +47,7 @@ return {
       },
     },
     format_on_save = {
-      timeout_ms = 500,
       lsp_format = "fallback",
-      filter = function(client)
-        return client.name ~= "tsserver"
-      end,
     },
   },
 }
