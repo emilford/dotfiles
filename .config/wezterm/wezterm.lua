@@ -16,6 +16,7 @@ config.show_new_tab_button_in_tab_bar = false
 config.tab_bar_at_bottom = true
 config.tab_max_width = 25
 config.use_fancy_tab_bar = false
+config.window_background_opacity = 0.98
 config.window_decorations = "RESIZE"
 
 wezterm.on("update-right-status", function(window, _)
