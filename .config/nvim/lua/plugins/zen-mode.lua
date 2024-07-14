@@ -15,9 +15,6 @@ return {
             options = {
               enabled = false,
             },
-            kitty = {
-              enabled = false,
-            },
           },
         })
       end,
@@ -43,10 +40,6 @@ return {
               enabled = true,
               ruler = false,
               showcmd = false,
-            },
-            kitty = {
-              enabled = true,
-              font = "+2",
             },
           },
         })
