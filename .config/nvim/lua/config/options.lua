@@ -6,6 +6,7 @@ vim.opt.cpoptions:append("$")
 vim.opt.diffopt:append("vertical")
 vim.opt.fillchars = "eob: "
 vim.opt.hidden = true
+vim.opt.ignorecase = true
 vim.opt.joinspaces = false
 vim.opt.laststatus = 1
 vim.opt.list = true
@@ -18,6 +19,7 @@ vim.opt.shiftround = true
 vim.opt.shortmess:append("I")
 vim.opt.showmatch = true
 vim.opt.signcolumn = "yes"
+vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.wildmode = { "list:longest", "list:full" }
 vim.opt.wrap = false
