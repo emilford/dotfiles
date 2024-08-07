@@ -48,6 +48,7 @@ cask "skype"
 cask "slack"
 cask "syncthing"
 cask "tuple"
+cask "wezterm"
 
 mas "1Password for Safari", id: 1569813296
 mas "Agenda", id: 1287445660
