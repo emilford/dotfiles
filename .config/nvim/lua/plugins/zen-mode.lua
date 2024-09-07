@@ -31,6 +31,7 @@ return {
             options = {
               signcolumn = "no",
               number = false,
+              relativenumber = false,
               cursorline = false,
               cursorcolumn = false,
             },
@@ -42,6 +43,16 @@ return {
               showcmd = false,
             },
           },
+          wezterm = {
+            enabled = true,
+            font = "+8",
+          },
+          on_open = function()
+            vim.cmd("IBLDisable")
+          end,
+          on_close = function()
+            vim.cmd("IBLEnable")
+          end,
         })
       end,
       desc = "Toggle buffer zoom",
