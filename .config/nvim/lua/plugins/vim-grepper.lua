@@ -2,7 +2,7 @@ return {
   "mhinz/vim-grepper",
   cmd = { "Grepper" },
   keys = {
-    { "<c-g>", "<plug>(GrepperOperator)", mode = { "x", "n" }, desc = "Grep" },
+    { "g/", "<plug>(GrepperOperator)", mode = { "x", "n" }, desc = "Grep" },
   },
   init = function()
     vim.g.grepper = {
