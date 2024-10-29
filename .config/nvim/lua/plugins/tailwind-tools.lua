@@ -8,6 +8,9 @@ return {
   },
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   opts = {
+    server = {
+      override = false,
+    },
     conceal = {
       symbol = "…",
     },
