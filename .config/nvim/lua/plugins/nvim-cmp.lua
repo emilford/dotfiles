@@ -1,12 +1,14 @@
 return {
-  "hrsh7th/nvim-cmp",
+  "iguanacucumber/magazine.nvim",
+  name = "nvim-cmp",
   event = { "CmdlineEnter", "InsertEnter" },
   dependencies = {
     "L3MON4D3/LuaSnip",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-cmdline",
-    "hrsh7th/cmp-nvim-lsp",
-    "hrsh7th/cmp-path",
+    "https://codeberg.org/FelipeLema/cmp-async-path",
+    { "iguanacucumber/mag-nvim-lsp", name = "cmp-nvim-lsp", opts = {} },
+    { "iguanacucumber/mag-nvim-lua", name = "cmp-nvim-lua" },
+    { "iguanacucumber/mag-buffer", name = "cmp-buffer" },
+    { "iguanacucumber/mag-cmdline", name = "cmp-cmdline" },
     "kristijanhusak/vim-dadbod-completion",
     "petertriho/cmp-git",
     "saadparwaiz1/cmp_luasnip",
@@ -110,7 +112,7 @@ return {
         ["<S-Tab>"] = { c = handle_tab_complete(cmp.select_prev_item) },
       }),
       sources = cmp.config.sources({
-        { name = "path" },
+        { name = "async_path" },
       }, {
         { name = "cmdline" },
       }),
