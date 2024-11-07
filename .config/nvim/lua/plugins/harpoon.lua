@@ -56,4 +56,10 @@ return {
       desc = "Open Harpoon File 5",
     },
   },
+  opts = {
+    settings = {
+      save_on_toggle = true,
+      sync_on_ui_close = true,
+    },
+  },
 }
