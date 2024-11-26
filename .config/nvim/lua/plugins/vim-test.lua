@@ -23,6 +23,10 @@ return {
         vim.keymap.set("n", "<leader>tk", function()
           vim.cmd("!wezterm cli kill-pane --pane-id " .. pane_id, { silent = true })
         end, { desc = "Close test runner" })
+
+        vim.keymap.set("n", "<leader>tz", function()
+          vim.cmd("!wezterm cli zoom-pane --zoom --pane-id " .. pane_id, { silent = true })
+        end, { desc = "Zoom test runner" })
       end,
     }
 
