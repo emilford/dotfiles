@@ -1,0 +1,43 @@
+return {
+  {
+    "tpope/vim-fugitive",
+    dependencies = {
+      "shumphrey/fugitive-gitlab.vim",
+      "tpope/vim-rhubarb",
+    },
+    cmd = {
+      "G",
+      "GBrowse",
+      "GDelete",
+      "GMove",
+      "GRemove",
+      "GRename",
+      "GUnlink",
+      "Gcd",
+      "Gclog",
+      "Gdiffsplit",
+      "Gdrop",
+      "Ge",
+      "Gedit",
+      "Ggrep",
+      "Ghdiffsplit",
+      "Git",
+      "Glcd",
+      "Glgrep",
+      "Gllog",
+      "Gpedit",
+      "Gr",
+      "Gread",
+      "Gsplit",
+      "Gtabedit",
+      "Gvdiffsplit",
+      "GvsplitGvsplit",
+      "Gw",
+      "Gwq",
+      "Gwrite",
+    },
+    init = function()
+      vim.g.fugitive_legacy_commands = 0
+    end,
+  },
+}

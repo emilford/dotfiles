@@ -1,0 +1,31 @@
+return {
+  {
+    "letieu/wezterm-move.nvim",
+    keys = {
+      {
+        "<c-h>",
+        function()
+          require("wezterm-move").move("h")
+        end,
+      },
+      {
+        "<c-j>",
+        function()
+          require("wezterm-move").move("j")
+        end,
+      },
+      {
+        "<c-k>",
+        function()
+          require("wezterm-move").move("k")
+        end,
+      },
+      {
+        "<c-l>",
+        function()
+          require("wezterm-move").move("l")
+        end,
+      },
+    },
+  },
+}
