@@ -123,6 +123,16 @@ function module.apply_to_config(config)
         end),
       }),
     },
+
+    -- Clear scroll back and viewport
+    {
+      key = "K",
+      mods = "CTRL|SHIFT",
+      action = wezterm.action.Multiple({
+        wezterm.action.ClearScrollback("ScrollbackAndViewport"),
+        wezterm.action.SendKey({ key = "L", mods = "CTRL" }),
+      }),
+    },
   }
 
   for i = 1, 8 do
