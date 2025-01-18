@@ -9,6 +9,7 @@
 /.aptible/
 /.asdf
 /.aws
+/.azure
 /.bash_history
 /.bash_sessions
 /.bashrc
@@ -112,6 +113,7 @@
 /.weechat/sec.conf
 /.weechat/weechat.log
 /.wget-hsts
+/.yarn
 /.yarnrc
 /.zcompdump
 /.zoomus
