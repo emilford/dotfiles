@@ -1,0 +1,24 @@
+{
+  "contributes": {
+    "snippets": [
+      {
+        "language": [
+          "all"
+        ],
+        "path": "./global.json"
+      },
+      {
+        "language": [
+          "gitcommit"
+        ],
+        "path": "./gitcommit.json"
+      },
+      {
+        "language": [
+          "ruby"
+        ],
+        "path": "./ruby.jsonc"
+      }
+    ]
+  }
+}

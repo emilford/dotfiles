@@ -1,0 +1,272 @@
+{
+  /** Start: Minitest Assertions **/
+  "assert": {
+    "prefix": "assert",
+    "body": "assert ${1:test}${2:, \"${3:message}\"}",
+    "description": "Fails unless `test` is truthy"
+  },
+  "assert-empty": {
+    "prefix": "assert-empty",
+    "body": "assert_empty ${1:object}${2:, \"${3:message}\"}",
+    "description": "Fails unless `object` is empty"
+  },
+  "assert-equal": {
+    "prefix": "assert-equal",
+    "body": "assert_equal ${1:expected}, ${2:actual}${3:, \"${4:message}\"}",
+    "description": "Fails unless `expected == actual`. For floats use assert_in_delta."
+  },
+  "assert-in-delta": {
+    "prefix": "assert-in-delta",
+    "body": "assert_in_delta ${1:expected}, ${2:actual}${3:, ${4:delta}}${5:, \"${6:message}\"}",
+    "description": "For comparing Floats. Fails unless `expected` and `actual` are within `delta` of each other."
+  },
+  "assert-in-epsilon": {
+    "prefix": "assert-in-epsilon",
+    "body": "assert_in_epsilon ${1:expected}, ${2:actual}${3:, ${4:epsilon}}${5:, \"${6:message}\"}",
+    "description": "For comparing Floats. Fails unless `expected` and `actual` have a relative error less than `epsilon`"
+  },
+  "assert-includes": {
+    "prefix": "assert-includes",
+    "body": "assert_includes ${1:collection}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails unless `collection` includes `object`"
+  },
+  "assert-instance-of": {
+    "prefix": "assert-instance-of",
+    "body": "assert_instance_of ${1:class}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails unless `object` is a kind of `class`."
+  },
+  "assert-kind-of": {
+    "prefix": "assert-kind-of",
+    "body": "assert_kind_of ${1:class}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails unless `object is a kind of `class`"
+  },
+  "assert-match": {
+    "prefix": "assert-match",
+    "body": "assert_match ${1:matcher}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails unless `matcher =~ object`"
+  },
+  "assert-mock": {
+    "prefix": "assert-mock",
+    "body": "assert_mock ${1:mock}${2:, \"${3:message}\"}",
+    "description": "Assert that `mock` verifies correctly and fail if not."
+  },
+  "assert-nil": {
+    "prefix": "assert-nil",
+    "body": "assert_nil ${1:object}${2:, \"${3:message}\"}",
+    "description": "Fails unless `object` is `nil`"
+  },
+  "assert-operator": {
+    "prefix": "assert-operator",
+    "body": "assert_operator ${1:object_1}, ${2:operator}${3:, ${4:object_2}}${5:, \"${6:message}\"}",
+    "description": "Fails unless object_1.operator(object_2) is true"
+  },
+  "assert-output": {
+    "prefix": "assert-output",
+    "body": "assert_output(${1:stdout}${2:, ${3:stderr}}) { $0 }",
+    "description": "Fails if `stdout` or `stderr` do not output the expected results. Pass `nil` to skip that stream's output or \"\" if you require it to be silent."
+  },
+  "assert-path-exists": {
+    "prefix": "assert-path-exists",
+    "body": "assert_path_exists \"${1:path}\"${2:, \"${3:message}\"}",
+    "description": "Fails unless `path` exists."
+  },
+  "assert-pattern": {
+    "prefix": "assert-pattern",
+    "body": "assert_pattern { $0 }",
+    "description": "[1,2,3] => [Integer, Integer, Integer]. For testing with pattern matching."
+  },
+  "assert-raises-ruby": {
+    "prefix": "assert-raises-ruby",
+    "body": "assert_raises(${1:class}${2:, \"${3:message}\") { $0 }",
+    "description": "Fails unless the block raises one of exp. Returns the exception matched so you can check the message, attributes, etc."
+  },
+  "assert-same": {
+    "prefix": "assert-same",
+    "body": "assert_same ${1:expected}, ${2:actual}${3:, \"${4:message}\"",
+    "description": "Fails unless `expected` and `actual` are `equal?`"
+  },
+  "assert-silent": {
+    "prefix": "assert-silent",
+    "body": "assert_silent { $0 }",
+    "description": "Fails if the block outputs anything to stderr or stdout."
+  },
+  "capture-io": {
+    "prefix": "capture-io",
+    "body": "stdout, stderr = capture_io { $0 }",
+    "description": "Captures $stdout and $stderr into strings."
+  },
+  "capture-subprocess-io": {
+    "prefix": "capture-subprocess-io",
+    "body": "stdout, stderr = capture_subprocess_io { $0 }",
+    "description": "Captures $stdout and $stderr into strings, using Tempfile to ensure that subprocess IO is captured as well."
+  },
+  "fail-after": {
+    "prefix": "fail-after",
+    "body": "fail_after(${1:year}${2:, ${3:month}}${4:, ${5:day}}) { $0 }",
+    "description": "Fails after a given date (in the local time zone)."
+  },
+  "flunk": {
+    "prefix": "flunk",
+    "body": "flunk(\"${1:message}\")",
+    "description": "Fails with `message`."
+  },
+  "pass": {
+    "prefix": "pass",
+    "body": "pass(\"${1:message}\")",
+    "description": "Passes with `message`."
+  },
+  "refute": {
+    "prefix": "refute",
+    "body": "refute ${1:test}${2:, \"${3:message}\"}",
+    "description": "Fails if `test` is truthy"
+  },
+  "refute-empty": {
+    "prefix": "refute-empty",
+    "body": "refute_empty ${1:object}${2:, \"${3:message}\"}",
+    "description": "Fails if `object` is empty"
+  },
+  "refute-equal": {
+    "prefix": "refute-equal",
+    "body": "refute_equal ${1:expected}, ${2:actual}${3:, \"${4:message}\"}",
+    "description": "Fails if `expected == actual`. For floats use refute_in_delta."
+  },
+  "refute-in-delta": {
+    "prefix": "refute-in-delta",
+    "body": "refute_in_delta ${1:expected}, ${2:actual}${3:, ${4:delta}}${5:, \"${6:message}\"}",
+    "description": "For comparing Floats. Fails if `expected` is within `delta` of `actual`."
+  },
+  "refute-in-epsilon": {
+    "prefix": "refute-in-epsilon",
+    "body": "refute_in_epsilon ${1:expected}, ${2:actual}${3:, ${4:epsilon}}${5:, \"${6:message}\"}",
+    "description": "For comparing Floats. Fails if `expected` and `actual` have a relative error less than `epsilon`"
+  },
+  "refute-includes": {
+    "prefix": "refute-includes",
+    "body": "refute_includes ${1:collection}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails if `collection` includes `object`"
+  },
+  "refute-instance-of": {
+    "prefix": "refute-instance-of",
+    "body": "refute_instance_of ${1:class}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails if `object` is a kind of `class`."
+  },
+  "refute-kind-of": {
+    "prefix": "refute-kind-of",
+    "body": "refute_kind_of ${1:class}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails if `object is a kind of `class`"
+  },
+  "refute-match": {
+    "prefix": "refute-match",
+    "body": "refute_match ${1:matcher}, ${2:object}${3:, \"${4:message}\"}",
+    "description": "Fails if `matcher =~ object`"
+  },
+  "refute-nil": {
+    "prefix": "refute-nil",
+    "body": "refute_nil ${1:object}${2:, \"${3:message}\"}",
+    "description": "Fails if `object` is `nil`"
+  },
+  "refute-operator": {
+    "prefix": "refute-operator",
+    "body": "refute_operator ${1:object_1}, ${2:operator}${3:, ${4:object_2}}${5:, \"${6:message}\"}",
+    "description": "Fails if not object_1.operator(object_2)"
+  },
+  "refute-path-exists": {
+    "prefix": "refute-path-exists",
+    "body": "refute_path_exists \"${1:path}\"${2:, \"${3:message}\"}",
+    "description": "Fails if `path` exists."
+  },
+  "refute-pattern": {
+    "prefix": "refute-pattern",
+    "body": "refute_pattern { $0 }",
+    "description": "[1,2,3] => [Integer, Integer, Integer]. For testing with pattern matching."
+  },
+  "refute-same": {
+    "prefix": "refute-same",
+    "body": "refute_same $1{:expected}, ${2:actual}${3:, \"${4:message}\"",
+    "description": "Fails if `expected` and `actual` are `equal?`"
+  },
+  "skip": {
+    "prefix": "skip",
+    "body": "skip(\"${1:message}\")",
+    "description": "Skips the current run."
+  },
+  "skip-until": {
+    "prefix": "skip-until",
+    "body": "skip_until(${1:year}${2:, ${3:month}}${4:, ${5:day}}) { $0 }",
+    "description": "Skips the current run until a given date (in the local time zone)."
+  },
+  /** End: Minitest Assertions **/
+  /** Start: Rails Assertions **/
+  "assert-changes": {
+    "prefix": "assert-changes",
+    "body": [
+      "assert_changes ${1:expression}${2:, \"${3:message}\"}${4:, from: ${5:from}}${6:, to: ${7:to}} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Passes if evaluating `expression` changes when invoking the block."
+  },
+  "assert-difference": {
+    "prefix": "assert-difference",
+    "body": [
+      "assert_difference ${1:expression}${2:, ${3:args}} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Passes if numeric difference of return value of `expression` is equal to `args` after invoking the block."
+  },
+  "assert-no-changes": {
+    "prefix": "assert-no-changes",
+    "body": [
+      "assert_no_changes ${1:expression}${2:, \"${3:message}\"}${4:, from: ${5:from}} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Passes if evaluating `expression` doesn't change when invoking the block."
+  },
+  "assert-no-difference": {
+    "prefix": "assert-no-difference",
+    "body": [
+      "assert_no_difference ${1:expression} do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Passes if numeric difference of return value of `expression` doesn't change when invoking the block."
+  },
+  "assert-nothing-raised": {
+    "prefix": "assert-nothing-raised",
+    "body": [
+      "assert_nothing_raised do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Passes if the block doesn't raise an exception."
+  },
+  "assert-raises": {
+    "prefix": "assert-raises",
+    "body": [
+      "assert_raises($1{:class}${2:, match: /${3:regexp}/}) do",
+      "\t$0",
+      "end"
+    ],
+    "description": "Fails unless the block raises one of exp. Returns the exception matched so you can check the message, attributes, etc."
+  },
+  "assert-redirected-to": {
+    "prefix": "assert-redirected-to",
+    "body": "assert_redirected_to(${1:url_options}${2:, ${3:options}}${4:, \"${5:message}\"}/)",
+    "description": [
+      "Asserts that the response is a redirect to a URL matching the given options.",
+      "`assert_redirected_to controller: \"weblog\", action: \"index\"`",
+      "`assert_redirected_to login_url`",
+      "`assert_redirected_to @customer`",
+      "`assert_redirected_to %r(\\Ahttp://example.org)`",
+      "`assert_redirected_to \"/some/path\", status: :moved_permanently`"
+    ]
+  },
+  "assert-response": {
+    "prefix": "assert-response",
+    "body": "assert_response($1{:type}${2:, \"${3:message}\"/)",
+    "description": "Passes if the response matches the type (number or symbol). See `Rack::Utils::SYMBOL_TO_STATUS_CODE` for a full list."
+  }
+  /** End: Rails Assertions **/
+}

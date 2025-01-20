@@ -1,0 +1,6 @@
+{
+  "co-authored-by": {
+    "body": "Co-authored-by: ${1:full_name} <${2:email}>",
+    "prefix": "co-authored-by"
+  }
+}
