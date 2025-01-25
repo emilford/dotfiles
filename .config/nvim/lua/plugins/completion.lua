@@ -50,6 +50,10 @@ return {
           ["<Tab>"] = { "select_and_accept", "fallback" },
         },
       },
+      signature = {
+        enabled = true,
+        window = { border = "rounded" },
+      },
       snippets = { preset = "luasnip" },
       sources = {
         default = { "lsp", "path", "snippets", "buffer", "git", "dadbod" },
