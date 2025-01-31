@@ -59,31 +59,25 @@ return {
       },
       snippets = { preset = "luasnip" },
       sources = {
-        default = { "lsp", "path", "snippets", "buffer", "git", "dadbod" },
+        per_filetype = {
+          ["lua"] = { "lazydev", "lsp", "path", "buffer" },
+          ["sql"] = { "dadbod", "buffer" },
+          ["gitcommit"] = { "git", "snippets", "path", "buffer" },
+        },
         providers = {
           dadbod = {
             name = "DB",
             module = "vim_dadbod_completion.blink",
-            fallbacks = { "buffer" },
-            enabled = function()
-              return vim.o.filetype == "sql"
-            end,
           },
           git = {
             name = "Git",
             module = "blink.compat.source",
             async = true,
-            enabled = function()
-              return vim.o.filetype == "gitcommit"
-            end,
           },
           lazydev = {
             name = "LazyDev",
             module = "lazydev.integrations.blink",
             score_offset = 100,
-            enabled = function()
-              return vim.o.filetype == "lua"
-            end,
           },
         },
       },
