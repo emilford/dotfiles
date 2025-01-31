@@ -68,11 +68,13 @@ return {
           dadbod = {
             name = "DB",
             module = "vim_dadbod_completion.blink",
+            score_offset = 100,
           },
           git = {
             name = "Git",
             module = "blink.compat.source",
             async = true,
+            score_offset = 100,
           },
           lazydev = {
             name = "LazyDev",
