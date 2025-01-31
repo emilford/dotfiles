@@ -27,7 +27,10 @@ return {
         menu = {
           border = "rounded",
           draw = {
-            columns = { { "kind_icon" }, { "label" }, { "source_name" } },
+            columns = function(ctx)
+              return ctx.mode == "cmdline" and { { "kind_icon" }, { "label" } }
+                or { { "kind_icon" }, { "label" }, { "source_name" } }
+            end,
             components = {
               kind_icon = {
                 highlight = function() end,
