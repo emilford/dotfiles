@@ -26,6 +26,7 @@ return {
           c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }),
           f = ai.gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }),
           x = ai.gen_spec.treesitter({ a = "@comment.outer", i = "@comment.inner" }),
+          A = ai.gen_spec.function_call(),
 
           e = extra.gen_ai_spec.buffer(),
           i = extra.gen_ai_spec.indent(),
