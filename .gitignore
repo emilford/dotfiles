@@ -122,6 +122,7 @@
 /.zsh_sessions
 /.zshrc
 /.zshrc.zni
+/go/
 /Applications
 /Code
 /Desktop
