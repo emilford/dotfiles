@@ -80,6 +80,7 @@ return {
           },
         },
         ruby_lsp = {
+          cmd = { "sh", "-c", "mise x -- ruby-lsp" },
           init_options = {
             formatter = "standard",
             linters = { "standard" },
