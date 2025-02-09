@@ -8,9 +8,6 @@ return {
       dark_variant = "moon",
       highlight_groups = {
         ["@string.special.symbol.ruby"] = { fg = "foam" },
-        ["CodeActionBorder"] = { fg = "highlight_med" },
-        ["LspInfoBorder"] = { fg = "highlight_med" },
-        ["RenameBorder"] = { fg = "highlight_med" },
         ["Pmenu"] = { link = "FloatBorder" },
       },
       styles = {
