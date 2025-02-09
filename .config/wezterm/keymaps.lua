@@ -37,6 +37,32 @@ function module.apply_to_config(config)
     navigate("k"),
     navigate("l"),
 
+    -- rotate panes clockwise
+    {
+      key = ">",
+      mods = "LEADER",
+      action = wezterm.action.RotatePanes("Clockwise"),
+    },
+    -- rotate panes counter-clockwise
+    {
+      key = "<",
+      mods = "LEADER",
+      action = wezterm.action.RotatePanes("CounterClockwise"),
+    },
+    {
+      key = ">",
+      mods = "LEADER",
+      action = wezterm.action.RotatePanes("Clockwise"),
+    },
+    -- show the pane selection mode, but have it swap the active and selected panes
+    {
+      key = "?",
+      mods = "LEADER",
+      action = wezterm.action.PaneSelect({
+        mode = "SwapWithActive",
+      }),
+    },
+
     -- Open new tab
     {
       key = "c",
