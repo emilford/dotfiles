@@ -11,6 +11,7 @@ return {
         ["CodeActionBorder"] = { fg = "highlight_med" },
         ["LspInfoBorder"] = { fg = "highlight_med" },
         ["RenameBorder"] = { fg = "highlight_med" },
+        ["Pmenu"] = { link = "FloatBorder" },
       },
       styles = {
         transparency = true,
