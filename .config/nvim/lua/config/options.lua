@@ -20,3 +20,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
 vim.opt.termguicolors = true
 vim.opt.wildmode = { "list:longest", "list:full" }
+
+vim.g.no_ruby_maps = true
