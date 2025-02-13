@@ -6,8 +6,8 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     build = ":TSUpdate",
     dependencies = {
+      "RRethy/nvim-treesitter-endwise",
       "andymass/vim-matchup",
-      "metiulekm/nvim-treesitter-endwise",
     },
     opts = {
       auto_install = true,
