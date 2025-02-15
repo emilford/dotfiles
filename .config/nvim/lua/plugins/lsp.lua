@@ -127,14 +127,6 @@ return {
     end,
   },
   {
-    "WhoIsSethDaniel/mason-tool-installer.nvim",
-    opts = {
-      ensure_installed = {
-        "stylua",
-      },
-    },
-  },
-  {
     "folke/lazydev.nvim",
     ft = "lua",
     opts = {
