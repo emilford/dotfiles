@@ -13,6 +13,12 @@ return {
       appearance = {
         kind_icons = require("config.icons").kind_icons,
       },
+      cmdline = {
+        keymap = {
+          preset = "default",
+          ["<Tab>"] = { "select_and_accept", "fallback" },
+        },
+      },
       completion = {
         documentation = {
           auto_show = true,
@@ -48,10 +54,6 @@ return {
       keymap = {
         ["<c-k>"] = { "snippet_forward", "fallback" },
         ["<c-j>"] = { "snippet_backward", "fallback" },
-        cmdline = {
-          preset = "default",
-          ["<Tab>"] = { "select_and_accept", "fallback" },
-        },
       },
       signature = {
         enabled = true,
