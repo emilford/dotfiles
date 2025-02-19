@@ -82,6 +82,11 @@ return {
         ruby_lsp = {
           cmd = { "sh", "-c", "mise x -- ruby-lsp" },
           init_options = {
+            addonSettings = {
+              ["Ruby LSP Rails"] = {
+                enablePendingMigrationsPrompt = false,
+              },
+            },
             formatter = "standard",
             linters = { "standard" },
           },
