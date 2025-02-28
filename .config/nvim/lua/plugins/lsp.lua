@@ -91,8 +91,8 @@ return {
                 enablePendingMigrationsPrompt = false,
               },
             },
-            formatter = "standard",
-            linters = { "standard" },
+            formatter = vim.fn.filereadable(".standard.yml") and "standard" or "auto",
+            linters = { vim.fn.filereadable(".standard.yml") and "standard" or "auto" },
           },
         },
         vale_ls = {
