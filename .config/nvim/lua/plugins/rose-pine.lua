@@ -10,6 +10,11 @@ return {
         ["@string.special.symbol.ruby"] = { fg = "foam" },
         ["Pmenu"] = { link = "FloatBorder" },
       },
+      palette = {
+        dawn = {
+          text = "#575279",
+        },
+      },
       styles = {
         transparency = true,
       },
