@@ -13,12 +13,6 @@ return {
       appearance = {
         kind_icons = require("config.icons").kind_icons,
       },
-      cmdline = {
-        keymap = {
-          preset = "default",
-          ["<Tab>"] = { "select_and_accept", "fallback" },
-        },
-      },
       completion = {
         documentation = {
           auto_show = true,
