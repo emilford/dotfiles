@@ -74,9 +74,27 @@ return {
           },
           git = {
             name = "Git",
-            module = "blink.compat.source",
-            async = true,
+            module = "blink-cmp-git",
             score_offset = 100,
+            opts = {
+              git_centers = {
+                github = {
+                  pull_request = {
+                    get_command_args = function(command, token)
+                      local args = require("blink-cmp-git.default.github").issue.get_command_args(command, token)
+                      local utils = require("blink-cmp-git.utils")
+
+                      args[#args] = "repos/"
+                        .. utils.get_repo_owner_and_repo()
+                        .. "/pulls?state=all&per_page=100&sort=updated&direction=desc"
+
+                      return args
+                    end,
+                  },
+                },
+              },
+              kind_icons = require("config.icons").kind_icons,
+            },
           },
           lazydev = {
             name = "LazyDev",
@@ -89,18 +107,7 @@ return {
     opts_extend = { "sources.default" },
   },
   {
-    "petertriho/cmp-git",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    ft = "gitcommit",
-    opts = {
-      github = {
-        pull_requests = {
-          state = "all",
-        },
-      },
-    },
+    "Kaiser-Yang/blink-cmp-git",
   },
   {
     "kristijanhusak/vim-dadbod-completion",
