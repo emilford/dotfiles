@@ -9,6 +9,7 @@ return {
       highlight_groups = {
         ["@string.special.symbol.ruby"] = { fg = "foam" },
         ["Pmenu"] = { link = "FloatBorder" },
+        ["BlinkCmpSource"] = { bg = "base" },
         ["BlinkCmpGitKindCommit"] = { link = "BlinkCmpKind" },
         ["BlinkCmpGitKindIssue"] = { link = "BlinkCmpKind" },
         ["BlinkCmpGitKindMention"] = { link = "BlinkCmpKind" },
