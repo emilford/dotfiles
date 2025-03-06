@@ -6,7 +6,6 @@ return {
     event = { "BufReadPost", "BufNewFile" },
     build = ":TSUpdate",
     dependencies = {
-      "RRethy/nvim-treesitter-endwise",
       "andymass/vim-matchup",
     },
     opts = {
@@ -25,5 +24,9 @@ return {
         enabled = true,
       },
     },
+  },
+  {
+    "RRethy/nvim-treesitter-endwise",
+    ft = { "bash", "fish", "lua", "ruby" },
   },
 }
