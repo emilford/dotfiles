@@ -7,7 +7,6 @@ return {
   {
     "saghen/blink.cmp",
     version = "*",
-    dependencies = { "L3MON4D3/LuaSnip" },
     event = { "CmdlineEnter", "InsertEnter" },
     opts = {
       appearance = {
@@ -109,6 +108,10 @@ return {
       },
     },
     opts_extend = { "sources.default" },
+  },
+  {
+    "L3MON4D3/LuaSnip",
+    cmd = { "InsertEnter" },
   },
   {
     "Kaiser-Yang/blink-cmp-git",
