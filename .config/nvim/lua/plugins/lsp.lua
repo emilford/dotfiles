@@ -11,11 +11,6 @@ return {
       vim.api.nvim_create_autocmd("LspAttach", {
         group = vim.api.nvim_create_augroup("lsp-attach", { clear = true }),
         callback = function(args)
-          local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-          vim.keymap.set("i", "<c-s>", function()
-            vim.lsp.buf.signature_help({ border = "rounded" })
-          end, { desc = "vim.lsp.buf.signature_help()" })
 
           vim.keymap.set("n", "gd", function()
             vim.lsp.buf.definition()
@@ -25,11 +20,6 @@ return {
             vim.lsp.buf.type_definition()
           end, { desc = "vim.lsp.buf.type_definition()" })
 
-          if client and client:supports_method("textDocument/hover", args.buf) then
-            vim.keymap.set("n", "K", function()
-              vim.lsp.buf.hover({ border = "rounded" })
-            end, { buffer = args.buf, desc = "vim.lsp.buf.hover()" })
-          end
         end,
       })
 
@@ -40,7 +30,6 @@ return {
 
       vim.diagnostic.config({
         float = {
-          border = "rounded",
           source = true,
         },
         severity_sort = true,
