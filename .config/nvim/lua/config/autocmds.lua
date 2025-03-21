@@ -60,3 +60,16 @@ vim.api.nvim_create_autocmd("TextYankPost", {
   end,
   desc = "Highlight the yanked text",
 })
+
+vim.api.nvim_create_autocmd("LspAttach", {
+  group = "CustomAutoCommands",
+  callback = function()
+    vim.keymap.set("n", "gd", function()
+      vim.lsp.buf.definition()
+    end, { desc = "vim.lsp.buf.definition()" })
+
+    vim.keymap.set("n", "gt", function()
+      vim.lsp.buf.type_definition()
+    end, { desc = "vim.lsp.buf.type_definition()" })
+  end,
+})
