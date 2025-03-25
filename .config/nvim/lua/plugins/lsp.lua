@@ -5,7 +5,6 @@ return {
       opts.ensure_installed = vim.list_extend(opts.ensure_installed or {}, {
         "json-lsp",
         "lua-language-server",
-        "ruby-lsp",
         "stimulus-language-server",
         "vale-ls",
         "yaml-language-server",
