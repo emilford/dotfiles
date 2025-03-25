@@ -26,7 +26,6 @@ return {
         documentation = {
           auto_show = true,
           auto_show_delay_ms = 200,
-          window = { border = "rounded" },
         },
         list = {
           selection = {
@@ -34,7 +33,6 @@ return {
           },
         },
         menu = {
-          border = "rounded",
           draw = {
             columns = function(ctx)
               return ctx.mode == "cmdline" and { { "kind_icon" }, { "label" } }
@@ -60,7 +58,6 @@ return {
       },
       signature = {
         enabled = true,
-        window = { border = "rounded" },
       },
       snippets = { preset = "luasnip" },
       sources = {
