@@ -10,7 +10,6 @@ vim.diagnostic.config({
       [vim.diagnostic.severity.HINT] = icon,
     },
   },
-  virtual_text = false,
 })
 
 vim.lsp.config("*", { root_markers = { ".git" } })
