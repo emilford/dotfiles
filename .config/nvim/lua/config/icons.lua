@@ -3,6 +3,13 @@ return {
     diagnostic = "",
     vertical_bar = "│",
   },
+  dap = {
+    Breakpoint = "󰻃 ",
+    BreakpointCondition = "󰘥 ",
+    BreakpointRejected = "󰗖 ",
+    LogPoint = "󰮍 ",
+    Stopped = "󱖘 ",
+  },
   kind_icons = {
     Array = "",
     Boolean = "",

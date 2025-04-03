@@ -30,6 +30,13 @@ return {
         ["BlinkCmpGitLabelMRRest"] = { link = "BlinkCmpLabel" },
         ["BlinkCmpGitLabelPRId"] = { link = "BlinkCmpLabel" },
         ["BlinkCmpGitLabelPRRest"] = { link = "BlinkCmpLabel" },
+
+        ["DapBreakpoint"] = { fg = "love" },
+        ["DapBreakpointCondition"] = { fg = "love" },
+        ["DapStopped"] = { fg = "gold" },
+        ["DapStoppedLine"] = { bg = "gold", blend = 10 },
+        ["NvimDapVirtualText"] = { fg = "muted" },
+        ["NvimDapVirtualTextChanged"] = { fg = "love" },
       },
       palette = {
         dawn = {
