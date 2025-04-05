@@ -112,6 +112,7 @@ return {
   },
   {
     "Kaiser-Yang/blink-cmp-git",
+    dependencies = { "nvim-lua/plenary.nvim" },
   },
   {
     "kristijanhusak/vim-dadbod-completion",
