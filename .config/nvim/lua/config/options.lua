@@ -14,7 +14,7 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.ruler = false
 vim.opt.shiftround = true
-vim.opt.shortmess:append("I")
+vim.opt.shortmess:append({ I = true, W = true })
 vim.opt.showmatch = true
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
