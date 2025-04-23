@@ -4,7 +4,7 @@ vim.opt.breakindent = true
 vim.opt.colorcolumn = "+1"
 vim.opt.confirm = true
 vim.opt.cpoptions:append("$")
-vim.opt.diffopt:append("vertical")
+vim.opt.diffopt:append({ "algorithm:histogram", "indent-heuristic", "vertical" })
 vim.opt.diffopt:remove("linematch:40")
 vim.opt.fillchars = { eob = " " }
 vim.opt.ignorecase = true
