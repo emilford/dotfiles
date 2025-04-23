@@ -13,4 +13,4 @@ vim.diagnostic.config({
 })
 
 vim.lsp.config("*", { root_markers = { ".git" } })
-vim.lsp.enable({ "jsonls", "lua_ls", "ruby_lsp", "stimulus_ls", "vale_ls", "yamlls" })
+vim.lsp.enable({ "eslint_lsp", "jsonls", "lua_ls", "ruby_lsp", "stimulus_ls", "vale_ls", "yamlls" })
