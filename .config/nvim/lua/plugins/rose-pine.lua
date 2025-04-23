@@ -30,6 +30,8 @@ return {
         ["BlinkCmpGitLabelMRRest"] = { link = "BlinkCmpLabel" },
         ["BlinkCmpGitLabelPRId"] = { link = "BlinkCmpLabel" },
         ["BlinkCmpGitLabelPRRest"] = { link = "BlinkCmpLabel" },
+        ["InclineNormal"] = { fg = "subtle", bg = "highlight_med", blend = 30 },
+        ["InclineNormalNC"] = { fg = "subtle", bg = "highlight_med", blend = 30 },
       },
       palette = {
         dawn = {

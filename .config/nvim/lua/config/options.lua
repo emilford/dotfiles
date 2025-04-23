@@ -7,7 +7,7 @@ vim.opt.diffopt:append("vertical")
 vim.opt.diffopt:remove("linematch:40")
 vim.opt.fillchars = { eob = " " }
 vim.opt.ignorecase = true
-vim.opt.laststatus = 1
+vim.opt.laststatus = 3
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 vim.opt.number = true
@@ -19,6 +19,7 @@ vim.opt.showmatch = true
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
+vim.opt.statusline = '%{""}'
 vim.opt.termguicolors = true
 vim.opt.wildmode = { "list:longest", "list:full" }
 vim.opt.winborder = "rounded"
