@@ -7,6 +7,7 @@ return {
         "json-lsp",
         "lua-language-server",
         "stimulus-language-server",
+        "tailwindcss-language-server",
         "vale-ls",
         "yaml-language-server",
       })
