@@ -63,7 +63,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = "CustomAutoCommands",
-  callback = function()
+  callback = function(args)
     vim.keymap.set("n", "gd", function()
       vim.lsp.buf.definition()
     end, { desc = "vim.lsp.buf.definition()" })
@@ -84,5 +84,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.api.nvim_create_user_command("LspStop", function()
       vim.lsp.stop_client(vim.lsp.get_clients({ bufnr = vim.api.nvim_get_current_buf() }))
     end, { desc = "Stop running LSP clients" })
+
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+
+    if client:supports_method("textDocument/documentColor") then
+      vim.lsp.document_color.enable(true, args.buf, { style = require("config.icons").misc.square .. " " })
+    end
   end,
 })

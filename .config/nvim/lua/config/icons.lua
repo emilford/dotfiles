@@ -1,6 +1,7 @@
 return {
   misc = {
     diagnostic = "",
+    square = "■",
     vertical_bar = "│",
   },
   kind_icons = {
