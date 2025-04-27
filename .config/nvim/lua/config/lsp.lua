@@ -14,6 +14,7 @@ vim.diagnostic.config({
 
 vim.lsp.config("*", { root_markers = { ".git" } })
 vim.lsp.enable({
+  "cssls",
   "eslint_lsp",
   "jsonls",
   "lua_ls",
