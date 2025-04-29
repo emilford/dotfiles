@@ -5,6 +5,7 @@
 /**/.squirrel
 /**/.tool-versions
 /**/dump.sql
+/**/mise.local.toml
 /**/notes
 /**/spec/examples.txt
 /**/tags
