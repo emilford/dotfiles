@@ -1,5 +1,7 @@
 /**/.config.fish
+/**/.db_ui
 /**/.envrc
+/**/.gp/
 /**/.projections.json
 /**/.psql_history*
 /**/.squirrel
@@ -12,5 +14,3 @@
 /**/vendor/bundle
 /**/vendor/cache
 /**/vendor/gems
-/**/.db_ui
-/**/.gp/
