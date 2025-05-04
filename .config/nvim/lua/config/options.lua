@@ -24,5 +24,3 @@ vim.opt.statusline = '%{""}'
 vim.opt.termguicolors = true
 vim.opt.wildmode = { "list:longest", "list:full" }
 vim.opt.winborder = "rounded"
-
-vim.g.no_ruby_maps = true
