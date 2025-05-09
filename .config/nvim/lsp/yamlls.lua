@@ -10,6 +10,7 @@ return {
         enable = false,
         url = "",
       },
+      schemas = require("schemastore").yaml.schemas(),
       validate = true,
     },
     redhat = { telemetry = { enabled = false } },
@@ -17,8 +18,4 @@ return {
   init_options = {
     provideFormatter = true,
   },
-  on_new_config = function(config)
-    config.settings.yaml.schemas = config.settings.yaml.schemas or {}
-    vim.list_extend(config.settings.yaml.schemas, require("schemastore").json.schemas())
-  end,
 }
