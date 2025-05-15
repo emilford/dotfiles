@@ -9,6 +9,7 @@ return {
         "lua-language-server",
         "stimulus-language-server",
         "tailwindcss-language-server",
+        "typescript-language-server",
         "vale-ls",
         "yaml-language-server",
       })
