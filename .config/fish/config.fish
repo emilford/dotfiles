@@ -17,4 +17,4 @@ else
 end
 
 fish_add_path -pP ".git/safe/../../bin"
-fish_add_path -aP "/Users/eric/.local/share/nvim/mason/bin"
+fish_add_path -aP "$HOME/.local/share/nvim/mason/bin"
