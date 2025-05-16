@@ -8,6 +8,7 @@ return {
         prettierd = { require_cwd = true },
       },
       formatters_by_ft = {
+        ["htmlangular"] = { "prettierd" },
         ["lua"] = { "stylua" },
         ["javascript"] = { "prettierd" },
         ["javascriptreact"] = { "prettierd" },
