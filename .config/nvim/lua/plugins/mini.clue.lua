@@ -7,8 +7,7 @@ return {
     },
     keys = {
       "<c-g>",
-      "<leader>f",
-      "<leader>t",
+      "<leader>",
       "[",
       "]",
       [[\]],
