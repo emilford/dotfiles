@@ -108,7 +108,6 @@ return {
   },
   {
     "L3MON4D3/LuaSnip",
-    cmd = { "InsertEnter" },
   },
   {
     "Kaiser-Yang/blink-cmp-git",
@@ -116,10 +115,8 @@ return {
   },
   {
     "kristijanhusak/vim-dadbod-completion",
-    ft = "sql",
   },
   {
     "folke/lazydev.nvim",
-    ft = "lua",
   },
 }
