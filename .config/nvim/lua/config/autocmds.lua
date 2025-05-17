@@ -66,11 +66,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     vim.keymap.set("n", "gd", function()
       vim.lsp.buf.definition()
-    end, { desc = "vim.lsp.buf.definition()" })
+    end, { desc = "vim.lsp.buf.definition()", buffer = true })
 
     vim.keymap.set("n", "gt", function()
       vim.lsp.buf.type_definition()
-    end, { desc = "vim.lsp.buf.type_definition()" })
+    end, { desc = "vim.lsp.buf.type_definition()", buffer = true })
 
     vim.api.nvim_create_user_command("LspLog", function()
       vim.cmd(string.format("tabnew %s", vim.lsp.get_log_path()))
