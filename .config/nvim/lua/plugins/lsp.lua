@@ -1,5 +1,12 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    init = function()
+      local path = require("lazy.core.config").options.root .. "/nvim-lspconfig"
+      vim.opt.runtimepath:prepend(path)
+    end,
+  },
+  {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     opts = function(_, opts)
       opts.ensure_installed = vim.list_extend(opts.ensure_installed or {}, {

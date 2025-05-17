@@ -1,7 +1,5 @@
 return {
   cmd = { "sh", "-c", "mise x -- ruby-lsp" },
-  filetypes = { "ruby", "eruby" },
-  root_markers = { "Gemfile" },
   init_options = {
     addonSettings = {
       ["Ruby LSP Rails"] = {
