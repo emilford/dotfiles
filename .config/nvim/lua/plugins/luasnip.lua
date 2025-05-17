@@ -47,7 +47,7 @@ return {
         ext_opts = {
           [types.choiceNode] = {
             active = {
-              virt_text = { { "", "Comment" } },
+              virt_text = { { require("config.icons").misc.selection, "Comment" } },
               hl_mode = "combine",
             },
           },
