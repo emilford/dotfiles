@@ -6,6 +6,7 @@ direnv hook fish | source
 
 set -x FZF_CTRL_T_COMMAND "fd --type file --follow --hidden --exclude .git"
 set -x FZF_DEFAULT_COMMAND $FZF_CTRL_T_COMMAND
+set -x MANPAGER "nvim +Man!"
 set -x RIPGREP_CONFIG_PATH $HOME/.config/ripgrep/ripgreprc
 set -x VISUAL nvim
 
