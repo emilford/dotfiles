@@ -72,19 +72,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.lsp.buf.type_definition()
     end, { desc = "vim.lsp.buf.type_definition()", buffer = true })
 
-    vim.api.nvim_create_user_command("LspLog", function()
-      vim.cmd(string.format("tabnew %s", vim.lsp.get_log_path()))
-    end, { desc = "Open the LSP client log" })
-
-    vim.api.nvim_create_user_command("LspRestart", function()
-      vim.cmd("LspStop")
-      vim.cmd("edit")
-    end, { desc = "Restart running LSP clients" })
-
-    vim.api.nvim_create_user_command("LspStop", function()
-      vim.lsp.stop_client(vim.lsp.get_clients({ bufnr = vim.api.nvim_get_current_buf() }))
-    end, { desc = "Stop running LSP clients" })
-
     vim.lsp.document_color.enable(true, args.buf, { style = require("config.icons").misc.square .. " " })
   end,
 })
