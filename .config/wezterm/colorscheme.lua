@@ -82,7 +82,7 @@ local function color_scheme_from_theme()
     file:close()
   end
 
-  return current_theme == "light\n" and light_color_scheme or dark_color_scheme
+  return current_theme == "dark\n" and dark_color_scheme or light_color_scheme
 end
 
 function module.apply_to_config(config)
