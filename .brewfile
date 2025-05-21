@@ -22,7 +22,6 @@ brew "ripgrep"
 brew "tldr"
 brew "tree"
 brew "universal-ctags", args: ["HEAD"]
-brew "weechat"
 
 cask "1password"
 cask "anki"
