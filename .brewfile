@@ -20,7 +20,6 @@ brew "mosh"
 brew "neovim"
 brew "ripgrep"
 brew "tldr"
-brew "tmux"
 brew "tree"
 brew "universal-ctags", args: ["HEAD"]
 brew "weechat"
