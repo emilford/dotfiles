@@ -1,5 +1,6 @@
 # Use `brew bundle --file=$HOME/.brewfile` to install the packages listed below
 
+tap "benjiwolff/neovim-nightly", "git@github.com:benjiwolff/homebrew-neovim-nightly.git"
 tap "heroku/brew"
 
 brew "bat"
@@ -17,7 +18,6 @@ brew "jq"
 brew "mas"
 brew "mise"
 brew "mosh"
-brew "neovim"
 brew "ripgrep"
 brew "tldr"
 brew "tree"
@@ -34,6 +34,7 @@ cask "discord"
 cask "figma"
 cask "firefox-developer-edition"
 cask "font-symbols-only-nerd-font"
+cask "neovim-nightly"
 cask "ngrok"
 cask "slack"
 cask "tuple"
