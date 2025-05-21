@@ -10,7 +10,7 @@ set -x MANPAGER "nvim +Man!"
 set -x RIPGREP_CONFIG_PATH $HOME/.config/ripgrep/ripgreprc
 set -x VISUAL nvim
 
-set theme (cat $HOME/.theme)
+set theme (cat $HOME/.theme 2>/dev/null; or echo "light")
 if test $theme = light
     fish_config theme choose "Rosé Pine Dawn"
 else
