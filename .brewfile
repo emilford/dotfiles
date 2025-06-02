@@ -3,6 +3,7 @@
 tap "benjiwolff/neovim-nightly", "git@github.com:benjiwolff/homebrew-neovim-nightly.git"
 tap "heroku/brew"
 
+brew "1password-cli"
 brew "bat"
 brew "direnv"
 brew "fd"
