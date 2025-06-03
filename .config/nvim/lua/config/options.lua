@@ -20,6 +20,7 @@ vim.opt.showmatch = true
 vim.opt.showmode = false
 vim.opt.signcolumn = "yes"
 vim.opt.smartcase = true
+vim.opt.spellfile = vim.fn.stdpath("config") .. "/spell/en.utf-8.add"
 vim.opt.statusline = '%{""}'
 vim.opt.termguicolors = true
 vim.opt.wildmode = { "list:longest", "list:full" }
