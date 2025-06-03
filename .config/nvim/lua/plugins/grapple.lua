@@ -15,6 +15,7 @@ return {
     opts = {
       icons = false,
       status = false,
+      style = "basename",
     },
   },
 }
