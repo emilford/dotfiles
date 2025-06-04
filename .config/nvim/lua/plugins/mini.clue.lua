@@ -15,8 +15,11 @@ return {
     opts = {
       clues = {
         { mode = "n", keys = "<c-g>", desc = "+Chat" },
+        { mode = "n", keys = "<leader>c", desc = "+CC" },
         { mode = "n", keys = "<leader>f", desc = "+Find" },
         { mode = "n", keys = "<leader>t", desc = "+Test" },
+
+        { mode = "x", keys = "<leader>c", desc = "+CC" },
       },
       triggers = {
         { mode = "n", keys = "<leader>" },
