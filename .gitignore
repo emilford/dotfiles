@@ -22,6 +22,7 @@
 /.config/coc/*
 !/.config/coc/ultisnips
 /.config/configstore
+/.config/github-copilot
 /.config/fish/completions/
 /.config/fish/fish_variables
 /.config/fish/fishd*
