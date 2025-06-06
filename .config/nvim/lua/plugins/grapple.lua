@@ -16,6 +16,9 @@ return {
       icons = false,
       status = false,
       style = "basename",
+      win_opts = {
+        border = "rounded",
+      },
     },
   },
 }
