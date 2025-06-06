@@ -14,7 +14,7 @@ return {
         chat_template = require("gp.defaults").short_chat_template,
         chat_assistant_prefix = { ">", "[{{agent}}]" },
         chat_confirm_delete = false,
-        chat_dir = vim.fn.getcwd() .. "/.gp/chats",
+        chat_dir = vim.fn.getcwd() .. "/.ai/gp",
         chat_user_prefix = ">",
         style_chat_finder_border = "rounded",
         style_popup_border = "rounded",
