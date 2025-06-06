@@ -72,6 +72,7 @@
 /.kube
 /.lesshst
 /.local
+/.mise.local.toml
 /.mix
 /.mysql_history
 /.netrc
