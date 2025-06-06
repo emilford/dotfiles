@@ -63,7 +63,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = "CustomAutoCommands",
-  callback = function(args)
+  callback = function(event)
     vim.keymap.set("n", "gd", function()
       vim.lsp.buf.definition()
     end, { desc = "vim.lsp.buf.definition()", buffer = true })
@@ -72,6 +72,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
       vim.lsp.buf.type_definition()
     end, { desc = "vim.lsp.buf.type_definition()", buffer = true })
 
-    vim.lsp.document_color.enable(true, args.buf, { style = require("config.icons").misc.square .. " " })
+    vim.lsp.document_color.enable(true, event.buf, { style = require("config.icons").misc.square .. " " })
   end,
 })
