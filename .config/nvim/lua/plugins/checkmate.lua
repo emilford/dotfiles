@@ -4,13 +4,11 @@ return {
     ft = "markdown",
     opts = function()
       local rosepine = require("rose-pine.palette")
+      local icons = require("config.icons")
 
       return {
         files = { "notes/*.md" },
-        todo_markers = {
-          unchecked = "󰄱",
-          checked = "󰱒",
-        },
+        todo_markers = icons.todo_markers,
         keys = {
           ["<leader>tt"] = "toggle",
           ["<leader>tc"] = "create",

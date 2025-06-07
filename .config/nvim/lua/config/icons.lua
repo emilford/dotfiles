@@ -47,4 +47,8 @@ return {
     Value = "",
     Variable = "",
   },
+  todo_markers = {
+    unchecked = "󰄱",
+    checked = "󰱒",
+  },
 }
