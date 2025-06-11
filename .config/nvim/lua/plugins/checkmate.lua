@@ -7,6 +7,7 @@ return {
       local icons = require("config.icons")
 
       return {
+        notify = false,
         files = { "notes/*.md" },
         todo_markers = icons.todo_markers,
         keys = {
