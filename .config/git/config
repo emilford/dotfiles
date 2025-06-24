@@ -24,3 +24,6 @@
 	pruneTags = true
 [diff]
 	algorithm = histogram
+
+[interactive]
+	singlekey = true
