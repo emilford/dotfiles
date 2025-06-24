@@ -42,5 +42,10 @@ return {
         desc = "Find in buffer",
       },
     },
+    init = function()
+      vim.ui.select = function(...)
+        return require("mini.pick").ui_select(...)
+      end
+    end,
   },
 }
