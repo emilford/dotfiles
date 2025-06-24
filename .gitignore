@@ -72,6 +72,7 @@
 /.kube
 /.lesshst
 /.local
+/.mcp-hub/
 /.mise.local.toml
 /.mix
 /.mysql_history

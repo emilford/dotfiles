@@ -60,10 +60,24 @@ return {
             expiration_days = 0,
           },
         },
+        mcphub = {
+          callback = "mcphub.extensions.codecompanion",
+          opts = {
+            make_slash_commands = true,
+            make_vars = true,
+            show_result_in_chat = true,
+          },
+        },
       },
     },
     init = function()
       vim.cmd([[cab cc CodeCompanion]])
     end,
+  },
+  {
+    "ravitemer/mcphub.nvim",
+    build = "npm install -g mcp-hub@latest",
+    cmd = "MCPHub",
+    config = true,
   },
 }
