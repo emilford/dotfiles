@@ -18,9 +18,7 @@ return {
             auto_show = true,
           },
         },
-        keymap = {
-          ["<Tab>"] = { "select_and_accept", "fallback" },
-        },
+        keymap = { preset = "inherit" },
       },
       completion = {
         documentation = {
@@ -53,8 +51,15 @@ return {
         },
       },
       keymap = {
+        preset = "none",
+        ["<c-b>"] = { "scroll_documentation_up", "fallback" },
+        ["<c-e>"] = { "hide" },
+        ["<c-f>"] = { "scroll_documentation_down", "fallback" },
         ["<c-k>"] = { "snippet_forward", "fallback" },
         ["<c-j>"] = { "snippet_backward", "fallback" },
+        ["<c-n>"] = { "select_next", "fallback_to_mappings" },
+        ["<c-p>"] = { "select_prev", "fallback_to_mappings" },
+        ["<c-y>"] = { "select_and_accept" },
       },
       signature = {
         enabled = true,
