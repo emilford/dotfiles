@@ -17,6 +17,7 @@ return {
             { " ", guibg = props.focused and rosepine.rose or rosepine.highlight_high },
             " ",
             { filename == "" and "[No Name]" or filename },
+            vim.api.nvim_get_option_value("modified", {}) and require("config.icons").misc.modified or "",
             " ",
           }
         end,

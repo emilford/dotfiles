@@ -1,6 +1,7 @@
 return {
   misc = {
     diagnostic = "",
+    modified = "",
     selection = "",
     square = "■",
     vertical_bar = "│",
