@@ -20,7 +20,7 @@ M.shorten_path = function(path, opts)
 
   local components = vim.split(path, Path.path.sep)
 
-  if #components == 1 then
+  if #components == 1 or #components == opts.tail_count then
     return path
   end
 
