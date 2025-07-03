@@ -14,6 +14,8 @@ local M = {}
 ---
 M.shorten_path = function(path, opts)
   local Path = require("plenary.path")
+
+  path = vim.fn.fnamemodify(path, ":.")
   opts = vim.tbl_extend("keep", opts, { short_len = 1, tail_count = 2, head_max = 0 })
 
   local components = vim.split(path, Path.path.sep)

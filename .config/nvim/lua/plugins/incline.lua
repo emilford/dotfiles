@@ -10,7 +10,7 @@ return {
           placement = { vertical = "bottom" },
         },
         render = function(props)
-          local filename = require("utils").shorten_path(vim.fn.expand("%:."), { short_len = 2 })
+          local filename = require("utils").shorten_path(vim.api.nvim_buf_get_name(props.buf), { short_len = 2 })
           local rosepine = require("rose-pine.palette")
 
           return {
