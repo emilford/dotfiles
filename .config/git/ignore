@@ -2,7 +2,6 @@
 /**/.config.fish
 /**/.db_ui
 /**/.envrc
-/**/.gp/
 /**/.projections.json
 /**/.psql_history*
 /**/.squirrel
