@@ -11,10 +11,10 @@ return {
         files = { "notes/*.md" },
         todo_markers = icons.todo_markers,
         style = {
-          checked_marker = { fg = rosepine.text },
-          checked_main_content = { fg = rosepine.muted },
-          unchecked_marker = { fg = rosepine.text },
-          unchecked_main_content = { fg = rosepine.text },
+          CheckmateCheckedMarker = { fg = rosepine.text },
+          CheckmateCheckedMainContent = { fg = rosepine.muted },
+          CheckmateUncheckedMarker = { fg = rosepine.text },
+          CheckmateUncheckedMainContent = { fg = rosepine.text },
         },
         show_todo_count = false,
       }
