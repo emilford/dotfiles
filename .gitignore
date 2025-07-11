@@ -16,6 +16,7 @@
 /.bin
 /.bundle/cache
 /.cache
+/.cargo
 /.chromedriver-helper
 /.cocoapods
 /.composer
@@ -95,6 +96,7 @@
 /.rnd
 /.rubies
 /.ruby-version
+/.rustup
 /.s3bucket
 /.sbt
 /.scala_history
