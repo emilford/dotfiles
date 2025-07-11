@@ -18,8 +18,10 @@ return {
         { mode = "n", keys = "<leader>c", desc = "+CC" },
         { mode = "n", keys = "<leader>f", desc = "+Find" },
         { mode = "n", keys = "<leader>t", desc = "+Test" },
+        { mode = "n", keys = "<leader>T", desc = "+Todo" },
 
         { mode = "x", keys = "<leader>c", desc = "+CC" },
+        { mode = "x", keys = "<leader>T", desc = "+Todo" },
       },
       triggers = {
         { mode = "n", keys = "<leader>" },

@@ -10,10 +10,6 @@ return {
         notify = false,
         files = { "notes/*.md" },
         todo_markers = icons.todo_markers,
-        keys = {
-          ["<leader>tt"] = "toggle",
-          ["<leader>tc"] = "create",
-        },
         style = {
           checked_marker = { fg = rosepine.text },
           checked_main_content = { fg = rosepine.muted },
