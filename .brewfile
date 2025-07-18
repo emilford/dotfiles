@@ -26,7 +26,6 @@ brew "universal-ctags"
 
 cask "1password"
 cask "anki"
-cask "basecamp"
 cask "brainfm"
 cask "bruno"
 cask "cleanshot"
