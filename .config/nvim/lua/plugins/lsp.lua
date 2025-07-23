@@ -13,8 +13,8 @@ return {
         "lua-language-server",
         "stimulus-language-server",
         "tailwindcss-language-server",
-        "typescript-language-server",
         "vale-ls",
+        "vtsls",
         "yaml-language-server",
       })
     end,

@@ -22,7 +22,7 @@ vim.lsp.enable({
   "ruby_lsp",
   "stimulus_ls",
   "tailwindcss",
-  "ts_ls",
   "vale_ls",
+  "vtsls",
   "yamlls",
 })
