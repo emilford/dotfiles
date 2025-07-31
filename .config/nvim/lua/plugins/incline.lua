@@ -6,6 +6,7 @@ return {
       return {
         window = {
           margin = { horizontal = 0 },
+          overlap = { statusline = true },
           padding = 0,
           placement = { vertical = "bottom" },
         },
