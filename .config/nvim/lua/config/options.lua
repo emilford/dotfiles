@@ -1,6 +1,7 @@
 vim.g.mapleader = ","
 
 vim.opt.breakindent = true
+vim.opt.cmdheight = 0
 vim.opt.colorcolumn = "+1"
 vim.opt.confirm = true
 vim.opt.cpoptions:append("$")
