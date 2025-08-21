@@ -14,6 +14,7 @@
 /.bash_sessions
 /.bashrc
 /.bin
+/.bun
 /.bundle/cache
 /.cache
 /.cargo
