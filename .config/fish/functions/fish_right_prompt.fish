@@ -21,6 +21,6 @@ function fish_right_prompt --description "Write out the right prompt"
   set -g __fish_git_prompt_color_prefix normal
   set -g __fish_git_prompt_color_suffix normal
 
-  echo -n (basename (prompt_pwd))
+  echo -n (git config project.name; or basename (prompt_pwd))
   printf '%s ' (__fish_vcs_prompt)
 end
