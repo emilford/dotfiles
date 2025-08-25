@@ -9,7 +9,7 @@ return {
       return {
         notify = false,
         files = { "notes/*.md" },
-        todo_markers = icons.todo_markers,
+        todo_states = icons.todo_states,
         style = {
           CheckmateCheckedMarker = { fg = rosepine.text },
           CheckmateCheckedMainContent = { fg = rosepine.muted },

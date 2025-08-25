@@ -48,8 +48,12 @@ return {
     Value = "",
     Variable = "",
   },
-  todo_markers = {
-    unchecked = "󰄱",
-    checked = "󰱒",
+  todo_states = {
+    unchecked = {
+      marker = "󰄱",
+    },
+    checked = {
+      marker = "󰱒",
+    },
   },
 }
