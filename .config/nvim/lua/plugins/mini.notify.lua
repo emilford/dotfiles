@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.notify",
+    "nvim-mini/mini.notify",
     version = false,
     event = { "BufReadPre", "BufNewFile" },
     opts = {

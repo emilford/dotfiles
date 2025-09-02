@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.bracketed",
+    "nvim-mini/mini.bracketed",
     version = false,
     -- stylua: ignore start
     keys = {

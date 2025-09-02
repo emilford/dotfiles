@@ -1,9 +1,9 @@
 return {
   {
-    "echasnovski/mini.clue",
+    "nvim-mini/mini.clue",
     version = false,
     dependencies = {
-      "echasnovski/mini.bracketed",
+      "nvim-mini/mini.bracketed",
     },
     keys = {
       "<c-g>",
@@ -17,10 +17,12 @@ return {
         { mode = "n", keys = "<c-g>", desc = "+Chat" },
         { mode = "n", keys = "<leader>c", desc = "+CC" },
         { mode = "n", keys = "<leader>f", desc = "+Find" },
+        { mode = "n", keys = "<leader>o", desc = "+OpenCode" },
         { mode = "n", keys = "<leader>t", desc = "+Test" },
         { mode = "n", keys = "<leader>T", desc = "+Todo" },
 
         { mode = "x", keys = "<leader>c", desc = "+CC" },
+        { mode = "x", keys = "<leader>o", desc = "+OpenCode" },
         { mode = "x", keys = "<leader>T", desc = "+Todo" },
       },
       triggers = {

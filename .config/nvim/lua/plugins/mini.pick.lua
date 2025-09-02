@@ -1,6 +1,6 @@
 return {
   {
-    "echasnovski/mini.pick",
+    "nvim-mini/mini.pick",
     version = false,
     cmd = {
       "Pick",
