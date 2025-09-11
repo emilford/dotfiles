@@ -17,6 +17,7 @@ vim.lsp.enable({
   "angularls",
   "cssls",
   "eslint",
+  "fish_lsp",
   "jsonls",
   "lua_ls",
   "ruby_lsp",

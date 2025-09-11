@@ -9,6 +9,7 @@ return {
       opts.ensure_installed = vim.list_extend(opts.ensure_installed or {}, {
         "css-lsp",
         "eslint-lsp",
+        "fish-lsp",
         "json-lsp",
         "lua-language-server",
         "stimulus-language-server",
