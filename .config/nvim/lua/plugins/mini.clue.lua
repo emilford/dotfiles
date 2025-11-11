@@ -7,6 +7,7 @@ return {
     },
     keys = {
       "<c-g>",
+      "cp",
       "<leader>",
       "[",
       "]",
@@ -15,6 +16,7 @@ return {
     opts = {
       clues = {
         { mode = "n", keys = "<c-g>", desc = "+Chat" },
+        { mode = "n", keys = "cp", desc = "+Copy" },
         { mode = "n", keys = "<leader>c", desc = "+CC" },
         { mode = "n", keys = "<leader>f", desc = "+Find" },
         { mode = "n", keys = "<leader>o", desc = "+OpenCode" },
@@ -33,6 +35,8 @@ return {
         { mode = "i", keys = "<c-g>" },
         { mode = "v", keys = "<c-g>" },
         { mode = "x", keys = "<c-g>" },
+
+        { mode = "n", keys = "cp" },
 
         { mode = "n", keys = "\\" },
 

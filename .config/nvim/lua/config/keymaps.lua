@@ -17,3 +17,26 @@ map("n", [[\w]], "<cmd>setlocal wrap!<cr>", { desc = "Toggle 'wrap'" })
 -- This is done to improve the jump to definition comand when using ruby-lsp
 -- https://github.com/neovim/neovim/issues/30160
 map("n", "<C-]>", "<C-]>", { noremap = true })
+
+-- Yank file path/name
+local function copy_buffer_name_to_clipboard(mods)
+  local result = vim.fn.fnamemodify(vim.api.nvim_buf_get_name(0), mods)
+  vim.fn.setreg("+", result)
+  vim.notify("Copied: " .. result)
+end
+
+map("n", "cpr", function()
+  copy_buffer_name_to_clipboard(":.")
+end, { desc = "Copy relative file path" })
+
+map("n", "cpa", function()
+  copy_buffer_name_to_clipboard(":p")
+end, { desc = "Copy absolute file path" })
+
+map("n", "cpd", function()
+  copy_buffer_name_to_clipboard(":p:h")
+end, { desc = "Copy directory" })
+
+map("n", "cpf", function()
+  copy_buffer_name_to_clipboard(":t")
+end, { desc = "Copy filename" })
