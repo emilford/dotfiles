@@ -31,6 +31,12 @@ function module.apply_to_config(config)
     { key = "h", mods = "LEADER", action = wezterm.action.SplitVertical({}) },
     { key = "v", mods = "LEADER", action = wezterm.action.SplitHorizontal({}) },
 
+    {
+      key = "Enter",
+      mods = "SHIFT",
+      action = wezterm.action.SendString("\n"),
+    },
+
     -- Move between panes
     navigate("h"),
     navigate("j"),

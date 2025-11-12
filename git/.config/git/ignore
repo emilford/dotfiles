@@ -2,6 +2,7 @@
 /.config.fish
 /.db_ui
 /.envrc
+/.opencode/agent
 /.projections.json
 /.psql_history*
 /.tool-versions
