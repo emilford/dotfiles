@@ -1,5 +1,5 @@
 return {
-  filetypes = vim.list_extend(require("lspconfig")["yamlls"].config_def.default_config.filetypes, { "yaml.ghaction" }),
+  filetypes = { "yaml", "yaml.docker-compose", "yaml.gitlab", "yaml.helm-values", "yaml.ghaction" },
   settings = {
     yaml = {
       format = {
